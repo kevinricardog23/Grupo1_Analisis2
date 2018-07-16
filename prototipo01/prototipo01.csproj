@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AB04E11-1DC0-44D9-B495-0F13B7AE0D00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prototipo01</RootNamespace>
+    <AssemblyName>prototipo01</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\carrera\Listado_carreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\carrera\Listado_carreras.Designer.cs">
+      <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\curso\Listado_curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\curso\Listado_curso.Designer.cs">
+      <DependentUpon>Listado_curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\edificio\Edificion_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\edificio\Edificion_Update.designer.cs">
+      <DependentUpon>Edificion_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\edificio\Edificio_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\edificio\Edificio_Create.designer.cs">
+      <DependentUpon>Edificio_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\edificio\listaEdificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\edificio\listaEdificios.designer.cs">
+      <DependentUpon>listaEdificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facultad\Listado_facultades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facultad\Listado_facultades.Designer.cs">
+      <DependentUpon>Listado_facultades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\laboratorio\Laboratorio_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\laboratorio\Laboratorio_Create.designer.cs">
+      <DependentUpon>Laboratorio_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\laboratorio\Laboratorio_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\laboratorio\Laboratorio_Update.designer.cs">
+      <DependentUpon>Laboratorio_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\laboratorio\listaLaboratorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\laboratorio\listaLaboratorios.designer.cs">
+      <DependentUpon>listaLaboratorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\pensum\Listado_pensum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pensum\Listado_pensum.Designer.cs">
+      <DependentUpon>Listado_pensum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salon\ListaSalones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salon\ListaSalones.designer.cs">
+      <DependentUpon>ListaSalones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salon\Salon_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salon\Salon_Create.designer.cs">
+      <DependentUpon>Salon_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salon\Salon_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salon\Salon_Update.designer.cs">
+      <DependentUpon>Salon_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\listaSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\listaSecciones.designer.cs">
+      <DependentUpon>listaSecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\Seccion_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\Seccion_Create.designer.cs">
+      <DependentUpon>Seccion_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\Seccion_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\Seccion_Update.designer.cs">
+      <DependentUpon>Seccion_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
+      <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\curso\Listado_curso.resx">
+      <DependentUpon>Listado_curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\edificio\Edificion_Update.resx">
+      <DependentUpon>Edificion_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\edificio\Edificio_Create.resx">
+      <DependentUpon>Edificio_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\edificio\listaEdificios.resx">
+      <DependentUpon>listaEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facultad\Listado_facultades.resx">
+      <DependentUpon>Listado_facultades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\laboratorio\Laboratorio_Create.resx">
+      <DependentUpon>Laboratorio_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\laboratorio\Laboratorio_Update.resx">
+      <DependentUpon>Laboratorio_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\laboratorio\listaLaboratorios.resx">
+      <DependentUpon>listaLaboratorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pensum\Listado_pensum.resx">
+      <DependentUpon>Listado_pensum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salon\ListaSalones.resx">
+      <DependentUpon>ListaSalones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salon\Salon_Create.resx">
+      <DependentUpon>Salon_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salon\Salon_Update.resx">
+      <DependentUpon>Salon_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\listaSecciones.resx">
+      <DependentUpon>listaSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\Seccion_Create.resx">
+      <DependentUpon>Seccion_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\Seccion_Update.resx">
+      <DependentUpon>Seccion_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
