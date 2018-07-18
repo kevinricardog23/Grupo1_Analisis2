@@ -47,6 +47,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ayudasadljf hawejhrlweq rlsdjfkhsadljfhasjdfhlajsdfhuoiaw ehfkjasdhlfkjahsdfjklsa" +
     "hdlfjkhasdljkghasdlkjfhasljdkfhasdjfhasdjfakdf";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
