@@ -22,7 +22,7 @@ namespace prototipo01
             Seccion_Update sup = new Seccion_Update();
             sup.Show();
 
-            this.Hide();
+            //this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace prototipo01
             Seccion_Create scre = new Seccion_Create();
             scre.Show();
 
-            this.Hide();
+            //this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

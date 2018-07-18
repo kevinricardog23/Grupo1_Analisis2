@@ -19,8 +19,8 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            listaSecciones listsec = new listaSecciones();
-            listsec.Show();
+            //listaSecciones listsec = new listaSecciones();
+            //listsec.Show();
 
             this.Dispose();
         }

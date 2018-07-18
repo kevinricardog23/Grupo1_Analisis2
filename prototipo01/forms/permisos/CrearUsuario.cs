@@ -8,20 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prototipo01
+namespace prototipo01.forms.permisos
 {
-    public partial class Salon_Update : Form
+    public partial class CrearUsuario : Form
     {
-        public Salon_Update()
+        public CrearUsuario()
         {
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //listaSalones listsal = new listaSalones();
-            //listsal.Show();
-
             this.Dispose();
         }
     }

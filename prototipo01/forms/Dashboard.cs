@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using prototipo01.forms.asignacion;
 using prototipo01.forms.estudiante;
 using prototipo01.forms.catedraticos;
+using prototipo01.forms.permisos;
 
 namespace prototipo01.forms
 {
@@ -105,7 +106,7 @@ namespace prototipo01.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openForm(new Home());
+            openForm(new Permisos());
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -132,6 +133,11 @@ namespace prototipo01.forms
         private void button11_Click(object sender, EventArgs e)
         {
             openForm(new Asignacion_Cursos());
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            openForm(new Home());
         }
     }
 }

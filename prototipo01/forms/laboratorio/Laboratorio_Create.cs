@@ -19,8 +19,8 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            listaLaboratorios listlab = new listaLaboratorios();
-            listlab.Show();
+            //listaLaboratorios listlab = new listaLaboratorios();
+            //listlab.Show();
 
             this.Dispose();
         }

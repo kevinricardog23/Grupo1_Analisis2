@@ -22,7 +22,7 @@ namespace prototipo01
             Laboratorio_Create lcre = new Laboratorio_Create();
             lcre.Show();
 
-            this.Hide();
+            //this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace prototipo01
             Laboratorio_Update lup = new Laboratorio_Update();
             lup.Show();
 
-            this.Hide();
+            //this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@ namespace prototipo01
 
             Salon_Create scre = new Salon_Create();
             scre.Show();   
-            this.Hide();
+            //this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
