@@ -245,6 +245,9 @@
     <EmbeddedResource Include="forms\pensum\Listado_pensum.resx">
       <DependentUpon>Listado_pensum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\reportes\Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\salon\ListaSalones.resx">
       <DependentUpon>ListaSalones.cs</DependentUpon>
     </EmbeddedResource>
