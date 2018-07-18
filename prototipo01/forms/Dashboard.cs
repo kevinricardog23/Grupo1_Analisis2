@@ -59,7 +59,7 @@ namespace prototipo01.forms
         {
             openForm(new listaSecciones());
         }
-
+        //el
         private void button5_Click(object sender, EventArgs e)
         {
             openForm(new listaLaboratorios());
