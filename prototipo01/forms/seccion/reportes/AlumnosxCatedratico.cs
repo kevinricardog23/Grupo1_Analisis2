@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace prototipo01.forms.seccion.reportes
 {
-    public partial class AlumnosSeccion : Form
+    public partial class AlumnosxCatedratico : Form
     {
-        public AlumnosSeccion()
+        public AlumnosxCatedratico()
         {
             InitializeComponent();
         }
 
-        private void AlumnosSeccion_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

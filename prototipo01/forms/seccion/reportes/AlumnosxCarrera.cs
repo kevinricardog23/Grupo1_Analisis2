@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace prototipo01.forms.seccion.reportes
 {
-    public partial class AlumnosSeccion : Form
+    public partial class AlumnosxCarrera : Form
     {
-        public AlumnosSeccion()
+        public AlumnosxCarrera()
         {
             InitializeComponent();
         }
 
-        private void AlumnosSeccion_Load(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
