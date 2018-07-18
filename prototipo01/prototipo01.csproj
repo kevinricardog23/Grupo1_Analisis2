@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ayuda\Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ayuda\Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\carrera\Listado_carreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\ayuda\Ayuda.resx">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +241,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,7 +256,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-help-3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-help-3-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-x-mark-7-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-angel-left-circle-thin-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
