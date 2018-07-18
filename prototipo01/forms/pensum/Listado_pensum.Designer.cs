@@ -33,12 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requisito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,8 +108,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.nombre,
-            this.ubicacion});
+            this.requisito,
+            this.curso,
+            this.creditos});
             this.dataGridView1.Location = new System.Drawing.Point(37, 244);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -113,26 +119,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(844, 323);
             this.dataGridView1.TabIndex = 9;
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 330;
-            // 
-            // ubicacion
-            // 
-            this.ubicacion.HeaderText = "Ubicación";
-            this.ubicacion.Name = "ubicacion";
-            this.ubicacion.ReadOnly = true;
-            this.ubicacion.Width = 430;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
@@ -140,13 +126,14 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(754, 116);
+            this.button1.Location = new System.Drawing.Point(709, 116);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 41);
+            this.button1.Size = new System.Drawing.Size(127, 54);
             this.button1.TabIndex = 8;
-            this.button1.Text = "CREAR";
+            this.button1.Text = "CREAR PENSUM";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -170,11 +157,91 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista de Pensum";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Ingeníeria en Sistemas",
+            "Ingenieria Electrica",
+            "Medicina",
+            "Odontologia"});
+            this.comboBox1.Location = new System.Drawing.Point(244, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label3.Location = new System.Drawing.Point(34, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Seleccione Carrera";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label4.Location = new System.Drawing.Point(34, 149);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 18);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Seleccione Pensum";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2000",
+            "2006",
+            "2010",
+            "2015",
+            "2017"});
+            this.comboBox2.Location = new System.Drawing.Point(244, 149);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(146, 21);
+            this.comboBox2.TabIndex = 16;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // requisito
+            // 
+            this.requisito.HeaderText = "Pre-requisito";
+            this.requisito.Name = "requisito";
+            this.requisito.ReadOnly = true;
+            // 
+            // curso
+            // 
+            this.curso.HeaderText = "Curso";
+            this.curso.Name = "curso";
+            this.curso.ReadOnly = true;
+            this.curso.Width = 330;
+            // 
+            // creditos
+            // 
+            this.creditos.HeaderText = "Creditos";
+            this.creditos.Name = "creditos";
+            this.creditos.ReadOnly = true;
+            // 
             // Listado_pensum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 618);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
@@ -200,11 +267,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ubicacion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requisito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creditos;
     }
 }

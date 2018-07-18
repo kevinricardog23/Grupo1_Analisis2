@@ -21,14 +21,14 @@ namespace prototipo01
         {
             Edificio_Create  ed = new Edificio_Create();
             ed.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Edificion_Update edup = new Edificion_Update();
             edup.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
