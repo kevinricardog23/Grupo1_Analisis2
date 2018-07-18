@@ -26,7 +26,9 @@ namespace prototipo01.forms.ayuda
         {
             switch (Dashboard.seleccionDeDashboard)
             {
-
+                case "Edificios":
+                    label2.Text = "Edificios: \n\nEn el siguiente bloque de programa usted podra consultar los diferentes edificios de la UMG, podra ver los salones disponibles y los que se encuentra ocupados por clases o laboratorios.";
+                    break;
                 case "Salones":
                     label2.Text = "Salones: \n\nEn esta area usted podra crear y eliminar los salones deseados y poder visualizarlos en pantalla.";
                     break;
@@ -36,10 +38,6 @@ namespace prototipo01.forms.ayuda
                 case "Laboratorios":
                     label2.Text = "Laboratorios: \n\nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos, para darle la opcion de investigar los cursos que comprenden ciertas carreras.";
                     break;
-
-
-
-
                 case "Facultades":
                     label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";
                     break;
@@ -53,7 +51,7 @@ namespace prototipo01.forms.ayuda
                     label2.Text = "Cursos: \n\nEn el siguiente bloque de programa usted podra consultar los cursos asi como los datos que conllevan estos, salones, secciones, catedraticos, etc. Esto con un fin informativo.";
                     break;
                 default:
-                    label2.Text = "Error de codigo.";
+                    label2.Text = "Por favor seleccione un bloque de la barra lateral para poder ayudarlo.";
                     break;
             }
         }

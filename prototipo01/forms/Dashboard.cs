@@ -49,7 +49,7 @@ namespace prototipo01.forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-               
+            seleccionDeDashboard = "Edificios";   
             openForm(new listaEdificios());
         }
 
