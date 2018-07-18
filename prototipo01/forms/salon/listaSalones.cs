@@ -45,5 +45,10 @@ namespace prototipo01
 
             //this.Dispose();
         }
+
+        private void listaSalones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

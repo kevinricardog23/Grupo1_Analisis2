@@ -16,5 +16,15 @@ namespace prototipo01.forms.carrera
         {
             InitializeComponent();
         }
+
+        private void Listado_carreras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
