@@ -26,6 +26,9 @@ namespace prototipo01.forms.ayuda
         {
             switch (Dashboard.seleccionDeDashboard)
             {
+                case "Edificios":
+                    label2.Text = "Edificios: \n\nEn el siguiente bloque de programa usted podra consultar los diferentes edificios de la UMG, podra ver los salones disponibles y los que se encuentra ocupados por clases o laboratorios.";
+                    break;
                 case "Facultades":
                     label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";
                     break;
