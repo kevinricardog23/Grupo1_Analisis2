@@ -159,6 +159,24 @@
     <Compile Include="forms\seccion\listaSecciones.designer.cs">
       <DependentUpon>listaSecciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosSeccion.Designer.cs">
+      <DependentUpon>AlumnosSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCarrera.Designer.cs">
+      <DependentUpon>AlumnosxCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCatedratico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCatedratico.Designer.cs">
+      <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\seccion\Seccion_Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +244,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\listaSecciones.resx">
       <DependentUpon>listaSecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosSeccion.resx">
+      <DependentUpon>AlumnosSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosxCarrera.resx">
+      <DependentUpon>AlumnosxCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosxCatedratico.resx">
+      <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\Seccion_Create.resx">
       <DependentUpon>Seccion_Create.cs</DependentUpon>
