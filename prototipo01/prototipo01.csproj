@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ayuda\Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ayuda\Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\carrera\Listado_carreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,30 @@
     <Compile Include="forms\seccion\listaSecciones.designer.cs">
       <DependentUpon>listaSecciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosSeccion.Designer.cs">
+      <DependentUpon>AlumnosSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCarrera.Designer.cs">
+      <DependentUpon>AlumnosxCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCatedratico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\AlumnosxCatedratico.Designer.cs">
+      <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\CursosAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\CursosAlumnos.Designer.cs">
+      <DependentUpon>CursosAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\seccion\Seccion_Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +199,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ayuda\Ayuda.resx">
+      <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
@@ -218,6 +251,18 @@
     <EmbeddedResource Include="forms\seccion\listaSecciones.resx">
       <DependentUpon>listaSecciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosSeccion.resx">
+      <DependentUpon>AlumnosSeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosxCarrera.resx">
+      <DependentUpon>AlumnosxCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\AlumnosxCatedratico.resx">
+      <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\CursosAlumnos.resx">
+      <DependentUpon>CursosAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\Seccion_Create.resx">
       <DependentUpon>Seccion_Create.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +277,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,7 +292,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-help-3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-help-3-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-x-mark-7-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-angel-left-circle-thin-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

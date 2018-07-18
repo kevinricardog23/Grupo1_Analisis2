@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prototipo01.forms.carrera
+namespace prototipo01.forms.seccion.reportes
 {
-    public partial class Listado_carreras : Form
+    public partial class CursosAlumnos : Form
     {
-        public Listado_carreras()
+        public CursosAlumnos()
         {
             InitializeComponent();
         }
 
-        private void Listado_carreras_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
