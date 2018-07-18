@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace prototipo01.forms
 {
+    //cH
     public partial class Dashboard : Form
     {
         public Dashboard()
