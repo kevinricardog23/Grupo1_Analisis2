@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\asignacion\Asignacion_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\asignacion\Asignacion_Cursos.designer.cs">
+      <DependentUpon>Asignacion_Cursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\ayuda\Ayuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,24 @@
     </Compile>
     <Compile Include="forms\carrera\Listado_carreras.Designer.cs">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\catedraticos\Catedratico_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\catedraticos\Catedratico_Create.designer.cs">
+      <DependentUpon>Catedratico_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\catedraticos\Catedratico_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\catedraticos\Catedratico_Update.designer.cs">
+      <DependentUpon>Catedratico_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\catedraticos\listaCatedraticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\catedraticos\listaCatedraticos.designer.cs">
+      <DependentUpon>listaCatedraticos.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\curso\Listado_curso.cs">
       <SubType>Form</SubType>
@@ -98,6 +122,24 @@
     </Compile>
     <Compile Include="forms\edificio\listaEdificios.designer.cs">
       <DependentUpon>listaEdificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\estudiantes\Estudiante_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\estudiantes\Estudiante_Create.designer.cs">
+      <DependentUpon>Estudiante_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\estudiantes\Estudiante_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\estudiantes\Estudiante_Update.designer.cs">
+      <DependentUpon>Estudiante_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\estudiantes\Listado_estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\estudiantes\Listado_estudiante.designer.cs">
+      <DependentUpon>Listado_estudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\facultad\Listado_facultades.cs">
       <SubType>Form</SubType>
@@ -206,11 +248,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\asignacion\Asignacion_Cursos.resx">
+      <DependentUpon>Asignacion_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\ayuda\Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\catedraticos\Catedratico_Create.resx">
+      <DependentUpon>Catedratico_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\catedraticos\Catedratico_Update.resx">
+      <DependentUpon>Catedratico_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\catedraticos\listaCatedraticos.resx">
+      <DependentUpon>listaCatedraticos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\curso\Listado_curso.resx">
       <DependentUpon>Listado_curso.cs</DependentUpon>
@@ -226,6 +280,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\edificio\listaEdificios.resx">
       <DependentUpon>listaEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\estudiantes\Estudiante_Create.resx">
+      <DependentUpon>Estudiante_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\estudiantes\Estudiante_Update.resx">
+      <DependentUpon>Estudiante_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\estudiantes\Listado_estudiante.resx">
+      <DependentUpon>Listado_estudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\facultad\Listado_facultades.resx">
       <DependentUpon>Listado_facultades.cs</DependentUpon>

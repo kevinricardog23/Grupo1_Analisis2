@@ -12,6 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.forms.asignacion;
+using prototipo01.forms.estudiante;
+using prototipo01.forms.catedraticos;
 
 namespace prototipo01.forms
 {
@@ -114,6 +117,21 @@ namespace prototipo01.forms
         {
             Ayuda ayuda = new Ayuda();
             ayuda.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            openForm(new Listado_estudiante());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openForm(new listaCatedraticos());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            openForm(new Asignacion_Cursos());
         }
     }
 }
