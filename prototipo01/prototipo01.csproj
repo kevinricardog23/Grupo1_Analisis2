@@ -177,6 +177,12 @@
     <Compile Include="forms\seccion\reportes\AlumnosxCatedratico.Designer.cs">
       <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\seccion\reportes\CursosAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\seccion\reportes\CursosAlumnos.Designer.cs">
+      <DependentUpon>CursosAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\seccion\Seccion_Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\reportes\AlumnosxCatedratico.resx">
       <DependentUpon>AlumnosxCatedratico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\seccion\reportes\CursosAlumnos.resx">
+      <DependentUpon>CursosAlumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\Seccion_Create.resx">
       <DependentUpon>Seccion_Create.cs</DependentUpon>
