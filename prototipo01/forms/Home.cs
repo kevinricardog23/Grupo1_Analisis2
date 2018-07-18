@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prototipo01.forms.seccion.reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,30 @@ namespace prototipo01.forms
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CursosAlumnos cursosAlumnos = new CursosAlumnos();
+            cursosAlumnos.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AlumnosSeccion scre = new AlumnosSeccion();
+            scre.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlumnosxCarrera scre = new AlumnosxCarrera();
+            scre.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AlumnosxCatedratico alumnosc = new AlumnosxCatedratico();
+            alumnosc.Show();
         }
     }
 }
