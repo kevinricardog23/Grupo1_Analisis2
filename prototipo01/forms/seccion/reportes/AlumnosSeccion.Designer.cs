@@ -270,6 +270,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "AlumnosSeccion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlumnosSeccion";
             this.Load += new System.EventHandler(this.AlumnosSeccion_Load);
             this.panel1.ResumeLayout(false);

@@ -26,7 +26,7 @@ namespace prototipo01.Clases
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se permite ingresar letras ");
+                MessageBox.Show("Solo se permite ingresar letras","Error de ingreso de datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -47,7 +47,7 @@ namespace prototipo01.Clases
             else
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se permite ingresar numeros ");
+                MessageBox.Show("Solo se permite ingresar numeros", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -49,30 +49,22 @@ namespace prototipo01.forms.seccion.reportes
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-
-                MessageBox.Show("Debe completar la informacion");
-
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-
-                MessageBox.Show("Debe completar la informacion");
-
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(textBox3.Text))
             {
-
-                MessageBox.Show("Debe completar la informacion");
-
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(comboBox1.Text))
             {
-
-                MessageBox.Show("Debe completar la informacion");
-
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
