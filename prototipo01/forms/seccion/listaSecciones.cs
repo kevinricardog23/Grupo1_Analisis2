@@ -47,6 +47,11 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Txt_Buscar.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Seccion_Create scre = new Seccion_Create();
             scre.Show();
 

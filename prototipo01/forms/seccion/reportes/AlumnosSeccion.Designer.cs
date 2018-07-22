@@ -29,117 +29,117 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Lbl_listado = new System.Windows.Forms.Label();
+            this.Lbl_CodCarrera = new System.Windows.Forms.Label();
+            this.Txt_CodCarrera = new System.Windows.Forms.TextBox();
+            this.Lbl_Semestre = new System.Windows.Forms.Label();
+            this.Txt_Semestre = new System.Windows.Forms.TextBox();
+            this.Lbl_Seccion = new System.Windows.Forms.Label();
+            this.Txt_Seccion = new System.Windows.Forms.TextBox();
+            this.Dgv_ListadoxSeccion = new System.Windows.Forms.DataGridView();
             this.Carnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Lbl_NumAlumnos = new System.Windows.Forms.Label();
+            this.Txt_NumAlumnos = new System.Windows.Forms.TextBox();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Btn_Actualizar = new System.Windows.Forms.Button();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Lbl_Jornada = new System.Windows.Forms.Label();
+            this.Cbo_Jornada = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoxSeccion)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Lbl_listado);
             this.panel1.Location = new System.Drawing.Point(74, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(868, 48);
             this.panel1.TabIndex = 21;
             // 
-            // label1
+            // Lbl_listado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(24, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Listado de Alumnos por Seccion";
+            this.Lbl_listado.AutoSize = true;
+            this.Lbl_listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Lbl_listado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_listado.Location = new System.Drawing.Point(24, 14);
+            this.Lbl_listado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_listado.Name = "Lbl_listado";
+            this.Lbl_listado.Size = new System.Drawing.Size(252, 18);
+            this.Lbl_listado.TabIndex = 0;
+            this.Lbl_listado.Text = "Listado de Alumnos por Seccion";
             // 
-            // label2
+            // Lbl_CodCarrera
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 20);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Codigo de Carrera:";
+            this.Lbl_CodCarrera.AutoSize = true;
+            this.Lbl_CodCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CodCarrera.Location = new System.Drawing.Point(54, 97);
+            this.Lbl_CodCarrera.Name = "Lbl_CodCarrera";
+            this.Lbl_CodCarrera.Size = new System.Drawing.Size(160, 20);
+            this.Lbl_CodCarrera.TabIndex = 22;
+            this.Lbl_CodCarrera.Text = "Codigo de Carrera:";
             // 
-            // textBox1
+            // Txt_CodCarrera
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.Txt_CodCarrera.Location = new System.Drawing.Point(229, 97);
+            this.Txt_CodCarrera.Name = "Txt_CodCarrera";
+            this.Txt_CodCarrera.Size = new System.Drawing.Size(132, 20);
+            this.Txt_CodCarrera.TabIndex = 23;
+            this.Txt_CodCarrera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // label3
+            // Lbl_Semestre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(474, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Semestre:";
+            this.Lbl_Semestre.AutoSize = true;
+            this.Lbl_Semestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Semestre.Location = new System.Drawing.Point(474, 97);
+            this.Lbl_Semestre.Name = "Lbl_Semestre";
+            this.Lbl_Semestre.Size = new System.Drawing.Size(91, 20);
+            this.Lbl_Semestre.TabIndex = 24;
+            this.Lbl_Semestre.Text = "Semestre:";
             // 
-            // textBox2
+            // Txt_Semestre
             // 
-            this.textBox2.Location = new System.Drawing.Point(571, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.Txt_Semestre.Location = new System.Drawing.Point(571, 97);
+            this.Txt_Semestre.Name = "Txt_Semestre";
+            this.Txt_Semestre.Size = new System.Drawing.Size(132, 20);
+            this.Txt_Semestre.TabIndex = 25;
+            this.Txt_Semestre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // label4
+            // Lbl_Seccion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Seccion:";
+            this.Lbl_Seccion.AutoSize = true;
+            this.Lbl_Seccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Seccion.Location = new System.Drawing.Point(54, 143);
+            this.Lbl_Seccion.Name = "Lbl_Seccion";
+            this.Lbl_Seccion.Size = new System.Drawing.Size(78, 20);
+            this.Lbl_Seccion.TabIndex = 26;
+            this.Lbl_Seccion.Text = "Seccion:";
             // 
-            // textBox3
+            // Txt_Seccion
             // 
-            this.textBox3.Location = new System.Drawing.Point(229, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 27;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.Txt_Seccion.Location = new System.Drawing.Point(229, 143);
+            this.Txt_Seccion.Name = "Txt_Seccion";
+            this.Txt_Seccion.Size = new System.Drawing.Size(132, 20);
+            this.Txt_Seccion.TabIndex = 27;
+            this.Txt_Seccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // dataGridView1
+            // Dgv_ListadoxSeccion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dgv_ListadoxSeccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_ListadoxSeccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Carnet,
             this.Nombre,
             this.Actualizar,
             this.Eliminar});
-            this.dataGridView1.Location = new System.Drawing.Point(58, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(432, 193);
-            this.dataGridView1.TabIndex = 28;
+            this.Dgv_ListadoxSeccion.Location = new System.Drawing.Point(58, 217);
+            this.Dgv_ListadoxSeccion.Name = "Dgv_ListadoxSeccion";
+            this.Dgv_ListadoxSeccion.Size = new System.Drawing.Size(432, 193);
+            this.Dgv_ListadoxSeccion.TabIndex = 28;
             // 
             // Carnet
             // 
@@ -162,91 +162,91 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Width = 91;
             // 
-            // label5
+            // Lbl_NumAlumnos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(396, 434);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(246, 24);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "NUMERO DE ALUMNOS:";
+            this.Lbl_NumAlumnos.AutoSize = true;
+            this.Lbl_NumAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_NumAlumnos.Location = new System.Drawing.Point(396, 434);
+            this.Lbl_NumAlumnos.Name = "Lbl_NumAlumnos";
+            this.Lbl_NumAlumnos.Size = new System.Drawing.Size(246, 24);
+            this.Lbl_NumAlumnos.TabIndex = 29;
+            this.Lbl_NumAlumnos.Text = "NUMERO DE ALUMNOS:";
             // 
-            // textBox4
+            // Txt_NumAlumnos
             // 
-            this.textBox4.Location = new System.Drawing.Point(659, 438);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(99, 20);
-            this.textBox4.TabIndex = 30;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.Txt_NumAlumnos.Location = new System.Drawing.Point(659, 438);
+            this.Txt_NumAlumnos.Name = "Txt_NumAlumnos";
+            this.Txt_NumAlumnos.Size = new System.Drawing.Size(99, 20);
+            this.Txt_NumAlumnos.TabIndex = 30;
+            this.Txt_NumAlumnos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
-            // button1
+            // Btn_Buscar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(621, 166);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 41);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_Buscar.FlatAppearance.BorderSize = 0;
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Buscar.Location = new System.Drawing.Point(621, 166);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(82, 41);
+            this.Btn_Buscar.TabIndex = 31;
+            this.Btn_Buscar.Text = "BUSCAR";
+            this.Btn_Buscar.UseVisualStyleBackColor = false;
+            this.Btn_Buscar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // Btn_Actualizar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(298, 217);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 41);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "ACTUALIZAR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
+            this.Btn_Actualizar.FlatAppearance.BorderSize = 0;
+            this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Actualizar.Location = new System.Drawing.Point(298, 217);
+            this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Actualizar.Name = "Btn_Actualizar";
+            this.Btn_Actualizar.Size = new System.Drawing.Size(102, 41);
+            this.Btn_Actualizar.TabIndex = 32;
+            this.Btn_Actualizar.Text = "ACTUALIZAR";
+            this.Btn_Actualizar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Btn_Eliminar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(400, 217);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 41);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Eliminar.Location = new System.Drawing.Point(400, 217);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(90, 41);
+            this.Btn_Eliminar.TabIndex = 33;
+            this.Btn_Eliminar.Text = "ELIMINAR";
+            this.Btn_Eliminar.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // Lbl_Jornada
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(474, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Jornada:";
+            this.Lbl_Jornada.AutoSize = true;
+            this.Lbl_Jornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Jornada.Location = new System.Drawing.Point(474, 141);
+            this.Lbl_Jornada.Name = "Lbl_Jornada";
+            this.Lbl_Jornada.Size = new System.Drawing.Size(79, 20);
+            this.Lbl_Jornada.TabIndex = 34;
+            this.Lbl_Jornada.Text = "Jornada:";
             // 
-            // comboBox1
+            // Cbo_Jornada
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Cbo_Jornada.FormattingEnabled = true;
+            this.Cbo_Jornada.Items.AddRange(new object[] {
             "Matutina",
             "Vespertina",
             "Sabados"});
-            this.comboBox1.Location = new System.Drawing.Point(571, 142);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
-            this.comboBox1.TabIndex = 36;
+            this.Cbo_Jornada.Location = new System.Drawing.Point(571, 142);
+            this.Cbo_Jornada.Name = "Cbo_Jornada";
+            this.Cbo_Jornada.Size = new System.Drawing.Size(132, 21);
+            this.Cbo_Jornada.TabIndex = 36;
             // 
             // AlumnosSeccion
             // 
@@ -254,20 +254,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1045, 482);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Cbo_Jornada);
+            this.Controls.Add(this.Lbl_Jornada);
+            this.Controls.Add(this.Btn_Eliminar);
+            this.Controls.Add(this.Btn_Actualizar);
+            this.Controls.Add(this.Btn_Buscar);
+            this.Controls.Add(this.Txt_NumAlumnos);
+            this.Controls.Add(this.Lbl_NumAlumnos);
+            this.Controls.Add(this.Dgv_ListadoxSeccion);
+            this.Controls.Add(this.Txt_Seccion);
+            this.Controls.Add(this.Lbl_Seccion);
+            this.Controls.Add(this.Txt_Semestre);
+            this.Controls.Add(this.Lbl_Semestre);
+            this.Controls.Add(this.Txt_CodCarrera);
+            this.Controls.Add(this.Lbl_CodCarrera);
             this.Controls.Add(this.panel1);
             this.Name = "AlumnosSeccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -275,7 +275,7 @@
             this.Load += new System.EventHandler(this.AlumnosSeccion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListadoxSeccion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,24 +284,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label Lbl_listado;
+        private System.Windows.Forms.Label Lbl_CodCarrera;
+        private System.Windows.Forms.TextBox Txt_CodCarrera;
+        private System.Windows.Forms.Label Lbl_Semestre;
+        private System.Windows.Forms.TextBox Txt_Semestre;
+        private System.Windows.Forms.Label Lbl_Seccion;
+        private System.Windows.Forms.TextBox Txt_Seccion;
+        private System.Windows.Forms.DataGridView Dgv_ListadoxSeccion;
+        private System.Windows.Forms.Label Lbl_NumAlumnos;
+        private System.Windows.Forms.TextBox Txt_NumAlumnos;
+        private System.Windows.Forms.Button Btn_Buscar;
+        private System.Windows.Forms.Button Btn_Actualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Carnet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewButtonColumn Actualizar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button Btn_Eliminar;
+        private System.Windows.Forms.Label Lbl_Jornada;
+        private System.Windows.Forms.ComboBox Cbo_Jornada;
     }
 }
