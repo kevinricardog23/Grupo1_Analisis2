@@ -35,6 +35,16 @@ namespace prototipo01
             Clases.Validacion.SoloLetras(e);
         }
 
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
+            
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Trim() == "")
