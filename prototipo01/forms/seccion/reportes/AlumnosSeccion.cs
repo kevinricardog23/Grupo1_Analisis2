@@ -34,5 +34,15 @@ namespace prototipo01.forms.seccion.reportes
         {
             Clases.Validacion.SoloLetras(e);
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
     }
 }

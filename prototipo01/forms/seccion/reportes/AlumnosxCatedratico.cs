@@ -21,5 +21,30 @@ namespace prototipo01.forms.seccion.reportes
         {
 
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
     }
 }

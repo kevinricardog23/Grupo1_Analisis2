@@ -34,19 +34,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Carnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.textBox2.Size = new System.Drawing.Size(132, 20);
             this.textBox2.TabIndex = 29;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label3
             // 
@@ -97,6 +98,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 20);
             this.textBox1.TabIndex = 27;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
@@ -107,13 +109,6 @@
             this.label2.Size = new System.Drawing.Size(170, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Codigo de Facultad:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(232, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 20);
-            this.textBox5.TabIndex = 37;
             // 
             // label6
             // 
@@ -138,6 +133,32 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(600, 150);
             this.dataGridView1.TabIndex = 38;
+            // 
+            // Carnet
+            // 
+            this.Carnet.HeaderText = "Carnet";
+            this.Carnet.Name = "Carnet";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Seccion
+            // 
+            this.Seccion.HeaderText = "Seccion";
+            this.Seccion.Name = "Seccion";
+            // 
+            // Actualizar
+            // 
+            this.Actualizar.HeaderText = "";
+            this.Actualizar.Name = "Actualizar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 90;
             // 
             // button1
             // 
@@ -184,32 +205,6 @@
             this.button2.Text = "ELIMINAR";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // Carnet
-            // 
-            this.Carnet.HeaderText = "Carnet";
-            this.Carnet.Name = "Carnet";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Seccion
-            // 
-            this.Seccion.HeaderText = "Seccion";
-            this.Seccion.Name = "Seccion";
-            // 
-            // Actualizar
-            // 
-            this.Actualizar.HeaderText = "";
-            this.Actualizar.Name = "Actualizar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 90;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -226,19 +221,32 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(99, 20);
             this.textBox4.TabIndex = 43;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Matutina",
+            "Vespertina",
+            "Sabados"});
+            this.comboBox1.Location = new System.Drawing.Point(233, 147);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 21);
+            this.comboBox1.TabIndex = 44;
             // 
             // AlumnosxCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 465);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -263,7 +271,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
@@ -276,5 +283,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -26,6 +26,7 @@ namespace prototipo01.Clases
             else
             {
                 e.Handled = true;
+                MessageBox.Show("Solo se permite ingresar letras ");
             }
         }
 
@@ -46,6 +47,7 @@ namespace prototipo01.Clases
             else
             {
                 e.Handled = true;
+                MessageBox.Show("Solo se permite ingresar numeros ");
             }
         }
     }

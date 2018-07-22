@@ -24,5 +24,10 @@ namespace prototipo01
 
             this.Dispose();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
     }
 }
