@@ -49,12 +49,22 @@ namespace prototipo01
 
             if (textBox2.Text.Trim() == "")
             {
-                epErrorDescripcion.SetError(textBox1, "Introduce una Descripcion");
-                textBox1.Focus();
+                epErrorDescripcion.SetError(textBox2, "Introduce una Descripcion");
+                textBox2.Focus();
             }
             else
             {
                 epErrorDescripcion.Clear();
+            }
+
+            if (comboBox1.SelectedItem==null)
+            {
+                epErrorUbicacion.SetError(comboBox1, "Selecciona una opcion");
+                comboBox1.Focus();
+            }
+            else
+            {
+                epErrorUbicacion.Clear();
             }
         }
     }

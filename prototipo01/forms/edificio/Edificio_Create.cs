@@ -59,12 +59,22 @@ namespace prototipo01
 
             if (textBox2.Text.Trim() == "")
             {
-                epError_Descrip.SetError(textBox1, "Introduce una descripcion del edificio");
-                textBox1.Focus();
+                epError_Descrip.SetError(textBox2, "Introduce una descripcion del edificio");
+                textBox2.Focus();
             }
             else
             {
                 epError_Descrip.Clear();
+            }
+
+            if (comboBox1.SelectedItem == null)
+            {
+                epError_Ubicacion.SetError(comboBox1, "Selecciona una opcion");
+                comboBox1.Focus();
+            }
+            else
+            {
+                epError_Ubicacion.Clear();
             }
 
         }

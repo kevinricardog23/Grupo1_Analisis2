@@ -44,12 +44,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.epErrorNombre = new System.Windows.Forms.ErrorProvider(this.components);
             this.epErrorDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epErrorUbicacion = new System.Windows.Forms.ErrorProvider(this.components);
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epErrorNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epErrorDescripcion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epErrorUbicacion)).BeginInit();
             this.SuspendLayout();
             // 
             // CRUD
@@ -204,6 +206,10 @@
             // 
             this.epErrorDescripcion.ContainerControl = this;
             // 
+            // epErrorUbicacion
+            // 
+            this.epErrorUbicacion.ContainerControl = this;
+            // 
             // Edificion_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epErrorNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epErrorDescripcion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epErrorUbicacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +252,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider epErrorNombre;
         private System.Windows.Forms.ErrorProvider epErrorDescripcion;
+        private System.Windows.Forms.ErrorProvider epErrorUbicacion;
     }
 }
