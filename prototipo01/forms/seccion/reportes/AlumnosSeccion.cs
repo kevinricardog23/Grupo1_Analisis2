@@ -21,5 +21,22 @@ namespace prototipo01.forms.seccion.reportes
         {
 
         }
+
+        public void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            
+          
+        }
+
+        private void Validacion()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.
+        }
     }
 }
