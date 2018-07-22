@@ -54,7 +54,12 @@ namespace prototipo01.forms.estudiante
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "")                 
+
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim() == "")
             {
                 epError_Nombres.SetError(textBox1, "Introduce Nombre para el estudiante");
                 textBox1.Focus();
@@ -63,7 +68,10 @@ namespace prototipo01.forms.estudiante
             {
                 epError_Nombres.Clear();
             }
+        }
 
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
             if (textBox2.Text.Trim() == "")
             {
                 epError_Apellidos.SetError(textBox2, "Introduce apellidos del estudiante");
@@ -73,7 +81,10 @@ namespace prototipo01.forms.estudiante
             {
                 epError_Apellidos.Clear();
             }
+        }
 
+        private void textBox3_Validated(object sender, EventArgs e)
+        {
             if (textBox3.Text.Trim() == "")
             {
                 epError_Pass.SetError(textBox3, "Introduce la contraseña del estudiante");
@@ -83,7 +94,10 @@ namespace prototipo01.forms.estudiante
             {
                 epError_Pass.Clear();
             }
+        }
 
+        private void textBox4_Validated(object sender, EventArgs e)
+        {
             if (textBox4.Text.Trim() == "")
             {
                 epError_Correo.SetError(textBox4, "Introduce un correo del estudiante");
@@ -93,20 +107,26 @@ namespace prototipo01.forms.estudiante
             {
                 epError_Correo.Clear();
             }
+        }
 
+        private void textBox5_Validated(object sender, EventArgs e)
+        {
             if (textBox5.Text.Trim() == "")
             {
-                epError_Tel.SetError(textBox5, "Introduce el telefono del estudiante");
+                epError_Tel.SetError(textBox5, "Introduce direccion del estudiante");
                 textBox5.Focus();
             }
             else
             {
                 epError_Tel.Clear();
             }
+        }
 
+        private void textBox6_Validated(object sender, EventArgs e)
+        {
             if (textBox6.Text.Trim() == "")
             {
-                epError_Direccion.SetError(textBox6, "Introduce la direccion del estudiante");
+                epError_Direccion.SetError(textBox6, "Introduce telefono del estudiante");
                 textBox6.Focus();
             }
             else
