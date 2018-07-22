@@ -16,7 +16,7 @@ namespace prototipo01.models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_laboratorio { get; set; }
 
         [StringLength(45)]

@@ -10,7 +10,7 @@ namespace prototipo01.models
     public partial class bitacora
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_bitacora { get; set; }
 
         [Column(TypeName = "date")]
