@@ -1,4 +1,6 @@
-﻿using prototipo01.forms;
+﻿using prototipo01.controladores;
+using prototipo01.forms;
+using prototipo01.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,7 @@ namespace prototipo01
 {
     public partial class Form1 : Form
     {
+        ControladorUsuario controladorUsuario = new ControladorUsuario();
         public Form1()
         {
             InitializeComponent();
@@ -40,10 +43,34 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
+            TextBox objTextBox = (TextBox)textBox1;
+            string email = objTextBox.Text;
+
+            TextBox objTextBox2 = (TextBox)textBox2;
+            string pass = objTextBox2.Text;
+
+
+            if (login(email,pass))
+            {
+                this.Hide();
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+            }
+          
         }
+
+
+
+        public Boolean login(String correo, String password)
+        {
+            usuario user = controladorUsuario.buscarUsuarioCorreo(correo);
+            return controladorUsuario.login(user, password);
+        }
+
     }
+
+
+    
+
 }
 //eddy lopez

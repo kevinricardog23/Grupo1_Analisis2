@@ -27,5 +27,34 @@ namespace prototipo01.controladores
             db.SaveChanges();
         }
 
+        public usuario buscarUsuarioCorreo(string correo)
+        {
+            usuario user = null;
+            using (var ctx = db)
+            {
+                 user = new usuario();
+                 user = ctx.usuario
+                              .Where(s => s.correo_usuario == correo)
+                              .FirstOrDefault<usuario>();
+            }
+
+            return user;
+        }
+
+        public Boolean login(usuario usuarioLogin, String password)
+        {
+            if (usuarioLogin == null)
+            {
+                return false;
+            }
+
+            if (usuarioLogin.password_usuario == password)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }
