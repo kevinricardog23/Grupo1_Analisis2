@@ -29,5 +29,25 @@ namespace prototipo01
         {
             Clases.Validacion.SoloLetras(e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+
+            }
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+
+            }
+        }
     }
 }

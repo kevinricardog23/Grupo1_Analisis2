@@ -26,10 +26,10 @@ namespace prototipo01.forms.seccion.reportes
         {
 
             Clases.Validacion.SoloNumeros(e);
-          
+
         }
 
-     
+
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
@@ -43,6 +43,38 @@ namespace prototipo01.forms.seccion.reportes
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox3.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
         }
     }
 }
