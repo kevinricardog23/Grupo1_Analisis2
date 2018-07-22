@@ -12,10 +12,11 @@ namespace prototipo01.controladores
 
         ModelDADOS db = new ModelDADOS();
 
+
+        //Metodo para guardar un nuevo edificion
         public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)
         {
             
-
             edificio edificioNuevo = new edificio();
 
             edificioNuevo.nombre_edificio = nombre_edificio;
@@ -25,6 +26,27 @@ namespace prototipo01.controladores
             db.SaveChanges();
 
         }
+
+      
+  
+
+
+
+        //Metodo para actualizar un edificio
+        public void actualizarEdificio(String nombre_edificio, String ubicacion_edificio)
+        {
+            edificio edificioUpdate = new edificio();
+
+            edificioUpdate.nombre_edificio = nombre_edificio;
+            edificioUpdate.ubicacion_edificio = ubicacion_edificio;
+
+            db.SaveChanges();
+
+
+        }
+
+        //ARRECIS
+
 
     }
 }

@@ -57,15 +57,11 @@ namespace prototipo01
                 epErrorDescripcion.Clear();
             }
 
-            if (comboBox1.SelectedItem==null)
-            {
-                epErrorUbicacion.SetError(comboBox1, "Selecciona una opcion");
-                comboBox1.Focus();
-            }
-            else
-            {
-                epErrorUbicacion.Clear();
-            }
+            //call update edificio
+
+
+
+
         }
     }
 }
