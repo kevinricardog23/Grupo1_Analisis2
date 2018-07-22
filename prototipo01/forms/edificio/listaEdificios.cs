@@ -15,6 +15,15 @@ namespace prototipo01
         public listaEdificios()
         {
             InitializeComponent();
+            if (textBox1.Text.Trim() == "")
+            {
+                epError_Buscar.SetError(textBox1, "Introduce ID del edificio");
+                textBox1.Focus();
+            }
+            else
+            {
+                epError_Buscar.Clear();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
