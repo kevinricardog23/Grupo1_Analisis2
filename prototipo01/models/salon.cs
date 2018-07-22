@@ -17,7 +17,7 @@ namespace prototipo01.models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_salon { get; set; }
 
         [StringLength(45)]

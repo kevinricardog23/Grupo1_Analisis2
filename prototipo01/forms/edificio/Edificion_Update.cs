@@ -24,5 +24,48 @@ namespace prototipo01
 
             this.Dispose();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim() == "")
+            {
+                epErrorNombre.SetError(textBox1, "Introduce Nombre para el edificio");
+                textBox1.Focus();
+            }
+            else
+            {
+                epErrorNombre.Clear();
+            }
+
+            if (textBox2.Text.Trim() == "")
+            {
+                epErrorDescripcion.SetError(textBox2, "Introduce una Descripcion");
+                textBox2.Focus();
+            }
+            else
+            {
+                epErrorDescripcion.Clear();
+            }
+
+            if (comboBox1.SelectedItem==null)
+            {
+                epErrorUbicacion.SetError(comboBox1, "Selecciona una opcion");
+                comboBox1.Focus();
+            }
+            else
+            {
+                epErrorUbicacion.Clear();
+            }
+        }
     }
 }

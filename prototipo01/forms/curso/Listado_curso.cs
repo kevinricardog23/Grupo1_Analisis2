@@ -15,6 +15,32 @@ namespace prototipo01.forms.curso
         public Listado_curso()
         {
             InitializeComponent();
+
+            if (textBox1.Text.Trim() == "")
+            {
+                epError.SetError(textBox1, "Introduce ID de Curso");
+                textBox1.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+
         }
     }
 }
