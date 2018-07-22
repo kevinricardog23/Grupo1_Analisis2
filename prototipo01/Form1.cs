@@ -15,7 +15,7 @@ namespace prototipo01
 {
     public partial class Form1 : Form
     {
-        ControladorUsuario controladorUsuario = new ControladorUsuario();
+        
         public Form1()
         {
             InitializeComponent();
@@ -63,6 +63,7 @@ namespace prototipo01
 
         public Boolean login(String correo, String password)
         {
+            ControladorUsuario controladorUsuario = new ControladorUsuario();
             usuario user = controladorUsuario.buscarUsuarioCorreo(correo);
             return controladorUsuario.login(user, password);
         }
