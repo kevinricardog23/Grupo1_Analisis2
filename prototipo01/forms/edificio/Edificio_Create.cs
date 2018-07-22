@@ -33,6 +33,7 @@ namespace prototipo01
         private void Btn_crear_Click(object sender, EventArgs e)
         {
             controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
+            //test
         }
     }
 }
