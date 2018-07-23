@@ -22,11 +22,12 @@ namespace prototipo01
         BindingList<edificioDto> edificiosDataSource = new BindingList<edificioDto>();
 
         private int ID_reference;
-        
+ 
 
         public listaEdificios()
         {
             InitializeComponent();
+           
             
         }
 
@@ -97,6 +98,8 @@ namespace prototipo01
         private void listaEdificios_Load_1(object sender, EventArgs e)
         {
             refreshDataSource();
+
+         
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
