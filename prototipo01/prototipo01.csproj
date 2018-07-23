@@ -77,6 +77,7 @@
     <Compile Include="Clases\Validacion.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
+    <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
