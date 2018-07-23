@@ -195,6 +195,7 @@
             this.Name = "Edificion_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edificion_Update";
+            this.Load += new System.EventHandler(this.Edificion_Update_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
