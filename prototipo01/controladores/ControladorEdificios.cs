@@ -48,6 +48,16 @@ namespace prototipo01.controladores
 
 
 
+        //
+
+
+
+
+
+
+
+
+
         //Metodo para guardar un nuevo edificion
         public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)
         {
@@ -78,8 +88,6 @@ namespace prototipo01.controladores
                     var std = db.edificio
                         .Where(s => s.id_edificio == id_edificio)
                         .FirstOrDefault<edificio>();
-
-                  
 
                     return std;
                 }
