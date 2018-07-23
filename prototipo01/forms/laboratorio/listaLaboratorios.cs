@@ -18,6 +18,8 @@ namespace prototipo01
         BindingList<laboratorioDto> laboratorioDataSource = new BindingList<laboratorioDto>();
         ControladorLaboratorio controladorLaboratorio = new ControladorLaboratorio();
 
+        private int ID_reference;
+
         public listaLaboratorios()
         {
             InitializeComponent();
@@ -45,7 +47,7 @@ namespace prototipo01
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Laboratorio_Update lup = new Laboratorio_Update();
+            Laboratorio_Update lup = new Laboratorio_Update(ID_reference);
             lup.Show();
 
             //this.Hide();
@@ -53,7 +55,13 @@ namespace prototipo01
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el Laboratorio", "Eliminar", MessageBoxButtons.YesNo);
 
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                controladorLaboratorio.eliminarLaboratorio(ID_reference);
+                refreshDataSource();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -79,6 +87,20 @@ namespace prototipo01
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             refreshDataSource();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
         }
     }
 }

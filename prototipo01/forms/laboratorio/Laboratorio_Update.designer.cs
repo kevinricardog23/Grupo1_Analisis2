@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laboratorio_Update));
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Cbo_edificio = new System.Windows.Forms.ComboBox();
+            this.Cbo_catedratico = new System.Windows.Forms.ComboBox();
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cbo_salon = new System.Windows.Forms.ComboBox();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -61,8 +61,8 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Btn_actualizar);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.Cbo_edificio);
+            this.tabPage1.Controls.Add(this.Cbo_salon);
+            this.tabPage1.Controls.Add(this.Cbo_catedratico);
             this.tabPage1.Controls.Add(this.Txt_nombre);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -75,15 +75,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Cbo_edificio
+            // Cbo_catedratico
             // 
-            this.Cbo_edificio.FormattingEnabled = true;
-            this.Cbo_edificio.Location = new System.Drawing.Point(484, 230);
-            this.Cbo_edificio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Cbo_edificio.Name = "Cbo_edificio";
-            this.Cbo_edificio.Size = new System.Drawing.Size(257, 29);
-            this.Cbo_edificio.TabIndex = 19;
-            this.Cbo_edificio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_edificio_KeyPress);
+            this.Cbo_catedratico.FormattingEnabled = true;
+            this.Cbo_catedratico.Location = new System.Drawing.Point(484, 230);
+            this.Cbo_catedratico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cbo_catedratico.Name = "Cbo_catedratico";
+            this.Cbo_catedratico.Size = new System.Drawing.Size(257, 29);
+            this.Cbo_catedratico.TabIndex = 19;
+            this.Cbo_catedratico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_edificio_KeyPress);
             // 
             // Txt_nombre
             // 
@@ -162,14 +162,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Laboratorio";
             // 
-            // comboBox1
+            // Cbo_salon
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(484, 319);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 29);
-            this.comboBox1.TabIndex = 20;
+            this.Cbo_salon.FormattingEnabled = true;
+            this.Cbo_salon.Location = new System.Drawing.Point(484, 319);
+            this.Cbo_salon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cbo_salon.Name = "Cbo_salon";
+            this.Cbo_salon.Size = new System.Drawing.Size(257, 29);
+            this.Cbo_salon.TabIndex = 20;
             // 
             // Btn_actualizar
             // 
@@ -185,6 +185,7 @@
             this.Btn_actualizar.TabIndex = 21;
             this.Btn_actualizar.Text = "Actualizar";
             this.Btn_actualizar.UseVisualStyleBackColor = false;
+            this.Btn_actualizar.Click += new System.EventHandler(this.Btn_actualizar_Click_1);
             // 
             // Laboratorio_Update
             // 
@@ -199,6 +200,7 @@
             this.Name = "Laboratorio_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Laboratorio_Update";
+            this.Load += new System.EventHandler(this.Laboratorio_Update_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -215,13 +217,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox Cbo_edificio;
+        private System.Windows.Forms.ComboBox Cbo_catedratico;
         private System.Windows.Forms.TextBox Txt_nombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cbo_salon;
         private System.Windows.Forms.Button Btn_actualizar;
     }
 }

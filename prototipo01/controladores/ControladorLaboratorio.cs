@@ -142,42 +142,20 @@ namespace prototipo01.controladores
 
 
 
-        //obtener id del edificio
-        public int getIdEdificio(string nombre_edificio)
+ 
+
+
+        //Buscar laboratorio
+        public laboratorio buscarLaboratorio(int id_laboratorio)
         {
             try
             {
 
                 using (ModelDADOS db = new ModelDADOS())
                 {
-                    var std = db.edificio
-                        .Where(s => s.nombre_edificio == nombre_edificio)
-                        .FirstOrDefault<edificio>();
-
-                    return std.id_edificio;
-                }
-
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-        }
-
-
-        //Buscar salon
-        public salon buscarSalon(int id_salon)
-        {
-            try
-            {
-
-                using (ModelDADOS db = new ModelDADOS())
-                {
-                    var std = db.salon
-                        .Where(s => s.id_salon == id_salon)
-                        .FirstOrDefault<salon>();
+                    var std = db.laboratorio
+                        .Where(s => s.id_laboratorio == id_laboratorio )
+                        .FirstOrDefault<laboratorio>();
 
                     return std;
                 }
@@ -191,8 +169,8 @@ namespace prototipo01.controladores
         }
 
 
-        //Metodo para eliminar un salon
-        public void eliminarSalon(int id_salon)
+        //Metodo para eliminar laboratorio
+        public void eliminarLaboratorio(int id_laboratorio)
         {
 
             try
@@ -200,11 +178,11 @@ namespace prototipo01.controladores
 
                 using (ModelDADOS db = new ModelDADOS())
                 {
-                    var std = db.salon
-                        .Where(s => s.id_salon == id_salon)
-                        .FirstOrDefault<salon>();
+                    var std = db.laboratorio
+                        .Where(s => s.id_laboratorio == id_laboratorio)
+                        .FirstOrDefault<laboratorio>();
 
-                    db.salon.Remove(std);
+                    db.laboratorio.Remove(std);
                     db.SaveChanges();
 
                 }
