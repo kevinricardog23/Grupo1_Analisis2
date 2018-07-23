@@ -60,6 +60,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /**/
 
             Salon_Create scre = new Salon_Create();
             scre.Show();   
