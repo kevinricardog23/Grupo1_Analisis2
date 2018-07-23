@@ -40,8 +40,8 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //listaEdificios listed = new listaEdificios();
-            //listed.Show();
+            listaEdificios listed = new listaEdificios();
+            listed.Show();
 
             this.Dispose();
         }
