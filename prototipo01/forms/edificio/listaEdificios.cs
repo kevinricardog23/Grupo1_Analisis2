@@ -43,8 +43,6 @@ namespace prototipo01
 
 
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             Edificio_Create  ed = new Edificio_Create();

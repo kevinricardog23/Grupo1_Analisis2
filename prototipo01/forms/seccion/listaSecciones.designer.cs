@@ -113,6 +113,7 @@
             this.Dgv_ListaSecciones.Size = new System.Drawing.Size(1125, 398);
             this.Dgv_ListaSecciones.TabIndex = 9;
             this.Dgv_ListaSecciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Dgv_ListaSecciones.SelectionChanged += new System.EventHandler(this.Dgv_ListaSecciones_SelectionChanged);
             // 
             // Btn_Buscar
             // 
@@ -182,6 +183,7 @@
             this.Name = "listaSecciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listaSecciones";
+            this.Load += new System.EventHandler(this.listaSecciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListaSecciones)).EndInit();
             this.Pnl_ListaSeccion.ResumeLayout(false);
             this.Pnl_ListaSeccion.PerformLayout();
