@@ -40,10 +40,7 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //dash pn = new dash();
-            //pn.Show();
-
-            //this.Dispose();
+           
 
         }
 
@@ -54,6 +51,11 @@ namespace prototipo01
                 MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void listaLaboratorios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
