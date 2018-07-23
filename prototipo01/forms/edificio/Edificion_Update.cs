@@ -42,6 +42,7 @@ namespace prototipo01
         {
             listaEdificios listed = new listaEdificios();
             listed.Show();
+            listed.Dispose();
 
             this.Dispose();
         }
