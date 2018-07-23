@@ -53,5 +53,10 @@ namespace prototipo01.forms.catedraticos
                 return;
             }
         }
+
+        private void Catedratico_Create_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
