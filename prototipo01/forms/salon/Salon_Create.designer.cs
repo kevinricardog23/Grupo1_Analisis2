@@ -103,7 +103,7 @@
             this.comboBox1.Location = new System.Drawing.Point(377, 266);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.Size = new System.Drawing.Size(160, 30);
             this.comboBox1.TabIndex = 7;
             // 
             // textBox2
@@ -220,6 +220,7 @@
             this.Name = "Salon_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salon";
+            this.Load += new System.EventHandler(this.Salon_Create_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

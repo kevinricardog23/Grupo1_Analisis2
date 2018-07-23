@@ -34,9 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,7 +54,7 @@
             this.button3.Location = new System.Drawing.Point(698, 208);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 41);
+            this.button3.Size = new System.Drawing.Size(109, 50);
             this.button3.TabIndex = 12;
             this.button3.Text = "ACTUALIZAR";
             this.button3.UseVisualStyleBackColor = false;
@@ -118,26 +115,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(844, 323);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 330;
-            // 
-            // ubicacion
-            // 
-            this.ubicacion.HeaderText = "Ubicación";
-            this.ubicacion.Name = "ubicacion";
-            this.ubicacion.ReadOnly = true;
-            this.ubicacion.Width = 430;
             // 
             // button1
             // 

@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.models;
+using prototipo01.controladores;
 
 namespace prototipo01
 {
     public partial class Salon_Create : Form
     {
+
+
+        ControladorSalones controladorSalones = new ControladorSalones();
+
         public Salon_Create()
         {
             InitializeComponent();
@@ -19,8 +25,7 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //listaSalones listsal = new listaSalones();
-            //listsal.Show();
+            
 
             this.Dispose();
         }

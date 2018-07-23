@@ -29,7 +29,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(comboBox1.Text))
+            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_descripcion.Text) || string.IsNullOrEmpty(Cbo_edificio.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -49,6 +49,16 @@ namespace prototipo01
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Cbo_edificio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_descripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
