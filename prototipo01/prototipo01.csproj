@@ -224,24 +224,6 @@
     <Compile Include="forms\reportes\Alumnos.Designer.cs">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\salon\ListaSalones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\salon\ListaSalones.designer.cs">
-      <DependentUpon>ListaSalones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\salon\Salon_Create.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\salon\Salon_Create.designer.cs">
-      <DependentUpon>Salon_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\salon\Salon_Update.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\salon\Salon_Update.designer.cs">
-      <DependentUpon>Salon_Update.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\seccion\listaSecciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,15 +358,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\reportes\Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\salon\ListaSalones.resx">
-      <DependentUpon>ListaSalones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\salon\Salon_Create.resx">
-      <DependentUpon>Salon_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\salon\Salon_Update.resx">
-      <DependentUpon>Salon_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\listaSecciones.resx">
       <DependentUpon>listaSecciones.cs</DependentUpon>
