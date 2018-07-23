@@ -27,13 +27,18 @@ namespace prototipo01.forms.permisos
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text) || string.IsNullOrEmpty(checkedListBox1.Text))
+            if (string.IsNullOrEmpty(textBoxNombre.Text) || string.IsNullOrEmpty(textBoxApellidos.Text) || string.IsNullOrEmpty(textBoxPassword.Text) || string.IsNullOrEmpty(textBoxEmail.Text) || string.IsNullOrEmpty(textBoxAlias.Text) || string.IsNullOrEmpty(textBoxTelefono.Text) || string.IsNullOrEmpty(checkedListBox1.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            controladorUsuario.guardarUsuario("andres8m", "Andrés", "Canú", "zxcv", "andres8m@hotmail.com", "24454545");
+            TextBox objTextBoxNombre = (TextBox)textBoxNombre;
+            TextBox objTextBoxApellidos = (TextBox)textBoxApellidos;
+            TextBox objTextBoxPass = (TextBox)textBoxPassword;
+            TextBox objTextBoxEmail = (TextBox)textBoxEmail;
+            TextBox objTextBoxUser = (TextBox)textBoxAlias;
+            TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
+            controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
