@@ -71,7 +71,7 @@
             this.CRUD.Controls.Add(this.tabPage1);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRUD.Location = new System.Drawing.Point(94, 70);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
             this.CRUD.Size = new System.Drawing.Size(876, 498);
@@ -93,9 +93,9 @@
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Location = new System.Drawing.Point(414, 360);
-            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(82, 41);
             this.Btn_crear.TabIndex = 31;
@@ -120,11 +120,12 @@
             // 
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox5.Location = new System.Drawing.Point(538, 267);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(317, 28);
             this.textBox5.TabIndex = 11;
+            this.textBox5.Validated += new System.EventHandler(this.textBox5_Validated);
             // 
             // label6
             // 
@@ -142,12 +143,13 @@
             // 
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox6.Location = new System.Drawing.Point(113, 267);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(317, 28);
             this.textBox6.TabIndex = 9;
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.textBox6.Validated += new System.EventHandler(this.textBox6_Validated);
             // 
             // label7
             // 
@@ -165,11 +167,12 @@
             // 
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox4.Location = new System.Drawing.Point(538, 182);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(317, 28);
             this.textBox4.TabIndex = 7;
+            this.textBox4.Validated += new System.EventHandler(this.textBox4_Validated);
             // 
             // label5
             // 
@@ -187,11 +190,12 @@
             // 
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox3.Location = new System.Drawing.Point(113, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(317, 28);
             this.textBox3.TabIndex = 5;
+            this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
             // 
             // label4
             // 
@@ -209,12 +213,13 @@
             // 
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox2.Location = new System.Drawing.Point(538, 87);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(317, 28);
             this.textBox2.TabIndex = 3;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.textBox2.Validated += new System.EventHandler(this.textBox2_Validated);
             // 
             // label3
             // 
@@ -232,12 +237,13 @@
             // 
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox1.Location = new System.Drawing.Point(113, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 28);
             this.textBox1.TabIndex = 1;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
             // label2
             // 
@@ -257,7 +263,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(94, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 48);
             this.panel1.TabIndex = 4;
@@ -266,7 +272,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(820, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.TabIndex = 3;
@@ -318,7 +324,7 @@
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Estudiante_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estudiante_Create";

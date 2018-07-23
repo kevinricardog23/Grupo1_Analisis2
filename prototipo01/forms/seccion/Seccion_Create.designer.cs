@@ -30,140 +30,141 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seccion_Create));
             this.CRUD = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Tbp_CrearSeccion = new System.Windows.Forms.TabPage();
+            this.Btn_Crear = new System.Windows.Forms.Button();
+            this.Txt_Estado = new System.Windows.Forms.TextBox();
+            this.Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.Lbl_Estado = new System.Windows.Forms.Label();
+            this.Lbl_Nombre = new System.Windows.Forms.Label();
+            this.Pnl_CrearSeccion = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_CrearSeccion = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Tbp_CrearSeccion.SuspendLayout();
+            this.Pnl_CrearSeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CRUD
             // 
-            this.CRUD.Controls.Add(this.tabPage1);
+            this.CRUD.Controls.Add(this.Tbp_CrearSeccion);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRUD.Location = new System.Drawing.Point(12, 76);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
             this.CRUD.Size = new System.Drawing.Size(876, 498);
             this.CRUD.TabIndex = 3;
             // 
-            // tabPage1
+            // Tbp_CrearSeccion
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(868, 466);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Tbp_CrearSeccion.Controls.Add(this.Btn_Crear);
+            this.Tbp_CrearSeccion.Controls.Add(this.Txt_Estado);
+            this.Tbp_CrearSeccion.Controls.Add(this.Txt_Nombre);
+            this.Tbp_CrearSeccion.Controls.Add(this.Lbl_Estado);
+            this.Tbp_CrearSeccion.Controls.Add(this.Lbl_Nombre);
+            this.Tbp_CrearSeccion.Location = new System.Drawing.Point(4, 28);
+            this.Tbp_CrearSeccion.Margin = new System.Windows.Forms.Padding(2);
+            this.Tbp_CrearSeccion.Name = "Tbp_CrearSeccion";
+            this.Tbp_CrearSeccion.Padding = new System.Windows.Forms.Padding(2);
+            this.Tbp_CrearSeccion.Size = new System.Drawing.Size(868, 466);
+            this.Tbp_CrearSeccion.TabIndex = 0;
+            this.Tbp_CrearSeccion.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Btn_Crear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(441, 324);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btn_Crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_Crear.FlatAppearance.BorderSize = 0;
+            this.Btn_Crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Crear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Crear.ForeColor = System.Drawing.Color.White;
+            this.Btn_Crear.Location = new System.Drawing.Point(441, 324);
+            this.Btn_Crear.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Crear.Name = "Btn_Crear";
+            this.Btn_Crear.Size = new System.Drawing.Size(101, 48);
+            this.Btn_Crear.TabIndex = 6;
+            this.Btn_Crear.Text = "Crear";
+            this.Btn_Crear.UseVisualStyleBackColor = false;
+            this.Btn_Crear.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // Txt_Estado
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox2.Location = new System.Drawing.Point(328, 241);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 28);
-            this.textBox2.TabIndex = 3;
+            this.Txt_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Estado.Location = new System.Drawing.Point(328, 241);
+            this.Txt_Estado.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Estado.Multiline = true;
+            this.Txt_Estado.Name = "Txt_Estado";
+            this.Txt_Estado.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Estado.TabIndex = 3;
             // 
-            // textBox1
+            // Txt_Nombre
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(328, 168);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 28);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.Txt_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Nombre.Location = new System.Drawing.Point(328, 168);
+            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre.Multiline = true;
+            this.Txt_Nombre.Name = "Txt_Nombre";
+            this.Txt_Nombre.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Nombre.TabIndex = 1;
+            this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // label3
+            // Lbl_Estado
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(219, 242);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Estado";
+            this.Lbl_Estado.AutoSize = true;
+            this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Estado.Location = new System.Drawing.Point(219, 242);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Estado.Name = "Lbl_Estado";
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
+            this.Lbl_Estado.TabIndex = 2;
+            this.Lbl_Estado.Text = "Estado";
             // 
-            // label2
+            // Lbl_Nombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(219, 169);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
+            this.Lbl_Nombre.AutoSize = true;
+            this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Nombre.Location = new System.Drawing.Point(219, 169);
+            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Nombre.Name = "Lbl_Nombre";
+            this.Lbl_Nombre.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_Nombre.TabIndex = 0;
+            this.Lbl_Nombre.Text = "Nombre";
             // 
-            // panel1
+            // Pnl_CrearSeccion
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 48);
-            this.panel1.TabIndex = 2;
+            this.Pnl_CrearSeccion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pnl_CrearSeccion.Controls.Add(this.pictureBox1);
+            this.Pnl_CrearSeccion.Controls.Add(this.Lbl_CrearSeccion);
+            this.Pnl_CrearSeccion.Location = new System.Drawing.Point(12, 11);
+            this.Pnl_CrearSeccion.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_CrearSeccion.Name = "Pnl_CrearSeccion";
+            this.Pnl_CrearSeccion.Size = new System.Drawing.Size(876, 48);
+            this.Pnl_CrearSeccion.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(812, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // Lbl_CrearSeccion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(8, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Crear Sección";
+            this.Lbl_CrearSeccion.AutoSize = true;
+            this.Lbl_CrearSeccion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CrearSeccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_CrearSeccion.Location = new System.Drawing.Point(8, 16);
+            this.Lbl_CrearSeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_CrearSeccion.Name = "Lbl_CrearSeccion";
+            this.Lbl_CrearSeccion.Size = new System.Drawing.Size(115, 18);
+            this.Lbl_CrearSeccion.TabIndex = 0;
+            this.Lbl_CrearSeccion.Text = "Crear Sección";
             // 
             // Seccion_Create
             // 
@@ -172,17 +173,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 585);
             this.Controls.Add(this.CRUD);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Pnl_CrearSeccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Seccion_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seccion";
             this.CRUD.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Tbp_CrearSeccion.ResumeLayout(false);
+            this.Tbp_CrearSeccion.PerformLayout();
+            this.Pnl_CrearSeccion.ResumeLayout(false);
+            this.Pnl_CrearSeccion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -191,14 +192,14 @@
         #endregion
 
         private System.Windows.Forms.TabControl CRUD;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage Tbp_CrearSeccion;
+        private System.Windows.Forms.Button Btn_Crear;
+        private System.Windows.Forms.TextBox Txt_Estado;
+        private System.Windows.Forms.TextBox Txt_Nombre;
+        private System.Windows.Forms.Label Lbl_Estado;
+        private System.Windows.Forms.Label Lbl_Nombre;
+        private System.Windows.Forms.Panel Pnl_CrearSeccion;
+        private System.Windows.Forms.Label Lbl_CrearSeccion;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -46,5 +46,24 @@ namespace prototipo01.forms.seccion.reportes
         {
             Clases.Validacion.SoloNumeros(e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_CodCat.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_CodCurso.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_Seccion.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }

@@ -19,7 +19,26 @@ namespace prototipo01.forms.seccion.reportes
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_CodCarrera.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_CodAlumno.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Cbo_Jornada.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

@@ -93,6 +93,16 @@ namespace prototipo01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_magnifier_1_32 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-magnifier-1-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_x_mark_7_32 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-x-mark-7-32", resourceCulture);

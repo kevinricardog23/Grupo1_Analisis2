@@ -36,5 +36,36 @@ namespace prototipo01
             controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
             
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim() == "")
+            {
+                epError_Nombre.SetError(textBox1, "Introduce Nombre para el edificio");
+                textBox1.Focus();
+            }
+            else
+            {
+                epError_Nombre.Clear();
+            }
+        }
+
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Trim() == "")
+            {
+                epError_Ubicacion.SetError(textBox2, "Introduce una ubicacion");
+                textBox2.Focus();
+            }
+            else
+            {
+                epError_Ubicacion.Clear();
+            }
+        }
     }
 }

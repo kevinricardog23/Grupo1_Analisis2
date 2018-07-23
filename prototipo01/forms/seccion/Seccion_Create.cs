@@ -29,5 +29,19 @@ namespace prototipo01
         {
             Clases.Validacion.SoloLetras(e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_Nombre.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_Estado.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }

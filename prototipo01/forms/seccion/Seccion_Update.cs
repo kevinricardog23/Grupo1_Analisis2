@@ -32,7 +32,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(Txt_Nombre.Text))
             {
 
                 MessageBox.Show("Debe completar la informacion");
@@ -40,7 +40,7 @@ namespace prototipo01
                 return;
 
             }
-            if (string.IsNullOrEmpty(textBox2.Text))
+            if (string.IsNullOrEmpty(Text_Estado.Text))
             {
 
                 MessageBox.Show("Debe completar la informacion");
