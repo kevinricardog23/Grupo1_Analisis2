@@ -58,5 +58,10 @@ namespace prototipo01.forms.catedraticos
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
