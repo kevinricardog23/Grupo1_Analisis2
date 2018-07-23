@@ -76,9 +76,11 @@
   <ItemGroup>
     <Compile Include="Clases\Validacion.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
+    <Compile Include="controladores\ControladorPensum.cs" />
     <Compile Include="controladores\ControladorSalones.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
     <Compile Include="Dto\edificioDto.cs" />
+    <Compile Include="Dto\PensumDto.cs" />
     <Compile Include="Dto\salonDto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

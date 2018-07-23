@@ -21,6 +21,8 @@ namespace prototipo01.models
 
         public int CARRERA_id_carrera { get; set; }
 
+        public String nombre { get; set; }
+
         public virtual carrera carrera { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
