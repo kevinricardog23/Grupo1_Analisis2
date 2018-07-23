@@ -102,8 +102,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(317, 28);
             this.textBox2.TabIndex = 15;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            this.textBox2.Validated += new System.EventHandler(this.textBox2_Validated);
+          
             // 
             // textBox1
             // 
@@ -114,8 +113,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 28);
             this.textBox1.TabIndex = 11;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
+         
             // 
             // label4
             // 
