@@ -38,9 +38,11 @@
             this.Pnl_ListaSeccion = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_ListaSeccion = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListaSecciones)).BeginInit();
             this.Pnl_ListaSeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_Actualizar
@@ -122,7 +124,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Buscar.Location = new System.Drawing.Point(994, 110);
+            this.Btn_Buscar.Location = new System.Drawing.Point(969, 110);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(109, 50);
@@ -165,12 +167,24 @@
             this.Lbl_ListaSeccion.TabIndex = 0;
             this.Lbl_ListaSeccion.Text = "Lista de secciones";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1097, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // listaSecciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1181, 673);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Lbl_Buscar);
@@ -188,6 +202,7 @@
             this.Pnl_ListaSeccion.ResumeLayout(false);
             this.Pnl_ListaSeccion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +219,6 @@
         private System.Windows.Forms.Panel Pnl_ListaSeccion;
         private System.Windows.Forms.Label Lbl_ListaSeccion;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

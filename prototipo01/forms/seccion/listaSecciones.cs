@@ -116,5 +116,10 @@ namespace prototipo01
             }
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            refreshDataSource();
+        }
     }
 }
