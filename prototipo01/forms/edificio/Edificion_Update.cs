@@ -29,6 +29,20 @@ namespace prototipo01
         }
 
 
+        private void openForm(object formHijo)
+        {
+           
+            this.Controls.Clear();
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
         //Set datos edificio
         private void setData()
         {
@@ -40,11 +54,11 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
-        
-            
 
+            openForm(new listaEdificios());
             this.Dispose();
+
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

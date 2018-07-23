@@ -44,6 +44,7 @@ namespace prototipo01
 
 
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             Edificio_Create  ed = new Edificio_Create();
@@ -56,6 +57,9 @@ namespace prototipo01
 
             if (ID_reference != 0)
             {
+
+
+
                 Edificion_Update edup = new Edificion_Update(ID_reference);
                 edup.Show();
                 
