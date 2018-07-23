@@ -7,15 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.controladores;
+using prototipo01.models;
+using prototipo01.Dto;
 
 namespace prototipo01
 {
     public partial class listaSalones : Form
     {
+
+
+        ControladorSalones controladorSalones = new ControladorSalones();
+        BindingList<salonDto> edificiosDataSource = new BindingList<salonDto>();
+
         public listaSalones()
         {
             InitializeComponent();
         }
+
+
+
+        private void refreshDataSource()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            edificiosDataSource = controladorSalones.listSalones();
+            dataGridView1.DataSource = edificiosDataSource;
+
+        }
+
+
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -48,6 +71,7 @@ namespace prototipo01
 
         private void listaSalones_Load(object sender, EventArgs e)
         {
+            refreshDataSource();
 
         }
     }
