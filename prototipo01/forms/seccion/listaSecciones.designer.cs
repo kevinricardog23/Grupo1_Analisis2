@@ -36,12 +36,11 @@
             this.Dgv_ListaSecciones = new System.Windows.Forms.DataGridView();
             this.Btn_Buscar = new System.Windows.Forms.Button();
             this.Pnl_ListaSeccion = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_ListaSeccion = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListaSecciones)).BeginInit();
             this.Pnl_ListaSeccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +51,7 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(931, 256);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(984, 311);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(108, 50);
@@ -68,7 +67,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(1044, 256);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(1097, 311);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(109, 50);
@@ -82,7 +81,7 @@
             this.Lbl_Buscar.AutoSize = true;
             this.Lbl_Buscar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.Lbl_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Buscar.Location = new System.Drawing.Point(23, 191);
+            this.Lbl_Buscar.Location = new System.Drawing.Point(76, 246);
             this.Lbl_Buscar.Name = "Lbl_Buscar";
             this.Lbl_Buscar.Size = new System.Drawing.Size(71, 23);
             this.Lbl_Buscar.TabIndex = 7;
@@ -93,7 +92,7 @@
             // 
             this.Txt_Buscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Buscar.Location = new System.Drawing.Point(119, 183);
+            this.Txt_Buscar.Location = new System.Drawing.Point(172, 238);
             this.Txt_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Buscar.Multiline = true;
             this.Txt_Buscar.Name = "Txt_Buscar";
@@ -107,7 +106,7 @@
             this.Dgv_ListaSecciones.AllowUserToDeleteRows = false;
             this.Dgv_ListaSecciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_ListaSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_ListaSecciones.Location = new System.Drawing.Point(27, 256);
+            this.Dgv_ListaSecciones.Location = new System.Drawing.Point(80, 311);
             this.Dgv_ListaSecciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_ListaSecciones.Name = "Dgv_ListaSecciones";
             this.Dgv_ListaSecciones.ReadOnly = true;
@@ -124,7 +123,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Buscar.Location = new System.Drawing.Point(969, 110);
+            this.Btn_Buscar.Location = new System.Drawing.Point(1022, 165);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(109, 50);
@@ -136,32 +135,20 @@
             // Pnl_ListaSeccion
             // 
             this.Pnl_ListaSeccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Pnl_ListaSeccion.Controls.Add(this.pictureBox1);
             this.Pnl_ListaSeccion.Controls.Add(this.Lbl_ListaSeccion);
-            this.Pnl_ListaSeccion.Location = new System.Drawing.Point(13, 18);
+            this.Pnl_ListaSeccion.Location = new System.Drawing.Point(66, 85);
             this.Pnl_ListaSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pnl_ListaSeccion.Name = "Pnl_ListaSeccion";
-            this.Pnl_ListaSeccion.Size = new System.Drawing.Size(1157, 59);
+            this.Pnl_ListaSeccion.Size = new System.Drawing.Size(1157, 47);
             this.Pnl_ListaSeccion.TabIndex = 6;
             this.Pnl_ListaSeccion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1084, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Lbl_ListaSeccion
             // 
             this.Lbl_ListaSeccion.AutoSize = true;
             this.Lbl_ListaSeccion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.Lbl_ListaSeccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_ListaSeccion.Location = new System.Drawing.Point(11, 18);
+            this.Lbl_ListaSeccion.Location = new System.Drawing.Point(10, 12);
             this.Lbl_ListaSeccion.Name = "Lbl_ListaSeccion";
             this.Lbl_ListaSeccion.Size = new System.Drawing.Size(177, 23);
             this.Lbl_ListaSeccion.TabIndex = 0;
@@ -170,7 +157,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1097, 110);
+            this.pictureBox2.Location = new System.Drawing.Point(1150, 165);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,12 +165,29 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.button4.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(875, 238);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(52, 48);
+            this.button4.TabIndex = 15;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // listaSecciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1181, 673);
+            this.ClientSize = new System.Drawing.Size(1300, 720);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Btn_Eliminar);
@@ -201,7 +205,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListaSecciones)).EndInit();
             this.Pnl_ListaSeccion.ResumeLayout(false);
             this.Pnl_ListaSeccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,7 +221,7 @@
         private System.Windows.Forms.Button Btn_Buscar;
         private System.Windows.Forms.Panel Pnl_ListaSeccion;
         private System.Windows.Forms.Label Lbl_ListaSeccion;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button4;
     }
 }
