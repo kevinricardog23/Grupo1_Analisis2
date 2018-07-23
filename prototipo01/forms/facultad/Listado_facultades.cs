@@ -21,5 +21,14 @@ namespace prototipo01.forms.facultad
         {
 
         }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_buscar.Text))
+            {
+                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
