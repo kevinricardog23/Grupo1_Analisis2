@@ -34,21 +34,32 @@ namespace prototipo01.forms.estudiante
             openForm(new Listado_estudiante());
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Txt_Nombres_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Clases.Validacion.SoloLetras(e);
         }
+
+        private void Txt_Apellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
            
             
-                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
+                if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_Contraseña.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text))
                 {
                     MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 
             }
+        }
+
+        private void Txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
         }
     }
 }

@@ -29,6 +29,11 @@ namespace prototipo01.forms.estudiante
 
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -37,11 +42,7 @@ namespace prototipo01.forms.estudiante
 
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Clases.Validacion.SoloLetras(e);
-        }
-
+     
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
@@ -134,5 +135,7 @@ namespace prototipo01.forms.estudiante
                 epError_Direccion.Clear();
             }
         }
+
+       
     }
 }

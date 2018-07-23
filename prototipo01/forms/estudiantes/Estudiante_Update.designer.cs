@@ -1,4 +1,6 @@
-﻿namespace prototipo01.forms.estudiante
+﻿using System;
+
+namespace prototipo01.forms.estudiante
 {
     partial class Estudiante_Update
     {
@@ -31,25 +33,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estudiante_Update));
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_actualizar = new System.Windows.Forms.Button();
+            this.Txt_Direccion = new System.Windows.Forms.TextBox();
+            this.Lbl_direccion = new System.Windows.Forms.Label();
+            this.Txt_Telefono = new System.Windows.Forms.TextBox();
+            this.Lbl_telefono = new System.Windows.Forms.Label();
+            this.Txt_Correo = new System.Windows.Forms.TextBox();
+            this.Lbl_Correo = new System.Windows.Forms.Label();
+            this.Txt_Contraseña = new System.Windows.Forms.TextBox();
+            this.Lbl_contraseña = new System.Windows.Forms.Label();
+            this.Txt_Apellidos = new System.Windows.Forms.TextBox();
+            this.Lbl_apellido = new System.Windows.Forms.Label();
+            this.Txt_Nombres = new System.Windows.Forms.TextBox();
+            this.Lbl_nombre = new System.Windows.Forms.Label();
+            this.Pnl_panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Pnl_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             this.CRUD.Controls.Add(this.tabPage1);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CRUD.Location = new System.Drawing.Point(92, 75);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
             this.CRUD.Size = new System.Drawing.Size(876, 498);
@@ -66,192 +68,194 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.Btn_actualizar);
+            this.tabPage1.Controls.Add(this.Txt_Direccion);
+            this.tabPage1.Controls.Add(this.Lbl_direccion);
+            this.tabPage1.Controls.Add(this.Txt_Telefono);
+            this.tabPage1.Controls.Add(this.Lbl_telefono);
+            this.tabPage1.Controls.Add(this.Txt_Correo);
+            this.tabPage1.Controls.Add(this.Lbl_Correo);
+            this.tabPage1.Controls.Add(this.Txt_Contraseña);
+            this.tabPage1.Controls.Add(this.Lbl_contraseña);
+            this.tabPage1.Controls.Add(this.Txt_Apellidos);
+            this.tabPage1.Controls.Add(this.Lbl_apellido);
+            this.tabPage1.Controls.Add(this.Txt_Nombres);
+            this.tabPage1.Controls.Add(this.Lbl_nombre);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Btn_actualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(70)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(424, 355);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 48);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(70)))), ((int)(((byte)(96)))));
+            this.Btn_actualizar.FlatAppearance.BorderSize = 0;
+            this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_actualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
+            this.Btn_actualizar.Location = new System.Drawing.Point(424, 355);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_actualizar.Name = "Btn_actualizar";
+            this.Btn_actualizar.Size = new System.Drawing.Size(101, 48);
+            this.Btn_actualizar.TabIndex = 17;
+            this.Btn_actualizar.Text = "Actualizar";
+            this.Btn_actualizar.UseVisualStyleBackColor = false;
+            this.Btn_actualizar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
+            // Txt_Direccion
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox5.Location = new System.Drawing.Point(538, 267);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(317, 28);
-            this.textBox5.TabIndex = 11;
+            this.Txt_Direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Direccion.Location = new System.Drawing.Point(538, 267);
+            this.Txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Direccion.Multiline = true;
+            this.Txt_Direccion.Name = "Txt_Direccion";
+            this.Txt_Direccion.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Direccion.TabIndex = 11;
             // 
-            // label6
+            // Lbl_direccion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(449, 268);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 19);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Dirección";
+            this.Lbl_direccion.AutoSize = true;
+            this.Lbl_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_direccion.Location = new System.Drawing.Point(449, 268);
+            this.Lbl_direccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_direccion.Name = "Lbl_direccion";
+            this.Lbl_direccion.Size = new System.Drawing.Size(83, 19);
+            this.Lbl_direccion.TabIndex = 10;
+            this.Lbl_direccion.Text = "Dirección";
             // 
-            // textBox6
+            // Txt_Telefono
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox6.Location = new System.Drawing.Point(113, 267);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(317, 28);
-            this.textBox6.TabIndex = 9;
+            this.Txt_Telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Telefono.Location = new System.Drawing.Point(113, 267);
+            this.Txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Telefono.Multiline = true;
+            this.Txt_Telefono.Name = "Txt_Telefono";
+            this.Txt_Telefono.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Telefono.TabIndex = 9;
+            this.Txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Telefono_KeyPress);
             // 
-            // label7
+            // Lbl_telefono
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label7.Location = new System.Drawing.Point(16, 267);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 19);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Telefono";
+            this.Lbl_telefono.AutoSize = true;
+            this.Lbl_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_telefono.Location = new System.Drawing.Point(16, 267);
+            this.Lbl_telefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_telefono.Name = "Lbl_telefono";
+            this.Lbl_telefono.Size = new System.Drawing.Size(74, 19);
+            this.Lbl_telefono.TabIndex = 8;
+            this.Lbl_telefono.Text = "Telefono";
             // 
-            // textBox4
+            // Txt_Correo
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox4.Location = new System.Drawing.Point(538, 182);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(317, 28);
-            this.textBox4.TabIndex = 7;
+            this.Txt_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Correo.Location = new System.Drawing.Point(538, 182);
+            this.Txt_Correo.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Correo.Multiline = true;
+            this.Txt_Correo.Name = "Txt_Correo";
+            this.Txt_Correo.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Correo.TabIndex = 7;
             // 
-            // label5
+            // Lbl_Correo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(449, 183);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 19);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Correo";
+            this.Lbl_Correo.AutoSize = true;
+            this.Lbl_Correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Correo.Location = new System.Drawing.Point(449, 183);
+            this.Lbl_Correo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Correo.Name = "Lbl_Correo";
+            this.Lbl_Correo.Size = new System.Drawing.Size(61, 19);
+            this.Lbl_Correo.TabIndex = 6;
+            this.Lbl_Correo.Text = "Correo";
             // 
-            // textBox3
+            // Txt_Contraseña
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox3.Location = new System.Drawing.Point(113, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 28);
-            this.textBox3.TabIndex = 5;
+            this.Txt_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Contraseña.Location = new System.Drawing.Point(113, 182);
+            this.Txt_Contraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Contraseña.Multiline = true;
+            this.Txt_Contraseña.Name = "Txt_Contraseña";
+            this.Txt_Contraseña.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Contraseña.TabIndex = 5;
             // 
-            // label4
+            // Lbl_contraseña
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(16, 182);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Contraseña";
+            this.Lbl_contraseña.AutoSize = true;
+            this.Lbl_contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_contraseña.Location = new System.Drawing.Point(16, 182);
+            this.Lbl_contraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_contraseña.Name = "Lbl_contraseña";
+            this.Lbl_contraseña.Size = new System.Drawing.Size(98, 19);
+            this.Lbl_contraseña.TabIndex = 4;
+            this.Lbl_contraseña.Text = "Contraseña";
             // 
-            // textBox2
+            // Txt_Apellidos
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox2.Location = new System.Drawing.Point(538, 87);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 28);
-            this.textBox2.TabIndex = 3;
+            this.Txt_Apellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Apellidos.Location = new System.Drawing.Point(538, 87);
+            this.Txt_Apellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Apellidos.Multiline = true;
+            this.Txt_Apellidos.Name = "Txt_Apellidos";
+            this.Txt_Apellidos.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Apellidos.TabIndex = 3;
+            this.Txt_Apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Apellidos_KeyPress);
             // 
-            // label3
+            // Lbl_apellido
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(449, 88);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellidos";
+            this.Lbl_apellido.AutoSize = true;
+            this.Lbl_apellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_apellido.Location = new System.Drawing.Point(449, 88);
+            this.Lbl_apellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_apellido.Name = "Lbl_apellido";
+            this.Lbl_apellido.Size = new System.Drawing.Size(81, 19);
+            this.Lbl_apellido.TabIndex = 2;
+            this.Lbl_apellido.Text = "Apellidos";
             // 
-            // textBox1
+            // Txt_Nombres
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(113, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 28);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Txt_Nombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Nombres.Location = new System.Drawing.Point(113, 87);
+            this.Txt_Nombres.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombres.Multiline = true;
+            this.Txt_Nombres.Name = "Txt_Nombres";
+            this.Txt_Nombres.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Nombres.TabIndex = 1;
+            this.Txt_Nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Nombres_KeyPress);
             // 
-            // label2
+            // Lbl_nombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(16, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombres";
+            this.Lbl_nombre.AutoSize = true;
+            this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_nombre.Location = new System.Drawing.Point(16, 87);
+            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_nombre.Name = "Lbl_nombre";
+            this.Lbl_nombre.Size = new System.Drawing.Size(79, 19);
+            this.Lbl_nombre.TabIndex = 0;
+            this.Lbl_nombre.Text = "Nombres";
             // 
-            // panel1
+            // Pnl_panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(92, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 48);
-            this.panel1.TabIndex = 2;
+            this.Pnl_panel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pnl_panel.Controls.Add(this.pictureBox1);
+            this.Pnl_panel.Controls.Add(this.label1);
+            this.Pnl_panel.Location = new System.Drawing.Point(92, 10);
+            this.Pnl_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_panel.Name = "Pnl_panel";
+            this.Pnl_panel.Size = new System.Drawing.Size(876, 48);
+            this.Pnl_panel.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(820, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.TabIndex = 3;
@@ -277,41 +281,43 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 578);
             this.Controls.Add(this.CRUD);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Pnl_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Estudiante_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estudiante_Update";
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Pnl_panel.ResumeLayout(false);
+            this.Pnl_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
+      
+
         #endregion
 
         private System.Windows.Forms.TabControl CRUD;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox Txt_Nombres;
+        private System.Windows.Forms.Label Lbl_nombre;
+        private System.Windows.Forms.Panel Pnl_panel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Txt_Apellidos;
+        private System.Windows.Forms.Label Lbl_apellido;
+        private System.Windows.Forms.TextBox Txt_Contraseña;
+        private System.Windows.Forms.Label Lbl_contraseña;
+        private System.Windows.Forms.TextBox Txt_Correo;
+        private System.Windows.Forms.Label Lbl_Correo;
+        private System.Windows.Forms.TextBox Txt_Direccion;
+        private System.Windows.Forms.Label Lbl_direccion;
+        private System.Windows.Forms.TextBox Txt_Telefono;
+        private System.Windows.Forms.Label Lbl_telefono;
+        private System.Windows.Forms.Button Btn_actualizar;
     }
 }
