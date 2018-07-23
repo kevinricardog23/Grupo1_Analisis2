@@ -196,6 +196,7 @@
             this.Name = "listaLaboratorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listaLaboratorios";
+            this.Load += new System.EventHandler(this.listaLaboratorios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

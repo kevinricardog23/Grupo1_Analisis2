@@ -67,7 +67,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar un nuevo laboratorio
-        public void guardarSalon(string capacidad_salon, int id_edificio)
+        public void guardarlaboratorio(string capacidad_salon, int id_edificio)
         {
 
             using (ModelDADOS db = new ModelDADOS())

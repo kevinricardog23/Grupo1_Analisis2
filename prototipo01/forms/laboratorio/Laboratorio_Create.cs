@@ -29,7 +29,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_descripcion.Text) || string.IsNullOrEmpty(Cbo_edificio.Text))
+            if (string.IsNullOrEmpty(Txt_nombre.Text)  || string.IsNullOrEmpty(Cbo_edificio.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
