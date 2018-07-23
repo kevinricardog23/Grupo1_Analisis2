@@ -59,8 +59,8 @@ namespace prototipo01.forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            seleccionDeDashboard = "Salones";
-            openForm(new listaSalones());
+          /*  seleccionDeDashboard = "Salones";
+            openForm(new listaSalones());*/
         }
 
         private void button4_Click(object sender, EventArgs e)
