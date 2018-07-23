@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laboratorio_Create));
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Cbo_edificio = new System.Windows.Forms.ComboBox();
+            this.Btn_crear = new System.Windows.Forms.Button();
+            this.cbo_salon = new System.Windows.Forms.ComboBox();
+            this.Cbo_catedratico = new System.Windows.Forms.ComboBox();
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Btn_crear = new System.Windows.Forms.Button();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,8 +61,8 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Btn_crear);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.Cbo_edificio);
+            this.tabPage1.Controls.Add(this.cbo_salon);
+            this.tabPage1.Controls.Add(this.Cbo_catedratico);
             this.tabPage1.Controls.Add(this.Txt_nombre);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -75,16 +75,41 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Cbo_edificio
+            // Btn_crear
             // 
-            this.Cbo_edificio.FormattingEnabled = true;
-            this.Cbo_edificio.Location = new System.Drawing.Point(472, 230);
-            this.Cbo_edificio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Cbo_edificio.Name = "Cbo_edificio";
-            this.Cbo_edificio.Size = new System.Drawing.Size(257, 29);
-            this.Cbo_edificio.TabIndex = 13;
-            this.Cbo_edificio.SelectedIndexChanged += new System.EventHandler(this.Cbo_edificio_SelectedIndexChanged);
-            this.Cbo_edificio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_crear.FlatAppearance.BorderSize = 0;
+            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_crear.ForeColor = System.Drawing.Color.White;
+            this.Btn_crear.Location = new System.Drawing.Point(620, 426);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_crear.Name = "Btn_crear";
+            this.Btn_crear.Size = new System.Drawing.Size(109, 50);
+            this.Btn_crear.TabIndex = 32;
+            this.Btn_crear.Text = "CREAR";
+            this.Btn_crear.UseVisualStyleBackColor = false;
+            this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
+            // 
+            // cbo_salon
+            // 
+            this.cbo_salon.FormattingEnabled = true;
+            this.cbo_salon.Location = new System.Drawing.Point(472, 325);
+            this.cbo_salon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbo_salon.Name = "cbo_salon";
+            this.cbo_salon.Size = new System.Drawing.Size(257, 29);
+            this.cbo_salon.TabIndex = 14;
+            // 
+            // Cbo_catedratico
+            // 
+            this.Cbo_catedratico.FormattingEnabled = true;
+            this.Cbo_catedratico.Location = new System.Drawing.Point(472, 230);
+            this.Cbo_catedratico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Cbo_catedratico.Name = "Cbo_catedratico";
+            this.Cbo_catedratico.Size = new System.Drawing.Size(257, 29);
+            this.Cbo_catedratico.TabIndex = 13;
+            this.Cbo_catedratico.SelectedIndexChanged += new System.EventHandler(this.Cbo_edificio_SelectedIndexChanged);
+            this.Cbo_catedratico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // Txt_nombre
             // 
@@ -95,6 +120,7 @@
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(421, 34);
             this.Txt_nombre.TabIndex = 9;
+            this.Txt_nombre.TextChanged += new System.EventHandler(this.Txt_nombre_TextChanged);
             this.Txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label4
@@ -163,30 +189,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear Laboratorio";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(472, 325);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 29);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // Btn_crear
-            // 
-            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.Btn_crear.FlatAppearance.BorderSize = 0;
-            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_crear.Location = new System.Drawing.Point(620, 426);
-            this.Btn_crear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Btn_crear.Name = "Btn_crear";
-            this.Btn_crear.Size = new System.Drawing.Size(109, 50);
-            this.Btn_crear.TabIndex = 32;
-            this.Btn_crear.Text = "CREAR";
-            this.Btn_crear.UseVisualStyleBackColor = false;
-            // 
             // Laboratorio_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,6 +202,7 @@
             this.Name = "Laboratorio_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Laboratorio";
+            this.Load += new System.EventHandler(this.Laboratorio_Create_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -220,9 +223,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox Cbo_edificio;
+        private System.Windows.Forms.ComboBox Cbo_catedratico;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_salon;
         private System.Windows.Forms.Button Btn_crear;
     }
 }
