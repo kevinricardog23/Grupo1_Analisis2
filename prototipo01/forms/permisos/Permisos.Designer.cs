@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +59,36 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(868, 214);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // correo
+            // 
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            // 
+            // Activo
+            // 
+            this.Activo.HeaderText = "activo";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
             // 
             // panel1
             // 
@@ -120,36 +151,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // nombre
+            // button4
             // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            // 
-            // correo
-            // 
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            // 
-            // Activo
-            // 
-            this.Activo.HeaderText = "activo";
-            this.Activo.Name = "Activo";
-            // 
-            // editar
-            // 
-            this.editar.HeaderText = "Editar";
-            this.editar.Name = "editar";
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.button4.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(631, 148);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(39, 39);
+            this.button4.TabIndex = 15;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 528);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -179,5 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn correo;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Activo;
         private System.Windows.Forms.DataGridViewButtonColumn editar;
+        private System.Windows.Forms.Button button4;
     }
 }

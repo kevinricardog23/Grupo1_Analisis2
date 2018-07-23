@@ -22,5 +22,14 @@ namespace prototipo01.forms.permisos
             CrearUsuario ed = new CrearUsuario();
             ed.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
