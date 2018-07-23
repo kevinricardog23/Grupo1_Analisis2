@@ -24,5 +24,30 @@ namespace prototipo01
 
             this.Dispose();
         }
+
+        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+
+        }
+
+        private void Txt_descripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Btn_actualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_descripcion.Text) || string.IsNullOrEmpty(Cbo_edificio.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }

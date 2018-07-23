@@ -55,5 +55,15 @@ namespace prototipo01.forms.catedraticos
                 return;
             }
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

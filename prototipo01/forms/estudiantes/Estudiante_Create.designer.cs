@@ -1,4 +1,6 @@
-﻿namespace prototipo01.forms.estudiante
+﻿using System;
+
+namespace prototipo01.forms.estudiante
 {
     partial class Estudiante_Create
     {
@@ -242,6 +244,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 28);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
@@ -342,6 +345,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.epError_Direccion)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
