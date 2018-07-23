@@ -33,26 +33,48 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Por favor ingrese todos los campos", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
 
 
             int edificio = controladorSalones.getIdEdificio(comboBox1.Text.ToString());
+            string nombre =textBox1.Text.ToString();
             string capacidad = textBox2.Text.ToString();
 
-            controladorSalones.guardarSalon(capacidad,edificio);
 
 
-
-
-
-        }
-
-        private void Salon_Create_Load(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-            comboBox1.DataSource = controladorSalones.getEdificios();
-            comboBox1.DisplayMember = "Name";
-            comboBox1.ValueMember = "nombre_edificio";
+        }
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim() == "")
+            {
+                epError_Nombre.SetError(textBox1, "Ingrese nombre del salon");
+                textBox1.Focus();
+            }
+            else
+            {
+                epError_Nombre.Clear();
+            }
+        }
 
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Trim() == "")
+            {
+                epError_Capacidad.SetError(textBox2, "Ingrese la capacidad del salon");
+                textBox2.Focus();
+            }
+            else
+            {
+                epError_Nombre.Clear();
+            }
         }
     }
 }

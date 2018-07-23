@@ -53,23 +53,5 @@ namespace prototipo01
 
             this.Dispose();
         }
-
-        private void Salon_Update_Load(object sender, EventArgs e)
-        {
-            setCombo();
-            setData();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            string capacidad = textBox2.Text.ToString();
-            int edificio = controladorSalones.getIdEdificio(comboBox1.Text.ToString());
-
-
-            controladorSalones.actualizarSalon(referencia,capacidad,edificio);
-
-
-        }
     }
 }

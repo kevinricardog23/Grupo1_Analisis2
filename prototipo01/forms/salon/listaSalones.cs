@@ -82,19 +82,5 @@ namespace prototipo01
             refreshDataSource();
 
         }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedCells.Count > 0)
-            {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-
-                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
-
-            }
-
-        }
     }
 }
