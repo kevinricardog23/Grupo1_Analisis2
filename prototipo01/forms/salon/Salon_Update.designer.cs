@@ -80,12 +80,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(664, 416);
+            this.button1.Location = new System.Drawing.Point(597, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 59);
             this.button1.TabIndex = 17;
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -106,6 +107,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox1.Location = new System.Drawing.Point(512, 125);
             this.textBox1.Multiline = true;
@@ -189,6 +191,7 @@
             this.Name = "Salon_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salon_Update";
+            this.Load += new System.EventHandler(this.Salon_Update_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

@@ -72,7 +72,6 @@ namespace prototipo01.controladores
             {
 
                 salon salonNuevo = new salon();
-
                 salonNuevo.capacidad_salon = capacidad_salon;
                 salonNuevo.EDIFICIO_id_edificio = id_edificio;
 
@@ -85,6 +84,37 @@ namespace prototipo01.controladores
         }
 
 
+        //Metodo para actualizar un salon
+        public void actualizarSalon(int id_salon, string capacidad_salon, int id_edificio)
+        {
+
+            try
+            {
+
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var std = db.salon
+                        .Where(s => s.id_salon == id_salon)
+                        .FirstOrDefault<salon>();
+
+                    std.capacidad_salon = capacidad_salon;
+                    std.EDIFICIO_id_edificio = id_edificio;
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
+
+
         //obtener id del edificio
         public int getIdEdificio(string nombre_edificio)
         {
@@ -94,7 +124,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.edificio
-                        .Where(s => s.nombre_edificio ==  nombre_edificio)
+                        .Where(s => s.nombre_edificio == nombre_edificio)
                         .FirstOrDefault<edificio>();
 
                     return std.id_edificio;
@@ -110,40 +140,32 @@ namespace prototipo01.controladores
         }
 
 
-   
-
-
-
-        //Metodo para actualizar un edificio
-        public void actualizarEdificio(int id_edificio, String nombre_edificio, String ubicacion_edificio)
+        //Buscar salon
+        public salon buscarSalon(int id_salon)
         {
-
             try
             {
 
                 using (ModelDADOS db = new ModelDADOS())
                 {
-                    var std = db.edificio
-                        .Where(s => s.id_edificio == id_edificio)
-                        .FirstOrDefault<edificio>();
+                    var std = db.salon
+                        .Where(s => s.id_salon == id_salon)
+                        .FirstOrDefault<salon>();
 
-                    std.nombre_edificio = nombre_edificio;
-                    std.ubicacion_edificio = ubicacion_edificio;
-                    db.SaveChanges();
-
+                    return std;
                 }
+
 
             }
             catch (Exception)
             {
                 throw;
             }
-
         }
 
 
-        //Metodo para eliminar un edificio
-        public void eliminarEdificio(int id_edificio)
+        //Metodo para eliminar un salon
+        public void eliminarSalon(int id_salon)
         {
 
             try
@@ -151,11 +173,11 @@ namespace prototipo01.controladores
 
                 using (ModelDADOS db = new ModelDADOS())
                 {
-                    var std = db.edificio
-                        .Where(s => s.id_edificio == id_edificio)
-                        .FirstOrDefault<edificio>();
+                    var std = db.salon
+                        .Where(s => s.id_salon == id_salon)
+                        .FirstOrDefault<salon>();
 
-                    db.edificio.Remove(std);
+                    db.salon.Remove(std);
                     db.SaveChanges();
 
                 }

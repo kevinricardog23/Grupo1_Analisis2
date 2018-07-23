@@ -25,7 +25,8 @@ namespace prototipo01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            listaSalones listsal = new listaSalones();
+            listsal.Show();
 
             this.Dispose();
         }
@@ -35,10 +36,9 @@ namespace prototipo01
 
 
             int edificio = controladorSalones.getIdEdificio(comboBox1.Text.ToString());
-            string nombre =textBox1.Text.ToString();
             string capacidad = textBox2.Text.ToString();
 
-
+            controladorSalones.guardarSalon(capacidad,edificio);
 
 
 

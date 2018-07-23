@@ -48,15 +48,6 @@ namespace prototipo01.controladores
 
 
 
-        //
-
-
-
-
-
-
-
-
 
         //Metodo para guardar un nuevo edificion
         public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)

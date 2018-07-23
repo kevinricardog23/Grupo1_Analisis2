@@ -114,7 +114,7 @@ namespace prototipo01
             }
 
 
-            /*ID_reference = Convert.ToInt32(this.dataGridView1.Rows[selectedrowindex].Cells[0].Value.ToString());*/
+           
 
         }
 
