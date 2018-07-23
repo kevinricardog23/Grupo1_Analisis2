@@ -144,5 +144,10 @@ namespace prototipo01
 
            
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

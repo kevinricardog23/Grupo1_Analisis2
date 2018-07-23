@@ -59,36 +59,34 @@ namespace prototipo01
         private void button1_Click(object sender, EventArgs e)
         {
 
-            bool error = false;
+            
 
             if (textBox1.Text.Trim() == "")
              {
                  epErrorNombre.SetError(textBox1, "Introduce Nombre para el edificio");
                  textBox1.Focus();
-                error = true;
+                
              }
              else
              {
                  epErrorNombre.Clear();
-                error = false;
+                
             }
 
              if (textBox2.Text.Trim() == "")
              {
                  epErrorDescripcion.SetError(textBox2, "Introduce una Descripcion");
                  textBox2.Focus();
-                error = true;
+              
             }
              else
              {
                  epErrorDescripcion.Clear();
-                error = false;
+               
             }
              
 
-             if (error ==false)
-            {
-                //call update edificio
+      
 
                 TextBox objTextBox = (TextBox)textBox1;
                 string nombre = objTextBox.Text;
@@ -99,8 +97,7 @@ namespace prototipo01
 
 
                 controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
-            }
-
+         
 
         }
 
