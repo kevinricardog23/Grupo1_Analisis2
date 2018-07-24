@@ -43,7 +43,7 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            /*TextBox objTextBox = (TextBox)textBox1;
+            TextBox objTextBox = (TextBox)textBox1;
             string email = objTextBox.Text;
 
             TextBox objTextBox2 = (TextBox)textBox2;
@@ -55,11 +55,11 @@ namespace prototipo01
                 this.Hide();
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
-            }*/
+            }
 
-            this.Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
+            //this.Hide();
+            //Dashboard dashboard = new Dashboard();
+            //dashboard.Show();
 
         }
 
