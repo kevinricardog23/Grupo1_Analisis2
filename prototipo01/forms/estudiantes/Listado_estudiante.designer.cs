@@ -82,6 +82,7 @@
             // Dgb_estudiantes
             // 
             this.Dgb_estudiantes.AllowUserToDeleteRows = false;
+            this.Dgb_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgb_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgb_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_estudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -111,14 +112,12 @@
             this.Nombres.HeaderText = "Nombres";
             this.Nombres.Name = "Nombres";
             this.Nombres.ReadOnly = true;
-            this.Nombres.Width = 200;
             // 
             // Apellidos
             // 
             this.Apellidos.HeaderText = "Apellidos";
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.ReadOnly = true;
-            this.Apellidos.Width = 200;
             // 
             // Contraseña
             // 
@@ -131,7 +130,6 @@
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
-            this.Correo.Width = 150;
             // 
             // Telefono
             // 
@@ -144,12 +142,11 @@
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
-            this.Direccion.Width = 150;
             // 
             // Txt_buscar
             // 
             this.Txt_buscar.Location = new System.Drawing.Point(191, 210);
-            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar.Multiline = true;
             this.Txt_buscar.Name = "Txt_buscar";
             this.Txt_buscar.Size = new System.Drawing.Size(550, 47);
@@ -188,7 +185,7 @@
             this.Pnl_estudiantes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_estudiantes.Controls.Add(this.Lbl_estudiantes);
             this.Pnl_estudiantes.Location = new System.Drawing.Point(31, 65);
-            this.Pnl_estudiantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_estudiantes.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_estudiantes.Name = "Pnl_estudiantes";
             this.Pnl_estudiantes.Size = new System.Drawing.Size(1204, 46);
             this.Pnl_estudiantes.TabIndex = 29;
@@ -237,7 +234,7 @@
             this.Controls.Add(this.Btn_crear);
             this.Controls.Add(this.Pnl_estudiantes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Listado_estudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado_estudiante";
