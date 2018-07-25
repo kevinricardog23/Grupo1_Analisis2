@@ -33,13 +33,22 @@ namespace prototipo01
         }
 
 
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //listaSecciones listsec = new listaSecciones();
-            //listsec.Show();
-
-            this.Dispose();
+            openForm(new listaSecciones());
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

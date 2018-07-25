@@ -37,12 +37,27 @@ namespace prototipo01
         }
 
 
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
-            Seccion_Update sup = new Seccion_Update(ID_reference);
-            sup.Show();
-
-            //this.Hide();
+            openForm(new Seccion_Update(ID_reference));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -73,11 +88,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-            Seccion_Create scre = new Seccion_Create();
-            scre.Show();
-
-            //this.Hide();
+            openForm(new Seccion_Create());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
