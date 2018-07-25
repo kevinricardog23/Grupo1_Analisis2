@@ -18,7 +18,7 @@ namespace prototipo01.forms.curso
 
             if (textBox1.Text.Trim() == "")
             {
-                epError.SetError(textBox1, "Introduce ID de Curso");
+                epError.SetError(textBox1, "Introduce informacion a buscar");
                 textBox1.Focus();
             }
             else
