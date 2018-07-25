@@ -85,7 +85,6 @@ namespace prototipo01
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
         }
 
         private void Cbo_edificio_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,9 +117,19 @@ namespace prototipo01
             string nombre_laboratorio = Txt_nombre.Text.ToString();
             int id_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
             int id_salon = Convert.ToInt32(cbo_salon.Text.ToString());
+            try { 
 
 
             controladorLaboratorio.guardarlaboratorio(nombre_laboratorio,id_catedratico,1,id_salon);
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Txt_nombre.Text = "";
+                Cbo_catedratico.Text = "";
+                cbo_salon.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }

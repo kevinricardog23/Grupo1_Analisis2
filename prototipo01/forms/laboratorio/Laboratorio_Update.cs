@@ -121,9 +121,18 @@ namespace prototipo01
             int dpi_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
             int id_salon = Convert.ToInt32(Cbo_salon.Text.ToString());
 
-
+            try { 
             controladorLaboratorio.actualizarLaboratorio(reference,nombre,dpi_catedratico,1,id_salon);
-            
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Txt_nombre.Text = "";
+                Cbo_catedratico.Text = "";
+                Cbo_salon.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

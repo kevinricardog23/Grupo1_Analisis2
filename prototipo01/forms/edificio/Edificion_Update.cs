@@ -120,10 +120,19 @@ namespace prototipo01
                 TextBox objTextBox2 = (TextBox)textBox2;
                 string ubicacion = objTextBox2.Text;
 
-
+            try
+            {
 
                 controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
-         
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
