@@ -25,12 +25,25 @@ namespace prototipo01
             InitializeComponent();
         }
 
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Laboratorio_Create lcre = new Laboratorio_Create();
-            lcre.Show();
-
-            //this.Hide();
+            openForm(new Laboratorio_Create());
         }
 
 
@@ -47,10 +60,7 @@ namespace prototipo01
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Laboratorio_Update lup = new Laboratorio_Update(ID_reference);
-            lup.Show();
-
-            //this.Hide();
+            openForm(new Laboratorio_Update(ID_reference));
         }
 
         private void button2_Click(object sender, EventArgs e)
