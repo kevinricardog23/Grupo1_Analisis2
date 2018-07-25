@@ -54,6 +54,7 @@ namespace prototipo01.forms.catedraticos
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            MessageBox.Show("Se ha Actualizado exitosamente el catedratico", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

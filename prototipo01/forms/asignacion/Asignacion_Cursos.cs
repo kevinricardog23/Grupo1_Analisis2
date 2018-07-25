@@ -29,6 +29,7 @@ namespace prototipo01.forms.asignacion
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            MessageBox.Show("Se han asignado los cursos exitosamente", "Asignacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)

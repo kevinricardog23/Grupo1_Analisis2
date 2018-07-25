@@ -67,6 +67,7 @@ namespace prototipo01
                 this.Hide();
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
+                MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             //this.Hide();
