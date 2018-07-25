@@ -33,7 +33,7 @@ namespace prototipo01
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
+            controladorEdificios.guardarEdificio(txtBox1.Text.ToString(), txtBox2.Text.ToString());
             
         }
 
@@ -44,10 +44,10 @@ namespace prototipo01
 
         private void textBox1_Validated(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "")
+            if (txtBox1.Text.Trim() == "")
             {
-                epError_Nombre.SetError(textBox1, "Introduce Nombre para el edificio");
-                textBox1.Focus();
+                epError_Nombre.SetError(txtBox1, "Introduce Nombre para el edificio");
+                txtBox1.Focus();
             }
             else
             {
@@ -57,10 +57,10 @@ namespace prototipo01
 
         private void textBox2_Validated(object sender, EventArgs e)
         {
-            if (textBox2.Text.Trim() == "")
+            if (txtBox2.Text.Trim() == "")
             {
-                epError_Ubicacion.SetError(textBox2, "Introduce una ubicacion");
-                textBox2.Focus();
+                epError_Ubicacion.SetError(txtBox2, "Introduce una ubicacion");
+                txtBox2.Focus();
             }
             else
             {

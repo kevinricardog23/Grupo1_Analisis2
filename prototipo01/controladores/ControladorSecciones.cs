@@ -23,9 +23,9 @@ namespace prototipo01.controladores
                     var Query = (from n in db.seccion
                                  select new seccionDto
                                  {
-                                     id_seccion = n.id_seccion,
-                                     seccion_seccion = n.seccion_seccion,
-                                     estado_seccion = n.estado_seccion
+                                     iId_seccion = n.id_seccion,
+                                     sSeccion_seccion = n.seccion_seccion,
+                                     sEstado_seccion = n.estado_seccion
 
                                  }).ToList();
 
@@ -45,7 +45,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar una nueva seccion
-        public void guardarSeccion(string seccion, string estado)
+        public void guardarSeccion(string sSeccion, string sEstado)
         {
 
             using (ModelDADOS db = new ModelDADOS())
@@ -53,8 +53,8 @@ namespace prototipo01.controladores
 
                 seccion seccionNueva = new seccion();
 
-                seccionNueva.seccion_seccion = seccion;
-                seccionNueva.estado_seccion = estado;
+                seccionNueva.seccion_seccion = sSeccion;
+                seccionNueva.estado_seccion = sEstado;
 
                 db.seccion.Add(seccionNueva);
                 db.SaveChanges();
@@ -65,7 +65,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para actualizar un seccion
-        public void actualizarSeccion(int id_seccion, string nombre_seccion, string estado)
+        public void actualizarSeccion(int iId_seccion, string sNombre_seccion, string sEstado)
         {
 
             try
@@ -74,11 +74,11 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.seccion
-                        .Where(s => s.id_seccion == id_seccion)
+                        .Where(s => s.id_seccion == iId_seccion)
                         .FirstOrDefault<seccion>();
 
-                    std.seccion_seccion = nombre_seccion;
-                    std.estado_seccion = estado;
+                    std.seccion_seccion = sNombre_seccion;
+                    std.estado_seccion = sEstado;
                     db.SaveChanges();
 
                 }
@@ -96,7 +96,7 @@ namespace prototipo01.controladores
 
 
         //Buscar seccion
-        public seccion buscarSeccion(int id_seccion)
+        public seccion buscarSeccion(int iId_seccion)
         {
             try
             {
@@ -104,7 +104,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.seccion
-                        .Where(s => s.id_seccion== id_seccion)
+                        .Where(s => s.id_seccion== iId_seccion)
                         .FirstOrDefault<seccion>();
 
                     return std;
@@ -120,7 +120,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para eliminar seccion
-        public void eliminarSeccion(int id_seccion)
+        public void eliminarSeccion(int iId_seccion)
         {
 
             try
@@ -129,7 +129,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.seccion
-                        .Where(s => s.id_seccion == id_seccion)
+                        .Where(s => s.id_seccion == iId_seccion)
                         .FirstOrDefault<seccion>();
 
                     db.seccion.Remove(std);
@@ -147,3 +147,4 @@ namespace prototipo01.controladores
 
     }
 }
+//Se aplicaron las normas de estandarizacion -Valery

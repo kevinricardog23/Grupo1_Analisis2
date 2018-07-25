@@ -54,7 +54,7 @@ namespace prototipo01.forms
         private void button2_Click(object sender, EventArgs e)
         {
             seleccionDeDashboard = "Edificios";   
-            openForm(new listaEdificios());
+            openForm(new Btn_Buscar());
         }
 
         private void button3_Click(object sender, EventArgs e)

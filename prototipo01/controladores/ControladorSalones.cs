@@ -25,9 +25,9 @@ namespace prototipo01.controladores
                     var Query = (from n in db.salon
                                  select new salonDto
                                  {
-                                     id_salon = n.id_salon,
-                                     capacidad_salon = n.capacidad_salon,
-                                     EDIFICIO_id_edificio = n.EDIFICIO_id_edificio
+                                     iId_salon = n.id_salon,
+                                     sCapacidad_salon = n.capacidad_salon,
+                                     iEDIFICIO_id_edificio = n.EDIFICIO_id_edificio
 
                                  }).ToList();
 
@@ -65,15 +65,15 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar un nuevo salon
-        public void guardarSalon(string capacidad_salon, int id_edificio)
+        public void guardarSalon(string sCapacidad_salon, int iId_edificio)
         {
 
             using (ModelDADOS db = new ModelDADOS())
             {
 
                 salon salonNuevo = new salon();
-                salonNuevo.capacidad_salon = capacidad_salon;
-                salonNuevo.EDIFICIO_id_edificio = id_edificio;
+                salonNuevo.capacidad_salon = sCapacidad_salon;
+                salonNuevo.EDIFICIO_id_edificio = iId_edificio;
 
 
                 db.salon.Add(salonNuevo);
@@ -85,7 +85,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para actualizar un salon
-        public void actualizarSalon(int id_salon, string capacidad_salon, int id_edificio)
+        public void actualizarSalon(int iId_salon, string sCapacidad_salon, int iId_edificio)
         {
 
             try
@@ -94,11 +94,11 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.salon
-                        .Where(s => s.id_salon == id_salon)
+                        .Where(s => s.id_salon == iId_salon)
                         .FirstOrDefault<salon>();
 
-                    std.capacidad_salon = capacidad_salon;
-                    std.EDIFICIO_id_edificio = id_edificio;
+                    std.capacidad_salon = sCapacidad_salon;
+                    std.EDIFICIO_id_edificio = iId_edificio;
                     db.SaveChanges();
 
                 }
@@ -116,7 +116,7 @@ namespace prototipo01.controladores
 
 
         //obtener id del edificio
-        public int getIdEdificio(string nombre_edificio)
+        public int getIdEdificio(string sNombre_edificio)
         {
             try
             {
@@ -124,7 +124,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.edificio
-                        .Where(s => s.nombre_edificio == nombre_edificio)
+                        .Where(s => s.nombre_edificio == sNombre_edificio)
                         .FirstOrDefault<edificio>();
 
                     return std.id_edificio;
@@ -141,7 +141,7 @@ namespace prototipo01.controladores
 
 
         //Buscar salon
-        public salon buscarSalon(int id_salon)
+        public salon buscarSalon(int iId_salon)
         {
             try
             {
@@ -149,7 +149,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.salon
-                        .Where(s => s.id_salon == id_salon)
+                        .Where(s => s.id_salon == iId_salon)
                         .FirstOrDefault<salon>();
 
                     return std;
@@ -165,7 +165,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para eliminar un salon
-        public void eliminarSalon(int id_salon)
+        public void eliminarSalon(int iId_salon)
         {
 
             try
@@ -174,7 +174,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.salon
-                        .Where(s => s.id_salon == id_salon)
+                        .Where(s => s.id_salon == iId_salon)
                         .FirstOrDefault<salon>();
 
                     db.salon.Remove(std);
@@ -192,3 +192,4 @@ namespace prototipo01.controladores
 
     }
 }
+//Se aplicaron las normas de estandarizacion -Valery

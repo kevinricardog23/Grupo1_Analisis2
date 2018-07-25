@@ -9,11 +9,12 @@ namespace prototipo01.Dto
     class salonDto
     {
        
-        public int id_salon { get; set; }
+        public int iId_salon { get; set; }
 
-        public string capacidad_salon { get; set; }
+        public string sCapacidad_salon { get; set; }
 
-        public int EDIFICIO_id_edificio { get; set; }
+        public int iEDIFICIO_id_edificio { get; set; }
 
     }
 }
+//Se aplicaron las normas de estandarizacion -Valery

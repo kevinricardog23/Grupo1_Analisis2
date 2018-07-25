@@ -19,10 +19,10 @@ namespace prototipo01
         ControladorLaboratorio controladorLaboratorio = new ControladorLaboratorio();
         private int reference;
 
-        public Laboratorio_Update(int ID_reference)
+        public Laboratorio_Update()
         {
             InitializeComponent();
-            reference = ID_reference;
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

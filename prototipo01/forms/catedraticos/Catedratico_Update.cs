@@ -37,23 +37,19 @@ namespace prototipo01.forms.catedraticos
 
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -64,6 +60,15 @@ namespace prototipo01.forms.catedraticos
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_Actualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBox1.Text) || string.IsNullOrEmpty(txtBox2.Text) || string.IsNullOrEmpty(txtBox3.Text) || string.IsNullOrEmpty(txtBox4.Text) || string.IsNullOrEmpty(txtBox5.Text) || string.IsNullOrEmpty(txtBox6.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }
