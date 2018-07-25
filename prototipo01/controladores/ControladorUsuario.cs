@@ -12,6 +12,7 @@ namespace prototipo01.controladores
     class ControladorUsuario
     {
         ModelDADOS db = new ModelDADOS();
+        
 
 
         public BindingList<UsuarioDto> listaUsuarios()
@@ -75,6 +76,8 @@ namespace prototipo01.controladores
 
             if (usuarioLogin.password_usuario == password)
             {
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);
                 return true;
             }
 

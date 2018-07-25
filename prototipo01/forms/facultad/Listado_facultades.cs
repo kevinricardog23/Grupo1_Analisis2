@@ -19,6 +19,20 @@ namespace prototipo01.forms.facultad
 
         private void button1_Click(object sender, EventArgs e)
         {
+            openForm(new Facultad_Create());
+        }
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
 
         }
 
@@ -29,6 +43,11 @@ namespace prototipo01.forms.facultad
                 MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openForm(new Facultad_Update());
         }
     }
 }

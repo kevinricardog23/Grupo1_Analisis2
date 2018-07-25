@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Validacion.cs" />
+    <Compile Include="controladores\ControladorBitacora.cs" />
     <Compile Include="controladores\ControladorCursos.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
     <Compile Include="controladores\ControladorPensum.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="controladores\ControladorSalones.cs" />
     <Compile Include="controladores\ControladorSecciones.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
+    <Compile Include="Dto\bitacoraDto.cs" />
     <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Dto\laboratorioDto.cs" />
     <Compile Include="Dto\PensumDto.cs" />
@@ -183,6 +185,18 @@
     </Compile>
     <Compile Include="forms\estudiantes\Listado_estudiante.designer.cs">
       <DependentUpon>Listado_estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Create.Designer.cs">
+      <DependentUpon>Facultad_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Update.Designer.cs">
+      <DependentUpon>Facultad_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\facultad\Listado_facultades.cs">
       <SubType>Form</SubType>
@@ -348,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\estudiantes\Listado_estudiante.resx">
       <DependentUpon>Listado_estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facultad\Facultad_Create.resx">
+      <DependentUpon>Facultad_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facultad\Facultad_Update.resx">
+      <DependentUpon>Facultad_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\facultad\Listado_facultades.resx">
       <DependentUpon>Listado_facultades.cs</DependentUpon>
