@@ -9,8 +9,8 @@ namespace prototipo01.Dto
     public class PensumDto
     {
 
-        public int iId { get; set; }
-        public int iId_carrera { get; set; }
-        public string sNombre_pensum { get; set; }
+        public int id { get; set; }
+        public int id_carrera { get; set; }
+        public string nombre_pensum { get; set; }
     }
 }

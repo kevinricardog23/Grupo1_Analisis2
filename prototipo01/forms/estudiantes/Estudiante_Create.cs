@@ -29,7 +29,7 @@ namespace prototipo01.forms.estudiante
 
         }
 
-        private void txtBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }
@@ -43,12 +43,12 @@ namespace prototipo01.forms.estudiante
         }
 
      
-        private void txtBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
         }
 
-        private void txtBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }
@@ -58,12 +58,12 @@ namespace prototipo01.forms.estudiante
 
         }
 
-        private void txtBox1_Validated(object sender, EventArgs e)
+        private void textBox1_Validated(object sender, EventArgs e)
         {
-            if (txtBox1.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "")
             {
-                epError_Nombres.SetError(txtBox1, "Introduce Nombre para el estudiante");
-                txtBox1.Focus();
+                epError_Nombres.SetError(textBox1, "Introduce Nombre para el estudiante");
+                textBox1.Focus();
             }
             else
             {
@@ -71,12 +71,12 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void txtBox2_Validated(object sender, EventArgs e)
+        private void textBox2_Validated(object sender, EventArgs e)
         {
-            if (txtBox2.Text.Trim() == "")
+            if (textBox2.Text.Trim() == "")
             {
-                epError_Apellidos.SetError(txtBox2, "Introduce apellidos del estudiante");
-                txtBox2.Focus();
+                epError_Apellidos.SetError(textBox2, "Introduce apellidos del estudiante");
+                textBox2.Focus();
             }
             else
             {
@@ -84,12 +84,12 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void txtBox3_Validated(object sender, EventArgs e)
+        private void textBox3_Validated(object sender, EventArgs e)
         {
-            if (txtBox3.Text.Trim() == "")
+            if (textBox3.Text.Trim() == "")
             {
-                epError_Pass.SetError(txtBox3, "Introduce la contraseña del estudiante");
-                txtBox3.Focus();
+                epError_Pass.SetError(textBox3, "Introduce la contraseña del estudiante");
+                textBox3.Focus();
             }
             else
             {
@@ -97,12 +97,12 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void txtBox4_Validated(object sender, EventArgs e)
+        private void textBox4_Validated(object sender, EventArgs e)
         {
-            if (txtBox4.Text.Trim() == "")
+            if (textBox4.Text.Trim() == "")
             {
-                epError_Correo.SetError(txtBox4, "Introduce un correo del estudiante");
-                txtBox4.Focus();
+                epError_Correo.SetError(textBox4, "Introduce un correo del estudiante");
+                textBox4.Focus();
             }
             else
             {
@@ -110,12 +110,12 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void txtBox5_Validated(object sender, EventArgs e)
+        private void textBox5_Validated(object sender, EventArgs e)
         {
-            if (txtBox5.Text.Trim() == "")
+            if (textBox5.Text.Trim() == "")
             {
-                epError_Tel.SetError(txtBox5, "Introduce direccion del estudiante");
-                txtBox5.Focus();
+                epError_Tel.SetError(textBox5, "Introduce direccion del estudiante");
+                textBox5.Focus();
             }
             else
             {
@@ -123,12 +123,12 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void txtBox6_Validated(object sender, EventArgs e)
+        private void textBox6_Validated(object sender, EventArgs e)
         {
-            if (txtBox6.Text.Trim() == "")
+            if (textBox6.Text.Trim() == "")
             {
-                epError_Direccion.SetError(txtBox6, "Introduce telefono del estudiante");
-                txtBox6.Focus();
+                epError_Direccion.SetError(textBox6, "Introduce telefono del estudiante");
+                textBox6.Focus();
             }
             else
             {
@@ -136,10 +136,6 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
-//Se aplicaron las normas de estandarizacion de codigo

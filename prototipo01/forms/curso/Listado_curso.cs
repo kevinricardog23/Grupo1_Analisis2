@@ -16,10 +16,10 @@ namespace prototipo01.forms.curso
         {
             InitializeComponent();
 
-            if (txtBox1.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "")
             {
-                epError.SetError(txtBox1, "Introduce ID de Curso");
-                txtBox1.Focus();
+                epError.SetError(textBox1, "Introduce ID de Curso");
+                textBox1.Focus();
             }
             else
             {
@@ -37,36 +37,10 @@ namespace prototipo01.forms.curso
 
         }
 
-        private void txtBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Crear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Actualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Eliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Listado_curso_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-//Se aplicaron las normas de estandarizacion

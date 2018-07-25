@@ -8,9 +8,9 @@ namespace prototipo01.DTO
 {
     public class edificioDto
     {
-        public int iId_edificio { get; set; }
-        public string sNombre_edificio { get; set; }
-        public string sUbicacion_edificio { get; set; } //Se aplicaron las normas de estandarizacion 
+        public int id_edificio { get; set; }
+        public string nombre_edificio { get; set; }
+        public string ubicacion_edificio { get; set; }
 
     }
 }
