@@ -81,8 +81,16 @@ namespace prototipo01
                 string nombre_seccion = Txt_Nombre.Text.ToString();
                 string estado_seccion = Text_Estado.Text.ToString();
 
+                try { 
                 controladorSecciones.actualizarSeccion(reference,nombre_seccion,estado_seccion);
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Txt_Nombre.Text = "";
+                Text_Estado.Text = "";
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
 
         }

@@ -48,7 +48,6 @@ namespace prototipo01.forms.estudiante
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.epError_Nombres = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Pass = new System.Windows.Forms.ErrorProvider(this.components);
@@ -56,16 +55,17 @@ namespace prototipo01.forms.estudiante
             this.epError_Apellidos = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Correo = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Direccion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Nombres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Pass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Tel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Apellidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Correo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Direccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CRUD
@@ -244,7 +244,6 @@ namespace prototipo01.forms.estudiante
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 28);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
@@ -270,17 +269,6 @@ namespace prototipo01.forms.estudiante
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 48);
             this.panel1.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(820, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -318,6 +306,17 @@ namespace prototipo01.forms.estudiante
             // 
             this.epError_Direccion.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(820, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Estudiante_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,20 +335,20 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Nombres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Pass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Tel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Apellidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Correo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epError_Direccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         #endregion

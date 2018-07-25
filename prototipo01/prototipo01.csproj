@@ -106,6 +106,12 @@
     <Compile Include="forms\ayuda\Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\bitacoraLogin\bitacoraL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\bitacoraLogin\bitacoraL.Designer.cs">
+      <DependentUpon>bitacoraL.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\carrera\Listado_carreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     <EmbeddedResource Include="forms\ayuda\Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\bitacoraLogin\bitacoraL.resx">
+      <DependentUpon>bitacoraL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +437,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconmonstr-magnifier-1-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-book-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-angel-left-circle-thin-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

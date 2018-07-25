@@ -73,6 +73,26 @@ namespace prototipo01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_angel_left_circle_thin_321 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-angel-left-circle-thin-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_book_2_32 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-book-2-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_help_3_32 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-help-3-32", resourceCulture);

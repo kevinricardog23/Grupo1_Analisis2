@@ -1,4 +1,5 @@
 ﻿using prototipo01.controladores;
+using prototipo01.forms.bitacoraLogin;
 using prototipo01.Dto;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,18 @@ namespace prototipo01.forms.permisos
 
         }
 
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
         public void refreshGrid()
         {
             this.dataGridView1.DataSource = null;
@@ -55,6 +68,11 @@ namespace prototipo01.forms.permisos
         private void button2_Click(object sender, EventArgs e)
         {
             refreshGrid();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openForm(new bitacoraL());
         }
     }
 }

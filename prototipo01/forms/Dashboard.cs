@@ -16,6 +16,8 @@ using prototipo01.forms.asignacion;
 using prototipo01.forms.estudiante;
 using prototipo01.forms.catedraticos;
 using prototipo01.forms.permisos;
+using prototipo01.forms.bitacoraLogin;
+
 
 namespace prototipo01.forms
 {
@@ -140,6 +142,10 @@ namespace prototipo01.forms
         private void button14_Click(object sender, EventArgs e)
         {
             openForm(new Home());
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
         }
     }
 }

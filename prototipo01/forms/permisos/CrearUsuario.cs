@@ -32,13 +32,26 @@ namespace prototipo01.forms.permisos
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            TextBox objTextBoxNombre = (TextBox)textBoxNombre;
-            TextBox objTextBoxApellidos = (TextBox)textBoxApellidos;
-            TextBox objTextBoxPass = (TextBox)textBoxPassword;
-            TextBox objTextBoxEmail = (TextBox)textBoxEmail;
-            TextBox objTextBoxUser = (TextBox)textBoxAlias;
-            TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
-            controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text);
+            try
+            {
+                TextBox objTextBoxNombre = (TextBox)textBoxNombre;
+                TextBox objTextBoxApellidos = (TextBox)textBoxApellidos;
+                TextBox objTextBoxPass = (TextBox)textBoxPassword;
+                TextBox objTextBoxEmail = (TextBox)textBoxEmail;
+                TextBox objTextBoxUser = (TextBox)textBoxAlias;
+                TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
+                controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text);
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBoxNombre.Text = "";
+                textBoxApellidos.Text = "";
+                textBoxPassword.Text = "";
+                textBoxEmail.Text = "";
+                textBoxAlias.Text = "";
+                textBoxTelefono.Text = "";
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -53,12 +66,10 @@ namespace prototipo01.forms.permisos
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,7 +79,6 @@ namespace prototipo01.forms.permisos
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
         }
 
         private void checkedListBox1_KeyPress(object sender, KeyPressEventArgs e)

@@ -55,8 +55,17 @@ namespace prototipo01
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
-            
+            try
+            {
+                controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)

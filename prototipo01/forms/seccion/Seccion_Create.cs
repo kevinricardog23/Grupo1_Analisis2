@@ -62,9 +62,17 @@ namespace prototipo01
 
                 string nombre = Txt_Nombre.Text.ToString();
                 string estado = Txt_Estado.Text.ToString();
-
-                controladorSecciones.guardarSeccion(nombre,estado);
-            }
+                try
+                {
+                    controladorSecciones.guardarSeccion(nombre, estado);
+                    MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Txt_Nombre.Text = "";
+                    Txt_Estado.Text = "";
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                }
 
 
         }
