@@ -56,6 +56,11 @@ namespace prototipo01.forms.carrera
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 //Se aplicaron las normas de estandarizacion 
