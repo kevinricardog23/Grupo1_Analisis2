@@ -25,11 +25,11 @@ namespace prototipo01.controladores
                                  select new laboratorioDto
                                  {
 
-                                     iId_laboratorio = n.id_laboratorio,
-                                     sDescripcion_laboratorio = n.descripcion_laboratorio,
-                                     iCATEDRATICO_dpi_catedratico = n.CATEDRATICO_dpi_catedratico,
-                                     iHORARIO_id_horario = n.HORARIO_id_horario,
-                                     iSALON_id_salon = n.SALON_id_salon
+                                     id_laboratorio = n.id_laboratorio,
+                                     descripcion_laboratorio = n.descripcion_laboratorio,
+                                     CATEDRATICO_dpi_catedratico = n.CATEDRATICO_dpi_catedratico,
+                                     HORARIO_id_horario = n.HORARIO_id_horario,
+                                     SALON_id_salon = n.SALON_id_salon
 
                                  }).ToList();
 
@@ -87,7 +87,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar un nuevo laboratorio
-        public void guardarlaboratorio(string sNombre_laboratorio, int iDpi_catedratico, int iId_horario, int iId_salon)
+        public void guardarlaboratorio(string nombre_laboratorio, int dpi_catedratico, int id_horario, int id_salon)
         {
 
             using (ModelDADOS db = new ModelDADOS())
@@ -95,10 +95,10 @@ namespace prototipo01.controladores
 
                 laboratorio laboratorioNuevo = new laboratorio();
 
-                laboratorioNuevo.descripcion_laboratorio = sNombre_laboratorio;
-                laboratorioNuevo.CATEDRATICO_dpi_catedratico = iDpi_catedratico;
-                laboratorioNuevo.HORARIO_id_horario = iId_horario;
-                laboratorioNuevo.SALON_id_salon = iId_salon;
+                laboratorioNuevo.descripcion_laboratorio = nombre_laboratorio;
+                laboratorioNuevo.CATEDRATICO_dpi_catedratico = dpi_catedratico;
+                laboratorioNuevo.HORARIO_id_horario = id_horario;
+                laboratorioNuevo.SALON_id_salon = id_salon;
 
                 db.laboratorio.Add(laboratorioNuevo);
                 db.SaveChanges();
@@ -109,7 +109,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para actualizar laboratorio
-        public void actualizarLaboratorio(int iId_laboratorio,string sNombre_laboratorio, int iDpi_catedratico, int iId_horario,int iId_salon)
+        public void actualizarLaboratorio(int id_laboratorio,string nombre_laboratorio, int dpi_catedratico, int id_horario,int id_salon)
         {
 
             try
@@ -118,14 +118,14 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.laboratorio
-                        .Where(s => s.id_laboratorio== iId_laboratorio)
+                        .Where(s => s.id_laboratorio== id_laboratorio)
                         .FirstOrDefault<laboratorio>();
 
 
-                    std.descripcion_laboratorio = sNombre_laboratorio;
-                    std.CATEDRATICO_dpi_catedratico = iDpi_catedratico;
-                    std.HORARIO_id_horario = iId_horario;
-                    std.SALON_id_salon = iId_salon;
+                    std.descripcion_laboratorio = nombre_laboratorio;
+                    std.CATEDRATICO_dpi_catedratico = dpi_catedratico;
+                    std.HORARIO_id_horario = id_horario;
+                    std.SALON_id_salon = id_salon;
                     db.SaveChanges();
 
                 }
@@ -146,7 +146,7 @@ namespace prototipo01.controladores
 
 
         //Buscar laboratorio
-        public laboratorio buscarLaboratorio(int iId_laboratorio)
+        public laboratorio buscarLaboratorio(int id_laboratorio)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.laboratorio
-                        .Where(s => s.id_laboratorio == iId_laboratorio )
+                        .Where(s => s.id_laboratorio == id_laboratorio )
                         .FirstOrDefault<laboratorio>();
 
                     return std;
@@ -170,7 +170,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para eliminar laboratorio
-        public void eliminarLaboratorio(int iId_laboratorio)
+        public void eliminarLaboratorio(int id_laboratorio)
         {
 
             try
@@ -179,7 +179,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.laboratorio
-                        .Where(s => s.id_laboratorio == iId_laboratorio)
+                        .Where(s => s.id_laboratorio == id_laboratorio)
                         .FirstOrDefault<laboratorio>();
 
                     db.laboratorio.Remove(std);
@@ -196,4 +196,3 @@ namespace prototipo01.controladores
         }
     }
 }
-//Se aplicaron las normas de estandarizacion -Valery

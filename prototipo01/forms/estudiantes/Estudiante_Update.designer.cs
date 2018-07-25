@@ -103,7 +103,7 @@ namespace prototipo01.forms.estudiante
             this.Btn_actualizar.TabIndex = 17;
             this.Btn_actualizar.Text = "Actualizar";
             this.Btn_actualizar.UseVisualStyleBackColor = false;
-            this.Btn_actualizar.Click += new System.EventHandler(this.Btn_actualizar_Click);
+            this.Btn_actualizar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Txt_Direccion
             // 

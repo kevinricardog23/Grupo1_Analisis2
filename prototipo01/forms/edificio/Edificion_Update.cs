@@ -47,32 +47,72 @@ namespace prototipo01
         private void setData()
         {
             edificio Model = controladorEdificios.buscarEdificio(reference);
-            txtBox1.Text = Model.nombre_edificio.ToString();
-            txtBox2.Text = Model.ubicacion_edificio.ToString();
+            textBox1.Text = Model.nombre_edificio.ToString();
+            textBox2.Text = Model.ubicacion_edificio.ToString();
         }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            openForm(new Btn_Buscar());
+            openForm(new listaEdificios());
             this.Dispose();
 
 
         }
 
-        private void txtBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }
 
-        private void txtBox2_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
+
+            if (textBox1.Text.Trim() == "")
+             {
+                 epErrorNombre.SetError(textBox1, "Introduce Nombre para el edificio");
+                 textBox1.Focus();
+                
+             }
+             else
+             {
+                 epErrorNombre.Clear();
+                
+            }
+
+             if (textBox2.Text.Trim() == "")
+             {
+                 epErrorDescripcion.SetError(textBox2, "Introduce una Descripcion");
+                 textBox2.Focus();
+              
+            }
+             else
+             {
+                 epErrorDescripcion.Clear();
+               
+            }
+             
+
+      
+
+                TextBox objTextBox = (TextBox)textBox1;
+                string nombre = objTextBox.Text;
+
+                TextBox objTextBox2 = (TextBox)textBox2;
+                string ubicacion = objTextBox2.Text;
+
+
+
+                controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
+         
 
         }
 
@@ -81,49 +121,5 @@ namespace prototipo01
             setData();
 
         }
-
-        private void Btn_Actualizar_Click(object sender, EventArgs e)
-        {
-
-
-            if (txtBox1.Text.Trim() == "")
-            {
-                epErrorNombre.SetError(txtBox1, "Introduce Nombre para el edificio");
-                txtBox1.Focus();
-
-            }
-            else
-            {
-                epErrorNombre.Clear();
-
-            }
-
-            if (txtBox2.Text.Trim() == "")
-            {
-                epErrorDescripcion.SetError(txtBox2, "Introduce una Descripcion");
-                txtBox2.Focus();
-
-            }
-            else
-            {
-                epErrorDescripcion.Clear();
-
-            }
-
-
-
-
-            TextBox objTextBox = (TextBox)txtBox1;
-            string nombre = objTextBox.Text;
-
-            TextBox objTextBox2 = (TextBox)txtBox2;
-            string ubicacion = objTextBox2.Text;
-
-
-
-            controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
-
-        }
     }
 }
-//Se aplicaron los normas de estandarizacion

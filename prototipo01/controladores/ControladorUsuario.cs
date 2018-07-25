@@ -21,13 +21,13 @@ namespace prototipo01.controladores
                 var Query = (from n in db.usuario
                              select new UsuarioDto
                              {
-                                 iId_usuario = n.id_usuario,
-                                 sUsuario_usuario = n.usuario_usuario,
-                                 sNombre_usuario = n.nombre_usuario,
-                                 sApellido_usuario = n.apellido_usuario,
+                                 id_usuario = n.id_usuario,
+                                 usuario_usuario = n.usuario_usuario,
+                                 nombre_usuario = n.nombre_usuario,
+                                 apellido_usuario = n.apellido_usuario,
                                  //password_usuario = n.password_usuario,
-                                 sTelefono_usuario = n.telefono_usuario,
-                                 sCorreo_usuario = n.correo_usuario
+                                 telefono_usuario = n.telefono_usuario,
+                                 correo_usuario = n.correo_usuario
                              }).ToList();
 
                 BindingList<UsuarioDto> result = new BindingList<UsuarioDto>(Query);
@@ -38,42 +38,42 @@ namespace prototipo01.controladores
         }
 
 
-        public void guardarUsuario(String sUsuario_alias, String sNombre, String sApellido, String sPassword, String sEmail, String sTelefono)
+        public void guardarUsuario(String usuario_alias, String nombre, String apellido, String password, String email, String telefono)
         {
             //controladorUsuario.guardarUsuario("andres8m","Andrés","Canú","zxcv","andres.8m@hotmail.com","24454545");      
             usuario usuarioNuevo = new usuario();
-            usuarioNuevo.usuario_usuario = sUsuario_alias;
-            usuarioNuevo.nombre_usuario = sNombre;
-            usuarioNuevo.apellido_usuario = sApellido;
-            usuarioNuevo.password_usuario = sPassword;
-            usuarioNuevo.telefono_usuario = sTelefono;
-            usuarioNuevo.correo_usuario = sEmail;
+            usuarioNuevo.usuario_usuario = usuario_alias;
+            usuarioNuevo.nombre_usuario = nombre;
+            usuarioNuevo.apellido_usuario = apellido;
+            usuarioNuevo.password_usuario = password;
+            usuarioNuevo.telefono_usuario = telefono;
+            usuarioNuevo.correo_usuario = email;
             db.usuario.Add(usuarioNuevo);     
             db.SaveChanges();
         }
 
-        public usuario buscarUsuarioCorreo(string sCorreo)
+        public usuario buscarUsuarioCorreo(string correo)
         {
             usuario user = null;
             using (var ctx = db)
             {
                  user = new usuario();
                  user = ctx.usuario
-                              .Where(s => s.correo_usuario == sCorreo)
+                              .Where(s => s.correo_usuario == correo)
                               .FirstOrDefault<usuario>();
             }
 
             return user;
         }
 
-        public Boolean login(usuario usuarioLogin, String sPassword)
+        public Boolean login(usuario usuarioLogin, String password)
         {
             if (usuarioLogin == null)
             {
                 return false;
             }
 
-            if (usuarioLogin.password_usuario == sPassword)
+            if (usuarioLogin.password_usuario == password)
             {
                 return true;
             }
@@ -88,4 +88,3 @@ namespace prototipo01.controladores
 
     }
 }
-//Se aplicaron las normas de estandarizacion -Valery

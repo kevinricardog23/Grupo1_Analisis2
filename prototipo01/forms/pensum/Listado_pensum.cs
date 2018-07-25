@@ -74,7 +74,7 @@ namespace prototipo01.forms.pensum
                 PensumDto cust = row.DataBoundItem as PensumDto;
                 if (cust != null)
                 {
-                    objTextBox.Text = cust.sNombre_pensum;
+                    objTextBox.Text = cust.nombre_pensum;
               
                 }
             }

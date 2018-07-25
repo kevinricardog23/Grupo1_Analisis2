@@ -26,41 +26,14 @@ namespace prototipo01.forms.carrera
         {
 
         }
-/*
+
         private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-*/
-        private void Btn_Eliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Actualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Buscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Crear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }
-//Se aplicaron las normas de estandarizacion 
