@@ -52,6 +52,7 @@ namespace prototipo01.forms.catedraticos
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            
         }
 
         private void Catedratico_Create_Load(object sender, EventArgs e)

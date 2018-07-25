@@ -35,7 +35,7 @@ namespace prototipo01.forms.asignacion
         {
             if (string.IsNullOrEmpty(textBox4.Text))
             {
-                MessageBox.Show("Debe ingresar el numero de la boleta de pago.", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -197,11 +198,29 @@
             this.textBox2.Size = new System.Drawing.Size(146, 20);
             this.textBox2.TabIndex = 16;
             // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_Buscar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
+            this.Btn_Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Buscar.FlatAppearance.BorderSize = 0;
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Buscar.Location = new System.Drawing.Point(720, 264);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(39, 39);
+            this.Btn_Buscar.TabIndex = 17;
+            this.Btn_Buscar.UseVisualStyleBackColor = false;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
+            // 
             // Listado_pensum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 578);
+            this.Controls.Add(this.Btn_Buscar);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -238,5 +257,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Btn_Buscar;
     }
 }

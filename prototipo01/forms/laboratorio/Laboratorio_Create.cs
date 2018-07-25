@@ -89,7 +89,21 @@ namespace prototipo01
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(Txt_nombre.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Cbo_catedratico.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(cbo_salon.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string nombre_laboratorio = Txt_nombre.Text.ToString();
             int id_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
             int id_salon = Convert.ToInt32(cbo_salon.Text.ToString());

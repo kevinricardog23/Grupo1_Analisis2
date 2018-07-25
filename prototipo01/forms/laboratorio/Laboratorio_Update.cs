@@ -89,6 +89,21 @@ namespace prototipo01
 
         private void Btn_actualizar_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Txt_nombre.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Cbo_catedratico.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Cbo_salon.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string nombre = Txt_nombre.Text.ToString();
             int dpi_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
             int id_salon = Convert.ToInt32(Cbo_salon.Text.ToString());

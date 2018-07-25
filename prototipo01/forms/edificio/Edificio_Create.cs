@@ -33,6 +33,16 @@ namespace prototipo01
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             controladorEdificios.guardarEdificio(textBox1.Text.ToString(), textBox2.Text.ToString());
             
         }

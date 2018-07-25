@@ -43,10 +43,22 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            TextBox objTextBox = (TextBox)textBox1;
+
+            if (string.IsNullOrEmpty(Txt_Correo.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txt_password.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            TextBox objTextBox = (TextBox)Txt_Correo;
             string email = objTextBox.Text;
 
-            TextBox objTextBox2 = (TextBox)textBox2;
+            TextBox objTextBox2 = (TextBox)Txt_password;
             string pass = objTextBox2.Text;
 
 

@@ -31,7 +31,7 @@ namespace prototipo01.forms.carrera
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
