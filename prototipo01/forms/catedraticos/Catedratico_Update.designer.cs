@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Catedratico_Update));
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Btn_Actualizar = new System.Windows.Forms.Button();
+            this.txtBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBox3 = new System.Windows.Forms.TextBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,18 +66,18 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.Btn_Actualizar);
+            this.tabPage1.Controls.Add(this.txtBox5);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.txtBox6);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.txtBox4);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.txtBox3);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtBox2);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtBox1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -87,32 +87,32 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Btn_Actualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(70)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(424, 355);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 48);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(70)))), ((int)(((byte)(96)))));
+            this.Btn_Actualizar.FlatAppearance.BorderSize = 0;
+            this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Actualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Actualizar.Location = new System.Drawing.Point(424, 355);
+            this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Actualizar.Name = "Btn_Actualizar";
+            this.Btn_Actualizar.Size = new System.Drawing.Size(101, 48);
+            this.Btn_Actualizar.TabIndex = 17;
+            this.Btn_Actualizar.Text = "Actualizar";
+            this.Btn_Actualizar.UseVisualStyleBackColor = false;
+            this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click);
             // 
-            // textBox5
+            // txtBox5
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox5.Location = new System.Drawing.Point(538, 267);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(317, 28);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox5.Location = new System.Drawing.Point(538, 267);
+            this.txtBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox5.Multiline = true;
+            this.txtBox5.Name = "txtBox5";
+            this.txtBox5.Size = new System.Drawing.Size(317, 28);
+            this.txtBox5.TabIndex = 11;
+            this.txtBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -126,16 +126,16 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Dirección";
             // 
-            // textBox6
+            // txtBox6
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox6.Location = new System.Drawing.Point(113, 267);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(317, 28);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.txtBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox6.Location = new System.Drawing.Point(113, 267);
+            this.txtBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox6.Multiline = true;
+            this.txtBox6.Name = "txtBox6";
+            this.txtBox6.Size = new System.Drawing.Size(317, 28);
+            this.txtBox6.TabIndex = 9;
+            this.txtBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox3_KeyPress);
             // 
             // label7
             // 
@@ -149,16 +149,16 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Edad";
             // 
-            // textBox4
+            // txtBox4
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox4.Location = new System.Drawing.Point(538, 182);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(317, 28);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox4.Location = new System.Drawing.Point(538, 182);
+            this.txtBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox4.Multiline = true;
+            this.txtBox4.Name = "txtBox4";
+            this.txtBox4.Size = new System.Drawing.Size(317, 28);
+            this.txtBox4.TabIndex = 7;
+            this.txtBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -172,17 +172,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Correo";
             // 
-            // textBox3
-            // 
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox3.Location = new System.Drawing.Point(113, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 28);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -195,16 +184,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Telefono";
             // 
-            // textBox2
+            // txtBox2
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox2.Location = new System.Drawing.Point(538, 87);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 28);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox2.Location = new System.Drawing.Point(538, 87);
+            this.txtBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox2.Multiline = true;
+            this.txtBox2.Name = "txtBox2";
+            this.txtBox2.Size = new System.Drawing.Size(317, 28);
+            this.txtBox2.TabIndex = 3;
+            this.txtBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox1_KeyPress);
             // 
             // label3
             // 
@@ -218,16 +207,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellidos";
             // 
-            // textBox1
+            // txtBox1
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(113, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 28);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox1.Location = new System.Drawing.Point(113, 87);
+            this.txtBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox1.Multiline = true;
+            this.txtBox1.Name = "txtBox1";
+            this.txtBox1.Size = new System.Drawing.Size(317, 28);
+            this.txtBox1.TabIndex = 1;
+            this.txtBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox1_KeyPress);
             // 
             // label2
             // 
@@ -275,6 +264,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Catedratico";
             // 
+            // txtBox3
+            // 
+            this.txtBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBox3.Location = new System.Drawing.Point(113, 182);
+            this.txtBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox3.Multiline = true;
+            this.txtBox3.Name = "txtBox3";
+            this.txtBox3.Size = new System.Drawing.Size(317, 28);
+            this.txtBox3.TabIndex = 5;
+            this.txtBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox3_KeyPress);
+            // 
             // Catedratico_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,21 +302,21 @@
 
         private System.Windows.Forms.TabControl CRUD;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button Btn_Actualizar;
+        private System.Windows.Forms.TextBox txtBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBox6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBox3;
     }
 }

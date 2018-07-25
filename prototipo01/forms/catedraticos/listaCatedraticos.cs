@@ -29,7 +29,7 @@ namespace prototipo01.forms.catedraticos
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       /* private void button1_Click(object sender, EventArgs e)
         {
             openForm(new Catedratico_Create());
         }
@@ -41,11 +41,30 @@ namespace prototipo01.forms.catedraticos
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(txtBox1.Text))
             {
                 MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+        */
+        private void Btn_Crear_Click(object sender, EventArgs e)
+        {
+            openForm(new Catedratico_Create());
+        }
+
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBox1.Text))
+            {
+                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void Btn_Actualizar_Click(object sender, EventArgs e)
+        {
+            openForm(new Catedratico_Update());
         }
     }
 }

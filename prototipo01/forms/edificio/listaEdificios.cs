@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace prototipo01
 {
-    public partial class listaEdificios : Form
+    public partial class Btn_Buscar : Form
     {
 
         ControladorEdificios controladorEdificios = new ControladorEdificios();
@@ -24,7 +24,7 @@ namespace prototipo01
         private int ID_reference;
  
 
-        public listaEdificios()
+        public Btn_Buscar()
         {
             InitializeComponent();
            
@@ -43,13 +43,7 @@ namespace prototipo01
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Edificio_Create  ed = new Edificio_Create();
-            ed.Show();
-           // this.Hide();
-        }
-
+       /*
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -67,12 +61,7 @@ namespace prototipo01
             }
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        */
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -134,7 +123,7 @@ namespace prototipo01
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       /* private void button2_Click(object sender, EventArgs e)
 
         {
 
@@ -148,14 +137,14 @@ namespace prototipo01
 
 
            
-        }
+        }*/
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtBox1_TextChanged(object sender, EventArgs e)
         {
           
         }
@@ -163,6 +152,49 @@ namespace prototipo01
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             refreshDataSource();
+        }
+
+        private void Btn_Crear_Click(object sender, EventArgs e)
+        {
+            Edificio_Create ed = new Edificio_Create();
+            ed.Show();
+            // this.Hide();
+        }
+
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Actualizar_Click(object sender, EventArgs e)
+        {
+
+            if (ID_reference != 0)
+            {
+
+
+
+                Edificion_Update edup = new Edificion_Update(ID_reference);
+                edup.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un edificio");
+            }
+
+        }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el edificio?", "Eliminar", MessageBoxButtons.YesNo);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                controladorEdificios.eliminarEdificio(ID_reference);
+                refreshDataSource();
+            }
         }
     }
 }

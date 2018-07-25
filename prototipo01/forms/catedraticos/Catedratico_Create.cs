@@ -47,7 +47,7 @@ namespace prototipo01.forms.catedraticos
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
+            if (string.IsNullOrEmpty(txtBox1.Text) || string.IsNullOrEmpty(txtBox2.Text) || string.IsNullOrEmpty(txtBox3.Text) || string.IsNullOrEmpty(txtBox4.Text) || string.IsNullOrEmpty(txtBox5.Text) || string.IsNullOrEmpty(txtBox6.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

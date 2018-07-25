@@ -9,25 +9,26 @@ namespace prototipo01.Dto
     public class UsuarioDto
     {
 
-        public int id_usuario { get; set; }
+        public int iId_usuario { get; set; }
 
         
-        public string usuario_usuario { get; set; }
+        public string sUsuario_usuario { get; set; }
 
        
-        public string nombre_usuario { get; set; }
+        public string sNombre_usuario { get; set; }
 
        
-        public string apellido_usuario { get; set; }
+        public string sApellido_usuario { get; set; }
 
         
         //public string password_usuario { get; set; }
 
        
-        public string correo_usuario { get; set; }
+        public string sCorreo_usuario { get; set; }
 
         
-        public string telefono_usuario { get; set; }
+        public string sTelefono_usuario { get; set; }
 
     }
 }
+//Se aplicaron las normas de estandarizacion -Valery

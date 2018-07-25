@@ -45,21 +45,21 @@ namespace prototipo01.forms.estudiante
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            
-                if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_Contraseña.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text))
-                {
-                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                
-            }
-        }
+       
 
         private void Txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
         }
-    }
+
+        private void Btn_actualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_Contraseña.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+        }
+}
 }

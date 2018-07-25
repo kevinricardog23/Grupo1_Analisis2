@@ -19,9 +19,9 @@ namespace prototipo01.controladores
                 var Query = (from n in db.pensum
                              select new PensumDto
                              {
-                                 id = n.id_pensum,
-                                 id_carrera = n.CARRERA_id_carrera,
-                                 nombre_pensum = n.nombre
+                                 iId = n.id_pensum,
+                                 iId_carrera = n.CARRERA_id_carrera,
+                                 sNombre_pensum = n.nombre
                              }).ToList();
 
                 BindingList<PensumDto> result = new BindingList<PensumDto>(Query);
@@ -32,17 +32,17 @@ namespace prototipo01.controladores
         }
 
 
-        public void guardarPensum(int idCarrera, String nombre)
+        public void guardarPensum(int iIdCarrera, String sNombre)
         {
             pensum pensumNuevo = new pensum();
             //usuarioNuevo.id_pensum = usuario_alias;
-            pensumNuevo.CARRERA_id_carrera = idCarrera;
-            pensumNuevo.nombre = nombre;
+            pensumNuevo.CARRERA_id_carrera = iIdCarrera;
+            pensumNuevo.nombre = sNombre;
             db.pensum.Add(pensumNuevo);
             db.SaveChanges();
         }
 
-        public pensum buscarPensum(int idPensum)
+        public pensum buscarPensum(int iIdPensum)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.pensum
-                        .Where(s => s.id_pensum == idPensum)
+                        .Where(s => s.id_pensum == iIdPensum)
                         .FirstOrDefault<pensum>();
 
                     return std;
@@ -64,18 +64,18 @@ namespace prototipo01.controladores
             }
         }
 
-        public void actualizarPensum(int idPensum, int carrera, String nombre)
+        public void actualizarPensum(int iIdPensum, int iCarrera, String sNombre)
         {
             try
             {
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.pensum
-                        .Where(s => s.id_pensum == idPensum)
+                        .Where(s => s.id_pensum == iIdPensum)
                         .FirstOrDefault<pensum>();
 
-                    std.nombre = nombre;
-                    std.CARRERA_id_carrera = carrera;
+                    std.nombre = sNombre;
+                    std.CARRERA_id_carrera = iCarrera;
                     db.SaveChanges();
 
                 }
@@ -94,3 +94,4 @@ namespace prototipo01.controladores
     }
 }
 
+//Se aplicaron las normas de estandarizacion -Valery

@@ -26,9 +26,9 @@ namespace prototipo01.controladores
                     var Query = (from n in db.edificio
                                  select new edificioDto
                                  {
-                                     id_edificio = n.id_edificio,
-                                     nombre_edificio = n.nombre_edificio,
-                                     ubicacion_edificio = n.ubicacion_edificio
+                                     iId_edificio = n.id_edificio,
+                                     sNombre_edificio = n.nombre_edificio,
+                                     sUbicacion_edificio = n.ubicacion_edificio
 
                                  }).ToList();
 
@@ -50,15 +50,15 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar un nuevo edificion
-        public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)
+        public void guardarEdificio(String sNombre_edificio, String sUbicacion_edificio)
         {
             ModelDADOS db = new ModelDADOS();
 
 
             edificio edificioNuevo = new edificio();
 
-            edificioNuevo.nombre_edificio = nombre_edificio;
-            edificioNuevo.ubicacion_edificio = ubicacion_edificio;
+            edificioNuevo.nombre_edificio = sNombre_edificio;
+            edificioNuevo.ubicacion_edificio = sUbicacion_edificio;
 
             db.edificio.Add(edificioNuevo);
             db.SaveChanges();
@@ -69,7 +69,7 @@ namespace prototipo01.controladores
 
         //Funcion para buscar edificio
 
-        public edificio buscarEdificio(int id_edificio)
+        public edificio buscarEdificio(int iId_edificio)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.edificio
-                        .Where(s => s.id_edificio == id_edificio)
+                        .Where(s => s.id_edificio == iId_edificio)
                         .FirstOrDefault<edificio>();
 
                     return std;
@@ -94,7 +94,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para actualizar un edificio
-        public void actualizarEdificio(int id_edificio, String nombre_edificio, String ubicacion_edificio)
+        public void actualizarEdificio(int iId_edificio, String sNombre_edificio, String sUbicacion_edificio)
         {
 
             try
@@ -103,11 +103,11 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std =db.edificio
-                        .Where(s => s.id_edificio == id_edificio)
+                        .Where(s => s.id_edificio == iId_edificio)
                         .FirstOrDefault<edificio>();
 
-                    std.nombre_edificio = nombre_edificio;
-                    std.ubicacion_edificio = ubicacion_edificio;
+                    std.nombre_edificio = sNombre_edificio;
+                    std.ubicacion_edificio = sUbicacion_edificio;
                     db.SaveChanges();
                 
                 }
@@ -122,7 +122,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para eliminar un edificio
-        public void eliminarEdificio(int id_edificio)
+        public void eliminarEdificio(int iId_edificio)
         {
 
             try
@@ -131,7 +131,7 @@ namespace prototipo01.controladores
                 using (ModelDADOS db = new ModelDADOS())
                 {
                     var std = db.edificio
-                        .Where(s => s.id_edificio == id_edificio)
+                        .Where(s => s.id_edificio == iId_edificio)
                         .FirstOrDefault<edificio>();
 
                     db.edificio.Remove(std);
@@ -153,4 +153,4 @@ namespace prototipo01.controladores
 
 
     }
-}
+} //Se aplicaron las normas de estandarizacion -Valery
