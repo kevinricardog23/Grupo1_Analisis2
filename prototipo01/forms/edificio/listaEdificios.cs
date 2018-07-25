@@ -62,9 +62,7 @@ namespace prototipo01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Edificio_Create  ed = new Edificio_Create();
-            ed.Show();
-           // this.Hide();
+            openForm(new Edificio_Create());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,14 +71,7 @@ namespace prototipo01
             if (ID_reference != 0)
             {
 
-                /*Edificion_Update edup = new Edificion_Update(ID_reference);
-                edup.Show();*/
-
-
-                //openForm(new Edificion_Update(ID_reference));
-
                 openForm(new Edificion_Update(ID_reference));
-
 
             }
             else
