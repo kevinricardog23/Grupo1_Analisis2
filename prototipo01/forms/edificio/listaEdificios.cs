@@ -18,11 +18,11 @@ namespace prototipo01
     public partial class listaEdificios : Form
     {
 
-        ControladorEdificios controladorEdificios = new ControladorEdificios();
-        BindingList<edificioDto> edificiosDataSource = new BindingList<edificioDto>();
-
+        ControladorEdificios controladorEdificios = new ControladorEdificios(); //LOGICA CRUD EDIFICIOS
+        BindingList<edificioDto> edificiosDataSource = new BindingList<edificioDto>(); //LISTA EDIFICIOS
         private int ID_reference;
- 
+
+
 
         public listaEdificios()
         {
@@ -30,6 +30,23 @@ namespace prototipo01
            
             
         }
+
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
 
 
         private void refreshDataSource()
@@ -56,12 +73,17 @@ namespace prototipo01
             if (ID_reference != 0)
             {
 
+                /*Edificion_Update edup = new Edificion_Update(ID_reference);
+                edup.Show();*/
 
 
-                Edificion_Update edup = new Edificion_Update(ID_reference);
-                edup.Show();
-                
-            }else
+                //openForm(new Edificion_Update(ID_reference));
+
+                openForm(new Edificion_Update(ID_reference));
+
+
+            }
+            else
             {
                 MessageBox.Show("Por favor seleccione un edificio");
             }

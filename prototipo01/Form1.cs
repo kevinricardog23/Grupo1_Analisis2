@@ -43,7 +43,7 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-
+            //verficiacion de usuarios (LOGIN)
             if (string.IsNullOrEmpty(Txt_Correo.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,6 +68,10 @@ namespace prototipo01
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
             }
+
+            //this.Hide();
+            //Dashboard dashboard = new Dashboard();
+            //dashboard.Show();
 
         }
 

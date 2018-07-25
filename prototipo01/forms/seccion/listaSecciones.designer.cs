@@ -51,7 +51,7 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(988, 314);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(989, 260);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(119, 50);
@@ -67,7 +67,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(1112, 314);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(1111, 260);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(109, 50);
@@ -81,7 +81,7 @@
             this.Lbl_Buscar.AutoSize = true;
             this.Lbl_Buscar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.Lbl_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Buscar.Location = new System.Drawing.Point(91, 249);
+            this.Lbl_Buscar.Location = new System.Drawing.Point(82, 215);
             this.Lbl_Buscar.Name = "Lbl_Buscar";
             this.Lbl_Buscar.Size = new System.Drawing.Size(71, 23);
             this.Lbl_Buscar.TabIndex = 7;
@@ -92,7 +92,7 @@
             // 
             this.Txt_Buscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Buscar.Location = new System.Drawing.Point(187, 240);
+            this.Txt_Buscar.Location = new System.Drawing.Point(178, 206);
             this.Txt_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Buscar.Multiline = true;
             this.Txt_Buscar.Name = "Txt_Buscar";
@@ -104,6 +104,7 @@
             // Dgv_ListaSecciones
             // 
             this.Dgv_ListaSecciones.AllowUserToDeleteRows = false;
+            this.Dgv_ListaSecciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_ListaSecciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_ListaSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_ListaSecciones.Location = new System.Drawing.Point(95, 314);
@@ -175,7 +176,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(889, 240);
+            this.button4.Location = new System.Drawing.Point(880, 206);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(52, 48);
