@@ -49,7 +49,7 @@
             // 
             this.CRUD.Controls.Add(this.Tbp_CrearSeccion);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(12, 76);
+            this.CRUD.Location = new System.Drawing.Point(88, 87);
             this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
@@ -78,7 +78,7 @@
             this.Btn_Crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Crear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_Crear.Location = new System.Drawing.Point(441, 324);
+            this.Btn_Crear.Location = new System.Drawing.Point(421, 327);
             this.Btn_Crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Crear.Name = "Btn_Crear";
             this.Btn_Crear.Size = new System.Drawing.Size(101, 48);
@@ -137,7 +137,7 @@
             this.Pnl_CrearSeccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_CrearSeccion.Controls.Add(this.pictureBox1);
             this.Pnl_CrearSeccion.Controls.Add(this.Lbl_CrearSeccion);
-            this.Pnl_CrearSeccion.Location = new System.Drawing.Point(12, 11);
+            this.Pnl_CrearSeccion.Location = new System.Drawing.Point(88, 22);
             this.Pnl_CrearSeccion.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_CrearSeccion.Name = "Pnl_CrearSeccion";
             this.Pnl_CrearSeccion.Size = new System.Drawing.Size(876, 48);
@@ -171,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 585);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.Pnl_CrearSeccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

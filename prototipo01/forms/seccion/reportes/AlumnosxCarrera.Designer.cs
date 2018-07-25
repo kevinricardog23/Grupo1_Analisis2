@@ -55,7 +55,7 @@
             // 
             this.Pnl_ListadoAlumnos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_ListadoAlumnos.Controls.Add(this.Lbl_ListadoAlumnos);
-            this.Pnl_ListadoAlumnos.Location = new System.Drawing.Point(23, 22);
+            this.Pnl_ListadoAlumnos.Location = new System.Drawing.Point(81, 22);
             this.Pnl_ListadoAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_ListadoAlumnos.Name = "Pnl_ListadoAlumnos";
             this.Pnl_ListadoAlumnos.Size = new System.Drawing.Size(868, 48);
@@ -75,7 +75,7 @@
             // 
             // Txt_CodCarrera
             // 
-            this.Txt_CodCarrera.Location = new System.Drawing.Point(644, 106);
+            this.Txt_CodCarrera.Location = new System.Drawing.Point(702, 106);
             this.Txt_CodCarrera.Name = "Txt_CodCarrera";
             this.Txt_CodCarrera.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCarrera.TabIndex = 29;
@@ -86,7 +86,7 @@
             // 
             this.Lbl_CodCarrera.AutoSize = true;
             this.Lbl_CodCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CodCarrera.Location = new System.Drawing.Point(478, 106);
+            this.Lbl_CodCarrera.Location = new System.Drawing.Point(536, 106);
             this.Lbl_CodCarrera.Name = "Lbl_CodCarrera";
             this.Lbl_CodCarrera.Size = new System.Drawing.Size(160, 20);
             this.Lbl_CodCarrera.TabIndex = 28;
@@ -94,7 +94,7 @@
             // 
             // Txt_CodFacu
             // 
-            this.Txt_CodFacu.Location = new System.Drawing.Point(233, 106);
+            this.Txt_CodFacu.Location = new System.Drawing.Point(291, 106);
             this.Txt_CodFacu.Name = "Txt_CodFacu";
             this.Txt_CodFacu.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodFacu.TabIndex = 27;
@@ -104,7 +104,7 @@
             // 
             this.Lbl_CodFacu.AutoSize = true;
             this.Lbl_CodFacu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CodFacu.Location = new System.Drawing.Point(58, 106);
+            this.Lbl_CodFacu.Location = new System.Drawing.Point(116, 106);
             this.Lbl_CodFacu.Name = "Lbl_CodFacu";
             this.Lbl_CodFacu.Size = new System.Drawing.Size(170, 20);
             this.Lbl_CodFacu.TabIndex = 26;
@@ -114,7 +114,7 @@
             // 
             this.Lbl_Jornada.AutoSize = true;
             this.Lbl_Jornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Jornada.Location = new System.Drawing.Point(135, 149);
+            this.Lbl_Jornada.Location = new System.Drawing.Point(193, 149);
             this.Lbl_Jornada.Name = "Lbl_Jornada";
             this.Lbl_Jornada.Size = new System.Drawing.Size(79, 20);
             this.Lbl_Jornada.TabIndex = 36;
@@ -129,9 +129,9 @@
             this.Seccion,
             this.Actualizar,
             this.Eliminar});
-            this.Dgv_ListadoAlumnos.Location = new System.Drawing.Point(77, 216);
+            this.Dgv_ListadoAlumnos.Location = new System.Drawing.Point(135, 216);
             this.Dgv_ListadoAlumnos.Name = "Dgv_ListadoAlumnos";
-            this.Dgv_ListadoAlumnos.Size = new System.Drawing.Size(600, 150);
+            this.Dgv_ListadoAlumnos.Size = new System.Drawing.Size(539, 150);
             this.Dgv_ListadoAlumnos.TabIndex = 38;
             // 
             // Carnet
@@ -167,7 +167,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Buscar.Location = new System.Drawing.Point(460, 139);
+            this.Btn_Buscar.Location = new System.Drawing.Point(752, 139);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(82, 41);
@@ -183,7 +183,7 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(416, 216);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(478, 216);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(102, 41);
@@ -198,7 +198,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(522, 216);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(584, 216);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(90, 41);
@@ -210,7 +210,7 @@
             // 
             this.Lbl_NumAlumnos.AutoSize = true;
             this.Lbl_NumAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NumAlumnos.Location = new System.Drawing.Point(447, 411);
+            this.Lbl_NumAlumnos.Location = new System.Drawing.Point(505, 411);
             this.Lbl_NumAlumnos.Name = "Lbl_NumAlumnos";
             this.Lbl_NumAlumnos.Size = new System.Drawing.Size(246, 24);
             this.Lbl_NumAlumnos.TabIndex = 42;
@@ -218,7 +218,7 @@
             // 
             // Txt_NumAlunos
             // 
-            this.Txt_NumAlunos.Location = new System.Drawing.Point(710, 415);
+            this.Txt_NumAlunos.Location = new System.Drawing.Point(768, 415);
             this.Txt_NumAlunos.Name = "Txt_NumAlunos";
             this.Txt_NumAlunos.Size = new System.Drawing.Size(99, 20);
             this.Txt_NumAlunos.TabIndex = 43;
@@ -231,7 +231,7 @@
             "Matutina",
             "Vespertina",
             "Sabados"});
-            this.Cbo_Jornada.Location = new System.Drawing.Point(233, 147);
+            this.Cbo_Jornada.Location = new System.Drawing.Point(291, 147);
             this.Cbo_Jornada.Name = "Cbo_Jornada";
             this.Cbo_Jornada.Size = new System.Drawing.Size(132, 21);
             this.Cbo_Jornada.TabIndex = 44;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 465);
+            this.ClientSize = new System.Drawing.Size(1045, 539);
             this.Controls.Add(this.Cbo_Jornada);
             this.Controls.Add(this.Txt_NumAlunos);
             this.Controls.Add(this.Lbl_NumAlumnos);

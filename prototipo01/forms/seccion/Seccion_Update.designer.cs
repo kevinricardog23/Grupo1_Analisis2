@@ -49,11 +49,11 @@
             // 
             this.CRUD.Controls.Add(this.Tbp_ActualizarSeccion);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(16, 94);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CRUD.Location = new System.Drawing.Point(58, 92);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
-            this.CRUD.Size = new System.Drawing.Size(1168, 613);
+            this.CRUD.Size = new System.Drawing.Size(876, 498);
             this.CRUD.TabIndex = 5;
             // 
             // Tbp_ActualizarSeccion
@@ -63,11 +63,11 @@
             this.Tbp_ActualizarSeccion.Controls.Add(this.Txt_Nombre);
             this.Tbp_ActualizarSeccion.Controls.Add(this.Lbl_Estado);
             this.Tbp_ActualizarSeccion.Controls.Add(this.Lbl_Nombre);
-            this.Tbp_ActualizarSeccion.Location = new System.Drawing.Point(4, 30);
-            this.Tbp_ActualizarSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tbp_ActualizarSeccion.Location = new System.Drawing.Point(4, 28);
+            this.Tbp_ActualizarSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tbp_ActualizarSeccion.Name = "Tbp_ActualizarSeccion";
-            this.Tbp_ActualizarSeccion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tbp_ActualizarSeccion.Size = new System.Drawing.Size(1160, 579);
+            this.Tbp_ActualizarSeccion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tbp_ActualizarSeccion.Size = new System.Drawing.Size(868, 466);
             this.Tbp_ActualizarSeccion.TabIndex = 0;
             this.Tbp_ActualizarSeccion.UseVisualStyleBackColor = true;
             // 
@@ -78,10 +78,10 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(563, 363);
-            this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(422, 295);
+            this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
-            this.Btn_Actualizar.Size = new System.Drawing.Size(135, 59);
+            this.Btn_Actualizar.Size = new System.Drawing.Size(101, 48);
             this.Btn_Actualizar.TabIndex = 18;
             this.Btn_Actualizar.Text = "Actualizar";
             this.Btn_Actualizar.UseVisualStyleBackColor = false;
@@ -90,21 +90,21 @@
             // Text_Estado
             // 
             this.Text_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Text_Estado.Location = new System.Drawing.Point(415, 258);
-            this.Text_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Text_Estado.Location = new System.Drawing.Point(311, 210);
+            this.Text_Estado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Text_Estado.Multiline = true;
             this.Text_Estado.Name = "Text_Estado";
-            this.Text_Estado.Size = new System.Drawing.Size(421, 34);
+            this.Text_Estado.Size = new System.Drawing.Size(317, 28);
             this.Text_Estado.TabIndex = 10;
             // 
             // Txt_Nombre
             // 
             this.Txt_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Nombre.Location = new System.Drawing.Point(415, 167);
-            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Nombre.Location = new System.Drawing.Point(311, 136);
+            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_Nombre.Multiline = true;
             this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Size = new System.Drawing.Size(421, 34);
+            this.Txt_Nombre.Size = new System.Drawing.Size(317, 28);
             this.Txt_Nombre.TabIndex = 8;
             this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -113,9 +113,10 @@
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(269, 258);
+            this.Lbl_Estado.Location = new System.Drawing.Point(202, 210);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Estado.Name = "Lbl_Estado";
-            this.Lbl_Estado.Size = new System.Drawing.Size(74, 23);
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
             this.Lbl_Estado.TabIndex = 9;
             this.Lbl_Estado.Text = "Estado";
             // 
@@ -124,9 +125,10 @@
             this.Lbl_Nombre.AutoSize = true;
             this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Nombre.Location = new System.Drawing.Point(269, 169);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(202, 137);
+            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(89, 23);
+            this.Lbl_Nombre.Size = new System.Drawing.Size(73, 19);
             this.Lbl_Nombre.TabIndex = 7;
             this.Lbl_Nombre.Text = "Nombre";
             // 
@@ -135,19 +137,19 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(58, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 59);
+            this.panel1.Size = new System.Drawing.Size(876, 48);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1088, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(816, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -157,22 +159,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(11, 20);
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 23);
+            this.label1.Size = new System.Drawing.Size(147, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Sección";
             // 
             // Seccion_Update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Seccion_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionUpdate";

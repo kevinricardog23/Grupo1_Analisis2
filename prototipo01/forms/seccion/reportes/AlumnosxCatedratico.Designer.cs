@@ -56,7 +56,7 @@
             // 
             this.Pnl_ListadoAlumnos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_ListadoAlumnos.Controls.Add(this.Lbl_ListadoAlumnos);
-            this.Pnl_ListadoAlumnos.Location = new System.Drawing.Point(40, 22);
+            this.Pnl_ListadoAlumnos.Location = new System.Drawing.Point(78, 23);
             this.Pnl_ListadoAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_ListadoAlumnos.Name = "Pnl_ListadoAlumnos";
             this.Pnl_ListadoAlumnos.Size = new System.Drawing.Size(868, 48);
@@ -81,7 +81,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Buscar.Location = new System.Drawing.Point(456, 143);
+            this.Btn_Buscar.Location = new System.Drawing.Point(728, 154);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(82, 41);
@@ -92,7 +92,7 @@
             // 
             // Txt_Seccion
             // 
-            this.Txt_Seccion.Location = new System.Drawing.Point(253, 153);
+            this.Txt_Seccion.Location = new System.Drawing.Point(291, 154);
             this.Txt_Seccion.Name = "Txt_Seccion";
             this.Txt_Seccion.Size = new System.Drawing.Size(132, 20);
             this.Txt_Seccion.TabIndex = 45;
@@ -102,7 +102,7 @@
             // 
             this.Lbl_Seccion.AutoSize = true;
             this.Lbl_Seccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Seccion.Location = new System.Drawing.Point(131, 153);
+            this.Lbl_Seccion.Location = new System.Drawing.Point(169, 154);
             this.Lbl_Seccion.Name = "Lbl_Seccion";
             this.Lbl_Seccion.Size = new System.Drawing.Size(78, 20);
             this.Lbl_Seccion.TabIndex = 44;
@@ -110,7 +110,7 @@
             // 
             // Txt_CodCurso
             // 
-            this.Txt_CodCurso.Location = new System.Drawing.Point(640, 110);
+            this.Txt_CodCurso.Location = new System.Drawing.Point(678, 111);
             this.Txt_CodCurso.Name = "Txt_CodCurso";
             this.Txt_CodCurso.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCurso.TabIndex = 43;
@@ -121,7 +121,7 @@
             // 
             this.Lbl_CodCurso.AutoSize = true;
             this.Lbl_CodCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CodCurso.Location = new System.Drawing.Point(474, 110);
+            this.Lbl_CodCurso.Location = new System.Drawing.Point(512, 111);
             this.Lbl_CodCurso.Name = "Lbl_CodCurso";
             this.Lbl_CodCurso.Size = new System.Drawing.Size(147, 20);
             this.Lbl_CodCurso.TabIndex = 42;
@@ -129,7 +129,7 @@
             // 
             // Txt_CodCat
             // 
-            this.Txt_CodCat.Location = new System.Drawing.Point(253, 110);
+            this.Txt_CodCat.Location = new System.Drawing.Point(291, 111);
             this.Txt_CodCat.Name = "Txt_CodCat";
             this.Txt_CodCat.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCat.TabIndex = 41;
@@ -139,7 +139,7 @@
             // 
             this.Lbl_CodCate.AutoSize = true;
             this.Lbl_CodCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CodCate.Location = new System.Drawing.Point(54, 110);
+            this.Lbl_CodCate.Location = new System.Drawing.Point(92, 111);
             this.Lbl_CodCate.Name = "Lbl_CodCate";
             this.Lbl_CodCate.Size = new System.Drawing.Size(193, 20);
             this.Lbl_CodCate.TabIndex = 40;
@@ -155,9 +155,9 @@
             this.Salon,
             this.Actualizar,
             this.Eliminar});
-            this.Dgv_ListadoxCatedratico.Location = new System.Drawing.Point(94, 237);
+            this.Dgv_ListadoxCatedratico.Location = new System.Drawing.Point(132, 238);
             this.Dgv_ListadoxCatedratico.Name = "Dgv_ListadoxCatedratico";
-            this.Dgv_ListadoxCatedratico.Size = new System.Drawing.Size(645, 150);
+            this.Dgv_ListadoxCatedratico.Size = new System.Drawing.Size(623, 150);
             this.Dgv_ListadoxCatedratico.TabIndex = 47;
             // 
             // Carnet
@@ -199,7 +199,7 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(521, 237);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(559, 238);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(102, 41);
@@ -215,7 +215,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(627, 237);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(665, 238);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(90, 41);
@@ -227,7 +227,7 @@
             // 
             this.Lbl_NumAlumnos.AutoSize = true;
             this.Lbl_NumAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NumAlumnos.Location = new System.Drawing.Point(452, 469);
+            this.Lbl_NumAlumnos.Location = new System.Drawing.Point(490, 470);
             this.Lbl_NumAlumnos.Name = "Lbl_NumAlumnos";
             this.Lbl_NumAlumnos.Size = new System.Drawing.Size(246, 24);
             this.Lbl_NumAlumnos.TabIndex = 50;
@@ -235,7 +235,7 @@
             // 
             // Txt_NumAlumnos
             // 
-            this.Txt_NumAlumnos.Location = new System.Drawing.Point(713, 473);
+            this.Txt_NumAlumnos.Location = new System.Drawing.Point(751, 474);
             this.Txt_NumAlumnos.Name = "Txt_NumAlumnos";
             this.Txt_NumAlumnos.Size = new System.Drawing.Size(99, 20);
             this.Txt_NumAlumnos.TabIndex = 51;
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 533);
+            this.ClientSize = new System.Drawing.Size(1045, 539);
             this.Controls.Add(this.Txt_NumAlumnos);
             this.Controls.Add(this.Lbl_NumAlumnos);
             this.Controls.Add(this.Btn_Eliminar);

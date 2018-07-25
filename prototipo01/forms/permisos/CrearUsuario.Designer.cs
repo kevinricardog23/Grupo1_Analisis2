@@ -72,7 +72,7 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(58, 21);
+            this.panel1.Location = new System.Drawing.Point(91, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 48);
@@ -96,10 +96,10 @@
             this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_crear.Location = new System.Drawing.Point(689, 399);
+            this.Btn_crear.Location = new System.Drawing.Point(402, 387);
             this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
-            this.Btn_crear.Size = new System.Drawing.Size(156, 41);
+            this.Btn_crear.Size = new System.Drawing.Size(95, 41);
             this.Btn_crear.TabIndex = 31;
             this.Btn_crear.Text = "CREAR";
             this.Btn_crear.UseVisualStyleBackColor = false;
@@ -294,7 +294,7 @@
             // 
             this.CRUD.Controls.Add(this.tabPage1);
             this.CRUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(58, 86);
+            this.CRUD.Location = new System.Drawing.Point(91, 91);
             this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
@@ -305,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 640);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CRUD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

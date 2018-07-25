@@ -84,7 +84,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Buscar.Location = new System.Drawing.Point(625, 178);
+            this.Btn_Buscar.Location = new System.Drawing.Point(675, 180);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(82, 41);
@@ -171,7 +171,7 @@
             this.Eliminar});
             this.Dgv_ListadoCursoHab.Location = new System.Drawing.Point(36, 277);
             this.Dgv_ListadoCursoHab.Name = "Dgv_ListadoCursoHab";
-            this.Dgv_ListadoCursoHab.Size = new System.Drawing.Size(969, 150);
+            this.Dgv_ListadoCursoHab.Size = new System.Drawing.Size(953, 150);
             this.Dgv_ListadoCursoHab.TabIndex = 49;
             // 
             // codigo
@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 547);
+            this.ClientSize = new System.Drawing.Size(1045, 539);
             this.Controls.Add(this.Cbo_Jornada);
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Actualizar);

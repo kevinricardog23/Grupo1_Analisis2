@@ -56,7 +56,7 @@
             this.Btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.Btn_eliminar.Location = new System.Drawing.Point(922, 183);
-            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(82, 41);
             this.Btn_eliminar.TabIndex = 35;
@@ -71,7 +71,7 @@
             this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar.Location = new System.Drawing.Point(818, 183);
-            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(100, 41);
             this.Btn_actualizar.TabIndex = 34;
@@ -93,7 +93,7 @@
             this.Telefono,
             this.Direccion});
             this.Dgb_estudiantes.Location = new System.Drawing.Point(23, 227);
-            this.Dgb_estudiantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Dgb_estudiantes.Margin = new System.Windows.Forms.Padding(2);
             this.Dgb_estudiantes.Name = "Dgb_estudiantes";
             this.Dgb_estudiantes.ReadOnly = true;
             this.Dgb_estudiantes.RowTemplate.Height = 24;
@@ -173,7 +173,7 @@
             this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Location = new System.Drawing.Point(908, 110);
-            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(82, 41);
             this.Btn_crear.TabIndex = 30;
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 578);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_actualizar);
