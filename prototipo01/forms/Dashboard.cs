@@ -40,13 +40,13 @@ namespace prototipo01.forms
 
         private void openForm(object formHijo)
         {
-            if (this.container.Controls.Count > 0)       
-                this.container.Controls.RemoveAt(0);
+            if (this.workspace.Controls.Count > 0)       
+                this.workspace.Controls.RemoveAt(0);
                 Form fh = formHijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
-                this.container.Controls.Add(fh);
-                this.container.Tag = fh;
+                this.workspace.Controls.Add(fh);
+                this.workspace.Tag = fh;
                 fh.Show();
            
         }

@@ -29,9 +29,11 @@ namespace prototipo01
         }
 
 
+
+
+        //SOBREPONER FORM EN PANEL
         private void openForm(object formHijo)
         {
-           
             this.Controls.Clear();
             Form fh = formHijo as Form;
             fh.TopLevel = false;
@@ -56,7 +58,7 @@ namespace prototipo01
         {
 
             openForm(new listaEdificios());
-            this.Dispose();
+           
 
 
         }
