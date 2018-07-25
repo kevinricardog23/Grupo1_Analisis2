@@ -28,181 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listaLaboratorios));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Btn_actualizar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
+            this.Lbl_buscar = new System.Windows.Forms.Label();
+            this.Txt_buscar = new System.Windows.Forms.TextBox();
+            this.Dgv_laboratorios = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dirección = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btn_crear = new System.Windows.Forms.Button();
+            this.Pnl_panel = new System.Windows.Forms.Panel();
+            this.Lbl_laboratorios = new System.Windows.Forms.Label();
+            this.Btn_buscar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_laboratorios)).BeginInit();
+            this.Pnl_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // Btn_actualizar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(995, 291);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 50);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "ACTUALIZAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
+            this.Btn_actualizar.FlatAppearance.BorderSize = 0;
+            this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_actualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
+            this.Btn_actualizar.Location = new System.Drawing.Point(783, 164);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_actualizar.Name = "Btn_actualizar";
+            this.Btn_actualizar.Size = new System.Drawing.Size(82, 41);
+            this.Btn_actualizar.TabIndex = 12;
+            this.Btn_actualizar.Text = "ACTUALIZAR";
+            this.Btn_actualizar.UseVisualStyleBackColor = false;
+            this.Btn_actualizar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // Btn_eliminar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1108, 291);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 50);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_eliminar.ForeColor = System.Drawing.Color.White;
+            this.Btn_eliminar.Location = new System.Drawing.Point(870, 164);
+            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(82, 41);
+            this.Btn_eliminar.TabIndex = 11;
+            this.Btn_eliminar.Text = "ELIMINAR";
+            this.Btn_eliminar.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // Lbl_buscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(87, 226);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Buscar";
+            this.Lbl_buscar.AutoSize = true;
+            this.Lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Lbl_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_buscar.Location = new System.Drawing.Point(104, 171);
+            this.Lbl_buscar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_buscar.Name = "Lbl_buscar";
+            this.Lbl_buscar.Size = new System.Drawing.Size(57, 18);
+            this.Lbl_buscar.TabIndex = 7;
+            this.Lbl_buscar.Text = "Buscar";
             // 
-            // textBox1
+            // Txt_buscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(183, 218);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(697, 47);
-            this.textBox1.TabIndex = 10;
+            this.Txt_buscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_buscar.Location = new System.Drawing.Point(176, 164);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_buscar.Multiline = true;
+            this.Txt_buscar.Name = "Txt_buscar";
+            this.Txt_buscar.Size = new System.Drawing.Size(524, 39);
+            this.Txt_buscar.TabIndex = 10;
+            this.Txt_buscar.TextChanged += new System.EventHandler(this.Txt_buscar_TextChanged);
             // 
-            // dataGridView1
+            // Dgv_laboratorios
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(91, 291);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1125, 398);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.Dgv_laboratorios.AllowUserToDeleteRows = false;
+            this.Dgv_laboratorios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_laboratorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_laboratorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nombres,
+            this.apellidos,
+            this.telefono,
+            this.correo,
+            this.edad,
+            this.dirección});
+            this.Dgv_laboratorios.Location = new System.Drawing.Point(107, 223);
+            this.Dgv_laboratorios.Margin = new System.Windows.Forms.Padding(2);
+            this.Dgv_laboratorios.Name = "Dgv_laboratorios";
+            this.Dgv_laboratorios.ReadOnly = true;
+            this.Dgv_laboratorios.RowTemplate.Height = 24;
+            this.Dgv_laboratorios.Size = new System.Drawing.Size(844, 323);
+            this.Dgv_laboratorios.TabIndex = 9;
             // 
-            // button1
+            // id
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1034, 159);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 50);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "CREAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
-            // panel1
+            // nombres
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(76, 87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1157, 54);
-            this.panel1.TabIndex = 6;
+            this.nombres.HeaderText = "Nombres";
+            this.nombres.Name = "nombres";
+            this.nombres.ReadOnly = true;
+            this.nombres.Width = 330;
             // 
-            // label1
+            // apellidos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(20, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de laboratorios";
+            this.apellidos.HeaderText = "Apellidos";
+            this.apellidos.Name = "apellidos";
+            this.apellidos.ReadOnly = true;
             // 
-            // button4
+            // telefono
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button4.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(887, 218);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 48);
-            this.button4.TabIndex = 14;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
             // 
-            // pictureBox2
+            // correo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1156, 159);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            // 
+            // edad
+            // 
+            this.edad.HeaderText = "Edad";
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
+            // dirección
+            // 
+            this.dirección.HeaderText = "Dirección";
+            this.dirección.Name = "dirección";
+            this.dirección.ReadOnly = true;
+            // 
+            // Btn_crear
+            // 
+            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_crear.FlatAppearance.BorderSize = 0;
+            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_crear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_crear.ForeColor = System.Drawing.Color.White;
+            this.Btn_crear.Location = new System.Drawing.Point(824, 95);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_crear.Name = "Btn_crear";
+            this.Btn_crear.Size = new System.Drawing.Size(82, 41);
+            this.Btn_crear.TabIndex = 8;
+            this.Btn_crear.Text = "CREAR";
+            this.Btn_crear.UseVisualStyleBackColor = false;
+            this.Btn_crear.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Pnl_panel
+            // 
+            this.Pnl_panel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pnl_panel.Controls.Add(this.Lbl_laboratorios);
+            this.Pnl_panel.Location = new System.Drawing.Point(97, 31);
+            this.Pnl_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_panel.Name = "Pnl_panel";
+            this.Pnl_panel.Size = new System.Drawing.Size(868, 48);
+            this.Pnl_panel.TabIndex = 6;
+            // 
+            // Lbl_laboratorios
+            // 
+            this.Lbl_laboratorios.AutoSize = true;
+            this.Lbl_laboratorios.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Lbl_laboratorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_laboratorios.Location = new System.Drawing.Point(15, 15);
+            this.Lbl_laboratorios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_laboratorios.Name = "Lbl_laboratorios";
+            this.Lbl_laboratorios.Size = new System.Drawing.Size(158, 18);
+            this.Lbl_laboratorios.TabIndex = 0;
+            this.Lbl_laboratorios.Text = "Lista de Laboratorios";
+            // 
+            // Btn_buscar
+            // 
+            this.Btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_buscar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
+            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_buscar.FlatAppearance.BorderSize = 0;
+            this.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_buscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_buscar.ForeColor = System.Drawing.Color.White;
+            this.Btn_buscar.Location = new System.Drawing.Point(704, 164);
+            this.Btn_buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(39, 39);
+            this.Btn_buscar.TabIndex = 13;
+            this.Btn_buscar.UseVisualStyleBackColor = false;
+            this.Btn_buscar.Click += new System.EventHandler(this.button4_Click);
             // 
             // listaLaboratorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 700);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
+            this.Controls.Add(this.Btn_buscar);
+            this.Controls.Add(this.Btn_actualizar);
+            this.Controls.Add(this.Btn_eliminar);
+            this.Controls.Add(this.Lbl_buscar);
+            this.Controls.Add(this.Txt_buscar);
+            this.Controls.Add(this.Dgv_laboratorios);
+            this.Controls.Add(this.Btn_crear);
+            this.Controls.Add(this.Pnl_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "listaLaboratorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "listaLaboratorios";
+            this.Text = "listaCatedraticos";
             this.Load += new System.EventHandler(this.listaLaboratorios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_laboratorios)).EndInit();
+            this.Pnl_panel.ResumeLayout(false);
+            this.Pnl_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,15 +252,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Btn_actualizar;
+        private System.Windows.Forms.Button Btn_eliminar;
+        private System.Windows.Forms.Label Lbl_buscar;
+        private System.Windows.Forms.TextBox Txt_buscar;
+        private System.Windows.Forms.DataGridView Dgv_laboratorios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dirección;
+        private System.Windows.Forms.Button Btn_crear;
+        private System.Windows.Forms.Panel Pnl_panel;
+        private System.Windows.Forms.Label Lbl_laboratorios;
+        private System.Windows.Forms.Button Btn_buscar;
     }
 }
