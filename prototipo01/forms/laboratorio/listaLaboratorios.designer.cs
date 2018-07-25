@@ -1,4 +1,6 @@
-﻿namespace prototipo01
+﻿using System.Windows.Forms;
+
+namespace prototipo01
 {
     partial class listaLaboratorios
     {
@@ -28,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
@@ -44,25 +45,10 @@
             this.Pnl_panel = new System.Windows.Forms.Panel();
             this.Lbl_laboratorios = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_laboratorios)).BeginInit();
             this.Pnl_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Btn_actualizar
-            // 
-            this.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
-            this.Btn_actualizar.FlatAppearance.BorderSize = 0;
-            this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_actualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_actualizar.Location = new System.Drawing.Point(783, 164);
-            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_actualizar.Name = "Btn_actualizar";
-            this.Btn_actualizar.Size = new System.Drawing.Size(82, 41);
-            this.Btn_actualizar.TabIndex = 12;
-            this.Btn_actualizar.Text = "ACTUALIZAR";
-            this.Btn_actualizar.UseVisualStyleBackColor = false;
-            this.Btn_actualizar.Click += new System.EventHandler(this.button3_Click);
             // 
             // Btn_eliminar
             // 
@@ -222,14 +208,30 @@
             this.Btn_buscar.UseVisualStyleBackColor = false;
             this.Btn_buscar.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(770, 164);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 41);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "ACTUALIZAR";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // listaLaboratorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 578);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_buscar);
-            this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Lbl_buscar);
             this.Controls.Add(this.Txt_buscar);
@@ -252,7 +254,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_actualizar;
+     
         private System.Windows.Forms.Button Btn_eliminar;
         private System.Windows.Forms.Label Lbl_buscar;
         private System.Windows.Forms.TextBox Txt_buscar;
@@ -268,5 +270,6 @@
         private System.Windows.Forms.Panel Pnl_panel;
         private System.Windows.Forms.Label Lbl_laboratorios;
         private System.Windows.Forms.Button Btn_buscar;
+        private Button button1;
     }
 }

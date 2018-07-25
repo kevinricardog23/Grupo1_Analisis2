@@ -34,10 +34,7 @@ namespace prototipo01
             openForm(new Laboratorio_Create());
         }
 
-        private void Btn_actualizar(object sender, EventArgs e)
-        {
-            openForm(new Laboratorio_Update());
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -56,6 +53,11 @@ namespace prototipo01
         private void Txt_buscar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openForm(new Laboratorio_Update());
         }
     }
 }
