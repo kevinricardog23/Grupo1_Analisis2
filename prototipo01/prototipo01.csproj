@@ -178,6 +178,18 @@
     <Compile Include="forms\estudiantes\Listado_estudiante.designer.cs">
       <DependentUpon>Listado_estudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\facultad\Facultad_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Create.Designer.cs">
+      <DependentUpon>Facultad_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facultad\Facultad_Update.Designer.cs">
+      <DependentUpon>Facultad_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\facultad\Listado_facultades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\estudiantes\Listado_estudiante.resx">
       <DependentUpon>Listado_estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facultad\Facultad_Create.resx">
+      <DependentUpon>Facultad_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facultad\Facultad_Update.resx">
+      <DependentUpon>Facultad_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\facultad\Listado_facultades.resx">
       <DependentUpon>Listado_facultades.cs</DependentUpon>
