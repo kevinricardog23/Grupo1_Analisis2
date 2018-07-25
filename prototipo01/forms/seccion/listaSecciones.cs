@@ -54,6 +54,17 @@ namespace prototipo01
 
 
 
+        //BUSCAR POR INICIALES
+        void search()
+        {
+            this.Dgv_ListaSecciones.DataSource = null;
+            this.Dgv_ListaSecciones.Rows.Clear();
+            seccionesDataSource = controladorSecciones.listaSeccionesLike(Txt_Buscar.Text.ToString());
+            Dgv_ListaSecciones.DataSource = seccionesDataSource;
+        }
+
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -78,7 +89,7 @@ namespace prototipo01
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            search();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

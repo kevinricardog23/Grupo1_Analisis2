@@ -169,6 +169,42 @@ namespace prototipo01.controladores
         }
 
 
+
+        //buscar laboratorio por iniciales
+
+        public BindingList<laboratorioDto> listaLaboratoriosLike(string search)
+        {
+            try
+            {
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var Query = (from n in db.laboratorio
+                                 where n.descripcion_laboratorio.Contains(search)
+                                 select new laboratorioDto
+                                 {
+                                     id_laboratorio= n.id_laboratorio,
+                                     descripcion_laboratorio = n.descripcion_laboratorio,
+                                     CATEDRATICO_dpi_catedratico =n.CATEDRATICO_dpi_catedratico,
+                                     HORARIO_id_horario = n.HORARIO_id_horario,
+                                     SALON_id_salon = n.SALON_id_salon
+
+                                 }).ToList();
+
+                    BindingList<laboratorioDto> result = new BindingList<laboratorioDto>(Query);
+
+                    return result;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
         //Metodo para eliminar laboratorio
         public void eliminarLaboratorio(int id_laboratorio)
         {

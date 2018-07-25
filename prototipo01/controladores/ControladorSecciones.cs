@@ -119,6 +119,39 @@ namespace prototipo01.controladores
         }
 
 
+
+        //buscar seccion por iniciales
+
+        public BindingList<seccionDto> listaSeccionesLike(string search)
+        {
+            try
+            {
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var Query = (from n in db.seccion
+                                 where n.seccion_seccion.Contains(search)
+                                 select new seccionDto
+                                 {
+                                     id_seccion = n.id_seccion,
+                                     seccion_seccion = n.seccion_seccion,
+                                     estado_seccion = n.estado_seccion
+
+                                 }).ToList();
+
+                    BindingList<seccionDto> result = new BindingList<seccionDto>(Query);
+
+                    return result;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
         //Metodo para eliminar seccion
         public void eliminarSeccion(int id_seccion)
         {

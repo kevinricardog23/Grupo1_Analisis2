@@ -41,6 +41,17 @@ namespace prototipo01
         }
 
 
+
+        //BUSCAR POR INICIALES
+        void search()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            laboratorioDataSource = controladorLaboratorio.listaLaboratoriosLike(textBox1.Text.ToString());
+            dataGridView1.DataSource = laboratorioDataSource;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             openForm(new Laboratorio_Create());
@@ -111,6 +122,11 @@ namespace prototipo01
                 ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
 
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            search();
         }
     }
 }

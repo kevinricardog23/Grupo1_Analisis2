@@ -59,7 +59,7 @@ namespace prototipo01
         }
 
 
-
+        //BUSCAR POR INICIALES
         void search()
         {
             this.dataGridView1.DataSource = null;
