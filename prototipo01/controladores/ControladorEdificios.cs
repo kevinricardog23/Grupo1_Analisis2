@@ -12,8 +12,6 @@ namespace prototipo01.controladores
     class ControladorEdificios
     {
 
-      
-
 
         //Lista de edificios capa Dto
         public BindingList<edificioDto> listaEdificios()
@@ -90,6 +88,39 @@ namespace prototipo01.controladores
                 throw;
             }
         }
+
+
+        //buscar edificio por iniciales
+
+        public BindingList<edificioDto> listaEdificiosLike(string search)
+        {
+            try
+            {
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var Query = (from n in db.edificio
+                                 where n.nombre_edificio.Contains(search)
+                                 select new edificioDto
+                                 {
+                                     id_edificio = n.id_edificio,
+                                     nombre_edificio = n.nombre_edificio,
+                                     ubicacion_edificio = n.ubicacion_edificio
+
+                                 }).ToList();
+
+                    BindingList<edificioDto> result = new BindingList<edificioDto>(Query);
+
+                    return result;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
 
 
 

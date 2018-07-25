@@ -60,6 +60,15 @@ namespace prototipo01
 
 
 
+        void search()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            edificiosDataSource = controladorEdificios.listaEdificiosLike(textBox1.Text.ToString());
+            dataGridView1.DataSource = edificiosDataSource;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             openForm(new Edificio_Create());
@@ -170,7 +179,7 @@ namespace prototipo01
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-          
+            search();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -180,7 +189,11 @@ namespace prototipo01
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+
+
             
+
         }
     }
 }
