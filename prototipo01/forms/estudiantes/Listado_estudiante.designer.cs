@@ -92,12 +92,12 @@
             this.Correo,
             this.Telefono,
             this.Direccion});
-            this.Dgb_estudiantes.Location = new System.Drawing.Point(23, 227);
+            this.Dgb_estudiantes.Location = new System.Drawing.Point(-7, 244);
             this.Dgb_estudiantes.Margin = new System.Windows.Forms.Padding(2);
             this.Dgb_estudiantes.Name = "Dgb_estudiantes";
             this.Dgb_estudiantes.ReadOnly = true;
             this.Dgb_estudiantes.RowTemplate.Height = 24;
-            this.Dgb_estudiantes.Size = new System.Drawing.Size(1014, 323);
+            this.Dgb_estudiantes.Size = new System.Drawing.Size(1027, 323);
             this.Dgb_estudiantes.TabIndex = 33;
             // 
             // id
