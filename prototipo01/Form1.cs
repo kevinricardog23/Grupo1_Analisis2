@@ -69,10 +69,6 @@ namespace prototipo01
                 dashboard.Show();
             }
 
-            //this.Hide();
-            //Dashboard dashboard = new Dashboard();
-            //dashboard.Show();
-
         }
 
 
