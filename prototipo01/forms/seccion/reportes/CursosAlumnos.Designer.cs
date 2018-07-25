@@ -96,6 +96,7 @@
             // Txt_CodAlumno
             // 
             this.Txt_CodAlumno.Location = new System.Drawing.Point(213, 134);
+            this.Txt_CodAlumno.MaxLength = 11;
             this.Txt_CodAlumno.Name = "Txt_CodAlumno";
             this.Txt_CodAlumno.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodAlumno.TabIndex = 45;
@@ -113,6 +114,7 @@
             // Txt_CodCarrera
             // 
             this.Txt_CodCarrera.Location = new System.Drawing.Point(625, 91);
+            this.Txt_CodCarrera.MaxLength = 11;
             this.Txt_CodCarrera.Name = "Txt_CodCarrera";
             this.Txt_CodCarrera.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCarrera.TabIndex = 43;
@@ -131,6 +133,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(214, 91);
+            this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 20);
             this.textBox1.TabIndex = 41;

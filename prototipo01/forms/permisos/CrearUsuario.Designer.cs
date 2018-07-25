@@ -110,6 +110,7 @@
             this.textBoxAlias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxAlias.Location = new System.Drawing.Point(538, 178);
             this.textBoxAlias.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAlias.MaxLength = 45;
             this.textBoxAlias.Multiline = true;
             this.textBoxAlias.Name = "textBoxAlias";
             this.textBoxAlias.Size = new System.Drawing.Size(317, 28);
@@ -133,6 +134,7 @@
             this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxTelefono.Location = new System.Drawing.Point(122, 177);
             this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefono.MaxLength = 15;
             this.textBoxTelefono.Multiline = true;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(317, 28);
@@ -156,6 +158,7 @@
             this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxEmail.Location = new System.Drawing.Point(538, 132);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.MaxLength = 35;
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(317, 28);
@@ -179,6 +182,7 @@
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxPassword.Location = new System.Drawing.Point(122, 131);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPassword.MaxLength = 45;
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(317, 28);
@@ -202,6 +206,7 @@
             this.textBoxApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxApellidos.Location = new System.Drawing.Point(538, 87);
             this.textBoxApellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxApellidos.MaxLength = 30;
             this.textBoxApellidos.Multiline = true;
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(317, 28);
@@ -225,6 +230,7 @@
             this.textBoxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxNombre.Location = new System.Drawing.Point(122, 86);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Multiline = true;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(317, 28);

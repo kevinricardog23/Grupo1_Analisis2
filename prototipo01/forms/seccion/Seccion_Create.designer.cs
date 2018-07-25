@@ -49,11 +49,11 @@
             // 
             this.CRUD.Controls.Add(this.Tbp_CrearSeccion);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(51, 107);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CRUD.Location = new System.Drawing.Point(38, 87);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
-            this.CRUD.Size = new System.Drawing.Size(1168, 593);
+            this.CRUD.Size = new System.Drawing.Size(876, 482);
             this.CRUD.TabIndex = 3;
             // 
             // Tbp_CrearSeccion
@@ -63,11 +63,11 @@
             this.Tbp_CrearSeccion.Controls.Add(this.Txt_Nombre);
             this.Tbp_CrearSeccion.Controls.Add(this.Lbl_Estado);
             this.Tbp_CrearSeccion.Controls.Add(this.Lbl_Nombre);
-            this.Tbp_CrearSeccion.Location = new System.Drawing.Point(4, 30);
-            this.Tbp_CrearSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tbp_CrearSeccion.Location = new System.Drawing.Point(4, 28);
+            this.Tbp_CrearSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tbp_CrearSeccion.Name = "Tbp_CrearSeccion";
-            this.Tbp_CrearSeccion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tbp_CrearSeccion.Size = new System.Drawing.Size(1160, 559);
+            this.Tbp_CrearSeccion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tbp_CrearSeccion.Size = new System.Drawing.Size(868, 450);
             this.Tbp_CrearSeccion.TabIndex = 0;
             this.Tbp_CrearSeccion.UseVisualStyleBackColor = true;
             // 
@@ -78,10 +78,10 @@
             this.Btn_Crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Crear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_Crear.Location = new System.Drawing.Point(561, 402);
-            this.Btn_Crear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Crear.Location = new System.Drawing.Point(421, 327);
+            this.Btn_Crear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Crear.Name = "Btn_Crear";
-            this.Btn_Crear.Size = new System.Drawing.Size(135, 59);
+            this.Btn_Crear.Size = new System.Drawing.Size(101, 48);
             this.Btn_Crear.TabIndex = 6;
             this.Btn_Crear.Text = "Crear";
             this.Btn_Crear.UseVisualStyleBackColor = false;
@@ -90,21 +90,23 @@
             // Txt_Estado
             // 
             this.Txt_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Estado.Location = new System.Drawing.Point(437, 297);
-            this.Txt_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Estado.Location = new System.Drawing.Point(328, 241);
+            this.Txt_Estado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Estado.MaxLength = 45;
             this.Txt_Estado.Multiline = true;
             this.Txt_Estado.Name = "Txt_Estado";
-            this.Txt_Estado.Size = new System.Drawing.Size(421, 34);
+            this.Txt_Estado.Size = new System.Drawing.Size(317, 28);
             this.Txt_Estado.TabIndex = 3;
             // 
             // Txt_Nombre
             // 
             this.Txt_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Nombre.Location = new System.Drawing.Point(437, 207);
-            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Nombre.Location = new System.Drawing.Point(328, 168);
+            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Nombre.MaxLength = 45;
             this.Txt_Nombre.Multiline = true;
             this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Size = new System.Drawing.Size(421, 34);
+            this.Txt_Nombre.Size = new System.Drawing.Size(317, 28);
             this.Txt_Nombre.TabIndex = 1;
             this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -113,9 +115,10 @@
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(292, 298);
+            this.Lbl_Estado.Location = new System.Drawing.Point(219, 242);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Estado.Name = "Lbl_Estado";
-            this.Lbl_Estado.Size = new System.Drawing.Size(74, 23);
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
             this.Lbl_Estado.TabIndex = 2;
             this.Lbl_Estado.Text = "Estado";
             // 
@@ -124,9 +127,10 @@
             this.Lbl_Nombre.AutoSize = true;
             this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Nombre.Location = new System.Drawing.Point(292, 208);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(219, 169);
+            this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(89, 23);
+            this.Lbl_Nombre.Size = new System.Drawing.Size(73, 19);
             this.Lbl_Nombre.TabIndex = 0;
             this.Lbl_Nombre.Text = "Nombre";
             // 
@@ -135,19 +139,19 @@
             this.Pnl_CrearSeccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_CrearSeccion.Controls.Add(this.pictureBox1);
             this.Pnl_CrearSeccion.Controls.Add(this.Lbl_CrearSeccion);
-            this.Pnl_CrearSeccion.Location = new System.Drawing.Point(51, 27);
-            this.Pnl_CrearSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pnl_CrearSeccion.Location = new System.Drawing.Point(38, 22);
+            this.Pnl_CrearSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_CrearSeccion.Name = "Pnl_CrearSeccion";
-            this.Pnl_CrearSeccion.Size = new System.Drawing.Size(1168, 59);
+            this.Pnl_CrearSeccion.Size = new System.Drawing.Size(876, 48);
             this.Pnl_CrearSeccion.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1083, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(812, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -157,22 +161,23 @@
             this.Lbl_CrearSeccion.AutoSize = true;
             this.Lbl_CrearSeccion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_CrearSeccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_CrearSeccion.Location = new System.Drawing.Point(11, 20);
+            this.Lbl_CrearSeccion.Location = new System.Drawing.Point(8, 16);
+            this.Lbl_CrearSeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_CrearSeccion.Name = "Lbl_CrearSeccion";
-            this.Lbl_CrearSeccion.Size = new System.Drawing.Size(141, 23);
+            this.Lbl_CrearSeccion.Size = new System.Drawing.Size(115, 18);
             this.Lbl_CrearSeccion.TabIndex = 0;
             this.Lbl_CrearSeccion.Text = "Crear Sección";
             // 
             // Seccion_Create
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1415, 711);
+            this.ClientSize = new System.Drawing.Size(1061, 578);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.Pnl_CrearSeccion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Seccion_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seccion";

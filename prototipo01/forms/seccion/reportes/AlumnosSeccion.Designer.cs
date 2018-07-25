@@ -87,6 +87,7 @@
             // Txt_CodCarrera
             // 
             this.Txt_CodCarrera.Location = new System.Drawing.Point(351, 114);
+            this.Txt_CodCarrera.MaxLength = 11;
             this.Txt_CodCarrera.Name = "Txt_CodCarrera";
             this.Txt_CodCarrera.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCarrera.TabIndex = 23;
@@ -105,6 +106,7 @@
             // Txt_Semestre
             // 
             this.Txt_Semestre.Location = new System.Drawing.Point(693, 114);
+            this.Txt_Semestre.MaxLength = 2;
             this.Txt_Semestre.Name = "Txt_Semestre";
             this.Txt_Semestre.Size = new System.Drawing.Size(132, 20);
             this.Txt_Semestre.TabIndex = 25;
@@ -123,6 +125,7 @@
             // Txt_Seccion
             // 
             this.Txt_Seccion.Location = new System.Drawing.Point(351, 160);
+            this.Txt_Seccion.MaxLength = 1;
             this.Txt_Seccion.Name = "Txt_Seccion";
             this.Txt_Seccion.Size = new System.Drawing.Size(132, 20);
             this.Txt_Seccion.TabIndex = 27;

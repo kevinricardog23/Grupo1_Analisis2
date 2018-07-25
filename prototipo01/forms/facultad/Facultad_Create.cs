@@ -35,5 +35,10 @@ namespace prototipo01.forms.facultad
         {
             openForm(new Listado_facultades());
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

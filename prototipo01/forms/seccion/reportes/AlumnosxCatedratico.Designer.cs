@@ -93,6 +93,7 @@
             // Txt_Seccion
             // 
             this.Txt_Seccion.Location = new System.Drawing.Point(291, 154);
+            this.Txt_Seccion.MaxLength = 1;
             this.Txt_Seccion.Name = "Txt_Seccion";
             this.Txt_Seccion.Size = new System.Drawing.Size(132, 20);
             this.Txt_Seccion.TabIndex = 45;
@@ -111,6 +112,7 @@
             // Txt_CodCurso
             // 
             this.Txt_CodCurso.Location = new System.Drawing.Point(678, 111);
+            this.Txt_CodCurso.MaxLength = 11;
             this.Txt_CodCurso.Name = "Txt_CodCurso";
             this.Txt_CodCurso.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCurso.TabIndex = 43;
@@ -130,6 +132,7 @@
             // Txt_CodCat
             // 
             this.Txt_CodCat.Location = new System.Drawing.Point(291, 111);
+            this.Txt_CodCat.MaxLength = 11;
             this.Txt_CodCat.Name = "Txt_CodCat";
             this.Txt_CodCat.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCat.TabIndex = 41;

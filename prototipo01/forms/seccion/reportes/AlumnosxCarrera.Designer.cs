@@ -76,6 +76,7 @@
             // Txt_CodCarrera
             // 
             this.Txt_CodCarrera.Location = new System.Drawing.Point(702, 106);
+            this.Txt_CodCarrera.MaxLength = 11;
             this.Txt_CodCarrera.Name = "Txt_CodCarrera";
             this.Txt_CodCarrera.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodCarrera.TabIndex = 29;
@@ -95,6 +96,7 @@
             // Txt_CodFacu
             // 
             this.Txt_CodFacu.Location = new System.Drawing.Point(291, 106);
+            this.Txt_CodFacu.MaxLength = 11;
             this.Txt_CodFacu.Name = "Txt_CodFacu";
             this.Txt_CodFacu.Size = new System.Drawing.Size(132, 20);
             this.Txt_CodFacu.TabIndex = 27;
