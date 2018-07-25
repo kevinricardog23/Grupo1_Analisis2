@@ -27,7 +27,7 @@ namespace prototipo01.controladores
         }
 
 
-        public BindingList<bitacoraDto> listaUsuarios()
+        public BindingList<bitacoraDto> listaBitacora()
         {
             using (ModelDADOS db = new ModelDADOS())
             {
@@ -36,7 +36,7 @@ namespace prototipo01.controladores
                              {
                                  id_bitacora = n.id_bitacora,
                                  fecha_bitacora = n.fecha_bitacora,
-                                 resultado_bitacora = n.resultado_bitacora,
+                                 accionusario_bitacora = n.accionusario_bitacora,
                                  USUARIO_id_usuario = n.USUARIO_id_usuario                              
                              }).ToList();
 

@@ -13,7 +13,9 @@ namespace prototipo01.Dto
 
         public DateTime? fecha_bitacora { get; set; }
 
-        public string resultado_bitacora { get; set; }
+        //public string resultado_bitacora { get; set; }
+
+        public string accionusario_bitacora { get; set; }
 
         public int USUARIO_id_usuario { get; set; }
 
