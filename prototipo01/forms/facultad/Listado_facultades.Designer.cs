@@ -28,91 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_actualizar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
+            this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Dgv_facultades = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Btn_crear = new System.Windows.Forms.Button();
+            this.Pnl_listafacultades = new System.Windows.Forms.Panel();
+            this.Lbl_listafacultades = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_facultades)).BeginInit();
+            this.Pnl_listafacultades.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
+            // Btn_actualizar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(702, 204);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 41);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "ACTUALIZAR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
+            this.Btn_actualizar.FlatAppearance.BorderSize = 0;
+            this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold);
+            this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
+            this.Btn_actualizar.Location = new System.Drawing.Point(687, 145);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_actualizar.Name = "Btn_actualizar";
+            this.Btn_actualizar.Size = new System.Drawing.Size(95, 41);
+            this.Btn_actualizar.TabIndex = 12;
+            this.Btn_actualizar.Text = "ACTUALIZAR";
+            this.Btn_actualizar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Btn_eliminar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(787, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_eliminar.ForeColor = System.Drawing.Color.White;
+            this.Btn_eliminar.Location = new System.Drawing.Point(786, 145);
+            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(82, 41);
+            this.Btn_eliminar.TabIndex = 11;
+            this.Btn_eliminar.Text = "ELIMINAR";
+            this.Btn_eliminar.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // Lbl_buscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(21, 151);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Buscar";
+            this.Lbl_buscar.AutoSize = true;
+            this.Lbl_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Lbl_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_buscar.Location = new System.Drawing.Point(21, 151);
+            this.Lbl_buscar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_buscar.Name = "Lbl_buscar";
+            this.Lbl_buscar.Size = new System.Drawing.Size(61, 18);
+            this.Lbl_buscar.TabIndex = 7;
+            this.Lbl_buscar.Text = "Buscar";
             // 
             // Txt_buscar
             // 
             this.Txt_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_buscar.Location = new System.Drawing.Point(93, 145);
-            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_buscar.Multiline = true;
             this.Txt_buscar.Name = "Txt_buscar";
             this.Txt_buscar.Size = new System.Drawing.Size(524, 39);
             this.Txt_buscar.TabIndex = 10;
             // 
-            // dataGridView1
+            // Dgv_facultades
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dgv_facultades.AllowUserToDeleteRows = false;
+            this.Dgv_facultades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_facultades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_facultades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nombre,
             this.ubicacion});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 204);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 323);
-            this.dataGridView1.TabIndex = 9;
+            this.Dgv_facultades.Location = new System.Drawing.Point(24, 204);
+            this.Dgv_facultades.Margin = new System.Windows.Forms.Padding(2);
+            this.Dgv_facultades.Name = "Dgv_facultades";
+            this.Dgv_facultades.ReadOnly = true;
+            this.Dgv_facultades.RowTemplate.Height = 24;
+            this.Dgv_facultades.Size = new System.Drawing.Size(844, 323);
+            this.Dgv_facultades.TabIndex = 9;
             // 
             // id
             // 
@@ -134,43 +134,43 @@
             this.ubicacion.ReadOnly = true;
             this.ubicacion.Width = 430;
             // 
-            // button1
+            // Btn_crear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(741, 76);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 41);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "CREAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_crear.FlatAppearance.BorderSize = 0;
+            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_crear.ForeColor = System.Drawing.Color.White;
+            this.Btn_crear.Location = new System.Drawing.Point(741, 76);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_crear.Name = "Btn_crear";
+            this.Btn_crear.Size = new System.Drawing.Size(82, 41);
+            this.Btn_crear.TabIndex = 8;
+            this.Btn_crear.Text = "CREAR";
+            this.Btn_crear.UseVisualStyleBackColor = false;
+            this.Btn_crear.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
+            // Pnl_listafacultades
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(14, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(868, 48);
-            this.panel1.TabIndex = 6;
+            this.Pnl_listafacultades.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pnl_listafacultades.Controls.Add(this.Lbl_listafacultades);
+            this.Pnl_listafacultades.Location = new System.Drawing.Point(14, 12);
+            this.Pnl_listafacultades.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_listafacultades.Name = "Pnl_listafacultades";
+            this.Pnl_listafacultades.Size = new System.Drawing.Size(868, 48);
+            this.Pnl_listafacultades.TabIndex = 6;
             // 
-            // label1
+            // Lbl_listafacultades
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(15, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de facultades";
+            this.Lbl_listafacultades.AutoSize = true;
+            this.Lbl_listafacultades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Lbl_listafacultades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_listafacultades.Location = new System.Drawing.Point(15, 15);
+            this.Lbl_listafacultades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_listafacultades.Name = "Lbl_listafacultades";
+            this.Lbl_listafacultades.Size = new System.Drawing.Size(149, 18);
+            this.Lbl_listafacultades.TabIndex = 0;
+            this.Lbl_listafacultades.Text = "Lista de facultades";
             // 
             // Btn_buscar
             // 
@@ -195,19 +195,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 538);
             this.Controls.Add(this.Btn_buscar);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Btn_actualizar);
+            this.Controls.Add(this.Btn_eliminar);
+            this.Controls.Add(this.Lbl_buscar);
             this.Controls.Add(this.Txt_buscar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Dgv_facultades);
+            this.Controls.Add(this.Btn_crear);
+            this.Controls.Add(this.Pnl_listafacultades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Listado_facultades";
             this.Text = "Listado_facultades";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_facultades)).EndInit();
+            this.Pnl_listafacultades.ResumeLayout(false);
+            this.Pnl_listafacultades.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,17 +215,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Btn_actualizar;
+        private System.Windows.Forms.Button Btn_eliminar;
+        private System.Windows.Forms.Label Lbl_buscar;
         private System.Windows.Forms.TextBox Txt_buscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Dgv_facultades;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ubicacion;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Btn_crear;
+        private System.Windows.Forms.Panel Pnl_listafacultades;
+        private System.Windows.Forms.Label Lbl_listafacultades;
         private System.Windows.Forms.Button Btn_buscar;
     }
 }
