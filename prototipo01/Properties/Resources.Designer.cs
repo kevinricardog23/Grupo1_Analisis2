@@ -93,6 +93,46 @@ namespace prototipo01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_check_mark_1_32 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-check-mark-1-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_check_mark_14_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-check-mark-14-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_check_mark_5_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-check-mark-5-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_edit_11_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-edit-11-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_help_3_32 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-help-3-32", resourceCulture);
@@ -116,6 +156,36 @@ namespace prototipo01.Properties {
         internal static System.Drawing.Bitmap iconmonstr_magnifier_1_32 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-magnifier-1-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_magnifier_4_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-magnifier-4-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_synchronization_19_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-synchronization-19-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_x_mark_13_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-x-mark-13-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

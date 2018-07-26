@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -205,6 +206,21 @@
             this.panel3.Size = new System.Drawing.Size(308, 2);
             this.panel3.TabIndex = 16;
             // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_x_mark_7_32;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(843, 12);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(45, 45);
+            this.btn_cerrar.TabIndex = 17;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +228,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(900, 582);
+            this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -247,6 +264,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_cerrar;
     }
 }
 

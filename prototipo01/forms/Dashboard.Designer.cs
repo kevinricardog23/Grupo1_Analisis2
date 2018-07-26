@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.sidebar = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -45,9 +46,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.workspace = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -73,6 +77,23 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(250, 690);
             this.sidebar.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(3, 638);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 40);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Bitacora de Acceso";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // button11
             // 
@@ -299,7 +320,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(105, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,22 +336,47 @@
             this.workspace.Size = new System.Drawing.Size(965, 690);
             this.workspace.TabIndex = 2;
             // 
-            // button2
+            // panel1
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 638);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Bitacora de Acceso";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btn_cerrar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(250, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(965, 53);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_x_mark_7_32;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(912, 4);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(45, 45);
+            this.btn_cerrar.TabIndex = 4;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_help_3_32;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(861, 4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(45, 45);
+            this.button10.TabIndex = 5;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
             // 
             // Dashboard
             // 
@@ -338,6 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1215, 690);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.workspace);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -347,6 +394,7 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -370,5 +418,8 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button button10;
     }
 }
