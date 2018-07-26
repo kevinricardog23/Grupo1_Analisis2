@@ -355,7 +355,7 @@ namespace prototipo01.forms.estudiante
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+        
         }
 
         #endregion

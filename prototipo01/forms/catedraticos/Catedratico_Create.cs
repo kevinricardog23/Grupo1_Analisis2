@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.controladores;
+using prototipo01.models;
 
 namespace prototipo01.forms.catedraticos
 {
     public partial class Catedratico_Create : Form
     {
+
+        ControladorCatedraticos controladorCatedraticos = new ControladorCatedraticos();
+
         public Catedratico_Create()
         {
             InitializeComponent();
@@ -28,6 +33,28 @@ namespace prototipo01.forms.catedraticos
             fh.Show();
 
         }
+
+
+        void createCatedratico()
+        {
+
+            string nombre, apellido, telefono, correo, direccion;
+            int edad,dpi;
+
+            
+            dpi = Convert.ToInt32(textBox7.Text.ToString());
+            nombre = textBox1.Text.ToString();
+            apellido = textBox2.Text.ToString();
+            telefono = textBox3.Text.ToString();
+            correo = textBox4.Text.ToString();
+            direccion = textBox5.Text.ToString();
+
+            edad = Convert.ToInt32(textBox6.Text.ToString());
+
+            controladorCatedraticos.guardarCatedratico(dpi,nombre,apellido,telefono,correo,edad,direccion);
+        }
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -51,8 +78,12 @@ namespace prototipo01.forms.catedraticos
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }else
+            {
+                createCatedratico();
+                MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
 
         private void Catedratico_Create_Load(object sender, EventArgs e)

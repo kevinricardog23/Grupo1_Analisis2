@@ -24,7 +24,7 @@ namespace prototipo01.forms.pensum
         public Listado_pensum()
         {
             InitializeComponent();
-            refreshGrid();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -92,6 +92,11 @@ namespace prototipo01.forms.pensum
                 MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void Listado_pensum_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

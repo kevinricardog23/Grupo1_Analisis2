@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Clases\Validacion.cs" />
     <Compile Include="controladores\ControladorBitacora.cs" />
+    <Compile Include="controladores\ControladorCatedraticos.cs" />
     <Compile Include="controladores\ControladorCursos.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
     <Compile Include="controladores\ControladorPensum.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="controladores\ControladorSecciones.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
     <Compile Include="Dto\bitacoraDto.cs" />
+    <Compile Include="Dto\catedraticoDto.cs" />
     <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Dto\laboratorioDto.cs" />
     <Compile Include="Dto\PensumDto.cs" />

@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.Dto;
+using prototipo01.models;
+using prototipo01.controladores;
+
 
 namespace prototipo01.forms.catedraticos
 {
     public partial class Catedratico_Update : Form
     {
-        public Catedratico_Update()
+
+
+        ControladorCatedraticos controladorCatedraticos = new ControladorCatedraticos();
+
+        private int reference;
+
+
+        public Catedratico_Update(int ID_reference)
         {
             InitializeComponent();
+            reference = ID_reference;
         }
 
         private void openForm(object formHijo)
@@ -28,6 +40,39 @@ namespace prototipo01.forms.catedraticos
             fh.Show();
 
         }
+
+
+        void updateCatedratico()
+        {
+            string nombre, apellido, telefono, correo, direccion;
+            int edad;
+
+            nombre = textBox1.Text.ToString();
+            apellido = textBox2.Text.ToString();
+            telefono = textBox3.Text.ToString();
+            correo = textBox4.Text.ToString();
+            direccion = textBox5.Text.ToString();
+
+            edad = Convert.ToInt32(textBox6.Text.ToString());
+
+
+            controladorCatedraticos.actualizarCatedratico(reference, nombre, apellido, telefono, correo, edad, direccion);
+            MessageBox.Show("Se ha Actualizado exitosamente el catedratico", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+       
+        void setData()
+        {
+            catedratico Model = controladorCatedraticos.buscarCatedratico(reference);
+
+            textBox1.Text = Model.nombre_catedratico.ToString();
+            textBox2.Text = Model.apellido_catedratico.ToString();
+            textBox3.Text = Model.telefono_catedratico.ToString();
+            textBox4.Text = Model.correo_catedratico.ToString();
+            textBox6.Text = Model.edad_catedratico.ToString();
+            textBox5.Text = Model.direccion_catedratico.ToString();
+
+        }
+
 
 
 
@@ -53,8 +98,12 @@ namespace prototipo01.forms.catedraticos
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }else
+            {
+                updateCatedratico();
+
             }
-            MessageBox.Show("Se ha Actualizado exitosamente el catedratico", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -65,6 +114,11 @@ namespace prototipo01.forms.catedraticos
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Catedratico_Update_Load(object sender, EventArgs e)
+        {
+            setData();
         }
     }
 }
