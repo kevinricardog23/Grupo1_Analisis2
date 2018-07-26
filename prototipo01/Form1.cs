@@ -85,6 +85,10 @@ namespace prototipo01
             return controladorUsuario.login(user, password);
         }
 
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 
