@@ -16,7 +16,13 @@ namespace prototipo01.controladores
         {
             try
             {
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var Query = (from n in db.alumno
+                                 select new estudianteDto
+                                 {
 
+                                 }
             }
         }
     }
