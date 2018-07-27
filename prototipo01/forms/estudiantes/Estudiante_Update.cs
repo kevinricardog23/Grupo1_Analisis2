@@ -31,7 +31,6 @@ namespace prototipo01.forms.estudiante
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            openForm(new Listado_estudiante());
         }
 
         private void Txt_Nombres_KeyPress(object sender, KeyPressEventArgs e)
@@ -60,6 +59,11 @@ namespace prototipo01.forms.estudiante
         private void Txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new Listado_estudiante());
         }
     }
 }

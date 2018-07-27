@@ -32,6 +32,10 @@ namespace prototipo01.forms.facultad
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
             openForm(new Listado_facultades());
         }
     }

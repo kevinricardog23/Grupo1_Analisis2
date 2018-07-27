@@ -68,5 +68,10 @@ namespace prototipo01.forms.seccion.reportes
                 return;
             }
         }
+
+        private void Btn_Actualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

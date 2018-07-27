@@ -100,7 +100,21 @@ namespace prototipo01.forms.catedraticos
                 return;
             }else
             {
-                updateCatedratico();
+                try
+                {
+                    updateCatedratico();
+                    MessageBox.Show("Se ha modificado exitosamente un nuevo Catedratico", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Edicion de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
             
@@ -119,6 +133,11 @@ namespace prototipo01.forms.catedraticos
         private void Catedratico_Update_Load(object sender, EventArgs e)
         {
             setData();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new listaCatedraticos());
         }
     }
 }

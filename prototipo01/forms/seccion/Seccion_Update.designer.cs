@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seccion_Update));
             this.CRUD = new System.Windows.Forms.TabControl();
             this.Tbp_ActualizarSeccion = new System.Windows.Forms.TabPage();
             this.Btn_Actualizar = new System.Windows.Forms.Button();
@@ -37,19 +36,18 @@
             this.Lbl_Estado = new System.Windows.Forms.Label();
             this.Lbl_Nombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.CRUD.SuspendLayout();
             this.Tbp_ActualizarSeccion.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CRUD
             // 
             this.CRUD.Controls.Add(this.Tbp_ActualizarSeccion);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(58, 92);
+            this.CRUD.Location = new System.Drawing.Point(40, 124);
             this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
@@ -78,19 +76,21 @@
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Actualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(422, 295);
+            this.Btn_Actualizar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
+            this.Btn_Actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Actualizar.Location = new System.Drawing.Point(298, 281);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
-            this.Btn_Actualizar.Size = new System.Drawing.Size(101, 48);
+            this.Btn_Actualizar.Size = new System.Drawing.Size(145, 41);
             this.Btn_Actualizar.TabIndex = 18;
-            this.Btn_Actualizar.Text = "Actualizar";
+            this.Btn_Actualizar.Text = "Editar";
             this.Btn_Actualizar.UseVisualStyleBackColor = false;
             this.Btn_Actualizar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Text_Estado
             // 
             this.Text_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Text_Estado.Location = new System.Drawing.Point(311, 210);
+            this.Text_Estado.Location = new System.Drawing.Point(298, 196);
             this.Text_Estado.Margin = new System.Windows.Forms.Padding(2);
             this.Text_Estado.MaxLength = 45;
             this.Text_Estado.Multiline = true;
@@ -101,7 +101,7 @@
             // Txt_Nombre
             // 
             this.Txt_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Nombre.Location = new System.Drawing.Point(311, 136);
+            this.Txt_Nombre.Location = new System.Drawing.Point(298, 122);
             this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Nombre.MaxLength = 45;
             this.Txt_Nombre.Multiline = true;
@@ -115,7 +115,7 @@
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(202, 210);
+            this.Lbl_Estado.Location = new System.Drawing.Point(189, 196);
             this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Estado.Name = "Lbl_Estado";
             this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
@@ -127,7 +127,7 @@
             this.Lbl_Nombre.AutoSize = true;
             this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Nombre.Location = new System.Drawing.Point(202, 137);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(189, 123);
             this.Lbl_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(73, 19);
@@ -137,24 +137,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_cerrar);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(58, 27);
+            this.panel1.Location = new System.Drawing.Point(40, 70);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 48);
+            this.panel1.Size = new System.Drawing.Size(870, 50);
             this.panel1.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(816, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -167,6 +156,21 @@
             this.label1.Size = new System.Drawing.Size(147, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Sección";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(822, 0);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
+            this.btn_cerrar.TabIndex = 11;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Seccion_Update
             // 
@@ -187,7 +191,6 @@
             this.Tbp_ActualizarSeccion.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,6 +206,6 @@
         private System.Windows.Forms.Label Lbl_Estado;
         private System.Windows.Forms.Label Lbl_Nombre;
         private System.Windows.Forms.Button Btn_Actualizar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_cerrar;
     }
 }

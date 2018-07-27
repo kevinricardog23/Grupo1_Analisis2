@@ -142,6 +142,18 @@
     <Compile Include="forms\catedraticos\listaCatedraticos.designer.cs">
       <DependentUpon>listaCatedraticos.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\curso\Cursos_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\curso\Cursos_Create.Designer.cs">
+      <DependentUpon>Cursos_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\curso\Cursos_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\curso\Cursos_Update.Designer.cs">
+      <DependentUpon>Cursos_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\curso\Listado_curso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +355,12 @@
     <EmbeddedResource Include="forms\catedraticos\listaCatedraticos.resx">
       <DependentUpon>listaCatedraticos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\curso\Cursos_Create.resx">
+      <DependentUpon>Cursos_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\curso\Cursos_Update.resx">
+      <DependentUpon>Cursos_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\curso\Listado_curso.resx">
       <DependentUpon>Listado_curso.cs</DependentUpon>
     </EmbeddedResource>
@@ -488,6 +506,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconmonstr-x-mark-13-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-undo-6-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-angel-left-circle-thin-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

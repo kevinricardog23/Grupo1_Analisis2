@@ -63,6 +63,16 @@ namespace prototipo01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_angel_left_circle_thin_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-angel-left-circle-thin-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_angel_left_circle_thin_32 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-angel-left-circle-thin-32", resourceCulture);
@@ -176,6 +186,16 @@ namespace prototipo01.Properties {
         internal static System.Drawing.Bitmap iconmonstr_synchronization_19_24 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-synchronization-19-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_undo_6_24 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-undo-6-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

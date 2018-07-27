@@ -144,5 +144,10 @@ namespace prototipo01
         {
 
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new listaLaboratorios());
+        }
     }
 }

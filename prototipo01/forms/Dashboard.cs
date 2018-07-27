@@ -115,7 +115,6 @@ namespace prototipo01.forms
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Application.Exit();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -153,10 +152,18 @@ namespace prototipo01.forms
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
         }
 
         private void button10_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_cerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button10_Click_2(object sender, EventArgs e)
         {
             Ayuda ayuda = new Ayuda();
             ayuda.Show();

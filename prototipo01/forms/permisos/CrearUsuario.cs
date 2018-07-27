@@ -85,5 +85,10 @@ namespace prototipo01.forms.permisos
         {
             Clases.Validacion.SoloLetras(e);
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
