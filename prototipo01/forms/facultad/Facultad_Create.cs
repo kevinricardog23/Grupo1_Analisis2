@@ -40,5 +40,10 @@ namespace prototipo01.forms.facultad
         {
 
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new Listado_facultades());
+        }
     }
 }

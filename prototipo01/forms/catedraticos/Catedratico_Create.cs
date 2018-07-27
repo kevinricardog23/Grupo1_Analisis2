@@ -58,7 +58,6 @@ namespace prototipo01.forms.catedraticos
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            openForm(new listaCatedraticos());
 
         }
 
@@ -80,8 +79,22 @@ namespace prototipo01.forms.catedraticos
                 return;
             }else
             {
-                createCatedratico();
-                MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    createCatedratico();
+                    MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    textBox7.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
            
         }
@@ -94,6 +107,11 @@ namespace prototipo01.forms.catedraticos
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new listaCatedraticos());
         }
     }
 }

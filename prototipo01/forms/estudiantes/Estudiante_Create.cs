@@ -165,6 +165,9 @@ namespace prototipo01.forms.estudiante
             }
         }
 
-       
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new Listado_estudiante());
+        }
     }
 }

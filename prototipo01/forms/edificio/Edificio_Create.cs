@@ -98,5 +98,10 @@ namespace prototipo01
                 epError_Ubicacion.Clear();
             }
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new listaEdificios());
+        }
     }
 }
