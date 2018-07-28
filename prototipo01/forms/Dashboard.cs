@@ -143,6 +143,7 @@ namespace prototipo01.forms
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

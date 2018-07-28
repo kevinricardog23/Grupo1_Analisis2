@@ -43,6 +43,8 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+
+            /*
             //verficiacion de usuarios (LOGIN)
             if (string.IsNullOrEmpty(Txt_Correo.Text))
             {
@@ -73,7 +75,7 @@ namespace prototipo01
             //this.Hide();
             //Dashboard dashboard = new Dashboard();
             //dashboard.Show();
-
+            */
         }
 
 
