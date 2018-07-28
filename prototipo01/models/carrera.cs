@@ -31,7 +31,7 @@ namespace prototipo01.models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<alumno> alumno { get; set; }
 
-        public virtual facultad facultad { get; set; }
+        public virtual facultad1 facultad { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<pensum> pensum { get; set; }

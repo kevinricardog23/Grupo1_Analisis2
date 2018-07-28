@@ -15,7 +15,7 @@ namespace prototipo01.controladores
     {
 
         //Lista de salones capa Dto
-        public BindingList<salonDto> listSalones()
+        public BindingList<salonDto> listaSalones()
         {
 
             try
@@ -189,6 +189,41 @@ namespace prototipo01.controladores
             }
 
         }
+
+
+        //buscar laboratorio por iniciales
+
+        public BindingList<salonDto> listaSalonesLike(int search)
+        {
+            try
+            {
+                using (ModelDADOS db = new ModelDADOS())
+                {
+                    var Query = (from n in db.salon
+                                 where n.id_salon ==search
+                                 select new salonDto
+                                 {
+                                     id_salon = n.id_salon,
+                                     EDIFICIO_id_edificio = n.EDIFICIO_id_edificio,
+                                  
+
+                                 }).ToList();
+
+                    BindingList<salonDto> result = new BindingList<salonDto>(Query);
+
+                    return result;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
 
     }
 }

@@ -7,10 +7,10 @@ namespace prototipo01.models
     using System.Data.Entity.Spatial;
 
     [Table("mydb.facultad")]
-    public partial class facultad
+    public partial class facultad1
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public facultad()
+        public facultad1()
         {
             alumno = new HashSet<alumno>();
             carrera = new HashSet<carrera>();

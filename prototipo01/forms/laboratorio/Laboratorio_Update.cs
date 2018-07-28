@@ -139,5 +139,10 @@ namespace prototipo01
         {
             openForm(new listaLaboratorios());
         }
+
+        private void Txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

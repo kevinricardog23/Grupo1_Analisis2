@@ -76,8 +76,8 @@ namespace prototipo01.controladores
 
             if (usuarioLogin.password_usuario == password)
             {
-                ControladorBitacora controladorBitacora = new ControladorBitacora();
-                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);
+                /*ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);*/
                 return true;
             }
 
