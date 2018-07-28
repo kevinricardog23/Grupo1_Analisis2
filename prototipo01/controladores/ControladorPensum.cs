@@ -89,7 +89,20 @@ namespace prototipo01.controladores
         }
 
 
+        //GET CARRERAS
 
+        public List<carrera> getCarreras()
+        {
+            using (ModelDADOS db = new ModelDADOS())
+            {
+
+                var std = (from carrera in db.carrera
+                           select carrera).ToList();
+
+                return std;
+
+            }
+        }
 
     }
 }
