@@ -36,7 +36,7 @@ namespace prototipo01.models
 
         public int CARRERA_id_carrera { get; set; }
 
-        public int? edad_alumno { get; set; }
+        public int edad_alumno { get; set; }
 
         [StringLength(45)]
         public string direccion_alumno { get; set; }
