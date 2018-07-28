@@ -67,8 +67,9 @@ namespace prototipo01.forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            seleccionDeDashboard = "Secciones";
-            openForm(new listaSecciones());
+            /*seleccionDeDashboard = "Secciones";
+            openForm(new listaSecciones());*/
+            MessageBox.Show("En desarrollo");
 
             /**/
         }
