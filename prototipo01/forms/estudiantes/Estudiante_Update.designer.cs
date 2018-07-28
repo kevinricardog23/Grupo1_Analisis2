@@ -39,15 +39,17 @@ namespace prototipo01.forms.estudiante
             this.Lbl_telefono = new System.Windows.Forms.Label();
             this.Txt_Correo = new System.Windows.Forms.TextBox();
             this.Lbl_Correo = new System.Windows.Forms.Label();
-            this.Txt_Contraseña = new System.Windows.Forms.TextBox();
-            this.Lbl_contraseña = new System.Windows.Forms.Label();
+            this.Txt_edad = new System.Windows.Forms.TextBox();
+            this.Lbl_edad = new System.Windows.Forms.Label();
             this.Txt_Apellidos = new System.Windows.Forms.TextBox();
             this.Lbl_apellido = new System.Windows.Forms.Label();
             this.Txt_Nombres = new System.Windows.Forms.TextBox();
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Pnl_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Rbtn_estado = new System.Windows.Forms.RadioButton();
+            this.Lbl_Estado = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pnl_panel.SuspendLayout();
@@ -66,6 +68,8 @@ namespace prototipo01.forms.estudiante
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Rbtn_estado);
+            this.tabPage1.Controls.Add(this.Lbl_Estado);
             this.tabPage1.Controls.Add(this.Btn_actualizar);
             this.tabPage1.Controls.Add(this.Txt_Direccion);
             this.tabPage1.Controls.Add(this.Lbl_direccion);
@@ -73,8 +77,8 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Controls.Add(this.Lbl_telefono);
             this.tabPage1.Controls.Add(this.Txt_Correo);
             this.tabPage1.Controls.Add(this.Lbl_Correo);
-            this.tabPage1.Controls.Add(this.Txt_Contraseña);
-            this.tabPage1.Controls.Add(this.Lbl_contraseña);
+            this.tabPage1.Controls.Add(this.Txt_edad);
+            this.tabPage1.Controls.Add(this.Lbl_edad);
             this.tabPage1.Controls.Add(this.Txt_Apellidos);
             this.tabPage1.Controls.Add(this.Lbl_apellido);
             this.tabPage1.Controls.Add(this.Txt_Nombres);
@@ -175,28 +179,28 @@ namespace prototipo01.forms.estudiante
             this.Lbl_Correo.TabIndex = 6;
             this.Lbl_Correo.Text = "Correo";
             // 
-            // Txt_Contraseña
+            // Txt_edad
             // 
-            this.Txt_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Contraseña.Location = new System.Drawing.Point(113, 182);
-            this.Txt_Contraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_Contraseña.MaxLength = 45;
-            this.Txt_Contraseña.Multiline = true;
-            this.Txt_Contraseña.Name = "Txt_Contraseña";
-            this.Txt_Contraseña.Size = new System.Drawing.Size(317, 28);
-            this.Txt_Contraseña.TabIndex = 5;
+            this.Txt_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_edad.Location = new System.Drawing.Point(113, 182);
+            this.Txt_edad.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_edad.MaxLength = 45;
+            this.Txt_edad.Multiline = true;
+            this.Txt_edad.Name = "Txt_edad";
+            this.Txt_edad.Size = new System.Drawing.Size(317, 28);
+            this.Txt_edad.TabIndex = 5;
             // 
-            // Lbl_contraseña
+            // Lbl_edad
             // 
-            this.Lbl_contraseña.AutoSize = true;
-            this.Lbl_contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_contraseña.Location = new System.Drawing.Point(11, 184);
-            this.Lbl_contraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_contraseña.Name = "Lbl_contraseña";
-            this.Lbl_contraseña.Size = new System.Drawing.Size(98, 19);
-            this.Lbl_contraseña.TabIndex = 4;
-            this.Lbl_contraseña.Text = "Contraseña";
+            this.Lbl_edad.AutoSize = true;
+            this.Lbl_edad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_edad.Location = new System.Drawing.Point(11, 184);
+            this.Lbl_edad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_edad.Name = "Lbl_edad";
+            this.Lbl_edad.Size = new System.Drawing.Size(50, 19);
+            this.Lbl_edad.TabIndex = 4;
+            this.Lbl_edad.Text = "Edad";
             // 
             // Txt_Apellidos
             // 
@@ -257,18 +261,6 @@ namespace prototipo01.forms.estudiante
             this.Pnl_panel.Size = new System.Drawing.Size(870, 50);
             this.Pnl_panel.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(8, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Actualizar Estudiante";
-            // 
             // btn_cerrar
             // 
             this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
@@ -283,6 +275,40 @@ namespace prototipo01.forms.estudiante
             this.btn_cerrar.TabIndex = 10;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Actualizar Estudiante";
+            // 
+            // Rbtn_estado
+            // 
+            this.Rbtn_estado.AutoSize = true;
+            this.Rbtn_estado.Location = new System.Drawing.Point(133, 314);
+            this.Rbtn_estado.Name = "Rbtn_estado";
+            this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
+            this.Rbtn_estado.TabIndex = 36;
+            this.Rbtn_estado.TabStop = true;
+            this.Rbtn_estado.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Estado
+            // 
+            this.Lbl_Estado.AutoSize = true;
+            this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Estado.Location = new System.Drawing.Point(50, 310);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Estado.Name = "Lbl_Estado";
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
+            this.Lbl_Estado.TabIndex = 35;
+            this.Lbl_Estado.Text = "Estado";
             // 
             // Estudiante_Update
             // 
@@ -318,8 +344,8 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Apellidos;
         private System.Windows.Forms.Label Lbl_apellido;
-        private System.Windows.Forms.TextBox Txt_Contraseña;
-        private System.Windows.Forms.Label Lbl_contraseña;
+        private System.Windows.Forms.TextBox Txt_edad;
+        private System.Windows.Forms.Label Lbl_edad;
         private System.Windows.Forms.TextBox Txt_Correo;
         private System.Windows.Forms.Label Lbl_Correo;
         private System.Windows.Forms.TextBox Txt_Direccion;
@@ -328,5 +354,7 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.Label Lbl_telefono;
         private System.Windows.Forms.Button Btn_actualizar;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.RadioButton Rbtn_estado;
+        private System.Windows.Forms.Label Lbl_Estado;
     }
 }

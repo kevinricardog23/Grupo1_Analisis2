@@ -89,6 +89,14 @@ namespace prototipo01
         {
             this.Close();
         }
+
+        private void Txt_password_Enter(object sender, EventArgs e)
+        {
+            
+            //this.Hide();
+            //Dashboard dashboard = new Dashboard();
+            //dashboard.Show();
+        }
     }
 
 

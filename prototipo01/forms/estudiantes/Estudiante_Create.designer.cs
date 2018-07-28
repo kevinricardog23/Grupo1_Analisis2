@@ -33,6 +33,12 @@ namespace prototipo01.forms.estudiante
             this.components = new System.ComponentModel.Container();
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Lbl_carrera = new System.Windows.Forms.Label();
+            this.Txt_dpi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Rbtn_estado = new System.Windows.Forms.RadioButton();
+            this.Lbl_Estado = new System.Windows.Forms.Label();
+            this.cbo_estudiante = new System.Windows.Forms.ComboBox();
             this.Btn_crear = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,12 +47,13 @@ namespace prototipo01.forms.estudiante
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Lbl_edad = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.epError_Nombres = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Pass = new System.Windows.Forms.ErrorProvider(this.components);
@@ -54,7 +61,8 @@ namespace prototipo01.forms.estudiante
             this.epError_Apellidos = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Correo = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Direccion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbo_facultad = new System.Windows.Forms.ComboBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,6 +87,14 @@ namespace prototipo01.forms.estudiante
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbo_facultad);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.Lbl_carrera);
+            this.tabPage1.Controls.Add(this.Txt_dpi);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.Rbtn_estado);
+            this.tabPage1.Controls.Add(this.Lbl_Estado);
+            this.tabPage1.Controls.Add(this.cbo_estudiante);
             this.tabPage1.Controls.Add(this.Btn_crear);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label6);
@@ -87,7 +103,7 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.Lbl_edad);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -100,6 +116,72 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // Lbl_carrera
+            // 
+            this.Lbl_carrera.AutoSize = true;
+            this.Lbl_carrera.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_carrera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_carrera.Location = new System.Drawing.Point(453, 296);
+            this.Lbl_carrera.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_carrera.Name = "Lbl_carrera";
+            this.Lbl_carrera.Size = new System.Drawing.Size(68, 19);
+            this.Lbl_carrera.TabIndex = 37;
+            this.Lbl_carrera.Text = "Carrera";
+            // 
+            // Txt_dpi
+            // 
+            this.Txt_dpi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_dpi.Location = new System.Drawing.Point(113, 25);
+            this.Txt_dpi.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_dpi.MaxLength = 30;
+            this.Txt_dpi.Multiline = true;
+            this.Txt_dpi.Name = "Txt_dpi";
+            this.Txt_dpi.Size = new System.Drawing.Size(741, 28);
+            this.Txt_dpi.TabIndex = 35;
+            this.Txt_dpi.Validated += new System.EventHandler(this.Txt_dpi_Validated);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label8.Location = new System.Drawing.Point(67, 26);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(33, 19);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "DPI";
+            // 
+            // Rbtn_estado
+            // 
+            this.Rbtn_estado.AutoSize = true;
+            this.Rbtn_estado.Location = new System.Drawing.Point(113, 302);
+            this.Rbtn_estado.Name = "Rbtn_estado";
+            this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
+            this.Rbtn_estado.TabIndex = 34;
+            this.Rbtn_estado.TabStop = true;
+            this.Rbtn_estado.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Estado
+            // 
+            this.Lbl_Estado.AutoSize = true;
+            this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Estado.Location = new System.Drawing.Point(30, 298);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Estado.Name = "Lbl_Estado";
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
+            this.Lbl_Estado.TabIndex = 33;
+            this.Lbl_Estado.Text = "Estado";
+            // 
+            // cbo_estudiante
+            // 
+            this.cbo_estudiante.FormattingEnabled = true;
+            this.cbo_estudiante.Location = new System.Drawing.Point(538, 290);
+            this.cbo_estudiante.Name = "cbo_estudiante";
+            this.cbo_estudiante.Size = new System.Drawing.Size(316, 27);
+            this.cbo_estudiante.TabIndex = 32;
+            // 
             // Btn_crear
             // 
             this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
@@ -109,7 +191,7 @@ namespace prototipo01.forms.estudiante
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(113, 303);
+            this.Btn_crear.Location = new System.Drawing.Point(113, 352);
             this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(145, 41);
@@ -203,17 +285,17 @@ namespace prototipo01.forms.estudiante
             this.textBox3.TabIndex = 5;
             this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
             // 
-            // label4
+            // Lbl_edad
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(11, 164);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Contraseña";
+            this.Lbl_edad.AutoSize = true;
+            this.Lbl_edad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_edad.Location = new System.Drawing.Point(30, 164);
+            this.Lbl_edad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_edad.Name = "Lbl_edad";
+            this.Lbl_edad.Size = new System.Drawing.Size(50, 19);
+            this.Lbl_edad.TabIndex = 4;
+            this.Lbl_edad.Text = "Edad";
             // 
             // textBox2
             // 
@@ -277,6 +359,21 @@ namespace prototipo01.forms.estudiante
             this.panel1.Size = new System.Drawing.Size(870, 50);
             this.panel1.TabIndex = 4;
             // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(822, 0);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
+            this.btn_cerrar.TabIndex = 10;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -313,20 +410,25 @@ namespace prototipo01.forms.estudiante
             // 
             this.epError_Direccion.ContainerControl = this;
             // 
-            // btn_cerrar
+            // label4
             // 
-            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
-            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(822, 0);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
-            this.btn_cerrar.TabIndex = 10;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label4.Location = new System.Drawing.Point(453, 342);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 19);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Facultad";
+            // 
+            // cbo_facultad
+            // 
+            this.cbo_facultad.FormattingEnabled = true;
+            this.cbo_facultad.Location = new System.Drawing.Point(539, 334);
+            this.cbo_facultad.Name = "cbo_facultad";
+            this.cbo_facultad.Size = new System.Drawing.Size(316, 27);
+            this.cbo_facultad.TabIndex = 39;
             // 
             // Estudiante_Create
             // 
@@ -341,6 +443,7 @@ namespace prototipo01.forms.estudiante
             this.Name = "Estudiante_Create";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estudiante_Create";
+            this.Load += new System.EventHandler(this.Estudiante_Create_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -372,7 +475,7 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Lbl_edad;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
@@ -386,6 +489,15 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.ErrorProvider epError_Apellidos;
         private System.Windows.Forms.ErrorProvider epError_Correo;
         private System.Windows.Forms.ErrorProvider epError_Direccion;
+        private System.Windows.Forms.ErrorProvider epError_Dpi;
         private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.ComboBox cbo_estudiante;
+        private System.Windows.Forms.RadioButton Rbtn_estado;
+        private System.Windows.Forms.Label Lbl_Estado;
+        private System.Windows.Forms.TextBox Txt_dpi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Lbl_carrera;
+        private System.Windows.Forms.ComboBox cbo_facultad;
+        private System.Windows.Forms.Label label4;
     }
 }

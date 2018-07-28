@@ -121,6 +121,7 @@
             this.Txt_password.Size = new System.Drawing.Size(304, 38);
             this.Txt_password.TabIndex = 10;
             this.Txt_password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Txt_password.Enter += new System.EventHandler(this.Txt_password_Enter);
             // 
             // bunifuThinButton21
             // 

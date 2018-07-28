@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using prototipo01.controladores;
+using prototipo01.models;
 namespace prototipo01.forms.estudiante
 {
     public partial class Estudiante_Create : Form
     {
+        ControladorEstudiante controladorEstudiantes = new ControladorEstudiante();
         public Estudiante_Create()
         {
             InitializeComponent();
@@ -28,7 +30,24 @@ namespace prototipo01.forms.estudiante
             fh.Show();
 
         }
+        void createAlumno()
+        {
 
+            string nombre, apellido,correo, direccion, telefono, estado;
+            int edad, dpi;
+
+
+            dpi = Convert.ToInt32(Txt_dpi.Text.ToString());
+            nombre = textBox1.Text.ToString();
+            apellido = textBox2.Text.ToString();
+            correo = textBox4.Text.ToString();
+            direccion = textBox5.Text.ToString();
+            telefono = textBox6.Text.ToString();
+            estado = Rbtn_estado.Text.ToString();
+            edad = Convert.ToInt32(textBox3.Text.ToString());
+
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono);
+        }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
@@ -85,7 +104,34 @@ namespace prototipo01.forms.estudiante
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (string.IsNullOrEmpty(Txt_dpi.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            /*codigo kevin*/
+            else
+            {
+                try
+                {
+                    createAlumno();
+                    MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    Txt_dpi.Text = "";
+                    Rbtn_estado.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
 
         private void textBox1_Validated(object sender, EventArgs e)
         {
@@ -148,7 +194,7 @@ namespace prototipo01.forms.estudiante
             }
             else
             {
-                epError_Tel.Clear();
+                epError_Direccion.Clear();
             }
         }
 
@@ -161,13 +207,42 @@ namespace prototipo01.forms.estudiante
             }
             else
             {
-                epError_Direccion.Clear();
+                epError_Tel.Clear();
             }
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             openForm(new Listado_estudiante());
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        private void Estudiante_Create_Load(object sender, EventArgs e)
+        {
+            cbo_estudiante.DataSource = controladorEstudiantes.getID_carrera();
+            cbo_estudiante.DisplayMember = "id_Curso";
+            cbo_estudiante.ValueMember = "CARRERA_id_carrera";
+            cbo_facultad.DataSource = controladorEstudiantes.getID_carrera();
+            cbo_facultad.DisplayMember = "id_facultad";
+            cbo_facultad.ValueMember = "FACULTAD_id_facultad";
+        }
+
+        private void Txt_dpi_Validated(object sender, EventArgs e)
+        {
+            if (Txt_dpi.Text.Trim() == "")
+            {
+                epError_Dpi.SetError(Txt_dpi, "Introduce DPI del estudiante");
+                textBox6.Focus();
+            }
+            else
+            {
+              /*  epError_Dpi.Clear();*/
+            }
         }
     }
 }
