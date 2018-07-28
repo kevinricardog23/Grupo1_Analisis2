@@ -46,7 +46,7 @@ namespace prototipo01.models
 
         public virtual carrera carrera { get; set; }
 
-        public virtual facultad facultad { get; set; }
+        public virtual facultad1 facultad { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<curso_estudiante> curso_estudiante { get; set; }
