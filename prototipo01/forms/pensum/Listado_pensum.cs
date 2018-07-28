@@ -97,6 +97,10 @@ namespace prototipo01.forms.pensum
         private void Listado_pensum_Load(object sender, EventArgs e)
         {
 
+
+            comboBox1.DataSource = controladorPensum.getCarreras();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "nombre_carrera";
         }
     }
 }

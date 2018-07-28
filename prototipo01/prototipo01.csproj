@@ -80,6 +80,7 @@
     <Compile Include="controladores\ControladorCursos.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
     <Compile Include="controladores\ControladorEstudiante.cs" />
+    <Compile Include="controladores\ControladorFacultades.cs" />
     <Compile Include="controladores\ControladorPensum.cs" />
     <Compile Include="controladores\ControladorLaboratorio.cs" />
     <Compile Include="controladores\ControladorSalones.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Dto\catedraticoDto.cs" />
     <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Dto\estudianteDto.cs" />
+    <Compile Include="Dto\facultadesDto.cs" />
     <Compile Include="Dto\laboratorioDto.cs" />
     <Compile Include="Dto\PensumDto.cs" />
     <Compile Include="Dto\salonDto.cs" />
