@@ -241,11 +241,11 @@ namespace prototipo01.models
                 .Property(e => e.horario_horario)
                 .IsUnicode(false);
 
-            /*modelBuilder.Entity<horario>()
+            modelBuilder.Entity<horario>()
                 .HasMany(e => e.curso)
                 .WithRequired(e => e.horario)
                 .HasForeignKey(e => e.HORARIO_id_horario)
-                .WillCascadeOnDelete(false);*/
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<horario>()
                 .HasMany(e => e.laboratorio)
@@ -257,11 +257,11 @@ namespace prototipo01.models
                 .Property(e => e.descripcion_laboratorio)
                 .IsUnicode(false);
 
-           /* modelBuilder.Entity<laboratorio>()
+            modelBuilder.Entity<laboratorio>()
                 .HasMany(e => e.curso)
                 .WithRequired(e => e.laboratorio)
                 .HasForeignKey(e => e.LABORATORIO_id_laboratorio)
-                .WillCascadeOnDelete(false);*/
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<pago>()
                 .Property(e => e.tipo_pago)
@@ -290,11 +290,11 @@ namespace prototipo01.models
                 .Property(e => e.capacidad_salon)
                 .IsUnicode(false);
 
-            /*modelBuilder.Entity<salon>()
+            modelBuilder.Entity<salon>()
                 .HasMany(e => e.curso)
                 .WithRequired(e => e.salon)
                 .HasForeignKey(e => e.SALON_id_salon)
-                .WillCascadeOnDelete(false);*/
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<salon>()
                 .HasMany(e => e.laboratorio)
@@ -310,11 +310,11 @@ namespace prototipo01.models
                 .Property(e => e.estado_seccion)
                 .IsUnicode(false);
 
-            /*modelBuilder.Entity<seccion>()
+            modelBuilder.Entity<seccion>()
                 .HasMany(e => e.curso)
                 .WithRequired(e => e.seccion)
                 .HasForeignKey(e => e.SECCION_id_seccion)
-                .WillCascadeOnDelete(false);*/
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<usuario>()
                 .Property(e => e.usuario_usuario)

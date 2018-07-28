@@ -30,6 +30,10 @@
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmbBox_Pensum = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBox_semestre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_crear = new System.Windows.Forms.Button();
@@ -40,10 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBox_semestre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbBox_Pensum = new System.Windows.Forms.ComboBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,6 +81,48 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // cmbBox_Pensum
+            // 
+            this.cmbBox_Pensum.FormattingEnabled = true;
+            this.cmbBox_Pensum.Location = new System.Drawing.Point(283, 292);
+            this.cmbBox_Pensum.Name = "cmbBox_Pensum";
+            this.cmbBox_Pensum.Size = new System.Drawing.Size(356, 27);
+            this.cmbBox_Pensum.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label6.Location = new System.Drawing.Point(208, 294);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 19);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Pensum";
+            // 
+            // txtBox_semestre
+            // 
+            this.txtBox_semestre.Location = new System.Drawing.Point(282, 226);
+            this.txtBox_semestre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_semestre.MaxLength = 45;
+            this.txtBox_semestre.Multiline = true;
+            this.txtBox_semestre.Name = "txtBox_semestre";
+            this.txtBox_semestre.Size = new System.Drawing.Size(357, 28);
+            this.txtBox_semestre.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label5.Location = new System.Drawing.Point(200, 228);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 19);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Semestre";
             // 
             // txtbox_ID
             // 
@@ -204,48 +246,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear Cursos";
             // 
-            // txtBox_semestre
-            // 
-            this.txtBox_semestre.Location = new System.Drawing.Point(282, 226);
-            this.txtBox_semestre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBox_semestre.MaxLength = 45;
-            this.txtBox_semestre.Multiline = true;
-            this.txtBox_semestre.Name = "txtBox_semestre";
-            this.txtBox_semestre.Size = new System.Drawing.Size(357, 28);
-            this.txtBox_semestre.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(200, 228);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 19);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Semestre";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(208, 294);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 19);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Pensum";
-            // 
-            // cmbBox_Pensum
-            // 
-            this.cmbBox_Pensum.FormattingEnabled = true;
-            this.cmbBox_Pensum.Location = new System.Drawing.Point(283, 292);
-            this.cmbBox_Pensum.Name = "cmbBox_Pensum";
-            this.cmbBox_Pensum.Size = new System.Drawing.Size(356, 27);
-            this.cmbBox_Pensum.TabIndex = 38;
-            // 
             // Cursos_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +257,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cursos_Create";
             this.Text = "Cursos_Create";
+            this.Load += new System.EventHandler(this.Cursos_Create_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

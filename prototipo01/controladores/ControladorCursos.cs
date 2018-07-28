@@ -55,20 +55,40 @@ namespace prototipo01.controladores
 
 
             curso cursoNuevo = new curso();
-            
+
+            cursoNuevo.id_curso = id_curso;
             cursoNuevo.nombre_curso = nombre_nombrecurso;
             cursoNuevo.PENSUM_id_pensum = PENSUM_id_pensum;
             cursoNuevo.ciclo_curso = ciclo_curso;
             cursoNuevo.semestre_curso = semestre_curso;
-
-            //MessageBox.Show(id_curso.ToString() + nombre_nombrecurso + PENSUM_id_pensum.ToString() + ciclo_curso + semestre_curso);
+            
 
             db.curso.Add(cursoNuevo);
             db.SaveChanges();
 
         }
 
-        
+
+
+        //devuelve pensum
+
+        public List<pensum> getPensum()
+        {
+
+
+            using (ModelDADOS db = new ModelDADOS())
+            {
+
+                var std = (from pensum in db.pensum
+                           select pensum).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
 
 
         /* //Lista de edificios capa Dto

@@ -48,7 +48,7 @@ namespace prototipo01.forms.curso
         {
 
             string nombre, ciclo, semestre;
-            int id_curso, id_pensum;
+            int  id_curso, id_pensum;
 
             id_curso = Convert.ToInt32(txtbox_ID.Text.ToString());
             nombre = txtBox_nombre.Text.ToString();
@@ -56,12 +56,22 @@ namespace prototipo01.forms.curso
             ciclo = txtBox_Ciclo.Text.ToString();
             semestre = txtBox_semestre.Text.ToString();
 
-            controladorCursos.guardarCurso(id_curso, nombre, id_pensum, ciclo, semestre);
+            controladorCursos.guardarCurso(id_curso,nombre, id_pensum, ciclo, semestre);
+        }
+
+        //devuelve pensum
+        private void dataPensum()
+        {
+            cmbBox_Pensum.DataSource = controladorCursos.getPensum();
+            cmbBox_Pensum.DisplayMember = "Name";
+            cmbBox_Pensum.ValueMember = "id_pensum";
+
+
         }
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtbox_ID.Text) || string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Ciclo.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  )
+            if (string.IsNullOrEmpty(txtbox_ID.Text) || (string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Ciclo.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  ))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -70,7 +80,6 @@ namespace prototipo01.forms.curso
             {
                 createCursos();
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbox_ID.Text = "";
                 txtBox_nombre.Text = "";
                 txtBox_Ciclo.Text = "";
                 txtBox_semestre.Text = "";
@@ -80,6 +89,11 @@ namespace prototipo01.forms.curso
             {
                 MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Cursos_Create_Load(object sender, EventArgs e)
+        {
+            dataPensum();
         }
     }
 }
