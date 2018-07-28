@@ -55,12 +55,15 @@ namespace prototipo01.forms.salones
         void updateSalon()
         {
 
-            string capacidad, edificio;
-            capacidad = Txt_capacidad.Text.ToString();
-            edificio = Cbo_edificio.Text.ToString();
+            string capacidad;
+            int ID_edificio;
 
-            controladorSalones.actualizarSalon(reference, capacidad, edificio);
-            MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            capacidad = Txt_capacidad.Text.ToString();
+            ID_edificio = controladorSalones.getIdEdificio(Cbo_edificio.Text.ToString());
+
+
+
+            controladorSalones.actualizarSalon(reference,capacidad, ID_edificio); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         private void Btn_editar_Click(object sender, EventArgs e)

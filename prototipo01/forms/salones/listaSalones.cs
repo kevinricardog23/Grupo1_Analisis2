@@ -23,7 +23,7 @@ namespace prototipo01.forms.salones
         {
             this.Dgv_salones.DataSource = null;
             this.Dgv_salones.Rows.Clear();
-            salonesDataSource = controladorSalones.listSalones();
+            salonesDataSource = controladorSalones.listaSalones();
             Dgv_salones.DataSource = salonesDataSource;
 
         }
@@ -76,7 +76,7 @@ namespace prototipo01.forms.salones
         {
             this.Dgv_salones.DataSource = null;
             this.Dgv_salones.Rows.Clear();
-            salonesDataSource = controladorSalones.listSalonesLike(Txt_buscar.Text.ToString());
+            salonesDataSource = controladorSalones.listaSalonesLike(Convert.ToInt32(Txt_buscar.Text.ToString()));
             Dgv_salones.DataSource = salonesDataSource;
         }
 

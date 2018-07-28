@@ -34,13 +34,15 @@ namespace prototipo01.forms.salones
         void crearSalon()
         {
 
-            int id;
-            string capacidad, edificio;
-            id = Convert.ToInt32(Txt_id.Text.ToString());
+            string capacidad;
+            int ID_edificio;
+         
             capacidad = Txt_capacidad.Text.ToString();
-            edificio = Cbo_edificio.Text.ToString();
+            ID_edificio = controladorSalones.getIdEdificio(Cbo_edificio.Text.ToString());
+
             
-            controladorSalones.guardarSalon(id,capacidad,edificio);
+            
+            controladorSalones.guardarSalon(capacidad,ID_edificio);
         }
 
 
@@ -52,7 +54,7 @@ namespace prototipo01.forms.salones
         private void Btn_crear_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(Txt_id.Text) || string.IsNullOrEmpty(Txt_capacidad.Text) || string.IsNullOrEmpty(Cbo_edificio.Text) )
+            if (string.IsNullOrEmpty(Txt_capacidad.Text) || string.IsNullOrEmpty(Cbo_edificio.Text) )
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -63,7 +65,7 @@ namespace prototipo01.forms.salones
                 {
                     crearSalon();
                     MessageBox.Show("Se ha agregado exitosamente un nuevo salon", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Txt_id.Text = "";
+                    
                     Txt_capacidad.Text = "";
                   
                 }
@@ -96,7 +98,7 @@ namespace prototipo01.forms.salones
 
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
+            Clases.Validacion.SoloNumeros(e);
         }
     }
 }

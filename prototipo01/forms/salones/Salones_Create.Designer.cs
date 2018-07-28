@@ -31,8 +31,6 @@
             this.CRUD = new System.Windows.Forms.TabControl();
             this.Tp_crear = new System.Windows.Forms.TabPage();
             this.Cbo_edificio = new System.Windows.Forms.ComboBox();
-            this.Txt_id = new System.Windows.Forms.TextBox();
-            this.Lbl_id = new System.Windows.Forms.Label();
             this.Btn_crear = new System.Windows.Forms.Button();
             this.Lbl_edificio = new System.Windows.Forms.Label();
             this.Txt_capacidad = new System.Windows.Forms.TextBox();
@@ -63,8 +61,6 @@
             // Tp_crear
             // 
             this.Tp_crear.Controls.Add(this.Cbo_edificio);
-            this.Tp_crear.Controls.Add(this.Txt_id);
-            this.Tp_crear.Controls.Add(this.Lbl_id);
             this.Tp_crear.Controls.Add(this.Btn_crear);
             this.Tp_crear.Controls.Add(this.Lbl_edificio);
             this.Tp_crear.Controls.Add(this.Txt_capacidad);
@@ -84,30 +80,6 @@
             this.Cbo_edificio.Name = "Cbo_edificio";
             this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
             this.Cbo_edificio.TabIndex = 33;
-            // 
-            // Txt_id
-            // 
-            this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_id.Location = new System.Drawing.Point(131, 41);
-            this.Txt_id.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_id.MaxLength = 30;
-            this.Txt_id.Multiline = true;
-            this.Txt_id.Name = "Txt_id";
-            this.Txt_id.Size = new System.Drawing.Size(316, 28);
-            this.Txt_id.TabIndex = 1;
-            this.Txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_KeyPress);
-            // 
-            // Lbl_id
-            // 
-            this.Lbl_id.AutoSize = true;
-            this.Lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_id.Location = new System.Drawing.Point(27, 50);
-            this.Lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_id.Name = "Lbl_id";
-            this.Lbl_id.Size = new System.Drawing.Size(24, 19);
-            this.Lbl_id.TabIndex = 32;
-            this.Lbl_id.Text = "ID";
             // 
             // Btn_crear
             // 
@@ -263,8 +235,6 @@
 
         private System.Windows.Forms.TabControl CRUD;
         private System.Windows.Forms.TabPage Tp_crear;
-        private System.Windows.Forms.TextBox Txt_id;
-        private System.Windows.Forms.Label Lbl_id;
         private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.Label Lbl_edificio;
         private System.Windows.Forms.TextBox Txt_capacidad;
