@@ -95,6 +95,7 @@
             this.Txt_id.Name = "Txt_id";
             this.Txt_id.Size = new System.Drawing.Size(316, 28);
             this.Txt_id.TabIndex = 1;
+            this.Txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_KeyPress);
             // 
             // Lbl_id
             // 
@@ -148,6 +149,7 @@
             this.Txt_capacidad.Name = "Txt_capacidad";
             this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
             this.Txt_capacidad.TabIndex = 2;
+            this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress);
             // 
             // Lbl_capacidad
             // 

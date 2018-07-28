@@ -15,7 +15,7 @@ namespace prototipo01.controladores
     {
 
         //Lista de salones capa Dto
-        public BindingList<salonDto> listaSalones()
+        public BindingList<salonDto> listSalones()
         {
 
             try

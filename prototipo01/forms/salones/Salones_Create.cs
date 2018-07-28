@@ -80,13 +80,23 @@ namespace prototipo01.forms.salones
         {
             Cbo_edificio.DataSource = controladorSalones.getEdificios();
             Cbo_edificio.DisplayMember = "Name";
-            Cbo_edificio.ValueMember = "id_edificio";
+            Cbo_edificio.ValueMember = "nombre_edificio";
 
 
         }
         private void Salones_Create_Load(object sender, EventArgs e)
         {
             dataEdificios();
+        }
+
+        private void Txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
         }
     }
 }

@@ -30,14 +30,14 @@
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.Tp_editar = new System.Windows.Forms.TabPage();
+            this.Cbo_edificio = new System.Windows.Forms.ComboBox();
+            this.Txt_capacidad = new System.Windows.Forms.TextBox();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Pnl_titulo = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_titulo = new System.Windows.Forms.Label();
-            this.Cbo_edificio = new System.Windows.Forms.ComboBox();
-            this.Txt_capacidad = new System.Windows.Forms.TextBox();
             this.CRUD.SuspendLayout();
             this.Tp_editar.SuspendLayout();
             this.Pnl_titulo.SuspendLayout();
@@ -68,6 +68,26 @@
             this.Tp_editar.Size = new System.Drawing.Size(868, 466);
             this.Tp_editar.TabIndex = 0;
             this.Tp_editar.UseVisualStyleBackColor = true;
+            // 
+            // Cbo_edificio
+            // 
+            this.Cbo_edificio.FormattingEnabled = true;
+            this.Cbo_edificio.Location = new System.Drawing.Point(189, 176);
+            this.Cbo_edificio.Name = "Cbo_edificio";
+            this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
+            this.Cbo_edificio.TabIndex = 35;
+            // 
+            // Txt_capacidad
+            // 
+            this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_capacidad.Location = new System.Drawing.Point(189, 102);
+            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_capacidad.MaxLength = 30;
+            this.Txt_capacidad.Multiline = true;
+            this.Txt_capacidad.Name = "Txt_capacidad";
+            this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
+            this.Txt_capacidad.TabIndex = 34;
+            this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress);
             // 
             // Btn_editar
             // 
@@ -148,25 +168,6 @@
             this.Lbl_titulo.Size = new System.Drawing.Size(175, 18);
             this.Lbl_titulo.TabIndex = 0;
             this.Lbl_titulo.Text = "Actualizar Catedratico";
-            // 
-            // Cbo_edificio
-            // 
-            this.Cbo_edificio.FormattingEnabled = true;
-            this.Cbo_edificio.Location = new System.Drawing.Point(189, 176);
-            this.Cbo_edificio.Name = "Cbo_edificio";
-            this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
-            this.Cbo_edificio.TabIndex = 35;
-            // 
-            // Txt_capacidad
-            // 
-            this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_capacidad.Location = new System.Drawing.Point(189, 102);
-            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_capacidad.MaxLength = 30;
-            this.Txt_capacidad.Multiline = true;
-            this.Txt_capacidad.Name = "Txt_capacidad";
-            this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
-            this.Txt_capacidad.TabIndex = 34;
             // 
             // Salones_Update
             // 

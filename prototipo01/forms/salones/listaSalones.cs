@@ -76,7 +76,7 @@ namespace prototipo01.forms.salones
         {
             this.Dgv_salones.DataSource = null;
             this.Dgv_salones.Rows.Clear();
-            salonesDataSource = controladorSalones.listaSalonesLike(Txt_buscar.Text.ToString());
+            salonesDataSource = controladorSalones.listSalonesLike(Txt_buscar.Text.ToString());
             Dgv_salones.DataSource = salonesDataSource;
         }
 

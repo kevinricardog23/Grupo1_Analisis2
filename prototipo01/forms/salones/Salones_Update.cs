@@ -79,7 +79,7 @@ namespace prototipo01.forms.salones
         {
             Cbo_edificio.DataSource = controladorSalones.getEdificios();
             Cbo_edificio.DisplayMember = "Name";
-            Cbo_edificio.ValueMember = "id_edificio";
+            Cbo_edificio.ValueMember = "nombre_edificio";
 
 
         }
@@ -88,6 +88,11 @@ namespace prototipo01.forms.salones
 
             dataEdificios();
             setData();
+        }
+
+        private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
         }
     }
 }
