@@ -67,8 +67,9 @@ namespace prototipo01.forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            seleccionDeDashboard = "Secciones";
-            openForm(new listaSecciones());
+            /*seleccionDeDashboard = "Secciones";
+            openForm(new listaSecciones());*/
+            MessageBox.Show("En desarrollo");
 
             /**/
         }
@@ -143,6 +144,7 @@ namespace prototipo01.forms
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

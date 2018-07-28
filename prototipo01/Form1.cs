@@ -43,6 +43,8 @@ namespace prototipo01
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+
+        
             //verficiacion de usuarios (LOGIN)
             if (string.IsNullOrEmpty(Txt_Correo.Text))
             {
@@ -69,11 +71,15 @@ namespace prototipo01
                 dashboard.Show();
                 MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("El usuario o contraseña es incorrecto", "Error de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             //this.Hide();
             //Dashboard dashboard = new Dashboard();
             //dashboard.Show();
-
+           
         }
 
 
