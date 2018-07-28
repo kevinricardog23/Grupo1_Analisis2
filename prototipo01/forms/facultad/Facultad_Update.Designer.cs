@@ -40,8 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +93,7 @@
             this.Btn_actualizar.TabIndex = 26;
             this.Btn_actualizar.Text = "Editar";
             this.Btn_actualizar.UseVisualStyleBackColor = false;
+            this.Btn_actualizar.Click += new System.EventHandler(this.Btn_actualizar_Click);
             // 
             // textBox3
             // 
@@ -127,6 +128,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(374, 28);
             this.textBox2.TabIndex = 23;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -149,6 +151,7 @@
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(374, 28);
             this.Txt_nombre.TabIndex = 16;
+            this.Txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_nombre_KeyPress);
             // 
             // label4
             // 
@@ -196,18 +199,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(870, 50);
             this.panel1.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(15, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Actualizar Facultad";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_cerrar
             // 
@@ -224,6 +216,18 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label1.Location = new System.Drawing.Point(15, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Actualizar Facultad";
+            // 
             // Facultad_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +240,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Facultad_Update";
             this.Text = "Facultad_Update";
+            this.Load += new System.EventHandler(this.Facultad_Update_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

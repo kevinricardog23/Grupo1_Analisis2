@@ -17,6 +17,7 @@ using prototipo01.forms.estudiante;
 using prototipo01.forms.catedraticos;
 using prototipo01.forms.permisos;
 using prototipo01.forms.bitacoraLogin;
+using prototipo01.forms.salones;
 
 
 namespace prototipo01.forms
@@ -61,14 +62,15 @@ namespace prototipo01.forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-          /*  seleccionDeDashboard = "Salones";
-            openForm(new listaSalones());*/
+           seleccionDeDashboard = "Salones";
+            openForm(new listaSalones());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            seleccionDeDashboard = "Secciones";
-            openForm(new listaSecciones());
+            /*seleccionDeDashboard = "Secciones";
+            openForm(new listaSecciones());*/
+            MessageBox.Show("En desarrollo");
 
             /**/
         }

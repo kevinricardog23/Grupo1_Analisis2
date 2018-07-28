@@ -21,7 +21,7 @@ namespace prototipo01.models
         public virtual DbSet<curso> curso { get; set; }
         public virtual DbSet<curso_estudiante> curso_estudiante { get; set; }
         public virtual DbSet<edificio> edificio { get; set; }
-        public virtual DbSet<facultad> facultad { get; set; }
+        public virtual DbSet<facultad1> facultad { get; set; }
         public virtual DbSet<horario> horario { get; set; }
         public virtual DbSet<laboratorio> laboratorio { get; set; }
         public virtual DbSet<pago> pago { get; set; }
@@ -209,29 +209,29 @@ namespace prototipo01.models
                 .HasForeignKey(e => e.EDIFICIO_id_edificio)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .Property(e => e.nombre_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .Property(e => e.direccion_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .Property(e => e.telefono_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .Property(e => e.correo_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .HasMany(e => e.alumno)
                 .WithRequired(e => e.facultad)
                 .HasForeignKey(e => e.FACULTAD_id_facultad)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<facultad>()
+            modelBuilder.Entity<facultad1>()
                 .HasMany(e => e.carrera)
                 .WithRequired(e => e.facultad)
                 .HasForeignKey(e => e.FACULTAD_id_facultad)
