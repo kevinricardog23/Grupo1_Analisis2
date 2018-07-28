@@ -87,6 +87,7 @@
     <Compile Include="controladores\ControladorUsuario.cs" />
     <Compile Include="Dto\bitacoraDto.cs" />
     <Compile Include="Dto\catedraticoDto.cs" />
+    <Compile Include="Dto\cursosDto.cs" />
     <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Dto\estudianteDto.cs" />
     <Compile Include="Dto\laboratorioDto.cs" />
