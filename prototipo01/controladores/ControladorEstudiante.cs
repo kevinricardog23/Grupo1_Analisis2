@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using prototipo01.models;
 using prototipo01.controladores;
 using prototipo01.Dto;
-
+/*
 namespace prototipo01.controladores
 {
     class ControladorEstudiante
@@ -27,3 +27,4 @@ namespace prototipo01.controladores
         }
     }
 }
+*/
