@@ -268,6 +268,24 @@
     <Compile Include="forms\reportes\Alumnos.Designer.cs">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\salones\Salones_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salones\Salones_Create.Designer.cs">
+      <DependentUpon>Salones_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salones\listaSalones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salones\listaSalones.Designer.cs">
+      <DependentUpon>listaSalones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salones\Salones_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salones\Salones_Update.Designer.cs">
+      <DependentUpon>Salones_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\seccion\listaSecciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,6 +436,15 @@
     <EmbeddedResource Include="forms\reportes\Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\salones\listaSalones.resx">
+      <DependentUpon>listaSalones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salones\Salones_Create.resx">
+      <DependentUpon>Salones_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salones\Salones_Update.resx">
+      <DependentUpon>Salones_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\seccion\listaSecciones.resx">
       <DependentUpon>listaSecciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -513,6 +540,7 @@
   <ItemGroup>
     <None Include="Resources\iconmonstr-angel-left-circle-thin-24.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
