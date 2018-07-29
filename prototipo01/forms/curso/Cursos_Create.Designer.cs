@@ -36,14 +36,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtbox_ID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Btn_crear = new System.Windows.Forms.Button();
             this.txtBox_Ciclo = new System.Windows.Forms.TextBox();
             this.txtBox_nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_crear = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -145,24 +145,7 @@
             this.label4.Size = new System.Drawing.Size(24, 19);
             this.label4.TabIndex = 33;
             this.label4.Text = "ID";
-            // 
-            // Btn_crear
-            // 
-            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.Btn_crear.FlatAppearance.BorderSize = 0;
-            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
-            this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(282, 351);
-            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_crear.Name = "Btn_crear";
-            this.Btn_crear.Size = new System.Drawing.Size(145, 41);
-            this.Btn_crear.TabIndex = 32;
-            this.Btn_crear.Text = "Crear";
-            this.Btn_crear.UseVisualStyleBackColor = false;
-            this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtBox_Ciclo
             // 
@@ -219,6 +202,36 @@
             this.panel1.Size = new System.Drawing.Size(870, 50);
             this.panel1.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Crear Cursos";
+            // 
+            // Btn_crear
+            // 
+            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
+            this.Btn_crear.FlatAppearance.BorderSize = 0;
+            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_crear.ForeColor = System.Drawing.Color.White;
+            this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
+            this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_crear.Location = new System.Drawing.Point(282, 351);
+            this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_crear.Name = "Btn_crear";
+            this.Btn_crear.Size = new System.Drawing.Size(145, 41);
+            this.Btn_crear.TabIndex = 32;
+            this.Btn_crear.Text = "Crear";
+            this.Btn_crear.UseVisualStyleBackColor = false;
+            this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
+            // 
             // btn_cerrar
             // 
             this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
@@ -233,18 +246,6 @@
             this.btn_cerrar.TabIndex = 9;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(8, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Crear Cursos";
             // 
             // Cursos_Create
             // 
