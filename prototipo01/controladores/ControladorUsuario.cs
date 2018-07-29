@@ -11,13 +11,13 @@ namespace prototipo01.controladores
 {
     class ControladorUsuario
     {
-        ModelDADOS db = new ModelDADOS();
+        ModelAsignacion db = new ModelAsignacion();
         
 
 
         public BindingList<UsuarioDto> listaUsuarios()
         {
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var Query = (from n in db.usuario
                              select new UsuarioDto

@@ -16,7 +16,6 @@ namespace prototipo01.models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_perfil { get; set; }
 
         [StringLength(30)]

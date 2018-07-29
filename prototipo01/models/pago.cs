@@ -10,7 +10,6 @@ namespace prototipo01.models
     public partial class pago
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_pago { get; set; }
 
         [StringLength(45)]

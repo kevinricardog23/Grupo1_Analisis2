@@ -7,17 +7,16 @@ namespace prototipo01.models
     using System.Data.Entity.Spatial;
 
     [Table("mydb.facultad")]
-    public partial class facultad1
+    public partial class facultad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public facultad1()
+        public facultad()
         {
             alumno = new HashSet<alumno>();
             carrera = new HashSet<carrera>();
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_facultad { get; set; }
 
         [StringLength(30)]

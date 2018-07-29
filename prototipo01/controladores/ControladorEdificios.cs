@@ -19,7 +19,7 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.edificio
                                  select new edificioDto
@@ -50,7 +50,7 @@ namespace prototipo01.controladores
         //Metodo para guardar un nuevo edificion
         public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)
         {
-            ModelDADOS db = new ModelDADOS();
+            ModelAsignacion db = new ModelAsignacion();
 
 
             edificio edificioNuevo = new edificio();
@@ -72,7 +72,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.edificio
                         .Where(s => s.id_edificio == id_edificio)
@@ -96,7 +96,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.edificio
                                  where n.nombre_edificio.Contains(search)
@@ -131,7 +131,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std =db.edificio
                         .Where(s => s.id_edificio == id_edificio)
@@ -159,7 +159,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.edificio
                         .Where(s => s.id_edificio == id_edificio)

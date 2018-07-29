@@ -16,7 +16,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.facultad
                                  select new facultadesDto
@@ -42,15 +42,15 @@ namespace prototipo01.controladores
 
         //Funcion para buscar facultad
 
-        public facultad1 buscarFacultad(int id_facultad)
+        public facultad buscarFacultad(int id_facultad)
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.facultad
                         .Where(s => s.id_facultad == id_facultad)
-                        .FirstOrDefault<facultad1>();
+                        .FirstOrDefault<facultad>();
 
                     return std;
                 }
@@ -67,11 +67,11 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.facultad
                         .Where(s => s.id_facultad == id_facultad)
-                        .FirstOrDefault<facultad1>();
+                        .FirstOrDefault<facultad>();
 
                     std.nombre_facultad = nombre_facultad;
                     std.direccion_facultad = direccion_facultad;
@@ -90,9 +90,9 @@ namespace prototipo01.controladores
         //Metodo para guardar una facultad
         public void guardarFacultad(int id_facultad, String nombre_facultad, String direccion_facultad, String telefono_facultad, String correo_facultad)
         {
-            ModelDADOS db = new ModelDADOS();
+            ModelAsignacion db = new ModelAsignacion();
 
-            facultad1 facultadNuevo = new facultad1();
+            facultad facultadNuevo = new facultad();
 
             facultadNuevo.id_facultad = id_facultad;
             facultadNuevo.nombre_facultad = nombre_facultad;
@@ -110,7 +110,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.facultad
                                  where n.nombre_facultad.Contains(search)

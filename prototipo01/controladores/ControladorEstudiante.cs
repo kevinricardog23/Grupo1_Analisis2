@@ -16,7 +16,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.alumno
                                  select new estudianteDto
@@ -46,7 +46,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.alumno
                         .Where(s => s.dpi_alumno == dpi_alumno)
@@ -68,7 +68,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.alumno
                         .Where(s => s.dpi_alumno == dpi_alumno)
@@ -95,7 +95,7 @@ namespace prototipo01.controladores
 
         public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera)
         {
-            ModelDADOS db = new ModelDADOS();
+            ModelAsignacion db = new ModelAsignacion();
 
 
             alumno alumnoNuevo = new alumno();
@@ -118,7 +118,7 @@ namespace prototipo01.controladores
 
         public List<carrera> getCarreras()
         {
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from CARRERA_id_carrera in db.carrera
                            select CARRERA_id_carrera).ToList();
@@ -128,7 +128,7 @@ namespace prototipo01.controladores
         
         public List<alumno> getID_carrera()
         {
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from alumno in db.alumno
                            select alumno ).ToList();
@@ -141,7 +141,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.alumno
                                  where n.nombre_alumno.Contains(search)

@@ -343,12 +343,13 @@
     <Compile Include="models\facultad.cs" />
     <Compile Include="models\horario.cs" />
     <Compile Include="models\laboratorio.cs" />
-    <Compile Include="models\ModelDADOS.cs" />
+    <Compile Include="models\ModelAsignacion.cs" />
     <Compile Include="models\pago.cs" />
     <Compile Include="models\pensum.cs" />
     <Compile Include="models\perfil.cs" />
+    <Compile Include="models\prerequisito.cs" />
     <Compile Include="models\salon.cs" />
-    <Compile Include="models\seccion.cs" />
+    <Compile Include="models\seccion_curso.cs" />
     <Compile Include="models\usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -479,6 +480,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -543,7 +545,9 @@
   <ItemGroup>
     <None Include="Resources\iconmonstr-angel-left-circle-thin-24.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\script_actualizado.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

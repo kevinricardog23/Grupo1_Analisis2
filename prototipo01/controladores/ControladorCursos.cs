@@ -20,15 +20,14 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.curso
                                  select new cursosDto
                                  {
                                      id_curso = n.id_curso,
                                      nombre_curso = n.nombre_curso,
-                                     PENSUM_id_pensum = n.PENSUM_id_pensum,
-                                     ciclo_curso = n.ciclo_curso,
+                                     PENSUM_id_pensum = n.PENSUM_id_pensum,                                    
                                      semestre_curso = n.semestre_curso
 
                                  }).ToList();
@@ -51,7 +50,7 @@ namespace prototipo01.controladores
         //Metodo para guardar un nuevo curso
         public void guardarCurso(int id_curso,String nombre_nombrecurso, int PENSUM_id_pensum, String ciclo_curso, String semestre_curso)
         {
-            ModelDADOS db = new ModelDADOS();
+            ModelAsignacion db = new ModelAsignacion();
 
 
             curso cursoNuevo = new curso();
@@ -59,7 +58,6 @@ namespace prototipo01.controladores
             cursoNuevo.id_curso = id_curso;
             cursoNuevo.nombre_curso = nombre_nombrecurso;
             cursoNuevo.PENSUM_id_pensum = PENSUM_id_pensum;
-            cursoNuevo.ciclo_curso = ciclo_curso;
             cursoNuevo.semestre_curso = semestre_curso;
             
 
@@ -76,7 +74,7 @@ namespace prototipo01.controladores
         {
 
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
 
                 var std = (from pensum in db.pensum
@@ -97,7 +95,7 @@ namespace prototipo01.controladores
 
              try
              {
-                 using (ModelDADOS db = new ModelDADOS())
+                 using (ModelAsignacion db = new ModelAsignacion())
                  {
                      var Query = (from n in db.edificio
                                   select new edificioDto
@@ -128,7 +126,7 @@ namespace prototipo01.controladores
          //Metodo para guardar un nuevo edificion
          public void guardarEdificio(String nombre_edificio, String ubicacion_edificio)
          {
-             ModelDADOS db = new ModelDADOS();
+             ModelAsignacion db = new ModelAsignacion();
 
 
              edificio edificioNuevo = new edificio();
@@ -150,7 +148,7 @@ namespace prototipo01.controladores
              try
              {
 
-                 using (ModelDADOS db = new ModelDADOS())
+                 using (ModelAsignacion db = new ModelAsignacion())
                  {
                      var std = db.edificio
                          .Where(s => s.id_edificio == id_edificio)
@@ -174,7 +172,7 @@ namespace prototipo01.controladores
          {
              try
              {
-                 using (ModelDADOS db = new ModelDADOS())
+                 using (ModelAsignacion db = new ModelAsignacion())
                  {
                      var Query = (from n in db.edificio
                                   where n.nombre_edificio.Contains(search)
@@ -209,7 +207,7 @@ namespace prototipo01.controladores
              try
              {
 
-                 using (ModelDADOS db = new ModelDADOS())
+                 using (ModelAsignacion db = new ModelAsignacion())
                  {
                      var std = db.edificio
                          .Where(s => s.id_edificio == id_edificio)
@@ -237,7 +235,7 @@ namespace prototipo01.controladores
              try
              {
 
-                 using (ModelDADOS db = new ModelDADOS())
+                 using (ModelAsignacion db = new ModelAsignacion())
                  {
                      var std = db.edificio
                          .Where(s => s.id_edificio == id_edificio)

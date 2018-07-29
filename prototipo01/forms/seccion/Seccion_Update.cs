@@ -27,7 +27,7 @@ namespace prototipo01
         //Set datos seccion
         private void setData()
         {
-            seccion Model = controladorSecciones.buscarSeccion(reference);
+            seccion_curso Model = controladorSecciones.buscarSeccion(reference);
             Txt_Nombre.Text = Model.seccion_seccion.ToString();
             Text_Estado.Text = Model.estado_seccion.ToString();
         }

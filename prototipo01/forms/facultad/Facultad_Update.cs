@@ -56,12 +56,12 @@ namespace prototipo01.forms.facultad
 
         void setData()
         {
-            facultad1 Model = controladorFacultades.buscarFacultad(reference);
+            //facultad1 Model = controladorFacultades.buscarFacultad(reference);
 
-            Txt_nombre.Text = Model.nombre_facultad.ToString();
-            textBox1.Text = Model.direccion_facultad.ToString();
-            textBox2.Text = Model.telefono_facultad.ToString();
-            textBox3.Text = Model.correo_facultad.ToString();
+            //Txt_nombre.Text = Model.nombre_facultad.ToString();
+            //textBox1.Text = Model.direccion_facultad.ToString();
+            //textBox2.Text = Model.telefono_facultad.ToString();
+            //textBox3.Text = Model.correo_facultad.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

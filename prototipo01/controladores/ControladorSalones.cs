@@ -20,7 +20,7 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.salon
                                  select new salonDto
@@ -52,7 +52,7 @@ namespace prototipo01.controladores
         {
 
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from edificio in db.edificio
                           select edificio).ToList();
@@ -68,7 +68,7 @@ namespace prototipo01.controladores
         public void guardarSalon(string capacidad_salon, int id_edificio)
         {
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
 
                 salon salonNuevo = new salon();
@@ -91,7 +91,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.salon
                         .Where(s => s.id_salon == id_salon)
@@ -121,7 +121,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.edificio
                         .Where(s => s.nombre_edificio == nombre_edificio)
@@ -146,7 +146,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.salon
                         .Where(s => s.id_salon == id_salon)
@@ -171,7 +171,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.salon
                         .Where(s => s.id_salon == id_salon)
@@ -197,7 +197,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.salon
                                  where n.id_salon ==search

@@ -18,7 +18,7 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.catedratico
                                  select new catedraticoDto
@@ -57,7 +57,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.catedratico
                         .Where(s => s.dpi_catedratico == dpi_catedratico)
@@ -83,7 +83,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.catedratico
                         .Where(s => s.dpi_catedratico == dpi_catedratico)
@@ -113,7 +113,7 @@ namespace prototipo01.controladores
         //Metodo para guardar un nuevo catedratico
         public void guardarCatedratico(int dpi_catedratico, String nombre_catedratico, String apellido_catedratico, String telefono_catedratico, String correo_catedratico, int edad_catedratico, String direccion_catedratico)
         {
-            ModelDADOS db = new ModelDADOS();
+            ModelAsignacion db = new ModelAsignacion();
 
 
             catedratico catedraticoNuevo = new catedratico();
@@ -139,7 +139,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.catedratico
                                  where n.nombre_catedratico.Contains(search)
