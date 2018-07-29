@@ -70,8 +70,8 @@ namespace prototipo01.forms.estudiante
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
 
-                //controladorEstudiante.eliminarestudiante(ID_reference);
-
+               controladorEstudiantes.eliminarEstudiante(ID_reference);
+                refreshDataSource();
 
             }
         }
