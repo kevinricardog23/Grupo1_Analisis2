@@ -55,7 +55,7 @@ namespace prototipo01.forms.pensum
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
+           
         }
 
         public void refreshGrid()
