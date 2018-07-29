@@ -345,7 +345,7 @@
     <Compile Include="models\carrera.cs" />
     <Compile Include="models\catedratico.cs" />
     <Compile Include="models\cuenta.cs" />
-    <Compile Include="models\curso.cs" />
+    <Compile Include="models\curso_model.cs" />
     <Compile Include="models\curso_estudiante.cs" />
     <Compile Include="models\edificio.cs" />
     <Compile Include="models\facultad.cs" />
