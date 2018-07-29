@@ -253,6 +253,18 @@
     <Compile Include="forms\pensum\Listado_pensum.Designer.cs">
       <DependentUpon>Listado_pensum.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\pensum\Pensum_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Create.Designer.cs">
+      <DependentUpon>Pensum_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Update.Designer.cs">
+      <DependentUpon>Pensum_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\permisos\CrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -430,6 +442,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\pensum\Listado_pensum.resx">
       <DependentUpon>Listado_pensum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pensum\Pensum_Create.resx">
+      <DependentUpon>Pensum_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pensum\Pensum_Update.resx">
+      <DependentUpon>Pensum_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\permisos\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
