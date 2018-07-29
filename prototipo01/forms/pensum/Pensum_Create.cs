@@ -50,6 +50,14 @@ namespace prototipo01.forms.pensum
             controladorPensum.guardarPensum(idPensum, idCarrera,nombre);
         }
 
+        void setData()
+        {
+            
+            comboBox1.DataSource = controladorPensum.getCarreras();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "id_carrera";
+        }
+
         private void Pensum_Create_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = controladorPensum.getCarreras();
@@ -68,7 +76,9 @@ namespace prototipo01.forms.pensum
 
                 create();
                 MessageBox.Show("Se agrego correctamente el pensum", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                textBox1.Text = "";
+                textBox2.Text = "";
+                setData();
             }
         }
 

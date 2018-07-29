@@ -36,7 +36,10 @@ namespace prototipo01.forms.pensum
 
         void setData()
         {
-            
+            prototipo01.models.pensum Model = contraladorPensum.buscarPensum(reference);
+            comboBox1.DataSource = contraladorPensum.getCarreras();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "id_carrera";
         }
             
 
@@ -45,7 +48,9 @@ namespace prototipo01.forms.pensum
             prototipo01.models.pensum Model = contraladorPensum.buscarPensum(reference);
 
             textBox1.Text = Model.id_pensum.ToString();
-            textBox3.Text = Model.CARRERA_id_carrera.ToString();
+            comboBox1.DataSource = contraladorPensum.getCarreras();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "id_carrera";
             textBox2.Text = Model.nombre.ToString();
             textBox1.Enabled = false;
 
@@ -63,7 +68,7 @@ namespace prototipo01.forms.pensum
 
             nombre = textBox2.Text.ToString();
             id = Convert.ToInt32(textBox1.Text.ToString());
-            idCarrera = Convert.ToInt32(textBox3.Text.ToString());
+            idCarrera = Convert.ToInt32(comboBox1.SelectedValue);
 
             contraladorPensum.actualizarPensum(reference, idCarrera, nombre);
         }
@@ -79,7 +84,9 @@ namespace prototipo01.forms.pensum
                 update();
                
                 MessageBox.Show("Se agrego correctamente el pensum", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                textBox1.Text = "";
+                textBox2.Text="";
+                setData();
             }
         }
         //Williams De La Cuesta
