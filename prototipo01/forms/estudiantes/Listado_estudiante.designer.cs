@@ -38,13 +38,6 @@
             this.Pnl_estudiantes = new System.Windows.Forms.Panel();
             this.Lbl_estudiantes = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_estudiantes)).BeginInit();
             this.Pnl_estudiantes.SuspendLayout();
             this.SuspendLayout();
@@ -101,14 +94,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgb_estudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgb_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgb_estudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Nombres,
-            this.Apellidos,
-            this.Edad,
-            this.Correo,
-            this.Telefono,
-            this.Direccion});
             this.Dgb_estudiantes.EnableHeadersVisualStyles = false;
             this.Dgb_estudiantes.Location = new System.Drawing.Point(40, 265);
             this.Dgb_estudiantes.Margin = new System.Windows.Forms.Padding(2);
@@ -118,6 +103,7 @@
             this.Dgb_estudiantes.RowTemplate.Height = 24;
             this.Dgb_estudiantes.Size = new System.Drawing.Size(872, 302);
             this.Dgb_estudiantes.TabIndex = 33;
+            this.Dgb_estudiantes.SelectionChanged += new System.EventHandler(this.Dgb_estudiantes_SelectionChanged);
             // 
             // Txt_buscar
             // 
@@ -194,48 +180,6 @@
             this.Btn_buscar.UseVisualStyleBackColor = false;
             this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // Nombres
-            // 
-            this.Nombres.HeaderText = "Nombres";
-            this.Nombres.Name = "Nombres";
-            this.Nombres.ReadOnly = true;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.ReadOnly = true;
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            this.Edad.ReadOnly = true;
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
             // Listado_estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +198,7 @@
             this.Name = "Listado_estudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado_estudiante";
+            this.Load += new System.EventHandler(this.Listado_estudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_estudiantes)).EndInit();
             this.Pnl_estudiantes.ResumeLayout(false);
             this.Pnl_estudiantes.PerformLayout();
@@ -273,12 +218,5 @@
         private System.Windows.Forms.Panel Pnl_estudiantes;
         private System.Windows.Forms.Label Lbl_estudiantes;
         private System.Windows.Forms.Button Btn_buscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
     }
 }

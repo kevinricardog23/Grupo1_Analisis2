@@ -68,6 +68,7 @@ namespace prototipo01.forms.estudiante
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            openForm(new Listado_estudiante());
         }
 
         private void Txt_Nombres_KeyPress(object sender, KeyPressEventArgs e)
@@ -101,8 +102,9 @@ namespace prototipo01.forms.estudiante
                     Txt_Apellidos.Text = "";
                     Txt_edad.Text = "";
                     Txt_Correo.Text = "";
-                    Txt_Direccion.Text = "";
                     Txt_Telefono.Text = "";
+                    Txt_Direccion.Text = "";
+                    
                     Rbtn_estado.Text = "";
                 }
                 catch (Exception ex)
@@ -122,6 +124,11 @@ namespace prototipo01.forms.estudiante
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             openForm(new Listado_estudiante());
+        }
+
+        private void Estudiante_Update_Load(object sender, EventArgs e)
+        {
+            setData();
         }
     }
 }

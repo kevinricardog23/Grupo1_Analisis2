@@ -489,7 +489,7 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.ErrorProvider epError_Apellidos;
         private System.Windows.Forms.ErrorProvider epError_Correo;
         private System.Windows.Forms.ErrorProvider epError_Direccion;
-        private System.Windows.Forms.ErrorProvider epError_Dpi;
+      /*  private System.Windows.Forms.ErrorProvider epError_Dpi;*/
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.ComboBox cbo_estudiante;
         private System.Windows.Forms.RadioButton Rbtn_estado;

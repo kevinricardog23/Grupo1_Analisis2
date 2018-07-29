@@ -22,7 +22,14 @@ namespace prototipo01.forms.estudiante
         {
             InitializeComponent();
         }
+        private void refreshDataSource()
+        {
+            this.Dgb_estudiantes.DataSource = null;
+            this.Dgb_estudiantes.Rows.Clear();
+            alumnoDataSource = controladorEstudiantes.Listado_estudiante();
+            Dgb_estudiantes.DataSource = alumnoDataSource;
 
+        }
 
         private void openForm(object formHijo)
         {
@@ -67,6 +74,38 @@ namespace prototipo01.forms.estudiante
 
 
             }
+        }
+        void setData()
+        {
+
+            refreshDataSource();
+
+        }
+        void search()
+        {
+            this.Dgb_estudiantes.DataSource = null;
+            this.Dgb_estudiantes.Rows.Clear();
+            alumnoDataSource = controladorEstudiantes.listaEstudiantesLike(Txt_buscar.Text.ToString());
+            Dgb_estudiantes.DataSource = alumnoDataSource;
+        }
+        private void Dgb_estudiantes_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (Dgb_estudiantes.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = Dgb_estudiantes.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = Dgb_estudiantes.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
+        }
+
+        private void Listado_estudiante_Load(object sender, EventArgs e)
+        {
+            setData();
+
         }
         //
     }

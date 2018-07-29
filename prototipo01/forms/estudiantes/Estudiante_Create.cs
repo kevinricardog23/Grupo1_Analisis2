@@ -30,13 +30,22 @@ namespace prototipo01.forms.estudiante
             fh.Show();
 
         }
+        private void Estudiante_Create_Load(object sender, EventArgs e)
+        {
+            cbo_estudiante.DataSource = controladorEstudiantes.getID_carrera();
+            cbo_estudiante.DisplayMember = "id_Curso";
+            cbo_estudiante.ValueMember = "CARRERA_id_carrera";
+            cbo_facultad.DataSource = controladorEstudiantes.getID_carrera();
+            cbo_facultad.DisplayMember = "id_facultad";
+            cbo_facultad.ValueMember = "FACULTAD_id_facultad";
+        }
         void createAlumno()
         {
 
             string nombre, apellido,correo, direccion, telefono, estado;
-            int edad, dpi;
+            int edad, dpi, carrera, facultad;
 
-
+            
             dpi = Convert.ToInt32(Txt_dpi.Text.ToString());
             nombre = textBox1.Text.ToString();
             apellido = textBox2.Text.ToString();
@@ -45,8 +54,10 @@ namespace prototipo01.forms.estudiante
             telefono = textBox6.Text.ToString();
             estado = Rbtn_estado.Text.ToString();
             edad = Convert.ToInt32(textBox3.Text.ToString());
+            carrera = Convert.ToInt32(cbo_estudiante.Text.ToString());
 
-            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono);
+            facultad = Convert.ToInt32(cbo_facultad.Text.ToString());
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera);
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -115,7 +126,7 @@ namespace prototipo01.forms.estudiante
                 try
                 {
                     createAlumno();
-                    MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha agregado exitosamente un nuevo Estudiante", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox3.Text = "";
@@ -222,27 +233,19 @@ namespace prototipo01.forms.estudiante
         }
 
        
-        private void Estudiante_Create_Load(object sender, EventArgs e)
-        {
-            cbo_estudiante.DataSource = controladorEstudiantes.getID_carrera();
-            cbo_estudiante.DisplayMember = "id_Curso";
-            cbo_estudiante.ValueMember = "CARRERA_id_carrera";
-            cbo_facultad.DataSource = controladorEstudiantes.getID_carrera();
-            cbo_facultad.DisplayMember = "id_facultad";
-            cbo_facultad.ValueMember = "FACULTAD_id_facultad";
-        }
+        
 
         private void Txt_dpi_Validated(object sender, EventArgs e)
         {
-            if (Txt_dpi.Text.Trim() == "")
+           /* if (Txt_dpi.Text.Trim() == "")
             {
                 epError_Dpi.SetError(Txt_dpi, "Introduce DPI del estudiante");
                 textBox6.Focus();
             }
             else
             {
-              /*  epError_Dpi.Clear();*/
-            }
+               epError_Dpi.Clear();
+            }*/
         }
     }
 }

@@ -32,6 +32,8 @@ namespace prototipo01.forms.estudiante
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Rbtn_estado = new System.Windows.Forms.RadioButton();
+            this.Lbl_Estado = new System.Windows.Forms.Label();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Txt_Direccion = new System.Windows.Forms.TextBox();
             this.Lbl_direccion = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@ namespace prototipo01.forms.estudiante
             this.Pnl_panel = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Rbtn_estado = new System.Windows.Forms.RadioButton();
-            this.Lbl_Estado = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pnl_panel.SuspendLayout();
@@ -90,6 +90,28 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Rbtn_estado
+            // 
+            this.Rbtn_estado.AutoSize = true;
+            this.Rbtn_estado.Location = new System.Drawing.Point(133, 314);
+            this.Rbtn_estado.Name = "Rbtn_estado";
+            this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
+            this.Rbtn_estado.TabIndex = 36;
+            this.Rbtn_estado.TabStop = true;
+            this.Rbtn_estado.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Estado
+            // 
+            this.Lbl_Estado.AutoSize = true;
+            this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_Estado.Location = new System.Drawing.Point(50, 310);
+            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_Estado.Name = "Lbl_Estado";
+            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
+            this.Lbl_Estado.TabIndex = 35;
+            this.Lbl_Estado.Text = "Estado";
             // 
             // Btn_actualizar
             // 
@@ -288,28 +310,6 @@ namespace prototipo01.forms.estudiante
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Estudiante";
             // 
-            // Rbtn_estado
-            // 
-            this.Rbtn_estado.AutoSize = true;
-            this.Rbtn_estado.Location = new System.Drawing.Point(133, 314);
-            this.Rbtn_estado.Name = "Rbtn_estado";
-            this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
-            this.Rbtn_estado.TabIndex = 36;
-            this.Rbtn_estado.TabStop = true;
-            this.Rbtn_estado.UseVisualStyleBackColor = true;
-            // 
-            // Lbl_Estado
-            // 
-            this.Lbl_Estado.AutoSize = true;
-            this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(50, 310);
-            this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_Estado.Name = "Lbl_Estado";
-            this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
-            this.Lbl_Estado.TabIndex = 35;
-            this.Lbl_Estado.Text = "Estado";
-            // 
             // Estudiante_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +323,7 @@ namespace prototipo01.forms.estudiante
             this.Name = "Estudiante_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estudiante_Update";
+            this.Load += new System.EventHandler(this.Estudiante_Update_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

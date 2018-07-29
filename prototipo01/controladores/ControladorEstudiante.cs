@@ -93,7 +93,7 @@ namespace prototipo01.controladores
 
         }
 
-        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno)
+        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera)
         {
             ModelDADOS db = new ModelDADOS();
 
@@ -108,6 +108,8 @@ namespace prototipo01.controladores
             alumnoNuevo.edad_alumno = edad_alumno;
             alumnoNuevo.direccion_alumno = direccion_alumno;
             alumnoNuevo.estado_alumno = estado_alumno;
+            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
+            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
 
             db.alumno.Add(alumnoNuevo);
             db.SaveChanges();
