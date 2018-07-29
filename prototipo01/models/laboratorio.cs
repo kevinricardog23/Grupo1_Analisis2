@@ -12,11 +12,10 @@ namespace prototipo01.models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public laboratorio()
         {
-            curso = new HashSet<curso>();
+            seccion_curso = new HashSet<seccion_curso>();
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_laboratorio { get; set; }
 
         [StringLength(45)]
@@ -30,11 +29,11 @@ namespace prototipo01.models
 
         public virtual catedratico catedratico { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<curso> curso { get; set; }
-
         public virtual horario horario { get; set; }
 
         public virtual salon salon { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<seccion_curso> seccion_curso { get; set; }
     }
 }

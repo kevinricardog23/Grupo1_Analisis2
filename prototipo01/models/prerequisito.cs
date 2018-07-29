@@ -6,24 +6,23 @@ namespace prototipo01.models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("mydb.curso_estudiante")]
-    public partial class curso_estudiante
+    [Table("mydb.prerequisito")]
+    public partial class prerequisito
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ALUMNO_dpi_alumno { get; set; }
+        public int CURSO_id_curso_requisito { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CURSO_id_curso { get; set; }
+        public int CURSO_id_curso_prerequisito { get; set; }
 
-        [StringLength(45)]
-        public string estado_cursoestudiante { get; set; }
+        public int? creditos { get; set; }
 
-        public virtual alumno alumno { get; set; }
+        public virtual curso curso { get; set; }
 
-        public virtual seccion_curso seccion_curso { get; set; }
+        public virtual curso curso1 { get; set; }
     }
 }

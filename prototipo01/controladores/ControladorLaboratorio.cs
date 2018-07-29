@@ -19,7 +19,7 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.laboratorio
                                  select new laboratorioDto
@@ -54,7 +54,7 @@ namespace prototipo01.controladores
         {
 
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from salon in db.salon
                            select salon).ToList();
@@ -72,7 +72,7 @@ namespace prototipo01.controladores
         {
 
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from catedratico in db.catedratico
                            select catedratico).ToList();
@@ -90,7 +90,7 @@ namespace prototipo01.controladores
         public void guardarlaboratorio(string nombre_laboratorio, int dpi_catedratico, int id_horario, int id_salon)
         {
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
 
                 laboratorio laboratorioNuevo = new laboratorio();
@@ -115,7 +115,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.laboratorio
                         .Where(s => s.id_laboratorio== id_laboratorio)
@@ -151,7 +151,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.laboratorio
                         .Where(s => s.id_laboratorio == id_laboratorio )
@@ -176,7 +176,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.laboratorio
                                  where n.descripcion_laboratorio.Contains(search)
@@ -212,7 +212,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.laboratorio
                         .Where(s => s.id_laboratorio == id_laboratorio)

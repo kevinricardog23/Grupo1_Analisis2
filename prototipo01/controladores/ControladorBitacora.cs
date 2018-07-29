@@ -11,14 +11,14 @@ namespace prototipo01.controladores
 {
     class ControladorBitacora
     {
-        ModelDADOS db = new ModelDADOS();
+        ModelAsignacion db = new ModelAsignacion();
 
         public bitacora guardarBitacora(int usuarioId)
         {
             bitacora bitacoraObj = new bitacora();
-            bitacoraObj.fecha_bitacora = DateTime.Now;
+            bitacoraObj.fecha_hora_bitacora = DateTime.Now;
             bitacoraObj.accionusario_bitacora = "Inicio de sesión en el sistema.";
-            bitacoraObj.USUARIO_id_usuario = usuarioId;
+            bitacoraObj.usuario_id_usuario = usuarioId;
 
             db.bitacora.Add(bitacoraObj);
             db.SaveChanges();
@@ -29,15 +29,15 @@ namespace prototipo01.controladores
 
         public BindingList<bitacoraDto> listaBitacora()
         {
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var Query = (from n in db.bitacora
                              select new bitacoraDto
                              {
                                  id_bitacora = n.id_bitacora,
-                                 fecha_bitacora = n.fecha_bitacora,
+                                 fecha_bitacora = n.fecha_hora_bitacora,
                                  accionusario_bitacora = n.accionusario_bitacora,
-                                 USUARIO_id_usuario = n.USUARIO_id_usuario                              
+                                 USUARIO_id_usuario = n.usuario_id_usuario                              
                              }).ToList();
 
                 BindingList<bitacoraDto> result = new BindingList<bitacoraDto>(Query);

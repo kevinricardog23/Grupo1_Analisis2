@@ -5,10 +5,10 @@ namespace prototipo01.models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModelDADOS : DbContext
+    public partial class ModelAsignacion : DbContext
     {
-        public ModelDADOS()
-            : base("name=ModelDADOS")
+        public ModelAsignacion()
+            : base("name=ModelAsignacion")
         {
         }
 
@@ -21,14 +21,15 @@ namespace prototipo01.models
         public virtual DbSet<curso> curso { get; set; }
         public virtual DbSet<curso_estudiante> curso_estudiante { get; set; }
         public virtual DbSet<edificio> edificio { get; set; }
-        public virtual DbSet<facultad1> facultad { get; set; }
+        public virtual DbSet<facultad> facultad { get; set; }
         public virtual DbSet<horario> horario { get; set; }
         public virtual DbSet<laboratorio> laboratorio { get; set; }
         public virtual DbSet<pago> pago { get; set; }
         public virtual DbSet<pensum> pensum { get; set; }
         public virtual DbSet<perfil> perfil { get; set; }
+        public virtual DbSet<prerequisito> prerequisito { get; set; }
         public virtual DbSet<salon> salon { get; set; }
-        public virtual DbSet<seccion> seccion { get; set; }
+        public virtual DbSet<seccion_curso> seccion_curso { get; set; }
         public virtual DbSet<usuario> usuario { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -91,18 +92,6 @@ namespace prototipo01.models
                 .Property(e => e.accionusario_bitacora)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<bitacora>()
-                .Property(e => e.resultado_bitacora)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<bitacora>()
-                .Property(e => e.error_bitacora)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<bitacora>()
-                .Property(e => e.ippc_bitacora)
-                .IsUnicode(false);
-
             modelBuilder.Entity<carrera>()
                 .Property(e => e.nombre_carrera)
                 .IsUnicode(false);
@@ -144,15 +133,15 @@ namespace prototipo01.models
                 .IsUnicode(false);
 
             modelBuilder.Entity<catedratico>()
+                .HasMany(e => e.seccion_curso)
+                .WithOptional(e => e.catedratico)
+                .HasForeignKey(e => e.catedratico_id);
+
+            modelBuilder.Entity<catedratico>()
                 .HasMany(e => e.laboratorio)
                 .WithRequired(e => e.catedratico)
                 .HasForeignKey(e => e.CATEDRATICO_dpi_catedratico)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<catedratico>()
-                .HasMany(e => e.curso)
-                .WithMany(e => e.catedratico)
-                .Map(m => m.ToTable("curso_catedratico", "mydb").MapLeftKey("CATEDRATICO_dpi_catedratico").MapRightKey("CURSO_id_curso"));
 
             modelBuilder.Entity<cuenta>()
                 .Property(e => e.nombre_cuenta)
@@ -173,23 +162,25 @@ namespace prototipo01.models
                 .IsUnicode(false);
 
             modelBuilder.Entity<curso>()
-                .Property(e => e.ciclo_curso)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<curso>()
                 .Property(e => e.semestre_curso)
                 .IsUnicode(false);
 
             modelBuilder.Entity<curso>()
-                .HasMany(e => e.curso_estudiante)
+                .HasMany(e => e.seccion_curso)
+                .WithOptional(e => e.curso)
+                .HasForeignKey(e => e.curso_id);
+
+            modelBuilder.Entity<curso>()
+                .HasMany(e => e.prerequisito)
                 .WithRequired(e => e.curso)
-                .HasForeignKey(e => e.CURSO_id_curso)
+                .HasForeignKey(e => e.CURSO_id_curso_requisito)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<curso>()
-                .HasMany(e => e.curso1)
-                .WithMany(e => e.curso2)
-                .Map(m => m.ToTable("prerequisito", "mydb").MapLeftKey("CURSO_id_curso_requisito").MapRightKey("CURSO_id_curso_prerequisito"));
+                .HasMany(e => e.prerequisito1)
+                .WithRequired(e => e.curso1)
+                .HasForeignKey(e => e.CURSO_id_curso_prerequisito)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<curso_estudiante>()
                 .Property(e => e.estado_cursoestudiante)
@@ -209,29 +200,29 @@ namespace prototipo01.models
                 .HasForeignKey(e => e.EDIFICIO_id_edificio)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .Property(e => e.nombre_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .Property(e => e.direccion_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .Property(e => e.telefono_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .Property(e => e.correo_facultad)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .HasMany(e => e.alumno)
                 .WithRequired(e => e.facultad)
                 .HasForeignKey(e => e.FACULTAD_id_facultad)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<facultad1>()
+            modelBuilder.Entity<facultad>()
                 .HasMany(e => e.carrera)
                 .WithRequired(e => e.facultad)
                 .HasForeignKey(e => e.FACULTAD_id_facultad)
@@ -242,29 +233,31 @@ namespace prototipo01.models
                 .IsUnicode(false);
 
             modelBuilder.Entity<horario>()
-                .HasMany(e => e.curso)
+                .HasMany(e => e.laboratorio)
                 .WithRequired(e => e.horario)
                 .HasForeignKey(e => e.HORARIO_id_horario)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<horario>()
-                .HasMany(e => e.laboratorio)
-                .WithRequired(e => e.horario)
-                .HasForeignKey(e => e.HORARIO_id_horario)
-                .WillCascadeOnDelete(false);
+                .HasMany(e => e.seccion_curso)
+                .WithOptional(e => e.horario)
+                .HasForeignKey(e => e.horario_id);
 
             modelBuilder.Entity<laboratorio>()
                 .Property(e => e.descripcion_laboratorio)
                 .IsUnicode(false);
 
             modelBuilder.Entity<laboratorio>()
-                .HasMany(e => e.curso)
-                .WithRequired(e => e.laboratorio)
-                .HasForeignKey(e => e.LABORATORIO_id_laboratorio)
-                .WillCascadeOnDelete(false);
+                .HasMany(e => e.seccion_curso)
+                .WithOptional(e => e.laboratorio)
+                .HasForeignKey(e => e.laboratorio_id);
 
             modelBuilder.Entity<pago>()
                 .Property(e => e.tipo_pago)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<pensum>()
+                .Property(e => e.nombre)
                 .IsUnicode(false);
 
             modelBuilder.Entity<pensum>()
@@ -291,10 +284,8 @@ namespace prototipo01.models
                 .IsUnicode(false);
 
             modelBuilder.Entity<salon>()
-                .HasMany(e => e.curso)
-                .WithRequired(e => e.salon)
-                .HasForeignKey(e => e.SALON_id_salon)
-                .WillCascadeOnDelete(false);
+                .Property(e => e.nombre_salon)
+                .IsUnicode(false);
 
             modelBuilder.Entity<salon>()
                 .HasMany(e => e.laboratorio)
@@ -302,18 +293,27 @@ namespace prototipo01.models
                 .HasForeignKey(e => e.SALON_id_salon)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<seccion>()
+            modelBuilder.Entity<salon>()
+                .HasMany(e => e.seccion_curso)
+                .WithOptional(e => e.salon)
+                .HasForeignKey(e => e.salon_id);
+
+            modelBuilder.Entity<seccion_curso>()
                 .Property(e => e.seccion_seccion)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<seccion>()
+            modelBuilder.Entity<seccion_curso>()
                 .Property(e => e.estado_seccion)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<seccion>()
-                .HasMany(e => e.curso)
-                .WithRequired(e => e.seccion)
-                .HasForeignKey(e => e.SECCION_id_seccion)
+            modelBuilder.Entity<seccion_curso>()
+                .Property(e => e.ciclo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<seccion_curso>()
+                .HasMany(e => e.curso_estudiante)
+                .WithRequired(e => e.seccion_curso)
+                .HasForeignKey(e => e.CURSO_id_curso)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<usuario>()
@@ -343,7 +343,7 @@ namespace prototipo01.models
             modelBuilder.Entity<usuario>()
                 .HasMany(e => e.bitacora)
                 .WithRequired(e => e.usuario)
-                .HasForeignKey(e => e.USUARIO_id_usuario)
+                .HasForeignKey(e => e.usuario_id_usuario)
                 .WillCascadeOnDelete(false);
         }
     }

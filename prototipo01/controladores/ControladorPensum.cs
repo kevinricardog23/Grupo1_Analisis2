@@ -11,17 +11,17 @@ namespace prototipo01.controladores
 {
     public class ControladorPensum
     {
-        ModelDADOS db = new ModelDADOS();
+        ModelAsignacion db = new ModelAsignacion();
         public BindingList<PensumDto> listaPensum()
         {    
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
                 var Query = (from n in db.pensum
                              select new PensumDto
                              {
                                  id = n.id_pensum,
-                                 id_carrera = n.CARRERA_id_carrera,
-                                 nombre_pensum = n.nombre
+                                 id_carrera = n.CARRERA_id_carrera
+                                 //nombre_pensum = n
                              }).ToList();
 
                 BindingList<PensumDto> result = new BindingList<PensumDto>(Query);
@@ -47,7 +47,7 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.pensum
                         .Where(s => s.id_pensum == idPensum)
@@ -68,7 +68,7 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var std = db.pensum
                         .Where(s => s.id_pensum == idPensum)
@@ -93,7 +93,7 @@ namespace prototipo01.controladores
 
         public List<carrera> getCarreras()
         {
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
 
                 var std = (from carrera in db.carrera

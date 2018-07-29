@@ -18,9 +18,9 @@ namespace prototipo01.controladores
 
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
-                    var Query = (from n in db.seccion
+                    var Query = (from n in db.seccion_curso
                                  select new seccionDto
                                  {
                                      id_seccion = n.id_seccion,
@@ -48,15 +48,15 @@ namespace prototipo01.controladores
         public void guardarSeccion(string seccion, string estado)
         {
 
-            using (ModelDADOS db = new ModelDADOS())
+            using (ModelAsignacion db = new ModelAsignacion())
             {
 
-                seccion seccionNueva = new seccion();
+                seccion_curso seccionNueva = new seccion_curso();
 
                 seccionNueva.seccion_seccion = seccion;
                 seccionNueva.estado_seccion = estado;
 
-                db.seccion.Add(seccionNueva);
+                db.seccion_curso.Add(seccionNueva);
                 db.SaveChanges();
 
             }
@@ -71,11 +71,11 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
-                    var std = db.seccion
+                    var std = db.seccion_curso
                         .Where(s => s.id_seccion == id_seccion)
-                        .FirstOrDefault<seccion>();
+                        .FirstOrDefault<seccion_curso>();
 
                     std.seccion_seccion = nombre_seccion;
                     std.estado_seccion = estado;
@@ -96,16 +96,16 @@ namespace prototipo01.controladores
 
 
         //Buscar seccion
-        public seccion buscarSeccion(int id_seccion)
+        public seccion_curso buscarSeccion(int id_seccion)
         {
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
-                    var std = db.seccion
+                    var std = db.seccion_curso
                         .Where(s => s.id_seccion== id_seccion)
-                        .FirstOrDefault<seccion>();
+                        .FirstOrDefault<seccion_curso>();
 
                     return std;
                 }
@@ -126,9 +126,9 @@ namespace prototipo01.controladores
         {
             try
             {
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
-                    var Query = (from n in db.seccion
+                    var Query = (from n in db.seccion_curso
                                  where n.seccion_seccion.Contains(search)
                                  select new seccionDto
                                  {
@@ -159,13 +159,13 @@ namespace prototipo01.controladores
             try
             {
 
-                using (ModelDADOS db = new ModelDADOS())
+                using (ModelAsignacion db = new ModelAsignacion())
                 {
-                    var std = db.seccion
+                    var std = db.seccion_curso
                         .Where(s => s.id_seccion == id_seccion)
-                        .FirstOrDefault<seccion>();
+                        .FirstOrDefault<seccion_curso>();
 
-                    db.seccion.Remove(std);
+                    db.seccion_curso.Remove(std);
                     db.SaveChanges();
 
                 }

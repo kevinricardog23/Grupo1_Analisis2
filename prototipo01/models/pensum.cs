@@ -16,12 +16,12 @@ namespace prototipo01.models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_pensum { get; set; }
 
         public int CARRERA_id_carrera { get; set; }
 
-        public String nombre { get; set; }
+        [StringLength(45)]
+        public string nombre { get; set; }
 
         public virtual carrera carrera { get; set; }
 
