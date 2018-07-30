@@ -150,19 +150,32 @@ namespace prototipo01.controladores
         }
 
 
-
-        
+        //OBTIENE TODAS LA FACULTADES
         public List<facultad> getFacultades()
         {
             using (ModelAsignacion db = new ModelAsignacion())
             {
                 var std = (from facultad in db.facultad
-                           select facultad ).ToList();
+                           select facultad).ToList();
                 return std;
             }
         }
 
+
+
         
+        public List<alumno> getID_carrera()
+        {
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from alumno in db.alumno
+                           select alumno ).ToList();
+                return std;
+            }
+
+        }
+
+
         public BindingList<estudianteDto> listaEstudiantesLike(string search)
         {
             try
