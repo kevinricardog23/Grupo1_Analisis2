@@ -94,7 +94,7 @@ namespace prototipo01.forms.estudiante
             // Rbtn_estado
             // 
             this.Rbtn_estado.AutoSize = true;
-            this.Rbtn_estado.Location = new System.Drawing.Point(133, 314);
+            this.Rbtn_estado.Location = new System.Drawing.Point(113, 331);
             this.Rbtn_estado.Name = "Rbtn_estado";
             this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
             this.Rbtn_estado.TabIndex = 36;
@@ -106,7 +106,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(50, 310);
+            this.Lbl_Estado.Location = new System.Drawing.Point(41, 327);
             this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Estado.Name = "Lbl_Estado";
             this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
@@ -122,7 +122,7 @@ namespace prototipo01.forms.estudiante
             this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_actualizar.Location = new System.Drawing.Point(113, 343);
+            this.Btn_actualizar.Location = new System.Drawing.Point(113, 383);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(145, 41);
@@ -217,7 +217,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_edad.AutoSize = true;
             this.Lbl_edad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_edad.Location = new System.Drawing.Point(11, 184);
+            this.Lbl_edad.Location = new System.Drawing.Point(50, 184);
             this.Lbl_edad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_edad.Name = "Lbl_edad";
             this.Lbl_edad.Size = new System.Drawing.Size(50, 19);
@@ -315,7 +315,7 @@ namespace prototipo01.forms.estudiante
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 578);
+            this.ClientSize = new System.Drawing.Size(1040, 634);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.Pnl_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

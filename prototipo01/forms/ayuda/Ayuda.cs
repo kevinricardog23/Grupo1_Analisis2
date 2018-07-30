@@ -48,7 +48,8 @@ namespace prototipo01.forms.ayuda
                     label2.Text = "Pensum: \nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos. Para buscar un pensum debera ingresar el nombre del pensum. El boton de CREAR le ayudara para crear un nuevo pensum en el cual solo debe seleccionar la carrera e ingresar el nombre que identificara el pensum.\n Si desea modificar un pensum seleccionara el pensum que desea modificar y luego presionar el boton de 'EDITAR'. Para eliminar un Pensum debera seleccionar el pensum que desea eliminar y luego presionar el boton de ELIMINAR.";
                     break;
                 case "Cursos":
-                    label2.Text = "Cursos: \n\nEn el siguiente bloque de programa usted podra consultar los cursos asi como los datos que conllevan estos, salones, secciones, catedraticos, etc. Esto con un fin informativo.";
+                    label2.Text = "Cursos: \n\nEn el siguiente bloque de programa usted podra consultar los cursos asi como los datos que conllevan estos, salones, secciones, catedraticos, etc. Esto con un fin informativo.\nPara buscar informacion, ingrese los datos a buscar en la barra de abajo, para crear un nuevo curso, presione el boton de crear (verde), esto deplegara una pantalla donde usted debera ingresar sus campos, asegurese de que su informacion sea la correcta, para modificar presione el boton de editar (azul), este le desplegara una ventana en la cual usted podra editar los campos que desee, por ultimo para eliminar la informacion seleccione el dato que desea eliminar y presione el boton de eliminar (rojo), y el dato se eliminara.";
+                    //Victor Hugo Jimenez Zepeda      ->Actualizacion de ayuda.
                     break;
                 default:
                     label2.Text = "Por favor seleccione un bloque de la barra lateral para poder ayudarlo.";

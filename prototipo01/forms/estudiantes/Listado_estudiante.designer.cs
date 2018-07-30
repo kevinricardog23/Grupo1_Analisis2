@@ -37,7 +37,6 @@
             this.Btn_crear = new System.Windows.Forms.Button();
             this.Pnl_estudiantes = new System.Windows.Forms.Panel();
             this.Lbl_estudiantes = new System.Windows.Forms.Label();
-            this.Btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_estudiantes)).BeginInit();
             this.Pnl_estudiantes.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +50,7 @@
             this.Btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.Btn_eliminar.Image = global::prototipo01.Properties.Resources.iconmonstr_x_mark_13_24;
             this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_eliminar.Location = new System.Drawing.Point(490, 168);
+            this.Btn_eliminar.Location = new System.Drawing.Point(767, 209);
             this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(145, 41);
@@ -69,7 +68,7 @@
             this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_actualizar.Location = new System.Drawing.Point(280, 168);
+            this.Btn_actualizar.Location = new System.Drawing.Point(618, 209);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(145, 41);
@@ -107,11 +106,11 @@
             // 
             // Txt_buscar
             // 
-            this.Txt_buscar.Location = new System.Drawing.Point(104, 124);
+            this.Txt_buscar.Location = new System.Drawing.Point(101, 142);
             this.Txt_buscar.MaxLength = 45;
             this.Txt_buscar.Multiline = true;
             this.Txt_buscar.Name = "Txt_buscar";
-            this.Txt_buscar.Size = new System.Drawing.Size(414, 39);
+            this.Txt_buscar.Size = new System.Drawing.Size(662, 39);
             this.Txt_buscar.TabIndex = 32;
             // 
             // Lbl_buscar
@@ -119,7 +118,7 @@
             this.Lbl_buscar.AutoSize = true;
             this.Lbl_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_buscar.Location = new System.Drawing.Point(37, 133);
+            this.Lbl_buscar.Location = new System.Drawing.Point(34, 151);
             this.Lbl_buscar.Name = "Lbl_buscar";
             this.Lbl_buscar.Size = new System.Drawing.Size(61, 18);
             this.Lbl_buscar.TabIndex = 31;
@@ -134,7 +133,7 @@
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(104, 168);
+            this.Btn_crear.Location = new System.Drawing.Point(469, 209);
             this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(145, 41);
@@ -163,30 +162,12 @@
             this.Lbl_estudiantes.TabIndex = 0;
             this.Lbl_estudiantes.Text = "Lista de Estudiantes";
             // 
-            // Btn_buscar
-            // 
-            this.Btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.Btn_buscar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
-            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Btn_buscar.FlatAppearance.BorderSize = 0;
-            this.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_buscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.Btn_buscar.Location = new System.Drawing.Point(533, 123);
-            this.Btn_buscar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_buscar.Name = "Btn_buscar";
-            this.Btn_buscar.Size = new System.Drawing.Size(39, 39);
-            this.Btn_buscar.TabIndex = 36;
-            this.Btn_buscar.UseVisualStyleBackColor = false;
-            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
-            // 
             // Listado_estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 578);
-            this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Dgb_estudiantes);
@@ -217,6 +198,5 @@
         private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.Panel Pnl_estudiantes;
         private System.Windows.Forms.Label Lbl_estudiantes;
-        private System.Windows.Forms.Button Btn_buscar;
     }
 }
