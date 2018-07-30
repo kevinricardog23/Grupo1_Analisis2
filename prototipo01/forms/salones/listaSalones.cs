@@ -63,7 +63,16 @@ namespace prototipo01.forms.salones
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            openForm(new Salones_Update(ID_reference));
+            if (ID_reference != 0)
+            {
+
+                openForm(new Salones_Update(ID_reference));
+
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un edificio");
+            }
         }
 
         private void listaSalones_Load(object sender, EventArgs e)
@@ -76,7 +85,7 @@ namespace prototipo01.forms.salones
         {
             this.Dgv_salones.DataSource = null;
             this.Dgv_salones.Rows.Clear();
-            salonesDataSource = controladorSalones.listaSalonesLike(Convert.ToInt32(Txt_buscar.Text.ToString()));
+            salonesDataSource = controladorSalones.listaSalonesLike(Txt_buscar.Text.ToString());
             Dgv_salones.DataSource = salonesDataSource;
         }
 

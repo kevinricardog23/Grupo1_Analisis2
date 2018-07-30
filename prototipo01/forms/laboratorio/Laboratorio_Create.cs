@@ -57,9 +57,16 @@ namespace prototipo01
         {
             cbo_salon.DataSource = controladorLaboratorio.getSalones();
             cbo_salon.DisplayMember = "Name";
-            cbo_salon.ValueMember = "id_salon";
+            cbo_salon.ValueMember = "nombre_salon";
+        }
 
 
+
+        private void dataHorarios()
+        {
+            cbo_horario.DataSource = controladorLaboratorio.getHorarios();
+            cbo_horario.DisplayMember = "Name";
+            cbo_horario.ValueMember = "horario_horario";
         }
 
 
@@ -116,15 +123,21 @@ namespace prototipo01
             }
             string nombre_laboratorio = Txt_nombre.Text.ToString();
             int id_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
-            int id_salon = Convert.ToInt32(cbo_salon.Text.ToString());
+            int id_horario = controladorLaboratorio.getIdHorario(cbo_horario.Text.ToString());
+            int id_salon = controladorLaboratorio.getIdSalon(cbo_salon.Text.ToString());
+
+
+
+
             try { 
 
 
-            controladorLaboratorio.guardarlaboratorio(nombre_laboratorio,id_catedratico,1,id_salon);
+            controladorLaboratorio.guardarlaboratorio(nombre_laboratorio,id_catedratico,id_horario,id_salon);
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Txt_nombre.Text = "";
                 Cbo_catedratico.Text = "";
                 cbo_salon.Text = "";
+                cbo_horario.Text = "";
             }
             catch (Exception ex)
             {
@@ -137,6 +150,7 @@ namespace prototipo01
         private void Laboratorio_Create_Load(object sender, EventArgs e)
         {
             dataSalones();
+            dataHorarios();
             dataCatedraicos();
         }
 

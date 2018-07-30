@@ -138,27 +138,84 @@ namespace prototipo01.controladores
             }
         }
 
+        //OBTIENE TODAS LA CARRERAS
         public List<carrera> getCarreras()
         {
             using (ModelAsignacion db = new ModelAsignacion())
             {
-                var std = (from CARRERA_id_carrera in db.carrera
-                           select CARRERA_id_carrera).ToList();
-                return std;
-            }
-        }
-        
-        public List<alumno> getID_carrera()
-        {
-            using (ModelAsignacion db = new ModelAsignacion())
-            {
-                var std = (from alumno in db.alumno
-                           select alumno ).ToList();
+                var std = (from carrera in db.carrera
+                           select carrera).ToList();
                 return std;
             }
         }
 
-        
+
+        //OBTIENE TODAS LA FACULTADES
+        public List<facultad> getFacultades()
+        {
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from facultad in db.facultad
+                           select facultad).ToList();
+                return std;
+            }
+        }
+
+
+
+
+        //obtener id carrera
+        public int getIdCarrera(string nombre_carrera)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.carrera
+                        .Where(s => s.nombre_carrera == nombre_carrera)
+                        .FirstOrDefault<carrera>();
+
+                    return std.id_carrera;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
+
+
+
+        //obtener id facultad
+        public int getIdFacultad(string nombre_facultad)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.facultad
+                        .Where(s => s.nombre_facultad == nombre_facultad)
+                        .FirstOrDefault<facultad>();
+
+                    return std.id_facultad;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
         public BindingList<estudianteDto> listaEstudiantesLike(string search)
         {
             try

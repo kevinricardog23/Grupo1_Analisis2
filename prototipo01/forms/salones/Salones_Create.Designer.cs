@@ -30,11 +30,13 @@
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.Tp_crear = new System.Windows.Forms.TabPage();
+            this.Txt_capacidad = new System.Windows.Forms.TextBox();
+            this.Lbl_capacidad = new System.Windows.Forms.Label();
             this.Cbo_edificio = new System.Windows.Forms.ComboBox();
             this.Btn_crear = new System.Windows.Forms.Button();
             this.Lbl_edificio = new System.Windows.Forms.Label();
-            this.Txt_capacidad = new System.Windows.Forms.TextBox();
-            this.Lbl_capacidad = new System.Windows.Forms.Label();
+            this.Txt_nombre = new System.Windows.Forms.TextBox();
+            this.Lbl_nombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,11 +62,13 @@
             // 
             // Tp_crear
             // 
+            this.Tp_crear.Controls.Add(this.Txt_capacidad);
+            this.Tp_crear.Controls.Add(this.Lbl_capacidad);
             this.Tp_crear.Controls.Add(this.Cbo_edificio);
             this.Tp_crear.Controls.Add(this.Btn_crear);
             this.Tp_crear.Controls.Add(this.Lbl_edificio);
-            this.Tp_crear.Controls.Add(this.Txt_capacidad);
-            this.Tp_crear.Controls.Add(this.Lbl_capacidad);
+            this.Tp_crear.Controls.Add(this.Txt_nombre);
+            this.Tp_crear.Controls.Add(this.Lbl_nombre);
             this.Tp_crear.Location = new System.Drawing.Point(4, 28);
             this.Tp_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Tp_crear.Name = "Tp_crear";
@@ -73,13 +77,38 @@
             this.Tp_crear.TabIndex = 0;
             this.Tp_crear.UseVisualStyleBackColor = true;
             // 
+            // Txt_capacidad
+            // 
+            this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_capacidad.Location = new System.Drawing.Point(139, 177);
+            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_capacidad.MaxLength = 30;
+            this.Txt_capacidad.Multiline = true;
+            this.Txt_capacidad.Name = "Txt_capacidad";
+            this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
+            this.Txt_capacidad.TabIndex = 35;
+            this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress_1);
+            // 
+            // Lbl_capacidad
+            // 
+            this.Lbl_capacidad.AutoSize = true;
+            this.Lbl_capacidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_capacidad.Location = new System.Drawing.Point(30, 177);
+            this.Lbl_capacidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_capacidad.Name = "Lbl_capacidad";
+            this.Lbl_capacidad.Size = new System.Drawing.Size(101, 19);
+            this.Lbl_capacidad.TabIndex = 34;
+            this.Lbl_capacidad.Text = "Capacidad";
+            // 
             // Cbo_edificio
             // 
             this.Cbo_edificio.FormattingEnabled = true;
-            this.Cbo_edificio.Location = new System.Drawing.Point(131, 186);
+            this.Cbo_edificio.Location = new System.Drawing.Point(139, 115);
             this.Cbo_edificio.Name = "Cbo_edificio";
             this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
             this.Cbo_edificio.TabIndex = 33;
+            this.Cbo_edificio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_edificio_KeyPress);
             // 
             // Btn_crear
             // 
@@ -90,7 +119,7 @@
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(114, 319);
+            this.Btn_crear.Location = new System.Drawing.Point(198, 289);
             this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(145, 41);
@@ -104,36 +133,36 @@
             this.Lbl_edificio.AutoSize = true;
             this.Lbl_edificio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_edificio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_edificio.Location = new System.Drawing.Point(22, 194);
+            this.Lbl_edificio.Location = new System.Drawing.Point(30, 123);
             this.Lbl_edificio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_edificio.Name = "Lbl_edificio";
             this.Lbl_edificio.Size = new System.Drawing.Size(64, 19);
             this.Lbl_edificio.TabIndex = 4;
             this.Lbl_edificio.Text = "Edificio";
             // 
-            // Txt_capacidad
+            // Txt_nombre
             // 
-            this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_capacidad.Location = new System.Drawing.Point(130, 120);
-            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_capacidad.MaxLength = 30;
-            this.Txt_capacidad.Multiline = true;
-            this.Txt_capacidad.Name = "Txt_capacidad";
-            this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
-            this.Txt_capacidad.TabIndex = 2;
-            this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress);
+            this.Txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_nombre.Location = new System.Drawing.Point(138, 49);
+            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_nombre.MaxLength = 30;
+            this.Txt_nombre.Multiline = true;
+            this.Txt_nombre.Name = "Txt_nombre";
+            this.Txt_nombre.Size = new System.Drawing.Size(317, 28);
+            this.Txt_nombre.TabIndex = 2;
+            this.Txt_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_nombre_KeyPress);
             // 
-            // Lbl_capacidad
+            // Lbl_nombre
             // 
-            this.Lbl_capacidad.AutoSize = true;
-            this.Lbl_capacidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_capacidad.Location = new System.Drawing.Point(22, 120);
-            this.Lbl_capacidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_capacidad.Name = "Lbl_capacidad";
-            this.Lbl_capacidad.Size = new System.Drawing.Size(101, 19);
-            this.Lbl_capacidad.TabIndex = 0;
-            this.Lbl_capacidad.Text = "Capacidad";
+            this.Lbl_nombre.AutoSize = true;
+            this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_nombre.Location = new System.Drawing.Point(30, 49);
+            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_nombre.Name = "Lbl_nombre";
+            this.Lbl_nombre.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_nombre.TabIndex = 0;
+            this.Lbl_nombre.Text = "Nombre";
             // 
             // panel1
             // 
@@ -182,6 +211,7 @@
             this.Pnl_titulo.Name = "Pnl_titulo";
             this.Pnl_titulo.Size = new System.Drawing.Size(870, 50);
             this.Pnl_titulo.TabIndex = 10;
+            this.Pnl_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_titulo_Paint);
             // 
             // Btn_atras
             // 
@@ -237,8 +267,8 @@
         private System.Windows.Forms.TabPage Tp_crear;
         private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.Label Lbl_edificio;
-        private System.Windows.Forms.TextBox Txt_capacidad;
-        private System.Windows.Forms.Label Lbl_capacidad;
+        private System.Windows.Forms.TextBox Txt_nombre;
+        private System.Windows.Forms.Label Lbl_nombre;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label label1;
@@ -246,5 +276,7 @@
         private System.Windows.Forms.Panel Pnl_titulo;
         private System.Windows.Forms.Button Btn_atras;
         private System.Windows.Forms.Label Lbl_titulo;
+        private System.Windows.Forms.TextBox Txt_capacidad;
+        private System.Windows.Forms.Label Lbl_capacidad;
     }
 }

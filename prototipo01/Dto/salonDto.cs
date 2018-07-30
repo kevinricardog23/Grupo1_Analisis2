@@ -15,5 +15,7 @@ namespace prototipo01.Dto
 
         public int EDIFICIO_id_edificio { get; set; }
 
+        public string nombre_salon { get; set; }
+
     }
 }

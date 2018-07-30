@@ -50,10 +50,19 @@ namespace prototipo01
         {
             Cbo_salon.DataSource = controladorLaboratorio.getSalones();
             Cbo_salon.DisplayMember = "Name";
-            Cbo_salon.ValueMember = "id_salon";
-
+            Cbo_salon.ValueMember = "nombre_salon";
 
         }
+
+
+        private void dataHorarios()
+        {
+            cbo_horario.DataSource = controladorLaboratorio.getHorarios();
+            cbo_horario.DisplayMember = "Name";
+            cbo_horario.ValueMember = "horario_horario";
+
+        }
+
 
 
         private void dataCatedraticos()
@@ -93,6 +102,7 @@ namespace prototipo01
         private void Laboratorio_Update_Load(object sender, EventArgs e)
         {
             dataSalones();
+            dataHorarios();
             dataCatedraticos();
 
             laboratorio  Model = controladorLaboratorio.buscarLaboratorio(reference);
@@ -119,14 +129,16 @@ namespace prototipo01
             }
             string nombre = Txt_nombre.Text.ToString();
             int dpi_catedratico = Convert.ToInt32(Cbo_catedratico.Text.ToString());
-            int id_salon = Convert.ToInt32(Cbo_salon.Text.ToString());
+            int id_salon = controladorLaboratorio.getIdSalon(Cbo_salon.Text.ToString());
+            int id_horario = controladorLaboratorio.getIdHorario(cbo_horario.Text.ToString());
 
             try { 
-            controladorLaboratorio.actualizarLaboratorio(reference,nombre,dpi_catedratico,1,id_salon);
+            controladorLaboratorio.actualizarLaboratorio(reference,nombre,dpi_catedratico,id_horario,id_salon);
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Txt_nombre.Text = "";
                 Cbo_catedratico.Text = "";
                 Cbo_salon.Text = "";
+                cbo_horario.Text = "";
             }
             catch (Exception ex)
             {

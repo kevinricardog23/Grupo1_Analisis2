@@ -33,11 +33,11 @@ namespace prototipo01.controladores
 
         
 
-        public void guardarPensum(int id, int idCarrera, String nombre)
+        public void guardarPensum(int idCarrera, String nombre)
         {
             pensum pensumNuevo = new pensum();
             //usuarioNuevo.id_pensum = usuario_alias;
-            pensumNuevo.id_pensum = id;
+           // pensumNuevo.id_pensum = id;
             pensumNuevo.CARRERA_id_carrera = idCarrera;
             pensumNuevo.nombre = nombre;
             db.pensum.Add(pensumNuevo);
