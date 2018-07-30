@@ -58,6 +58,8 @@ namespace prototipo01.forms.estudiante
             edad = Convert.ToInt32(textBox3.Text.ToString());
             carrera = controladorEstudiantes.getIdCarrera(cbo_estudiante.Text.ToString());
 
+
+            //
             facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
 
 
