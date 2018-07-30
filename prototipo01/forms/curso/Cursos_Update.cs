@@ -55,7 +55,6 @@ namespace prototipo01.forms.curso
         private void setData()
         {
             curso_model Model = controladorCursos.buscarCursos(reference);
-            txtbox_ID.Text = Model.id_curso.ToString();
             txtBox_nombre.Text = Model.nombre_curso.ToString();
             txtBox_Creditos.Text = Model.creditos.ToString();
             txtBox_semestre.Text = Model.semestre_curso.ToString();
