@@ -18,7 +18,7 @@ namespace prototipo01.models
         public virtual DbSet<carrera> carrera { get; set; }
         public virtual DbSet<catedratico> catedratico { get; set; }
         public virtual DbSet<cuenta> cuenta { get; set; }
-        public virtual DbSet<curso> curso { get; set; }
+        public virtual DbSet<curso_model> curso { get; set; }
         public virtual DbSet<curso_estudiante> curso_estudiante { get; set; }
         public virtual DbSet<edificio> edificio { get; set; }
         public virtual DbSet<facultad> facultad { get; set; }
@@ -157,26 +157,26 @@ namespace prototipo01.models
                 .HasForeignKey(e => e.CUENTA_id_cuenta)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<curso>()
+            modelBuilder.Entity<curso_model>()
                 .Property(e => e.nombre_curso)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<curso>()
+            modelBuilder.Entity<curso_model>()
                 .Property(e => e.semestre_curso)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<curso>()
+            modelBuilder.Entity<curso_model>()
                 .HasMany(e => e.seccion_curso)
                 .WithOptional(e => e.curso)
                 .HasForeignKey(e => e.curso_id);
 
-            modelBuilder.Entity<curso>()
+            modelBuilder.Entity<curso_model>()
                 .HasMany(e => e.prerequisito)
                 .WithRequired(e => e.curso)
                 .HasForeignKey(e => e.CURSO_id_curso_requisito)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<curso>()
+            modelBuilder.Entity<curso_model>()
                 .HasMany(e => e.prerequisito1)
                 .WithRequired(e => e.curso1)
                 .HasForeignKey(e => e.CURSO_id_curso_prerequisito)

@@ -21,8 +21,8 @@ namespace prototipo01.models
 
         public int? creditos { get; set; }
 
-        public virtual curso curso { get; set; }
+        public virtual curso_model curso { get; set; }
 
-        public virtual curso curso1 { get; set; }
+        public virtual curso_model curso1 { get; set; }
     }
 }

@@ -27,7 +27,8 @@ namespace prototipo01.controladores
                                  {
                                      id_salon = n.id_salon,
                                      capacidad_salon = n.capacidad_salon,
-                                     EDIFICIO_id_edificio = n.EDIFICIO_id_edificio
+                                     EDIFICIO_id_edificio = n.EDIFICIO_id_edificio,
+                                     nombre_salon = n.nombre_salon
 
                                  }).ToList();
 
@@ -65,7 +66,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar un nuevo salon
-        public void guardarSalon(string capacidad_salon, int id_edificio)
+        public void guardarSalon(string capacidad_salon, int id_edificio, string nombre_salon)
         {
 
             using (ModelAsignacion db = new ModelAsignacion())
@@ -74,6 +75,7 @@ namespace prototipo01.controladores
                 salon salonNuevo = new salon();
                 salonNuevo.capacidad_salon = capacidad_salon;
                 salonNuevo.EDIFICIO_id_edificio = id_edificio;
+                salonNuevo.nombre_salon = nombre_salon;
 
 
                 db.salon.Add(salonNuevo);
@@ -85,7 +87,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para actualizar un salon
-        public void actualizarSalon(int id_salon, string capacidad_salon, int id_edificio)
+        public void actualizarSalon(int id_salon, string capacidad_salon, int id_edificio, string nombre_salon)
         {
 
             try
@@ -99,6 +101,7 @@ namespace prototipo01.controladores
 
                     std.capacidad_salon = capacidad_salon;
                     std.EDIFICIO_id_edificio = id_edificio;
+                    std.nombre_salon = nombre_salon;
                     db.SaveChanges();
 
                 }
@@ -191,20 +194,22 @@ namespace prototipo01.controladores
         }
 
 
-        //buscar laboratorio por iniciales
+        //buscar salones por iniciales
 
-        public BindingList<salonDto> listaSalonesLike(int search)
+        public BindingList<salonDto> listaSalonesLike(string search)
         {
             try
             {
                 using (ModelAsignacion db = new ModelAsignacion())
                 {
                     var Query = (from n in db.salon
-                                 where n.id_salon ==search
+                                 where n.nombre_salon.Contains(search)
                                  select new salonDto
                                  {
                                      id_salon = n.id_salon,
                                      EDIFICIO_id_edificio = n.EDIFICIO_id_edificio,
+                                     capacidad_salon = n.capacidad_salon,
+                                     nombre_salon = n.nombre_salon
                                   
 
                                  }).ToList();

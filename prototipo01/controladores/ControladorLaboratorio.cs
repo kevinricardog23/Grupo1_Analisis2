@@ -66,6 +66,29 @@ namespace prototipo01.controladores
         }
 
 
+
+        //get horarios
+
+        public List<horario> getHorarios()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from horario in db.horario
+                           select horario).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
+
+
+
+
         //get catedraticos
 
         public List<catedratico> getCatedraticos()
@@ -166,6 +189,61 @@ namespace prototipo01.controladores
             {
                 throw;
             }
+        }
+
+
+
+
+
+
+        //obtener id del salon
+        public int getIdSalon(string nombre_salon)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.salon
+                        .Where(s => s.nombre_salon== nombre_salon)
+                        .FirstOrDefault<salon>();
+
+                    return std.id_salon;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
+
+        //obtener id del horario
+        public int getIdHorario(string nombre_horario)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.horario
+                        .Where(s => s.horario_horario == nombre_horario)
+                        .FirstOrDefault<horario>();
+
+                    return std.id_horario;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
 

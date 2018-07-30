@@ -17,9 +17,9 @@ namespace prototipo01.forms.pensum
     {
         ControladorPensum controladorPensum = new ControladorPensum();
         BindingList<PensumDto> pensumsDataSource = new BindingList<PensumDto>();
-        
-        
 
+
+        private int ID_reference;
 
         public Listado_pensum()
         {
@@ -27,19 +27,20 @@ namespace prototipo01.forms.pensum
             
         }
 
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                TextBox objTextBox = (TextBox)textBox2;
-                string theText = objTextBox.Text;
-               models.carrera res = comboBox1.SelectedItem as models.carrera;
-               controladorPensum.guardarPensum(res.id_carrera, theText);
-            }
+            openForm(new Pensum_Create());
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -54,7 +55,7 @@ namespace prototipo01.forms.pensum
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
+           
         }
 
         public void refreshGrid()
@@ -67,7 +68,7 @@ namespace prototipo01.forms.pensum
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TextBox objTextBox = (TextBox)textBox2;
+            /*TextBox objTextBox = (TextBox)textBox2;
         
             foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
             {
@@ -77,12 +78,20 @@ namespace prototipo01.forms.pensum
                     objTextBox.Text = cust.nombre_pensum;
               
                 }
-            }
+            }*/
+
+            openForm(new Pensum_Update(ID_reference));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el pensum?", "Eliminar", MessageBoxButtons.YesNo);
 
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                controladorPensum.eliminarPensum(ID_reference);
+                refreshGrid();
+            }
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -94,13 +103,45 @@ namespace prototipo01.forms.pensum
             }
         }
 
+        void setData()//Cargar el datagridview
+        {
+            refreshGrid();
+        }
+
         private void Listado_pensum_Load(object sender, EventArgs e)
         {
-
-
-            comboBox1.DataSource = controladorPensum.getCarreras();
-            comboBox1.DisplayMember = "Name";
-            comboBox1.ValueMember = "nombre_carrera";
+            setData();
         }
+        
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
+        }
+
+        //BUSCAR POR INICIALES
+        void search()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            pensumsDataSource = controladorPensum.listaPensum(textBox1.Text.ToString());
+            dataGridView1.DataSource = pensumsDataSource;
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        //Williams De La Cuesta
     }
 }
