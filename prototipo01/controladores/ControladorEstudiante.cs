@@ -29,13 +29,13 @@ namespace prototipo01.controladores
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno,
                                      estado_alumno = n.estado_alumno
-                                     
+
                                  }).ToList();
 
                     BindingList<estudianteDto> result = new BindingList<estudianteDto>(Query);
                     return result;
                 }
-        }
+            }
             catch (Exception)
             {
                 throw;
@@ -253,7 +253,7 @@ namespace prototipo01.controladores
                                      correo_alumno = n.correo_alumno,
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno
-                                     
+
 
                                  }).ToList();
 
@@ -273,7 +273,7 @@ namespace prototipo01.controladores
 
 
 
-    
+
     }
 }
 //kevin G
