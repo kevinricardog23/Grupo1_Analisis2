@@ -39,7 +39,7 @@ namespace prototipo01.forms.ayuda
                     label2.Text = "Laboratorios: \n\nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos, para darle la opcion de investigar los cursos que comprenden ciertas carreras.";
                     break;
                 case "Facultades":
-                    label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";
+                    label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades. BOTON CREAR: Al presionar este boton se desplegara una nueva pantalla donde podra ingresar una nueva facultad. BOTON ACTUALIZAR: Podra modificar la facultad de tiene seleccionada (para seleccionar solo debe dar click sobre ella). ";
                     break;
                 case "Carreras":
                     label2.Text = "Carreras: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar las carreras, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";

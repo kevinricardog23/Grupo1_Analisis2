@@ -52,7 +52,6 @@ namespace prototipo01.controladores
         {
             ModelAsignacion db = new ModelAsignacion();
 
-
             carrera carreraNueva = new carrera();
 
             carreraNueva.id_carrera = id_carrera;
@@ -167,7 +166,7 @@ namespace prototipo01.controladores
         }
 
         //Buscar una carrera
-        public carrera buscarSalon(int id_carrera)
+        public carrera buscarCarrera(int id_carrera)
         {
             try
             {

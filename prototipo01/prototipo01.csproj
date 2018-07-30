@@ -111,9 +111,7 @@
     <Compile Include="forms\asignacion\Asignacion_Cursos.designer.cs">
       <DependentUpon>Asignacion_Cursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ayuda\Ayuda.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\ayuda\Ayuda.cs" />
     <Compile Include="forms\ayuda\Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
@@ -134,6 +132,10 @@
     </Compile>
     <Compile Include="forms\carrera\Listado_carreras.Designer.cs">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\carrera\Update_Carrera.cs" />
+    <Compile Include="forms\carrera\Update_Carrera.Designer.cs">
+      <DependentUpon>Update_Carrera.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\catedraticos\Catedratico_Create.cs">
       <SubType>Form</SubType>
@@ -390,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\carrera\Update_Carrera.resx">
+      <DependentUpon>Update_Carrera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\catedraticos\Catedratico_Create.resx">
       <DependentUpon>Catedratico_Create.cs</DependentUpon>
