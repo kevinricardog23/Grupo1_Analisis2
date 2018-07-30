@@ -1,4 +1,7 @@
-﻿using System;
+﻿using prototipo01.controladores;
+using prototipo01.Dto;
+using prototipo01.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,26 @@ namespace prototipo01.forms.asignacion
 {
     public partial class Asignacion_Cursos : Form
     {
+        ControladorEstudiante controladorEstudiante = new ControladorEstudiante();
+        ControladorCursos controladorCursos = new ControladorCursos(); //LOGICA CRUD CURSOIS
+        BindingList<cursosDto> cursosDataSource = new BindingList<cursosDto>(); //LISTA CURSOS
+
+
+
         public Asignacion_Cursos()
         {
             InitializeComponent();
+            refreshDataSource();
+        }
+
+        //REFRESCAR EL DATAGRIDVIEW
+        private void refreshDataSource()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            cursosDataSource = controladorCursos.listaCursos();
+            dataGridView1.DataSource = cursosDataSource;
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -39,6 +59,22 @@ namespace prototipo01.forms.asignacion
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            String dpiStr = textBox1.Text + textBox2.Text + textBox3.Text;       
+            long numVal = Int64.Parse(dpiStr);
+
+            alumno alm = controladorEstudiante.buscarEstudiante(numVal);
+
+            if (alm == null)
+            {
+                MessageBox.Show("Error", "Alumno no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

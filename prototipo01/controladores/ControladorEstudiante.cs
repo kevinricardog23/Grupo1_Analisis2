@@ -64,7 +64,7 @@ namespace prototipo01.controladores
             db.SaveChanges();
 
         }
-        public alumno buscarEstudiante(int dpi_alumno)
+        public alumno buscarEstudiante(long dpi_alumno)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace prototipo01.controladores
             }
             catch (Exception)
             {
-                throw;
+                return null;
             }
         }
         public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno)
