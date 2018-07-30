@@ -133,7 +133,9 @@
     <Compile Include="forms\carrera\Listado_carreras.Designer.cs">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\carrera\Update_Carrera.cs" />
+    <Compile Include="forms\carrera\Update_Carrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\carrera\Update_Carrera.Designer.cs">
       <DependentUpon>Update_Carrera.cs</DependentUpon>
     </Compile>
