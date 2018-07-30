@@ -152,12 +152,12 @@ namespace prototipo01.controladores
 
 
         
-        public List<alumno> getID_carrera()
+        public List<facultad> getFacultades()
         {
             using (ModelAsignacion db = new ModelAsignacion())
             {
-                var std = (from alumno in db.alumno
-                           select alumno ).ToList();
+                var std = (from facultad in db.facultad
+                           select facultad ).ToList();
                 return std;
             }
         }
