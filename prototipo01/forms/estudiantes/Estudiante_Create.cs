@@ -57,7 +57,7 @@ namespace prototipo01.forms.estudiante
             carrera = controladorEstudiantes.getIdCarrera(cbo_estudiante.Text.ToString());
             direccion = Txt_direccion.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
-            estado = Rbtn_estado.Text.ToString();
+            estado = Txt_estado.Text.ToString();
            
             
 
@@ -90,7 +90,7 @@ namespace prototipo01.forms.estudiante
      
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloNumeros(e);
+            Clases.Validacion.SoloLetras(e);
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -149,7 +149,7 @@ namespace prototipo01.forms.estudiante
                     Txt_direccion.Text = "";
                     Txt_telefono.Text = "";
                     Txt_dpi.Text = "";
-                    Rbtn_estado.Text = "";
+                    Txt_estado.Text = "";
                     cbo_estudiante.Text = "";
                     cbo_facultad.Text = "";
                 }
@@ -270,6 +270,19 @@ namespace prototipo01.forms.estudiante
 
         }
 
-       
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_Estado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_edad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
