@@ -151,18 +151,31 @@ namespace prototipo01.controladores
 
 
 
-        
-        public List<alumno> getID_carrera()
+
+        //obtener id carrera
+        public int getIdCarrera(string nombre_carrera)
         {
-            using (ModelAsignacion db = new ModelAsignacion())
+            try
             {
-                var std = (from alumno in db.alumno
-                           select alumno ).ToList();
-                return std;
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.carrera
+                        .Where(s => s.nombre_carrera == nombre_carrera)
+                        .FirstOrDefault<carrera>();
+
+                    return std.id_carrera;
+                }
+
             }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
-        
+
         public BindingList<estudianteDto> listaEstudiantesLike(string search)
         {
             try
