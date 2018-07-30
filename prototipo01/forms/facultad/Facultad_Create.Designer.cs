@@ -42,8 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Txt_id = new System.Windows.Forms.TextBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,8 +60,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Txt_id);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.Btn_actualizar);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.label5);
@@ -103,7 +99,7 @@
             // textBox3
             // 
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox3.Location = new System.Drawing.Point(248, 312);
+            this.textBox3.Location = new System.Drawing.Point(248, 299);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.MaxLength = 35;
             this.textBox3.Multiline = true;
@@ -117,7 +113,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(183, 314);
+            this.label5.Location = new System.Drawing.Point(183, 301);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 19);
@@ -127,7 +123,7 @@
             // textBox2
             // 
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox2.Location = new System.Drawing.Point(248, 243);
+            this.textBox2.Location = new System.Drawing.Point(248, 230);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.MaxLength = 15;
             this.textBox2.Multiline = true;
@@ -139,7 +135,7 @@
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(248, 175);
+            this.textBox1.Location = new System.Drawing.Point(248, 162);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.MaxLength = 45;
             this.textBox1.Multiline = true;
@@ -150,7 +146,7 @@
             // Txt_nombre
             // 
             this.Txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_nombre.Location = new System.Drawing.Point(248, 108);
+            this.Txt_nombre.Location = new System.Drawing.Point(248, 95);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_nombre.MaxLength = 30;
             this.Txt_nombre.Multiline = true;
@@ -164,7 +160,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(161, 177);
+            this.label4.Location = new System.Drawing.Point(161, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 19);
@@ -176,7 +172,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(170, 245);
+            this.label3.Location = new System.Drawing.Point(170, 232);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 19);
@@ -188,7 +184,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(171, 110);
+            this.label2.Location = new System.Drawing.Point(171, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 19);
@@ -233,31 +229,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear Facultad";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(203, 54);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 19);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "ID";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // Txt_id
-            // 
-            this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_id.Location = new System.Drawing.Point(249, 54);
-            this.Txt_id.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_id.MaxLength = 30;
-            this.Txt_id.Multiline = true;
-            this.Txt_id.Name = "Txt_id";
-            this.Txt_id.Size = new System.Drawing.Size(378, 28);
-            this.Txt_id.TabIndex = 28;
-            this.Txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_KeyPress);
-            // 
             // Facultad_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,7 +267,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_cerrar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Txt_id;
     }
 }

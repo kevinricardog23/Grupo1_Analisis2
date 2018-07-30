@@ -39,13 +39,13 @@ namespace prototipo01.forms.ayuda
                     label2.Text = "Laboratorios: \n\nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos, para darle la opcion de investigar los cursos que comprenden ciertas carreras.";
                     break;
                 case "Facultades":
-                    label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";
+                    label2.Text = "Facultades: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar facultades. BOTON CREAR: Al presionar este boton se desplegara una nueva pantalla donde podra ingresar una nueva facultad. BOTON ACTUALIZAR: Podra modificar la facultad de tiene seleccionada (para seleccionar solo debe dar click sobre ella). ";
                     break;
                 case "Carreras":
                     label2.Text = "Carreras: \n\nEn el siguiente bloque de programa usted podra consultar, actulizar y eliminar las carreras, esto con el objetivo de darle a usted, el usuario, la capacidad de personalizar su sistema a sus necesidades.";
                     break;
                 case "Pensum":
-                    label2.Text = "Pensum: \n\nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos, para darle la opcion de investigar los cursos que comprenden ciertas carreras.";
+                    label2.Text = "Pensum: \n\nEn el siguiente bloque de programa usted podra consultar el pensum actual, asi como los antiguos, para darle la opcion de investigar los cursos que comprenden ciertas carreras.\n Para buscar un pensum en especifico lo unico que se debera hacer es ingresar el nombre del pensum el cual desea ver.\nEl boton de CREAR le ayudara para crear un nuevo pensum en el cual solo debe seleccionar la carrera la cual quiere asignarle el pensum e ingresar el nombre por el cual identificara el pensum, el ID se insertara automaticamente.\n Si desea modificar un pensum, lo unico que debera hacer es seleccionar el pensum que desea modificar y luego presionar el boton de 'EDITAR' el cual le abrira una nueva ventana para poder modificar la carrera o el nombre del pensum seleccionado.\n Para eliminar un Pensum lo unico que debera hacer es seleccionar el pensum que desea eliminar y luego presionar el boton de ELIMINAR.";
                     break;
                 case "Cursos":
                     label2.Text = "Cursos: \n\nEn el siguiente bloque de programa usted podra consultar los cursos asi como los datos que conllevan estos, salones, secciones, catedraticos, etc. Esto con un fin informativo.";

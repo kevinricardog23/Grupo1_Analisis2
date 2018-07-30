@@ -76,6 +76,7 @@
             this.tabPage1.Size = new System.Drawing.Size(851, 444);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // Btn_actualizar
             // 
