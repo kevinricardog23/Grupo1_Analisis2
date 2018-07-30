@@ -68,6 +68,8 @@ namespace prototipo01.forms.salones
                     MessageBox.Show("Se ha agregado exitosamente un nuevo salon", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     Txt_nombre.Text = "";
+                    Cbo_edificio.Text = "";
+                    Txt_capacidad.Text = "";
                   
                 }
                 catch (Exception ex)

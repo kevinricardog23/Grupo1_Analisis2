@@ -50,7 +50,7 @@ namespace prototipo01.forms.curso
             string nombre,  semestre;
             int  id_curso, id_pensum, creditos;
 
-            id_curso = Convert.ToInt32(txtbox_ID.Text.ToString());
+            id_curso  =0;
             nombre = txtBox_nombre.Text.ToString();
             id_pensum = Convert.ToInt32(cmbBox_Pensum.Text.ToString());
             creditos = Convert.ToInt32(txtBox_Creditos.Text.ToString());
@@ -71,7 +71,7 @@ namespace prototipo01.forms.curso
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtbox_ID.Text) || (string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Creditos.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  ))
+            if ((string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Creditos.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  ))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -83,7 +83,6 @@ namespace prototipo01.forms.curso
                 txtBox_nombre.Text = "";
                 txtBox_Creditos.Text = "";
                 txtBox_semestre.Text = "";
-                txtbox_ID.Text = "";
                 cmbBox_Pensum.Text = "";
             }
             catch (Exception ex)

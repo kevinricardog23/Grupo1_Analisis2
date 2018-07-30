@@ -30,20 +30,18 @@
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_cerrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbBox_Pensum = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBox_semestre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtbox_ID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Btn_update = new System.Windows.Forms.Button();
             this.txtBox_Creditos = new System.Windows.Forms.TextBox();
             this.txtBox_nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,8 +64,6 @@
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txtBox_semestre);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.txtbox_ID);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.Btn_update);
             this.tabPage1.Controls.Add(this.txtBox_Creditos);
             this.tabPage1.Controls.Add(this.txtBox_nombre);
@@ -80,44 +76,6 @@
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btn_cerrar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(40, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 50);
-            this.panel1.TabIndex = 4;
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
-            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(822, 0);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
-            this.btn_cerrar.TabIndex = 9;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(8, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Crear Cursos";
             // 
             // cmbBox_Pensum
             // 
@@ -160,28 +118,6 @@
             this.label5.Size = new System.Drawing.Size(78, 19);
             this.label5.TabIndex = 46;
             this.label5.Text = "Semestre";
-            // 
-            // txtbox_ID
-            // 
-            this.txtbox_ID.Location = new System.Drawing.Point(297, 53);
-            this.txtbox_ID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtbox_ID.MaxLength = 30;
-            this.txtbox_ID.Multiline = true;
-            this.txtbox_ID.Name = "txtbox_ID";
-            this.txtbox_ID.Size = new System.Drawing.Size(357, 28);
-            this.txtbox_ID.TabIndex = 45;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(269, 55);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 19);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "ID";
             // 
             // Btn_update
             // 
@@ -245,6 +181,44 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Nombre";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btn_cerrar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(40, 70);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(870, 50);
+            this.panel1.TabIndex = 4;
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_angel_left_circle_thin_24;
+            this.btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Location = new System.Drawing.Point(822, 0);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
+            this.btn_cerrar.TabIndex = 9;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Crear Cursos";
+            // 
             // Cursos_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,8 +251,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_semestre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtbox_ID;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Btn_update;
         private System.Windows.Forms.TextBox txtBox_Creditos;
         private System.Windows.Forms.TextBox txtBox_nombre;
