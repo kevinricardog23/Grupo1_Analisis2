@@ -32,9 +32,12 @@ namespace prototipo01.forms.estudiante
         }
         private void Estudiante_Create_Load(object sender, EventArgs e)
         {
-            cbo_estudiante.DataSource = controladorEstudiantes.getID_carrera();
-            cbo_estudiante.DisplayMember = "id_Curso";
-            cbo_estudiante.ValueMember = "CARRERA_id_carrera";
+            cbo_estudiante.DataSource = controladorEstudiantes.getCarreras();
+            cbo_estudiante.DisplayMember = "name";
+            cbo_estudiante.ValueMember = "nombre_carrera";
+            //ASI COMO ESTE
+
+
             cbo_facultad.DataSource = controladorEstudiantes.getID_carrera();
             cbo_facultad.DisplayMember = "id_facultad";
             cbo_facultad.ValueMember = "FACULTAD_id_facultad";

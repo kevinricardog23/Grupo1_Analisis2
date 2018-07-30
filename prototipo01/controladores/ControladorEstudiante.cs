@@ -138,15 +138,19 @@ namespace prototipo01.controladores
             }
         }
 
+        //OBTIENE TODAS LA CARRERAS
         public List<carrera> getCarreras()
         {
             using (ModelAsignacion db = new ModelAsignacion())
             {
-                var std = (from CARRERA_id_carrera in db.carrera
-                           select CARRERA_id_carrera).ToList();
+                var std = (from carrera in db.carrera
+                           select carrera).ToList();
                 return std;
             }
         }
+
+
+
         
         public List<alumno> getID_carrera()
         {
