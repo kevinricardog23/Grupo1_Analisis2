@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Clases\Validacion.cs" />
     <Compile Include="controladores\ControladorBitacora.cs" />
+    <Compile Include="controladores\ControladorCarrera.cs" />
     <Compile Include="controladores\ControladorCatedraticos.cs" />
     <Compile Include="controladores\ControladorCursos.cs" />
     <Compile Include="controladores\ControladorEdificios.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="controladores\ControladorSecciones.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
     <Compile Include="Dto\bitacoraDto.cs" />
+    <Compile Include="Dto\carreraDto.cs" />
     <Compile Include="Dto\catedraticoDto.cs" />
     <Compile Include="Dto\cursosDto.cs" />
     <Compile Include="Dto\edificioDto.cs" />
@@ -120,6 +122,12 @@
     </Compile>
     <Compile Include="forms\bitacoraLogin\bitacoraL.Designer.cs">
       <DependentUpon>bitacoraL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\carrera\Create_Carrea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\carrera\Create_Carrea.Designer.cs">
+      <DependentUpon>Create_Carrea.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\carrera\Listado_carreras.cs">
       <SubType>Form</SubType>
@@ -253,6 +261,18 @@
     <Compile Include="forms\pensum\Listado_pensum.Designer.cs">
       <DependentUpon>Listado_pensum.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\pensum\Pensum_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Create.Designer.cs">
+      <DependentUpon>Pensum_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pensum\Pensum_Update.Designer.cs">
+      <DependentUpon>Pensum_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\permisos\CrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,7 +357,7 @@
     <Compile Include="models\carrera.cs" />
     <Compile Include="models\catedratico.cs" />
     <Compile Include="models\cuenta.cs" />
-    <Compile Include="models\curso.cs" />
+    <Compile Include="models\curso_model.cs" />
     <Compile Include="models\curso_estudiante.cs" />
     <Compile Include="models\edificio.cs" />
     <Compile Include="models\facultad.cs" />
@@ -364,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\bitacoraLogin\bitacoraL.resx">
       <DependentUpon>bitacoraL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\carrera\Create_Carrea.resx">
+      <DependentUpon>Create_Carrea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\carrera\Listado_carreras.resx">
       <DependentUpon>Listado_carreras.cs</DependentUpon>
@@ -430,6 +453,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\pensum\Listado_pensum.resx">
       <DependentUpon>Listado_pensum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pensum\Pensum_Create.resx">
+      <DependentUpon>Pensum_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pensum\Pensum_Update.resx">
+      <DependentUpon>Pensum_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\permisos\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>

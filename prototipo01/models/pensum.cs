@@ -12,7 +12,7 @@ namespace prototipo01.models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public pensum()
         {
-            curso = new HashSet<curso>();
+            curso = new HashSet<curso_model>();
         }
 
         [Key]
@@ -26,6 +26,6 @@ namespace prototipo01.models
         public virtual carrera carrera { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<curso> curso { get; set; }
+        public virtual ICollection<curso_model> curso { get; set; }
     }
 }

@@ -41,6 +41,29 @@ namespace prototipo01.controladores
                 throw;
             }
         }
+
+        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera)
+        {
+            ModelAsignacion db = new ModelAsignacion();
+
+
+            alumno alumnoNuevo = new alumno();
+
+            alumnoNuevo.dpi_alumno = dpi_alumno;
+            alumnoNuevo.nombre_alumno = nombre_alumno;
+            alumnoNuevo.apellido_alumno = apellido_alumno;
+            alumnoNuevo.telefono_alumno = telefono_alumno;
+            alumnoNuevo.correo_alumno = correo_alumno;
+            alumnoNuevo.edad_alumno = edad_alumno;
+            alumnoNuevo.direccion_alumno = direccion_alumno;
+            alumnoNuevo.estado_alumno = estado_alumno;
+            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
+            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
+
+            db.alumno.Add(alumnoNuevo);
+            db.SaveChanges();
+
+        }
         public alumno buscarEstudiante(int dpi_alumno)
         {
             try
@@ -93,27 +116,26 @@ namespace prototipo01.controladores
 
         }
 
-        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera)
+        public void eliminarEstudiante(int id_alumno)
         {
-            ModelAsignacion db = new ModelAsignacion();
+            try
+            {
 
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.alumno
+                        .Where(s => s.dpi_alumno == id_alumno)
+                        .FirstOrDefault<alumno>();
 
-            alumno alumnoNuevo = new alumno();
+                    db.alumno.Remove(std);
+                    db.SaveChanges();
 
-            alumnoNuevo.dpi_alumno = dpi_alumno;
-            alumnoNuevo.nombre_alumno = nombre_alumno;
-            alumnoNuevo.apellido_alumno = apellido_alumno;
-            alumnoNuevo.telefono_alumno = telefono_alumno;
-            alumnoNuevo.correo_alumno = correo_alumno;
-            alumnoNuevo.edad_alumno = edad_alumno;
-            alumnoNuevo.direccion_alumno = direccion_alumno;
-            alumnoNuevo.estado_alumno = estado_alumno;
-            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
-            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
-
-            db.alumno.Add(alumnoNuevo);
-            db.SaveChanges();
-
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<carrera> getCarreras()
@@ -177,3 +199,4 @@ namespace prototipo01.controladores
     
     }
 }
+//kevin G

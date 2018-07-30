@@ -18,6 +18,7 @@ namespace prototipo01.forms.curso
 
         ControladorCursos controladorCursos = new ControladorCursos(); //LOGICA CRUD CURSOIS
         BindingList<cursosDto> cursosDataSource = new BindingList<cursosDto>(); //LISTA CURSOS
+        private int ID_reference;
 
         public Listado_curso()
         {
@@ -66,14 +67,22 @@ namespace prototipo01.forms.curso
 
         }
 
+        //BUSCAR POR INICIALES
+        void search()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            cursosDataSource = controladorCursos.listadoCursosPorCaracter(textBox1.Text.ToString());
+            dataGridView1.DataSource = cursosDataSource;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            search();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloNumeros(e);
 
         }
 
@@ -94,6 +103,38 @@ namespace prototipo01.forms.curso
         private void Listado_curso_Load(object sender, EventArgs e)
         {
             refreshDataSource();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (ID_reference != 0)
+            {
+                openForm(new Cursos_Update(ID_reference));
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un edificio");
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el edificio?", "Eliminar", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                controladorCursos.eliminarCursos(ID_reference);
+                refreshDataSource();
+            }
         }
     }
 }
