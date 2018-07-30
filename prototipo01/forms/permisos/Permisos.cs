@@ -74,5 +74,10 @@ namespace prototipo01.forms.permisos
         {
             openForm(new bitacoraL());
         }
+
+        private void Permisos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,7 +38,6 @@
             this.Pnl_ListaSeccion = new System.Windows.Forms.Panel();
             this.Lbl_ListaSeccion = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_ListaSecciones)).BeginInit();
             this.Pnl_ListaSeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,7 +52,7 @@
             this.Btn_Actualizar.ForeColor = System.Drawing.Color.White;
             this.Btn_Actualizar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_Actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(269, 171);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(601, 181);
             this.Btn_Actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(145, 41);
@@ -71,7 +70,7 @@
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
             this.Btn_Eliminar.Image = global::prototipo01.Properties.Resources.iconmonstr_x_mark_13_24;
             this.Btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(418, 171);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(750, 181);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(145, 41);
@@ -102,7 +101,7 @@
             this.Txt_Buscar.MaxLength = 11;
             this.Txt_Buscar.Multiline = true;
             this.Txt_Buscar.Name = "Txt_Buscar";
-            this.Txt_Buscar.Size = new System.Drawing.Size(524, 39);
+            this.Txt_Buscar.Size = new System.Drawing.Size(626, 39);
             this.Txt_Buscar.TabIndex = 10;
             this.Txt_Buscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.Txt_Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -142,7 +141,7 @@
             this.Btn_Buscar.ForeColor = System.Drawing.Color.White;
             this.Btn_Buscar.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.Btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Buscar.Location = new System.Drawing.Point(120, 171);
+            this.Btn_Buscar.Location = new System.Drawing.Point(452, 181);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(145, 41);
@@ -185,29 +184,12 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.button4.BackgroundImage = global::prototipo01.Properties.Resources.iconmonstr_magnifier_1_32;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(646, 128);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 39);
-            this.button4.TabIndex = 15;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // listaSecciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 578);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Btn_Actualizar);
             this.Controls.Add(this.Btn_Eliminar);
@@ -242,6 +224,5 @@
         private System.Windows.Forms.Panel Pnl_ListaSeccion;
         private System.Windows.Forms.Label Lbl_ListaSeccion;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button4;
     }
 }
