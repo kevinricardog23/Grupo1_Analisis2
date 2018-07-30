@@ -33,6 +33,8 @@ namespace prototipo01.forms.estudiante
             this.components = new System.ComponentModel.Container();
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbo_facultad = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Lbl_carrera = new System.Windows.Forms.Label();
             this.Txt_dpi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -40,17 +42,17 @@ namespace prototipo01.forms.estudiante
             this.Lbl_Estado = new System.Windows.Forms.Label();
             this.cbo_estudiante = new System.Windows.Forms.ComboBox();
             this.Btn_crear = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Txt_direccion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Txt_telefono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Txt_correo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Txt_edad = new System.Windows.Forms.TextBox();
             this.Lbl_edad = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_apellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
@@ -61,8 +63,6 @@ namespace prototipo01.forms.estudiante
             this.epError_Apellidos = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Correo = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Direccion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbo_facultad = new System.Windows.Forms.ComboBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -96,17 +96,17 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Controls.Add(this.Lbl_Estado);
             this.tabPage1.Controls.Add(this.cbo_estudiante);
             this.tabPage1.Controls.Add(this.Btn_crear);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.Txt_direccion);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.Txt_telefono);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.Txt_correo);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.Txt_edad);
             this.tabPage1.Controls.Add(this.Lbl_edad);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.Txt_apellido);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.Txt_Nombre);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -115,6 +115,26 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbo_facultad
+            // 
+            this.cbo_facultad.FormattingEnabled = true;
+            this.cbo_facultad.Location = new System.Drawing.Point(539, 334);
+            this.cbo_facultad.Name = "cbo_facultad";
+            this.cbo_facultad.Size = new System.Drawing.Size(316, 27);
+            this.cbo_facultad.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label4.Location = new System.Drawing.Point(453, 342);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 19);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Facultad";
             // 
             // Lbl_carrera
             // 
@@ -161,6 +181,7 @@ namespace prototipo01.forms.estudiante
             this.Rbtn_estado.TabIndex = 34;
             this.Rbtn_estado.TabStop = true;
             this.Rbtn_estado.UseVisualStyleBackColor = true;
+          
             // 
             // Lbl_Estado
             // 
@@ -200,17 +221,17 @@ namespace prototipo01.forms.estudiante
             this.Btn_crear.UseVisualStyleBackColor = false;
             this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
             // 
-            // textBox5
+            // Txt_direccion
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox5.Location = new System.Drawing.Point(538, 235);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.MaxLength = 45;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(317, 28);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Validated += new System.EventHandler(this.textBox5_Validated);
+            this.Txt_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_direccion.Location = new System.Drawing.Point(538, 235);
+            this.Txt_direccion.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_direccion.MaxLength = 45;
+            this.Txt_direccion.Multiline = true;
+            this.Txt_direccion.Name = "Txt_direccion";
+            this.Txt_direccion.Size = new System.Drawing.Size(317, 28);
+            this.Txt_direccion.TabIndex = 11;
+            this.Txt_direccion.Validated += new System.EventHandler(this.textBox5_Validated);
             // 
             // label6
             // 
@@ -224,18 +245,18 @@ namespace prototipo01.forms.estudiante
             this.label6.TabIndex = 10;
             this.label6.Text = "Dirección";
             // 
-            // textBox6
+            // Txt_telefono
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox6.Location = new System.Drawing.Point(113, 235);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.MaxLength = 15;
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(317, 28);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
-            this.textBox6.Validated += new System.EventHandler(this.textBox6_Validated);
+            this.Txt_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_telefono.Location = new System.Drawing.Point(113, 235);
+            this.Txt_telefono.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_telefono.MaxLength = 15;
+            this.Txt_telefono.Multiline = true;
+            this.Txt_telefono.Name = "Txt_telefono";
+            this.Txt_telefono.Size = new System.Drawing.Size(317, 28);
+            this.Txt_telefono.TabIndex = 9;
+            this.Txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.Txt_telefono.Validated += new System.EventHandler(this.textBox6_Validated);
             // 
             // label7
             // 
@@ -249,17 +270,17 @@ namespace prototipo01.forms.estudiante
             this.label7.TabIndex = 8;
             this.label7.Text = "Telefono";
             // 
-            // textBox4
+            // Txt_correo
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox4.Location = new System.Drawing.Point(538, 162);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.MaxLength = 35;
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(317, 28);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Validated += new System.EventHandler(this.textBox4_Validated);
+            this.Txt_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_correo.Location = new System.Drawing.Point(538, 162);
+            this.Txt_correo.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_correo.MaxLength = 35;
+            this.Txt_correo.Multiline = true;
+            this.Txt_correo.Name = "Txt_correo";
+            this.Txt_correo.Size = new System.Drawing.Size(317, 28);
+            this.Txt_correo.TabIndex = 7;
+            this.Txt_correo.Validated += new System.EventHandler(this.textBox4_Validated);
             // 
             // label5
             // 
@@ -273,17 +294,17 @@ namespace prototipo01.forms.estudiante
             this.label5.TabIndex = 6;
             this.label5.Text = "Correo";
             // 
-            // textBox3
+            // Txt_edad
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox3.Location = new System.Drawing.Point(113, 162);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.MaxLength = 45;
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 28);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
+            this.Txt_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_edad.Location = new System.Drawing.Point(113, 162);
+            this.Txt_edad.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_edad.MaxLength = 45;
+            this.Txt_edad.Multiline = true;
+            this.Txt_edad.Name = "Txt_edad";
+            this.Txt_edad.Size = new System.Drawing.Size(317, 28);
+            this.Txt_edad.TabIndex = 5;
+            this.Txt_edad.Validated += new System.EventHandler(this.textBox3_Validated);
             // 
             // Lbl_edad
             // 
@@ -297,18 +318,19 @@ namespace prototipo01.forms.estudiante
             this.Lbl_edad.TabIndex = 4;
             this.Lbl_edad.Text = "Edad";
             // 
-            // textBox2
+            // Txt_apellido
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox2.Location = new System.Drawing.Point(538, 87);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 28);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            this.textBox2.Validated += new System.EventHandler(this.textBox2_Validated);
+            this.Txt_apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_apellido.Location = new System.Drawing.Point(538, 87);
+            this.Txt_apellido.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_apellido.MaxLength = 30;
+            this.Txt_apellido.Multiline = true;
+            this.Txt_apellido.Name = "Txt_apellido";
+            this.Txt_apellido.Size = new System.Drawing.Size(317, 28);
+            this.Txt_apellido.TabIndex = 3;
+            this.Txt_apellido.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Txt_apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.Txt_apellido.Validated += new System.EventHandler(this.textBox2_Validated);
             // 
             // label3
             // 
@@ -322,19 +344,19 @@ namespace prototipo01.forms.estudiante
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellidos";
             // 
-            // textBox1
+            // Txt_Nombre
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(113, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 28);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated);
+            this.Txt_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Nombre.Location = new System.Drawing.Point(113, 87);
+            this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_Nombre.MaxLength = 30;
+            this.Txt_Nombre.Multiline = true;
+            this.Txt_Nombre.Name = "Txt_Nombre";
+            this.Txt_Nombre.Size = new System.Drawing.Size(317, 28);
+            this.Txt_Nombre.TabIndex = 1;
+            this.Txt_Nombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.Txt_Nombre.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
             // label2
             // 
@@ -410,26 +432,6 @@ namespace prototipo01.forms.estudiante
             // 
             this.epError_Direccion.ContainerControl = this;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(453, 342);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 19);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Facultad";
-            // 
-            // cbo_facultad
-            // 
-            this.cbo_facultad.FormattingEnabled = true;
-            this.cbo_facultad.Location = new System.Drawing.Point(539, 334);
-            this.cbo_facultad.Name = "cbo_facultad";
-            this.cbo_facultad.Size = new System.Drawing.Size(316, 27);
-            this.cbo_facultad.TabIndex = 39;
-            // 
             // Estudiante_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,17 +470,17 @@ namespace prototipo01.forms.estudiante
 
         private System.Windows.Forms.TabControl CRUD;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Txt_direccion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Txt_telefono;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Txt_correo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Txt_edad;
         private System.Windows.Forms.Label Lbl_edad;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_apellido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Nombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
