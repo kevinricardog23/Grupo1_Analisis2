@@ -22,6 +22,7 @@ namespace prototipo01.forms.salones
     {
         ControladorSalones controladorSalones = new ControladorSalones();
         private int reference;
+        //private string nombre_salon;
         public Salones_Update(int ID_reference)
         {
             InitializeComponent();
@@ -44,7 +45,8 @@ namespace prototipo01.forms.salones
             salon Model = controladorSalones.buscarSalon(reference);
 
             Txt_capacidad.Text = Model.capacidad_salon.ToString();
-            Cbo_edificio.Text = Model.EDIFICIO_id_edificio.ToString();
+        //    Cbo_edificio.Text = Model.EDIFICIO_id_edificio.ToString();
+            Txt_nombre.Text = Model.nombre_salon.ToString();
 
         }
 
@@ -55,15 +57,15 @@ namespace prototipo01.forms.salones
         void updateSalon()
         {
 
-            string capacidad;
+            string capacidad, nombre;
             int ID_edificio;
 
             capacidad = Txt_capacidad.Text.ToString();
             ID_edificio = controladorSalones.getIdEdificio(Cbo_edificio.Text.ToString());
+            nombre = Txt_nombre.Text.ToString();
 
 
-
-            controladorSalones.actualizarSalon(reference,capacidad, ID_edificio); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            controladorSalones.actualizarSalon(reference,capacidad, ID_edificio,nombre); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -94,6 +96,16 @@ namespace prototipo01.forms.salones
         }
 
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void Txt_capacidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
         }

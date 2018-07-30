@@ -30,6 +30,8 @@
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.Tp_editar = new System.Windows.Forms.TabPage();
+            this.Txt_nombre = new System.Windows.Forms.TextBox();
+            this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Cbo_edificio = new System.Windows.Forms.ComboBox();
             this.Txt_capacidad = new System.Windows.Forms.TextBox();
             this.Btn_editar = new System.Windows.Forms.Button();
@@ -56,6 +58,8 @@
             // 
             // Tp_editar
             // 
+            this.Tp_editar.Controls.Add(this.Txt_nombre);
+            this.Tp_editar.Controls.Add(this.Lbl_nombre);
             this.Tp_editar.Controls.Add(this.Cbo_edificio);
             this.Tp_editar.Controls.Add(this.Txt_capacidad);
             this.Tp_editar.Controls.Add(this.Btn_editar);
@@ -69,6 +73,29 @@
             this.Tp_editar.TabIndex = 0;
             this.Tp_editar.UseVisualStyleBackColor = true;
             // 
+            // Txt_nombre
+            // 
+            this.Txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_nombre.Location = new System.Drawing.Point(188, 50);
+            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_nombre.MaxLength = 30;
+            this.Txt_nombre.Multiline = true;
+            this.Txt_nombre.Name = "Txt_nombre";
+            this.Txt_nombre.Size = new System.Drawing.Size(317, 28);
+            this.Txt_nombre.TabIndex = 37;
+            // 
+            // Lbl_nombre
+            // 
+            this.Lbl_nombre.AutoSize = true;
+            this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_nombre.Location = new System.Drawing.Point(30, 50);
+            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_nombre.Name = "Lbl_nombre";
+            this.Lbl_nombre.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_nombre.TabIndex = 36;
+            this.Lbl_nombre.Text = "Nombre";
+            // 
             // Cbo_edificio
             // 
             this.Cbo_edificio.FormattingEnabled = true;
@@ -76,17 +103,19 @@
             this.Cbo_edificio.Name = "Cbo_edificio";
             this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
             this.Cbo_edificio.TabIndex = 35;
+            this.Cbo_edificio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_edificio_KeyPress);
             // 
             // Txt_capacidad
             // 
             this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_capacidad.Location = new System.Drawing.Point(189, 102);
+            this.Txt_capacidad.Location = new System.Drawing.Point(188, 112);
             this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_capacidad.MaxLength = 30;
             this.Txt_capacidad.Multiline = true;
             this.Txt_capacidad.Name = "Txt_capacidad";
             this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
             this.Txt_capacidad.TabIndex = 34;
+            this.Txt_capacidad.TextChanged += new System.EventHandler(this.Txt_capacidad_TextChanged);
             this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress);
             // 
             // Btn_editar
@@ -98,7 +127,7 @@
             this.Btn_editar.ForeColor = System.Drawing.Color.White;
             this.Btn_editar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_editar.Location = new System.Drawing.Point(113, 323);
+            this.Btn_editar.Location = new System.Drawing.Point(189, 280);
             this.Btn_editar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(145, 41);
@@ -124,7 +153,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(31, 104);
+            this.label2.Location = new System.Drawing.Point(30, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 19);
@@ -165,9 +194,9 @@
             this.Lbl_titulo.Location = new System.Drawing.Point(15, 15);
             this.Lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_titulo.Name = "Lbl_titulo";
-            this.Lbl_titulo.Size = new System.Drawing.Size(175, 18);
+            this.Lbl_titulo.Size = new System.Drawing.Size(127, 18);
             this.Lbl_titulo.TabIndex = 0;
-            this.Lbl_titulo.Text = "Actualizar Catedratico";
+            this.Lbl_titulo.Text = "Actualizar Salon\r\n";
             // 
             // Salones_Update
             // 
@@ -199,5 +228,7 @@
         private System.Windows.Forms.Label Lbl_titulo;
         private System.Windows.Forms.ComboBox Cbo_edificio;
         private System.Windows.Forms.TextBox Txt_capacidad;
+        private System.Windows.Forms.TextBox Txt_nombre;
+        private System.Windows.Forms.Label Lbl_nombre;
     }
 }
