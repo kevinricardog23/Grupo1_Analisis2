@@ -37,19 +37,21 @@ namespace prototipo01.forms.estudiante
         void updateCatedratico()
         {
             string nombre, apellido, telefono, correo, direccion, estado;
-            int edad;
+            int edad, carrera, facultad;
 
             nombre = Txt_Nombres.Text.ToString();
             apellido = Txt_Apellidos.Text.ToString();
             telefono = Txt_Telefono.Text.ToString();
             correo = Txt_Correo.Text.ToString();
+            facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
+            carrera = controladorEstudiantes.getIdCarrera(cbo_carrera.Text.ToString());
             direccion = Txt_Direccion.Text.ToString();
             estado = Txt_estado.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
 
 
 
-            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,estado);
+            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado);
             MessageBox.Show("Se ha Actualizado exitosamente el estudiante", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -130,6 +132,14 @@ namespace prototipo01.forms.estudiante
         private void Estudiante_Update_Load(object sender, EventArgs e)
         {
             setData();
+            cbo_carrera.DataSource = controladorEstudiantes.getCarreras();
+            cbo_carrera.DisplayMember = "name";
+            cbo_carrera.ValueMember = "nombre_carrera";
+
+
+            cbo_facultad.DataSource = controladorEstudiantes.getFacultades();
+            cbo_facultad.DisplayMember = "name";
+            cbo_facultad.ValueMember = "nombre_facultad";
         }
     }
 }
