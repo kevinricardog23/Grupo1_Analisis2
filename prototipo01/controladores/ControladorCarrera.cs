@@ -52,7 +52,6 @@ namespace prototipo01.controladores
         {
             ModelAsignacion db = new ModelAsignacion();
 
-C:\Users\Fredy Flores\Documents\GitHub\Grupo1_Analisis2\prototipo01\controladores\ControladorCarrera.cs
             carrera carreraNueva = new carrera();
 
             carreraNueva.id_carrera = id_carrera;
@@ -167,7 +166,7 @@ C:\Users\Fredy Flores\Documents\GitHub\Grupo1_Analisis2\prototipo01\controladore
         }
 
         //Buscar una carrera
-        public carrera buscarSalon(int id_carrera)
+        public carrera buscarCarrera(int id_carrera)
         {
             try
             {
