@@ -42,7 +42,13 @@ namespace prototipo01.forms.estudiante
             fh.Show();
 
         }
-
+        void search()
+        {
+            this.Dgb_estudiantes.DataSource = null;
+            this.Dgb_estudiantes.Rows.Clear();
+            alumnoDataSource = controladorEstudiantes.listaEstudiantesLike(Txt_buscar.Text.ToString());
+            Dgb_estudiantes.DataSource = alumnoDataSource;
+        }
         private void Btn_crear_Click(object sender, EventArgs e)
         {
             openForm(new Estudiante_Create());
@@ -56,11 +62,14 @@ namespace prototipo01.forms.estudiante
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
+
+            search();
             if (string.IsNullOrEmpty(Txt_buscar.Text))
             {
                 MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+           
         }
 
         private void Btn_eliminar_Click(object sender, EventArgs e)
@@ -81,13 +90,7 @@ namespace prototipo01.forms.estudiante
             refreshDataSource();
 
         }
-        void search()
-        {
-            this.Dgb_estudiantes.DataSource = null;
-            this.Dgb_estudiantes.Rows.Clear();
-            alumnoDataSource = controladorEstudiantes.listaEstudiantesLike(Txt_buscar.Text.ToString());
-            Dgb_estudiantes.DataSource = alumnoDataSource;
-        }
+        
         private void Dgb_estudiantes_SelectionChanged(object sender, EventArgs e)
         {
 
@@ -105,6 +108,11 @@ namespace prototipo01.forms.estudiante
         private void Listado_estudiante_Load(object sender, EventArgs e)
         {
             setData();
+
+        }
+
+        private void Dgb_estudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
         //

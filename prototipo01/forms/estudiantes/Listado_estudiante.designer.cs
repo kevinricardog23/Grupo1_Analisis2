@@ -81,7 +81,6 @@
             // 
             this.Dgb_estudiantes.AllowUserToAddRows = false;
             this.Dgb_estudiantes.AllowUserToDeleteRows = false;
-            this.Dgb_estudiantes.AllowUserToOrderColumns = true;
             this.Dgb_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgb_estudiantes.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -102,6 +101,7 @@
             this.Dgb_estudiantes.RowTemplate.Height = 24;
             this.Dgb_estudiantes.Size = new System.Drawing.Size(872, 302);
             this.Dgb_estudiantes.TabIndex = 33;
+            this.Dgb_estudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgb_estudiantes_CellContentClick);
             this.Dgb_estudiantes.SelectionChanged += new System.EventHandler(this.Dgb_estudiantes_SelectionChanged);
             // 
             // Txt_buscar
