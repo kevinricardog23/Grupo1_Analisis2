@@ -39,15 +39,15 @@ namespace prototipo01.forms.facultad
         void createCatedratico()
         {
             string nombre, direccion, telefono, correo;
-            int id;
+           // int id;
 
-            id = Convert.ToInt32(Txt_id.Text.ToString());
+           // id = Convert.ToInt32(Txt_id.Text.ToString());
             nombre = Txt_nombre.Text.ToString();
             direccion = textBox1.Text.ToString();
             telefono = textBox2.Text.ToString();
             correo = textBox3.Text.ToString();
 
-            controladorFacultades.guardarFacultad(id, nombre, direccion, telefono, correo);
+            controladorFacultades.guardarFacultad(nombre, direccion, telefono, correo);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace prototipo01.forms.facultad
 
         private void Btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_id.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -108,7 +108,7 @@ namespace prototipo01.forms.facultad
                 {
                     createCatedratico();
                     MessageBox.Show("Se ha agregado exitosamente una nueva Facultad", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Txt_id.Text = "";
+                    //Txt_id.Text = "";
                     Txt_nombre.Text = "";
                     textBox1.Text = "";
                     textBox2.Text = "";

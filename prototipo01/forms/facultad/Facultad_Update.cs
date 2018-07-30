@@ -11,6 +11,7 @@ using prototipo01.Dto;
 using prototipo01.controladores;
 using prototipo01.models;
 
+
 namespace prototipo01.forms.facultad
 {
     public partial class Facultad_Update : Form
@@ -39,33 +40,37 @@ namespace prototipo01.forms.facultad
 
         }
 
+        private void setData()
+        {
+
+            prototipo01.models.facultad Model = controladorFacultades.buscarFacultad(reference);
+
+            Txt_nombre.Text = Model.nombre_facultad.ToString();
+            textBox1.Text = Model.direccion_facultad.ToString();
+            textBox2.Text = Model.telefono_facultad.ToString();
+            textBox3.Text = Model.correo_facultad.ToString();
+        }
 
         void updateFacultad()
         {
             string nombre, direccion, telefono, correo;
-            //int id; 
+           // int ID_facultad;
 
-            nombre = Txt_nombre.Text.ToString();
+             nombre = Txt_nombre.Text.ToString();
             direccion = textBox1.Text.ToString();
             telefono = textBox2.Text.ToString();
             correo = textBox3.Text.ToString();
 
             controladorFacultades.actualizarFacultad(reference, nombre, direccion, telefono, correo);
            // MessageBox.Show("Se ha actualizado exitosamente la facultad", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            nombre = Txt_nombre.Text.ToString();
+            //ID_facultad = controladorFacultades.getId_
         }
 
-        void setData()
-        {
-            //facultad1 Model = controladorFacultades.buscarFacultad(reference);
-
-            //Txt_nombre.Text = Model.nombre_facultad.ToString();
-            //textBox1.Text = Model.direccion_facultad.ToString();
-            //textBox2.Text = Model.telefono_facultad.ToString();
-            //textBox3.Text = Model.correo_facultad.ToString();
-        }
-
+       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -73,16 +78,7 @@ namespace prototipo01.forms.facultad
             openForm(new Listado_facultades());
         }
 
-        private void Facultad_Update_Load(object sender, EventArgs e)
-        {
-            setData();
-        }
-
-        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Clases.Validacion.SoloLetras(e);
-        }
-
+               
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
@@ -112,9 +108,19 @@ namespace prototipo01.forms.facultad
             }
         }
 
+        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Facultad_Update_Load(object sender, EventArgs e)
+        {
+            setData();
         }
     }
 }

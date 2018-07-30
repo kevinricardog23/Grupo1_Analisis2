@@ -115,8 +115,9 @@ namespace prototipo01.forms.facultad
 
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-
-                            }
+                controladorFacultades.eliminarFacultad(ID_reference);
+                refreshDataSource();
+            }
         }
     }
 }
