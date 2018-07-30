@@ -34,6 +34,22 @@ namespace prototipo01.forms.bitacoraLogin
 
         }
 
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
         public void refreshGrid()
         {
             this.dataGridView1.DataSource = null;
@@ -42,6 +58,9 @@ namespace prototipo01.forms.bitacoraLogin
             dataGridView1.DataSource = usuarioDataSource;
         }
 
-
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            openForm(new permisos.Permisos());
+        }
     }
 }

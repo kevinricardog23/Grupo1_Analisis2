@@ -72,6 +72,7 @@ namespace prototipo01.forms.permisos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openForm(new EditarUsuario());
             refreshGrid();
         }
 
