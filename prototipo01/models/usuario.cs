@@ -37,6 +37,10 @@ namespace prototipo01.models
         [StringLength(15)]
         public string telefono_usuario { get; set; }
 
+        //TEST
+
+        public int? nivel_privilegio { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bitacora> bitacora { get; set; }
 

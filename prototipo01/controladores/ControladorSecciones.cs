@@ -25,6 +25,12 @@ namespace prototipo01.controladores
                                  {
                                      id_seccion = n.id_seccion,
                                      seccion_seccion = n.seccion_seccion,
+                                     catedratico_id = n.catedratico_id,
+                                     curso_id = n.curso_id,
+                                     laboratorio_id = n.laboratorio_id,
+                                     salon_id = n.salon_id,
+                                     horario_id = n.horario_id,
+                                     ciclo = n.ciclo,
                                      estado_seccion = n.estado_seccion
 
                                  }).ToList();
@@ -45,7 +51,7 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar una nueva seccion
-        public void guardarSeccion(string seccion, string estado)
+        public void guardarSeccion(string seccion, string estado, int id_catedratico, int id_curso, int id_laboratorio, int id_salon, int id_horario, string ciclo)
         {
 
             using (ModelAsignacion db = new ModelAsignacion())
@@ -54,6 +60,12 @@ namespace prototipo01.controladores
                 seccion_curso seccionNueva = new seccion_curso();
 
                 seccionNueva.seccion_seccion = seccion;
+                seccionNueva.estado_seccion = estado;
+                seccionNueva.catedratico_id = id_catedratico;
+                seccionNueva.curso_id = id_curso;
+                seccionNueva.laboratorio_id = id_laboratorio;
+                seccionNueva.salon_id = id_salon;
+                seccionNueva.horario_id = id_horario;
                 seccionNueva.estado_seccion = estado;
 
                 db.seccion_curso.Add(seccionNueva);
@@ -87,6 +99,101 @@ namespace prototipo01.controladores
             catch (Exception)
             {
                 throw;
+            }
+
+        }
+
+
+
+
+        //get catedraticos
+
+        public List<catedratico> getCatedraticos()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from catedratico in db.catedratico
+                           select catedratico).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
+
+
+        //get cursos
+
+        public List<curso_model> getCursos()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from curso_model in db.curso
+                           select curso_model).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
+        //get laboratorios
+
+        public List<laboratorio> getLaboratorios()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from laboratorio in db.laboratorio
+                           select laboratorio).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
+
+        //get salon
+
+        public List<salon> getSalones()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from salon in db.salon
+                           select salon).ToList();
+
+
+                return std;
+            }
+
+        }
+
+
+        //get horario
+
+        public List<horario> getHorarios()
+        {
+
+
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from horario in db.horario
+                           select horario).ToList();
+
+
+                return std;
             }
 
         }
@@ -180,3 +287,5 @@ namespace prototipo01.controladores
 
     }
 }
+
+//JOSE ARRECIS
