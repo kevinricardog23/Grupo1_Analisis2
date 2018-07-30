@@ -39,7 +39,7 @@ namespace prototipo01.models
 
         public virtual catedratico catedratico { get; set; }
 
-        public virtual curso curso { get; set; }
+        public virtual curso_model curso { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<curso_estudiante> curso_estudiante { get; set; }

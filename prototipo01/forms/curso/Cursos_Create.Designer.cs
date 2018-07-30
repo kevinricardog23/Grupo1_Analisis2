@@ -34,10 +34,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBox_semestre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtbox_ID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Btn_crear = new System.Windows.Forms.Button();
-            this.txtBox_Ciclo = new System.Windows.Forms.TextBox();
+            this.txtBox_Creditos = new System.Windows.Forms.TextBox();
             this.txtBox_nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,10 +64,8 @@
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txtBox_semestre);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.txtbox_ID);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.Btn_crear);
-            this.tabPage1.Controls.Add(this.txtBox_Ciclo);
+            this.tabPage1.Controls.Add(this.txtBox_Creditos);
             this.tabPage1.Controls.Add(this.txtBox_nombre);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -124,28 +120,6 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "Semestre";
             // 
-            // txtbox_ID
-            // 
-            this.txtbox_ID.Location = new System.Drawing.Point(282, 31);
-            this.txtbox_ID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtbox_ID.MaxLength = 30;
-            this.txtbox_ID.Multiline = true;
-            this.txtbox_ID.Name = "txtbox_ID";
-            this.txtbox_ID.Size = new System.Drawing.Size(357, 28);
-            this.txtbox_ID.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(254, 33);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 19);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "ID";
-            // 
             // Btn_crear
             // 
             this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
@@ -164,15 +138,15 @@
             this.Btn_crear.UseVisualStyleBackColor = false;
             this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
             // 
-            // txtBox_Ciclo
+            // txtBox_Creditos
             // 
-            this.txtBox_Ciclo.Location = new System.Drawing.Point(282, 162);
-            this.txtBox_Ciclo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBox_Ciclo.MaxLength = 45;
-            this.txtBox_Ciclo.Multiline = true;
-            this.txtBox_Ciclo.Name = "txtBox_Ciclo";
-            this.txtBox_Ciclo.Size = new System.Drawing.Size(357, 28);
-            this.txtBox_Ciclo.TabIndex = 4;
+            this.txtBox_Creditos.Location = new System.Drawing.Point(282, 162);
+            this.txtBox_Creditos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_Creditos.MaxLength = 45;
+            this.txtBox_Creditos.Multiline = true;
+            this.txtBox_Creditos.Name = "txtBox_Creditos";
+            this.txtBox_Creditos.Size = new System.Drawing.Size(357, 28);
+            this.txtBox_Creditos.TabIndex = 4;
             // 
             // txtBox_nombre
             // 
@@ -189,12 +163,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(153, 164);
+            this.label3.Location = new System.Drawing.Point(205, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 19);
+            this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Ciclo del Curso";
+            this.label3.Text = "Creditos";
             // 
             // label2
             // 
@@ -272,15 +246,13 @@
         private System.Windows.Forms.TabControl CRUD;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button Btn_crear;
-        private System.Windows.Forms.TextBox txtBox_Ciclo;
+        private System.Windows.Forms.TextBox txtBox_Creditos;
         private System.Windows.Forms.TextBox txtBox_nombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtbox_ID;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_semestre;
         private System.Windows.Forms.Label label5;

@@ -34,15 +34,16 @@ namespace prototipo01.forms.salones
         void crearSalon()
         {
 
-            string capacidad;
+            string capacidad,nombre;
             int ID_edificio;
+
          
             capacidad = Txt_capacidad.Text.ToString();
             ID_edificio = controladorSalones.getIdEdificio(Cbo_edificio.Text.ToString());
-
+            nombre = Txt_nombre.Text.ToString();
             
             
-            controladorSalones.guardarSalon(capacidad,ID_edificio);
+            controladorSalones.guardarSalon(capacidad,ID_edificio,nombre);
         }
 
 
@@ -54,7 +55,7 @@ namespace prototipo01.forms.salones
         private void Btn_crear_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(Txt_capacidad.Text) || string.IsNullOrEmpty(Cbo_edificio.Text) )
+            if (string.IsNullOrEmpty(Txt_capacidad.Text) || string.IsNullOrEmpty(Cbo_edificio.Text) || string.IsNullOrEmpty(Txt_nombre.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -66,6 +67,8 @@ namespace prototipo01.forms.salones
                     crearSalon();
                     MessageBox.Show("Se ha agregado exitosamente un nuevo salon", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
+                    Txt_nombre.Text = "";
+                    Cbo_edificio.Text = "";
                     Txt_capacidad.Text = "";
                   
                 }
@@ -96,9 +99,29 @@ namespace prototipo01.forms.salones
             Clases.Validacion.SoloNumeros(e);
         }
 
+  
+
+        private void Pnl_titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloNumeros(e);
+        }
+        private void Txt_capacidad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloNumeros(e);
+        }
+
+        private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
         }
     }
 }

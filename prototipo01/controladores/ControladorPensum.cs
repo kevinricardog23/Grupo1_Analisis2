@@ -20,8 +20,8 @@ namespace prototipo01.controladores
                              select new PensumDto
                              {
                                  id = n.id_pensum,
-                                 id_carrera = n.CARRERA_id_carrera
-                                 //nombre_pensum = n
+                                 id_carrera = n.CARRERA_id_carrera,
+                                 nombre_pensum = n.nombre
                              }).ToList();
 
                 BindingList<PensumDto> result = new BindingList<PensumDto>(Query);
@@ -31,11 +31,13 @@ namespace prototipo01.controladores
             }
         }
 
+        
 
         public void guardarPensum(int idCarrera, String nombre)
         {
             pensum pensumNuevo = new pensum();
             //usuarioNuevo.id_pensum = usuario_alias;
+           // pensumNuevo.id_pensum = id;
             pensumNuevo.CARRERA_id_carrera = idCarrera;
             pensumNuevo.nombre = nombre;
             db.pensum.Add(pensumNuevo);
@@ -88,6 +90,31 @@ namespace prototipo01.controladores
 
         }
 
+        public void eliminarPensum(int idPensum)
+        {
+
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.pensum
+                        .Where(s => s.id_pensum == idPensum)
+                        .FirstOrDefault<pensum>();
+
+                    db.pensum.Remove(std);
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
 
         //GET CARRERAS
 
@@ -102,6 +129,37 @@ namespace prototipo01.controladores
                 return std;
 
             }
+        }
+
+
+        //buscar catedratico por iniciales
+
+        public BindingList<PensumDto> listaPensum(string nombre)
+        {
+            try
+            {
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var Query = (from n in db.pensum
+                                 where n.nombre.Contains(nombre)
+                                 select new PensumDto
+                                 {
+                                     id = n.id_pensum,
+                                     id_carrera = n.CARRERA_id_carrera,
+                                     nombre_pensum = n.nombre
+                                 }).ToList();
+                    
+                    BindingList<PensumDto> result = new BindingList<PensumDto>(Query);
+
+                    return result;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
     }

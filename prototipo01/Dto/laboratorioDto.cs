@@ -11,7 +11,6 @@ namespace prototipo01.Dto
         
         public int id_laboratorio { get; set; }
 
- 
         public string descripcion_laboratorio { get; set; }
 
         public int CATEDRATICO_dpi_catedratico { get; set; }

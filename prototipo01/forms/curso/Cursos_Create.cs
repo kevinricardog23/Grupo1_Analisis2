@@ -47,16 +47,16 @@ namespace prototipo01.forms.curso
         void createCursos()
         {
 
-            string nombre, ciclo, semestre;
-            int  id_curso, id_pensum;
+            string nombre,  semestre;
+            int  id_curso, id_pensum, creditos;
 
-            id_curso = Convert.ToInt32(txtbox_ID.Text.ToString());
+            id_curso  =0;
             nombre = txtBox_nombre.Text.ToString();
             id_pensum = Convert.ToInt32(cmbBox_Pensum.Text.ToString());
-            ciclo = txtBox_Ciclo.Text.ToString();
+            creditos = Convert.ToInt32(txtBox_Creditos.Text.ToString());
             semestre = txtBox_semestre.Text.ToString();
 
-            controladorCursos.guardarCurso(id_curso,nombre, id_pensum, ciclo, semestre);
+            controladorCursos.guardarCurso(id_curso,nombre, id_pensum, semestre, creditos);
         }
 
         //devuelve pensum
@@ -71,7 +71,7 @@ namespace prototipo01.forms.curso
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtbox_ID.Text) || (string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Ciclo.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  ))
+            if ((string.IsNullOrEmpty(txtBox_nombre.Text) || string.IsNullOrEmpty(txtBox_Creditos.Text) || string.IsNullOrEmpty(txtBox_semestre.Text) || string.IsNullOrEmpty(cmbBox_Pensum.Text)  ))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -81,7 +81,7 @@ namespace prototipo01.forms.curso
                 createCursos();
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBox_nombre.Text = "";
-                txtBox_Ciclo.Text = "";
+                txtBox_Creditos.Text = "";
                 txtBox_semestre.Text = "";
                 cmbBox_Pensum.Text = "";
             }
@@ -94,6 +94,11 @@ namespace prototipo01.forms.curso
         private void Cursos_Create_Load(object sender, EventArgs e)
         {
             dataPensum();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

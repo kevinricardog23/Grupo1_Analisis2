@@ -30,7 +30,7 @@ namespace prototipo01.forms.ayuda
                     label2.Text = "Edificios: \n\nEn el siguiente bloque de programa usted podra consultar los diferentes edificios de la UMG, podra ver los salones disponibles y los que se encuentra ocupados por clases o laboratorios.";
                     break;
                 case "Salones":
-                    label2.Text = "Salones: \n\nEn esta area usted podra crear y eliminar los salones deseados y poder visualizarlos en pantalla.";
+                    label2.Text = "Salones: \n\nEn esta area usted podra crear y eliminar los salones deseados y poder visualizarlos en pantalla. \n el boton crear redirecciona a un formurario que debera llenar  asi mismo con la opcion de editar el cual debe seleccionar el dato de la tabla que desea editar y esta le desplega el formulario para editar la informacion si desea borrar debe de seleccionar la fila y presionar en eliminar";
                     break;
                 case "Secciones":
                     label2.Text = "Secciones: \n\nEn esta area usted podra crear y eliminar Secciones para los cursos que desea ademas que poder visualizarlos en pantalla.";
