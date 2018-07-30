@@ -112,6 +112,7 @@ namespace prototipo01.forms.salones
             {
 
                 controladorSalones.eliminarSalon(ID_reference);
+                refreshDataSource();
 
 
             }

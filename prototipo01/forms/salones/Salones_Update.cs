@@ -78,6 +78,9 @@ namespace prototipo01.forms.salones
             else
             {
                 updateSalon();
+                Txt_capacidad.Text = "";
+                Cbo_edificio.Text = "";
+                Txt_nombre.Text = "";
             }
         }
         private void dataEdificios()
