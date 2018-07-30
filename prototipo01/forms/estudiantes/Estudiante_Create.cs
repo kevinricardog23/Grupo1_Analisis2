@@ -37,9 +37,9 @@ namespace prototipo01.forms.estudiante
             cbo_estudiante.ValueMember = "nombre_carrera";
            
 
-            cbo_facultad.DataSource = controladorEstudiantes.getID_carrera();
+            cbo_facultad.DataSource = controladorEstudiantes.getFacultades();
             cbo_facultad.DisplayMember = "id_facultad";
-            cbo_facultad.ValueMember = "FACULTAD_id_facultad";
+            cbo_facultad.ValueMember = "nombre_facultad";
         }
         void createAlumno()
         {
