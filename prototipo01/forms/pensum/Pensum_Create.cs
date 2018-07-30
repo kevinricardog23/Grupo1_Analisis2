@@ -41,13 +41,13 @@ namespace prototipo01.forms.pensum
 
         void create()
         {
-            int idPensum;
+            
             int idCarrera;
             string nombre;
-            idPensum = Convert.ToInt32(textBox1.Text.ToString());
+            //idPensum = Convert.ToInt32(textBox1.Text.ToString());
             idCarrera = Convert.ToInt32(comboBox1.SelectedValue);
             nombre = textBox2.Text.ToString();
-            controladorPensum.guardarPensum(idPensum, idCarrera,nombre);
+            controladorPensum.guardarPensum(idCarrera,nombre);
         }
 
         void setData()
@@ -67,7 +67,7 @@ namespace prototipo01.forms.pensum
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || comboBox1.SelectedIndex == -1 || string.IsNullOrEmpty(textBox2.Text))
+            if (comboBox1.SelectedIndex == -1 || string.IsNullOrEmpty(textBox2.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -76,7 +76,7 @@ namespace prototipo01.forms.pensum
 
                 create();
                 MessageBox.Show("Se agrego correctamente el pensum", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox1.Text = "";
+                //textBox1.Text = "";
                 textBox2.Text = "";
                 setData();
             }

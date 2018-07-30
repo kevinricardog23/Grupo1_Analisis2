@@ -33,9 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,9 +47,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(62, 117);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(742, 388);
@@ -101,14 +97,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(391, 51);
-            this.textBox1.MaxLength = 45;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 27;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -120,18 +108,6 @@
             this.label3.Size = new System.Drawing.Size(153, 18);
             this.label3.TabIndex = 25;
             this.label3.Text = "Seleccione Carrera";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(149, 51);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 18);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "ID del Pensum";
             // 
             // panel1
             // 
@@ -195,9 +171,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label label1;
