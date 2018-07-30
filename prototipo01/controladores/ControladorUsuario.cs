@@ -39,7 +39,7 @@ namespace prototipo01.controladores
         }
 
 
-        public void guardarUsuario(String usuario_alias, String nombre, String apellido, String password, String email, String telefono)
+        public void guardarUsuario(String usuario_alias, String nombre, String apellido, String password, String email, String telefono, int privilegio)
         {
             //controladorUsuario.guardarUsuario("andres8m","Andrés","Canú","zxcv","andres.8m@hotmail.com","24454545");      
             usuario usuarioNuevo = new usuario();
@@ -49,6 +49,8 @@ namespace prototipo01.controladores
             usuarioNuevo.password_usuario = password;
             usuarioNuevo.telefono_usuario = telefono;
             usuarioNuevo.correo_usuario = email;
+            usuarioNuevo.nivel_privilegio = privilegio;
+
             db.usuario.Add(usuarioNuevo);     
             db.SaveChanges();
         }
@@ -82,6 +84,25 @@ namespace prototipo01.controladores
             }
 
             return false;
+        }
+
+
+        public int getNivelPrivilegio(string email, string password)
+
+        {
+
+       
+            using (var ctx = db)
+            {
+               
+                 var Query = ctx.usuario
+                             .Where(s => s.correo_usuario == email && s.password_usuario == password)
+                             .FirstOrDefault<usuario>();
+
+
+                return Query.nivel_privilegio;
+            }
+
         }
 
 

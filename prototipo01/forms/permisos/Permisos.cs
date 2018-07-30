@@ -25,10 +25,25 @@ namespace prototipo01.forms.permisos
             refreshGrid();
         }
 
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            CrearUsuario ed = new CrearUsuario();
-            ed.Show();
+            openForm(new CrearUsuario());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -45,17 +60,7 @@ namespace prototipo01.forms.permisos
 
         }
 
-        private void openForm(object formHijo)
-        {
-            this.Controls.Clear();
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.Controls.Add(fh);
-            this.Tag = fh;
-            fh.Show();
-
-        }
+  
 
         public void refreshGrid()
         {
