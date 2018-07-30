@@ -150,6 +150,18 @@ namespace prototipo01.controladores
         }
 
 
+        //OBTIENE TODAS LA FACULTADES
+        public List<facultad> getFacultades()
+        {
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var std = (from facultad in db.facultad
+                           select facultad).ToList();
+                return std;
+            }
+        }
+
+
 
 
         //obtener id carrera
@@ -165,6 +177,34 @@ namespace prototipo01.controladores
                         .FirstOrDefault<carrera>();
 
                     return std.id_carrera;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
+
+
+
+        //obtener id facultad
+        public int getIdFacultad(string nombre_facultad)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.facultad
+                        .Where(s => s.nombre_facultad == nombre_facultad)
+                        .FirstOrDefault<facultad>();
+
+                    return std.id_facultad;
                 }
 
             }
