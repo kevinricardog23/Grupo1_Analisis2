@@ -55,6 +55,39 @@ namespace prototipo01.controladores
             db.SaveChanges();
         }
 
+
+        public void editarUsuario(int id_usuario, String usuario_alias, String nombre, String apellido, String password, String email, String telefono, int privilegio)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.usuario
+                        .Where(s => s.id_usuario== id_usuario)
+                        .FirstOrDefault<usuario>();
+
+                    std.usuario_usuario = usuario_alias;
+                    std.nombre_usuario = nombre;
+                    std.apellido_usuario = apellido;
+                    std.password_usuario = password;
+                    std.telefono_usuario = telefono;
+                    std.correo_usuario = email;
+                    std.nivel_privilegio = privilegio;
+
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
         public usuario buscarUsuarioCorreo(string correo)
         {
             usuario user = null;
@@ -68,6 +101,25 @@ namespace prototipo01.controladores
 
             return user;
         }
+
+
+
+        //buscar usuario ID
+
+        public usuario buscarUsuario(int id_usuario)
+        {
+            usuario user = null;
+            using (var ctx = db)
+            {
+                user = new usuario();
+                user = ctx.usuario
+                             .Where(s => s.id_usuario == id_usuario)
+                             .FirstOrDefault<usuario>();
+            }
+
+            return user;
+        }
+
 
         public Boolean login(usuario usuarioLogin, String password)
         {

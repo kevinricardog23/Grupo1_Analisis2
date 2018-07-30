@@ -32,7 +32,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.Btn_crear = new System.Windows.Forms.Button();
             this.textBoxAlias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,18 +57,18 @@
             // 
             this.CRUD.Controls.Add(this.tabPage1);
             this.CRUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(123, 81);
+            this.CRUD.Location = new System.Drawing.Point(30, 158);
             this.CRUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
-            this.CRUD.Size = new System.Drawing.Size(1168, 613);
+            this.CRUD.Size = new System.Drawing.Size(1184, 553);
             this.CRUD.TabIndex = 9;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.checkedListBox1);
-            this.tabPage1.Controls.Add(this.Btn_crear);
             this.tabPage1.Controls.Add(this.textBoxAlias);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.textBoxTelefono);
@@ -85,7 +85,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1160, 578);
+            this.tabPage1.Size = new System.Drawing.Size(1176, 518);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -112,24 +112,7 @@
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(332, 73);
-            this.checkedListBox1.TabIndex = 32;
-            // 
-            // Btn_crear
-            // 
-            this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
-            this.Btn_crear.FlatAppearance.BorderSize = 0;
-            this.Btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_crear.ForeColor = System.Drawing.Color.White;
-            this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
-            this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(163, 452);
-            this.Btn_crear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Btn_crear.Name = "Btn_crear";
-            this.Btn_crear.Size = new System.Drawing.Size(193, 50);
-            this.Btn_crear.TabIndex = 31;
-            this.Btn_crear.Text = "Crear";
-            this.Btn_crear.UseVisualStyleBackColor = false;
+            this.checkedListBox1.TabIndex = 12;
             // 
             // textBoxAlias
             // 
@@ -268,7 +251,7 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.btn_cerrar);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(123, 17);
+            this.panel1.Location = new System.Drawing.Point(34, 75);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1168, 59);
@@ -301,6 +284,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Editar Usuario";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(507, 443);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(193, 50);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Editar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,6 +313,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarUsuario";
             this.Text = "EditarUsuario";
+            this.Load += new System.EventHandler(this.EditarUsuario_Load);
             this.CRUD.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -327,7 +329,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.TextBox textBoxAlias;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxTelefono;
@@ -343,5 +344,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }
