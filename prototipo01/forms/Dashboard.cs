@@ -171,5 +171,10 @@ namespace prototipo01.forms
             Ayuda ayuda = new Ayuda();
             ayuda.Show();
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
