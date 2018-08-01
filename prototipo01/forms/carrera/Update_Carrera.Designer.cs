@@ -60,6 +60,7 @@
             this.Btn_atras.Size = new System.Drawing.Size(50, 50);
             this.Btn_atras.TabIndex = 9;
             this.Btn_atras.UseVisualStyleBackColor = true;
+            this.Btn_atras.Click += new System.EventHandler(this.Btn_atras_Click);
             // 
             // Lbl_titulo
             // 
@@ -207,6 +208,7 @@
             this.Btn_editar.TabIndex = 38;
             this.Btn_editar.Text = "Editar";
             this.Btn_editar.UseVisualStyleBackColor = false;
+            this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
             // 
             // Update_Carrera
             // 

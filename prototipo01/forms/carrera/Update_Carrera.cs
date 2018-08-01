@@ -52,5 +52,41 @@ namespace prototipo01.forms.carrera
         {
 
         }
+
+        private void Btn_atras_Click(object sender, EventArgs e)
+        {
+            openForm(new Listado_carreras());
+        }
+
+        void updateSalon()
+        {
+
+            string jornada, nombre;
+            int ID_facultad;
+
+            nombre = Txt_nombre.Text.ToString();
+            ID_facultad = controladorCarrera.getIdFacultad(Cbo_facultad.Text.ToString());
+            jornada = Txt_nombre.Text.ToString();
+
+
+            controladorCarrera.actualizarCarrera(reference, nombre, ID_facultad, jornada); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Cbo_facultad.Text) || string.IsNullOrEmpty(Txt_jornada.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                updateSalon();
+                Txt_jornada.Text = "";
+                Cbo_facultad.Text = "";
+                Txt_nombre.Text = "";
+            }
+        }
     }
 }
