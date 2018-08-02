@@ -188,6 +188,31 @@ namespace prototipo01.controladores
             }
         }
 
+        public void eliminarCarrera(int id_carrera)
+        {
+
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.carrera
+                        .Where(s => s.id_carrera == id_carrera)
+                        .FirstOrDefault<carrera>();
+
+                    db.carrera.Remove(std);
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
 
     }
 }
