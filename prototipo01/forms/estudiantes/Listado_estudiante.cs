@@ -115,6 +115,11 @@ namespace prototipo01.forms.estudiante
         {
 
         }
+
+        private void Txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            search();
+        }
         //
     }
 }

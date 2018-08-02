@@ -112,6 +112,7 @@
             this.Txt_buscar.Name = "Txt_buscar";
             this.Txt_buscar.Size = new System.Drawing.Size(662, 39);
             this.Txt_buscar.TabIndex = 32;
+            this.Txt_buscar.TextChanged += new System.EventHandler(this.Txt_buscar_TextChanged);
             // 
             // Lbl_buscar
             // 
