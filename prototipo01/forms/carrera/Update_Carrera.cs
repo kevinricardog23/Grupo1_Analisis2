@@ -58,7 +58,7 @@ namespace prototipo01.forms.carrera
             openForm(new Listado_carreras());
         }
 
-        void updateSalon()
+        void updateCarrera()
         {
 
             string jornada, nombre;
@@ -82,60 +82,24 @@ namespace prototipo01.forms.carrera
             }
             else
             {
-                updateSalon();
+                updateCarrera();
                 Txt_jornada.Text = "";
                 Cbo_facultad.Text = "";
                 Txt_nombre.Text = "";
             }
 
-           /* if (Txt_nombre.Text.Trim() == "")
-            {
-                epErrorNombre.SetError(Txt_nombre, "Introduce Nombre para el carrera");
-                Txt_nombre.Focus();
-
-            }
-            else
-            {
-                epErrorNombre.Clear();
-
-            }
-
-            if (Txt_jornada.Text.Trim() == "")
-            {
-                epErrorDescripcion.SetError(Txt_jornada, "Introduce una Jornada");
-                Txt_jornada.Focus();
-
-            }
-            else
-            {
-                epErrorDescripcion.Clear();
-
-            }
 
 
+        }
+
+        private void dataFacultades()
+        {
+            Cbo_facultad.DataSource = controladorCarrera.getfacultades();
+            Cbo_facultad.DisplayMember = "Name";
+            Cbo_facultad.ValueMember = "nombre_edificio";
 
 
-            TextBox objTextBox = (TextBox)Txt_nombre;
-            string nombre = objTextBox.Text;
-
-            TextBox objTextBox2 = (TextBox)Txt_jornada;
-            string ubicacion = objTextBox2.Text;
-
-            try
-            {
-
-                controladorCarrera.actualizarCarrera(reference, nombre, ,reference, jornada);
-                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Txt_nombre.Text = "";
-                Txt_jornada.Text = "";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } */
-
-
-        } 
+        }
 
         private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
