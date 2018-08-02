@@ -29,5 +29,11 @@ namespace prototipo01.Dto
         
         public string telefono_usuario { get; set; }
 
+        //TEST
+
+
+        public int? nivel_privilegio { get; set; }
+
+
     }
 }

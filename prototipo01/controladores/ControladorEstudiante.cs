@@ -29,13 +29,13 @@ namespace prototipo01.controladores
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno,
                                      estado_alumno = n.estado_alumno
-                                     
+
                                  }).ToList();
 
                     BindingList<estudianteDto> result = new BindingList<estudianteDto>(Query);
                     return result;
                 }
-        }
+            }
             catch (Exception)
             {
                 throw;
@@ -64,7 +64,7 @@ namespace prototipo01.controladores
             db.SaveChanges();
 
         }
-        public alumno buscarEstudiante(int dpi_alumno)
+        public alumno buscarEstudiante(long dpi_alumno)
         {
             try
             {
@@ -82,10 +82,10 @@ namespace prototipo01.controladores
             }
             catch (Exception)
             {
-                throw;
+                return null;
             }
         }
-        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno)
+        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno,int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno)
         {
 
             try
@@ -104,6 +104,8 @@ namespace prototipo01.controladores
                     std.edad_alumno = edad_alumno;
                     std.direccion_alumno = direccion_alumno;
                     std.estado_alumno = estado_alumno;
+                    std.CARRERA_id_carrera = CARRERA_id_carrera;
+                    std.FACULTAD_id_facultad = FCULTAD_id_facultad;
                     db.SaveChanges();
 
                 }
@@ -253,7 +255,7 @@ namespace prototipo01.controladores
                                      correo_alumno = n.correo_alumno,
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno
-                                     
+
 
                                  }).ToList();
 
@@ -273,7 +275,7 @@ namespace prototipo01.controladores
 
 
 
-    
+
     }
 }
 //kevin G

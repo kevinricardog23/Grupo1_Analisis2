@@ -12,13 +12,13 @@ using prototipo01.models;
 
 namespace prototipo01
 {
-    public partial class Seccion_Update : Form
+    public partial class Txt_ciclo : Form
     {
 
         ControladorSecciones controladorSecciones = new ControladorSecciones();
         private int reference;
 
-        public Seccion_Update(int id_reference)
+        public Txt_ciclo(int id_reference)
         {
             InitializeComponent();
             reference = id_reference;
@@ -44,6 +44,47 @@ namespace prototipo01
             this.Tag = fh;
             fh.Show();
         }
+
+
+        private void dataCatedratico()
+        {
+            cbo_catedratico.DataSource = controladorSecciones.getCatedraticos();
+            cbo_catedratico.DisplayMember = "Name";
+            cbo_catedratico.ValueMember = "nombre_catedratico";
+        }
+
+        private void dataCurso()
+        {
+            cbo_curso.DataSource = controladorSecciones.getCursos();
+            cbo_curso.DisplayMember = "Name";
+            cbo_curso.ValueMember = "nombre_curso";
+        }
+
+        private void dataLaboratorio()
+        {
+            cbo_laboratorio.DataSource = controladorSecciones.getLaboratorios();
+            cbo_laboratorio.DisplayMember = "Name";
+            cbo_laboratorio.ValueMember = "descripcion_laboratorio";
+        }
+
+
+
+        private void dataSalon()
+        {
+            cbo_salon.DataSource = controladorSecciones.getSalones();
+            cbo_salon.DisplayMember = "Name";
+            cbo_salon.ValueMember = "nombre_salon";
+        }
+
+
+
+        private void dataHorario()
+        {
+            cbo_horario.DataSource = controladorSecciones.getHorarios();
+            cbo_horario.DisplayMember = "Name";
+            cbo_horario.ValueMember = "horario_horario";
+        }
+
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -78,11 +119,19 @@ namespace prototipo01
 
             if ((string.IsNullOrEmpty(Text_Estado.Text) == false) &&(string.IsNullOrEmpty(Text_Estado.Text) == false))
             {
-                string nombre_seccion = Txt_Nombre.Text.ToString();
-                string estado_seccion = Text_Estado.Text.ToString();
 
-                try { 
-                controladorSecciones.actualizarSeccion(reference,nombre_seccion,estado_seccion);
+                string nombre = Txt_Nombre.Text.ToString();
+                string estado = Txt_estado.Text.ToString();
+                int catedratico = controladorSecciones.getIdCatedratico(cbo_catedratico.Text.ToString());
+                int curso = controladorSecciones.getIdCurso(cbo_curso.Text.ToString());
+                int laboratorio = controladorSecciones.getIdLaboratorio(cbo_laboratorio.Text.ToString());
+                int salon = controladorSecciones.getIdSaon(cbo_salon.Text.ToString());
+                int horario = controladorSecciones.getIdHorario(cbo_horario.Text.ToString());
+                
+
+                try
+                { 
+                controladorSecciones.actualizarSeccion(reference, nombre, estado, catedratico, curso, laboratorio, salon, horario, "octavo");
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Txt_Nombre.Text = "";
                 Text_Estado.Text = "";
@@ -98,6 +147,12 @@ namespace prototipo01
         private void Seccion_Update_Load(object sender, EventArgs e)
         {
             setData();
+
+            dataCatedratico();
+            dataSalon();
+            dataHorario();
+            dataCurso();
+            dataLaboratorio();
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)

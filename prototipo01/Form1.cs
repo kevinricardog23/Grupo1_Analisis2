@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace prototipo01
 {
     public partial class Form1 : Form
@@ -66,19 +67,33 @@ namespace prototipo01
 
             if (login(email,pass))
             {
-                this.Hide();
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-                MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ControladorUsuario controladorUsuario = new ControladorUsuario();
+
+                int n_privilegio = controladorUsuario.getNivelPrivilegio(email,pass);
+
+                if (n_privilegio == 1)
+                {
+                    this.Hide();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                    MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }else
+                {
+                    this.Hide();
+                    Dashboard_secundario dashboardSec = new Dashboard_secundario();
+                    dashboardSec.Show();
+                    MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+             
             }
             else
             {
                 MessageBox.Show("El usuario o contraseña es incorrecto", "Error de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //this.Hide();
-            //Dashboard dashboard = new Dashboard();
-            //dashboard.Show();
            
         }
 
@@ -99,9 +114,7 @@ namespace prototipo01
         private void Txt_password_Enter(object sender, EventArgs e)
         {
             
-            //this.Hide();
-            //Dashboard dashboard = new Dashboard();
-            //dashboard.Show();
+  
         }
     }
 
@@ -109,4 +122,4 @@ namespace prototipo01
     
 
 }
-//eddy lopez
+//eddy lopez, andres canu, jose arrecis

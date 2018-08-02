@@ -20,6 +20,20 @@ namespace prototipo01.forms.permisos
             InitializeComponent();
         }
 
+
+
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -40,7 +54,19 @@ namespace prototipo01.forms.permisos
                 TextBox objTextBoxEmail = (TextBox)textBoxEmail;
                 TextBox objTextBoxUser = (TextBox)textBoxAlias;
                 TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
-                controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text);
+
+                int nivel = 0;
+
+                if (checkedListBox1.SelectedIndex == 0)
+                {
+                    nivel = 1;
+                }else if (checkedListBox1.SelectedIndex == 1)
+                {
+                    nivel =0;
+                }
+
+
+                controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text,nivel);
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxNombre.Text = "";
                 textBoxApellidos.Text = "";
@@ -48,6 +74,7 @@ namespace prototipo01.forms.permisos
                 textBoxEmail.Text = "";
                 textBoxAlias.Text = "";
                 textBoxTelefono.Text = "";
+                
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error); 
@@ -88,7 +115,7 @@ namespace prototipo01.forms.permisos
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            openForm(new Permisos());
         }
     }
 }

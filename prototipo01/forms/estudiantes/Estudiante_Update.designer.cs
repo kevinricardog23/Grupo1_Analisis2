@@ -32,7 +32,7 @@ namespace prototipo01.forms.estudiante
         {
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Rbtn_estado = new System.Windows.Forms.RadioButton();
+            this.Txt_estado = new System.Windows.Forms.TextBox();
             this.Lbl_Estado = new System.Windows.Forms.Label();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Txt_Direccion = new System.Windows.Forms.TextBox();
@@ -50,6 +50,10 @@ namespace prototipo01.forms.estudiante
             this.Pnl_panel = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_facultad = new System.Windows.Forms.ComboBox();
+            this.cbo_carrera = new System.Windows.Forms.ComboBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pnl_panel.SuspendLayout();
@@ -68,7 +72,11 @@ namespace prototipo01.forms.estudiante
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Rbtn_estado);
+            this.tabPage1.Controls.Add(this.cbo_carrera);
+            this.tabPage1.Controls.Add(this.cbo_facultad);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.Txt_estado);
             this.tabPage1.Controls.Add(this.Lbl_Estado);
             this.tabPage1.Controls.Add(this.Btn_actualizar);
             this.tabPage1.Controls.Add(this.Txt_Direccion);
@@ -91,15 +99,16 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Rbtn_estado
+            // Txt_estado
             // 
-            this.Rbtn_estado.AutoSize = true;
-            this.Rbtn_estado.Location = new System.Drawing.Point(133, 314);
-            this.Rbtn_estado.Name = "Rbtn_estado";
-            this.Rbtn_estado.Size = new System.Drawing.Size(14, 13);
-            this.Rbtn_estado.TabIndex = 36;
-            this.Rbtn_estado.TabStop = true;
-            this.Rbtn_estado.UseVisualStyleBackColor = true;
+            this.Txt_estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_estado.Location = new System.Drawing.Point(113, 308);
+            this.Txt_estado.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_estado.MaxLength = 15;
+            this.Txt_estado.Multiline = true;
+            this.Txt_estado.Name = "Txt_estado";
+            this.Txt_estado.Size = new System.Drawing.Size(317, 28);
+            this.Txt_estado.TabIndex = 36;
             // 
             // Lbl_Estado
             // 
@@ -122,7 +131,7 @@ namespace prototipo01.forms.estudiante
             this.Btn_actualizar.ForeColor = System.Drawing.Color.White;
             this.Btn_actualizar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_actualizar.Location = new System.Drawing.Point(113, 343);
+            this.Btn_actualizar.Location = new System.Drawing.Point(113, 364);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(145, 41);
@@ -134,7 +143,7 @@ namespace prototipo01.forms.estudiante
             // Txt_Direccion
             // 
             this.Txt_Direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Direccion.Location = new System.Drawing.Point(538, 267);
+            this.Txt_Direccion.Location = new System.Drawing.Point(538, 201);
             this.Txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Direccion.MaxLength = 45;
             this.Txt_Direccion.Multiline = true;
@@ -147,7 +156,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_direccion.AutoSize = true;
             this.Lbl_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_direccion.Location = new System.Drawing.Point(453, 269);
+            this.Lbl_direccion.Location = new System.Drawing.Point(453, 203);
             this.Lbl_direccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_direccion.Name = "Lbl_direccion";
             this.Lbl_direccion.Size = new System.Drawing.Size(83, 19);
@@ -157,7 +166,7 @@ namespace prototipo01.forms.estudiante
             // Txt_Telefono
             // 
             this.Txt_Telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Telefono.Location = new System.Drawing.Point(113, 267);
+            this.Txt_Telefono.Location = new System.Drawing.Point(113, 201);
             this.Txt_Telefono.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Telefono.MaxLength = 15;
             this.Txt_Telefono.Multiline = true;
@@ -171,7 +180,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_telefono.AutoSize = true;
             this.Lbl_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_telefono.Location = new System.Drawing.Point(35, 269);
+            this.Lbl_telefono.Location = new System.Drawing.Point(35, 203);
             this.Lbl_telefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_telefono.Name = "Lbl_telefono";
             this.Lbl_telefono.Size = new System.Drawing.Size(74, 19);
@@ -181,7 +190,7 @@ namespace prototipo01.forms.estudiante
             // Txt_Correo
             // 
             this.Txt_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Correo.Location = new System.Drawing.Point(538, 182);
+            this.Txt_Correo.Location = new System.Drawing.Point(538, 150);
             this.Txt_Correo.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Correo.MaxLength = 35;
             this.Txt_Correo.Multiline = true;
@@ -194,7 +203,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_Correo.AutoSize = true;
             this.Lbl_Correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Correo.Location = new System.Drawing.Point(471, 184);
+            this.Lbl_Correo.Location = new System.Drawing.Point(471, 152);
             this.Lbl_Correo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Correo.Name = "Lbl_Correo";
             this.Lbl_Correo.Size = new System.Drawing.Size(61, 19);
@@ -204,7 +213,7 @@ namespace prototipo01.forms.estudiante
             // Txt_edad
             // 
             this.Txt_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_edad.Location = new System.Drawing.Point(113, 182);
+            this.Txt_edad.Location = new System.Drawing.Point(113, 148);
             this.Txt_edad.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_edad.MaxLength = 45;
             this.Txt_edad.Multiline = true;
@@ -217,7 +226,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_edad.AutoSize = true;
             this.Lbl_edad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_edad.Location = new System.Drawing.Point(11, 184);
+            this.Lbl_edad.Location = new System.Drawing.Point(11, 150);
             this.Lbl_edad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_edad.Name = "Lbl_edad";
             this.Lbl_edad.Size = new System.Drawing.Size(50, 19);
@@ -310,6 +319,46 @@ namespace prototipo01.forms.estudiante
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Estudiante";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label2.Location = new System.Drawing.Point(26, 262);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 19);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Facultad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.label3.Location = new System.Drawing.Point(453, 255);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 19);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Carrera";
+            // 
+            // cbo_facultad
+            // 
+            this.cbo_facultad.FormattingEnabled = true;
+            this.cbo_facultad.Location = new System.Drawing.Point(113, 260);
+            this.cbo_facultad.Name = "cbo_facultad";
+            this.cbo_facultad.Size = new System.Drawing.Size(317, 27);
+            this.cbo_facultad.TabIndex = 41;
+            // 
+            // cbo_carrera
+            // 
+            this.cbo_carrera.FormattingEnabled = true;
+            this.cbo_carrera.Location = new System.Drawing.Point(538, 260);
+            this.cbo_carrera.Name = "cbo_carrera";
+            this.cbo_carrera.Size = new System.Drawing.Size(317, 27);
+            this.cbo_carrera.TabIndex = 42;
+            // 
             // Estudiante_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,7 +404,11 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.Label Lbl_telefono;
         private System.Windows.Forms.Button Btn_actualizar;
         private System.Windows.Forms.Button btn_cerrar;
-        private System.Windows.Forms.RadioButton Rbtn_estado;
         private System.Windows.Forms.Label Lbl_Estado;
+        private System.Windows.Forms.TextBox Txt_estado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbo_carrera;
+        private System.Windows.Forms.ComboBox cbo_facultad;
     }
 }

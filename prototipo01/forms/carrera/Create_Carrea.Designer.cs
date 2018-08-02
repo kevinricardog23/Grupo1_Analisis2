@@ -49,11 +49,12 @@
             // 
             // Pnl_titulo
             // 
+            this.Pnl_titulo.BackColor = System.Drawing.SystemColors.Control;
             this.Pnl_titulo.Controls.Add(this.Btn_atras);
             this.Pnl_titulo.Controls.Add(this.Lbl_titulo);
-            this.Pnl_titulo.Location = new System.Drawing.Point(12, 26);
+            this.Pnl_titulo.Location = new System.Drawing.Point(40, 70);
             this.Pnl_titulo.Name = "Pnl_titulo";
-            this.Pnl_titulo.Size = new System.Drawing.Size(916, 54);
+            this.Pnl_titulo.Size = new System.Drawing.Size(870, 50);
             this.Pnl_titulo.TabIndex = 0;
             // 
             // Btn_atras
@@ -64,7 +65,7 @@
             this.Btn_atras.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_atras.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_atras.Location = new System.Drawing.Point(863, 1);
+            this.Btn_atras.Location = new System.Drawing.Point(820, 0);
             this.Btn_atras.Name = "Btn_atras";
             this.Btn_atras.Size = new System.Drawing.Size(50, 50);
             this.Btn_atras.TabIndex = 9;
@@ -86,7 +87,7 @@
             // 
             this.CRUD.Controls.Add(this.Tp_crear);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(12, 110);
+            this.CRUD.Location = new System.Drawing.Point(40, 125);
             this.CRUD.Margin = new System.Windows.Forms.Padding(2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
@@ -114,9 +115,9 @@
             // 
             // Txt_jornada
             // 
-            this.Txt_jornada.Location = new System.Drawing.Point(159, 215);
+            this.Txt_jornada.Location = new System.Drawing.Point(325, 191);
             this.Txt_jornada.Name = "Txt_jornada";
-            this.Txt_jornada.Size = new System.Drawing.Size(288, 25);
+            this.Txt_jornada.Size = new System.Drawing.Size(315, 25);
             this.Txt_jornada.TabIndex = 37;
             // 
             // Lbl_jornada
@@ -124,18 +125,18 @@
             this.Lbl_jornada.AutoSize = true;
             this.Lbl_jornada.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_jornada.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_jornada.Location = new System.Drawing.Point(23, 218);
+            this.Lbl_jornada.Location = new System.Drawing.Point(165, 194);
             this.Lbl_jornada.Name = "Lbl_jornada";
-            this.Lbl_jornada.Size = new System.Drawing.Size(125, 18);
+            this.Lbl_jornada.Size = new System.Drawing.Size(154, 18);
             this.Lbl_jornada.TabIndex = 36;
-            this.Lbl_jornada.Text = "jornada carrera";
+            this.Lbl_jornada.Text = "Jornada de Carrera";
             this.Lbl_jornada.Click += new System.EventHandler(this.Lbl_jornada_Click);
             // 
             // Txt_nombre
             // 
-            this.Txt_nombre.Location = new System.Drawing.Point(159, 171);
+            this.Txt_nombre.Location = new System.Drawing.Point(325, 147);
             this.Txt_nombre.Name = "Txt_nombre";
-            this.Txt_nombre.Size = new System.Drawing.Size(288, 25);
+            this.Txt_nombre.Size = new System.Drawing.Size(315, 25);
             this.Txt_nombre.TabIndex = 35;
             // 
             // Lbl_nombre
@@ -143,19 +144,19 @@
             this.Lbl_nombre.AutoSize = true;
             this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_nombre.Location = new System.Drawing.Point(23, 174);
+            this.Lbl_nombre.Location = new System.Drawing.Point(165, 150);
             this.Lbl_nombre.Name = "Lbl_nombre";
-            this.Lbl_nombre.Size = new System.Drawing.Size(125, 18);
+            this.Lbl_nombre.Size = new System.Drawing.Size(153, 18);
             this.Lbl_nombre.TabIndex = 34;
-            this.Lbl_nombre.Text = "nombre carrera";
+            this.Lbl_nombre.Text = "Nombre de Carrera";
             this.Lbl_nombre.Click += new System.EventHandler(this.Lbl_nombre_Click);
             // 
             // Cbo_facultad
             // 
             this.Cbo_facultad.FormattingEnabled = true;
-            this.Cbo_facultad.Location = new System.Drawing.Point(130, 255);
+            this.Cbo_facultad.Location = new System.Drawing.Point(325, 231);
             this.Cbo_facultad.Name = "Cbo_facultad";
-            this.Cbo_facultad.Size = new System.Drawing.Size(316, 27);
+            this.Cbo_facultad.Size = new System.Drawing.Size(315, 27);
             this.Cbo_facultad.TabIndex = 33;
             // 
             // Btn_crear
@@ -167,7 +168,7 @@
             this.Btn_crear.ForeColor = System.Drawing.Color.White;
             this.Btn_crear.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.Btn_crear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_crear.Location = new System.Drawing.Point(114, 319);
+            this.Btn_crear.Location = new System.Drawing.Point(325, 282);
             this.Btn_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_crear.Name = "Btn_crear";
             this.Btn_crear.Size = new System.Drawing.Size(145, 41);
@@ -181,7 +182,7 @@
             this.Lbl_facultad.AutoSize = true;
             this.Lbl_facultad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_facultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_facultad.Location = new System.Drawing.Point(22, 257);
+            this.Lbl_facultad.Location = new System.Drawing.Point(242, 233);
             this.Lbl_facultad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_facultad.Name = "Lbl_facultad";
             this.Lbl_facultad.Size = new System.Drawing.Size(78, 19);
@@ -191,7 +192,7 @@
             // Txt_id
             // 
             this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_id.Location = new System.Drawing.Point(130, 122);
+            this.Txt_id.Location = new System.Drawing.Point(323, 98);
             this.Txt_id.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_id.MaxLength = 30;
             this.Txt_id.Multiline = true;
@@ -205,7 +206,7 @@
             this.Lbl_id.AutoSize = true;
             this.Lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_id.Location = new System.Drawing.Point(22, 122);
+            this.Lbl_id.Location = new System.Drawing.Point(295, 100);
             this.Lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_id.Name = "Lbl_id";
             this.Lbl_id.Size = new System.Drawing.Size(24, 19);
@@ -216,9 +217,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 608);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1005, 666);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.Pnl_titulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Create_Carrea";
             this.Text = "Create_Carrea";
             this.Pnl_titulo.ResumeLayout(false);

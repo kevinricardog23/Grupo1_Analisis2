@@ -19,16 +19,33 @@ namespace prototipo01.forms.permisos
         ControladorUsuario controladorUsuario = new ControladorUsuario();
         BindingList<UsuarioDto> usuarioDataSource = new BindingList<UsuarioDto>();
 
+        private int ID_reference;
+
         public Permisos()
         {
             InitializeComponent();
             refreshGrid();
         }
 
+
+        //SOBREPONER FORM EN PANEL
+        private void openForm(object formHijo)
+        {
+            this.Controls.Clear();
+
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Controls.Add(fh);
+            this.Tag = fh;
+            fh.Show();
+
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            CrearUsuario ed = new CrearUsuario();
-            ed.Show();
+            openForm(new CrearUsuario());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -45,17 +62,7 @@ namespace prototipo01.forms.permisos
 
         }
 
-        private void openForm(object formHijo)
-        {
-            this.Controls.Clear();
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.Controls.Add(fh);
-            this.Tag = fh;
-            fh.Show();
-
-        }
+  
 
         public void refreshGrid()
         {
@@ -67,12 +74,34 @@ namespace prototipo01.forms.permisos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openForm(new EditarUsuario(ID_reference));
             refreshGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             openForm(new bitacoraL());
+        }
+
+        private void Permisos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
+
         }
     }
 }

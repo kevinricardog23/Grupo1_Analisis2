@@ -68,7 +68,7 @@ namespace prototipo01
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openForm(new Seccion_Update(ID_reference));
+            openForm(new Txt_ciclo(ID_reference));
         }
 
         private void button2_Click(object sender, EventArgs e)

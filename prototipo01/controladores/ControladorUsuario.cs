@@ -39,7 +39,7 @@ namespace prototipo01.controladores
         }
 
 
-        public void guardarUsuario(String usuario_alias, String nombre, String apellido, String password, String email, String telefono)
+        public void guardarUsuario(String usuario_alias, String nombre, String apellido, String password, String email, String telefono, int privilegio)
         {
             //controladorUsuario.guardarUsuario("andres8m","Andrés","Canú","zxcv","andres.8m@hotmail.com","24454545");      
             usuario usuarioNuevo = new usuario();
@@ -49,9 +49,44 @@ namespace prototipo01.controladores
             usuarioNuevo.password_usuario = password;
             usuarioNuevo.telefono_usuario = telefono;
             usuarioNuevo.correo_usuario = email;
+            usuarioNuevo.nivel_privilegio = privilegio;
+
             db.usuario.Add(usuarioNuevo);     
             db.SaveChanges();
         }
+
+
+        public void editarUsuario(int id_usuario, String usuario_alias, String nombre, String apellido, String password, String email, String telefono, int privilegio)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.usuario
+                        .Where(s => s.id_usuario== id_usuario)
+                        .FirstOrDefault<usuario>();
+
+                    std.usuario_usuario = usuario_alias;
+                    std.nombre_usuario = nombre;
+                    std.apellido_usuario = apellido;
+                    std.password_usuario = password;
+                    std.telefono_usuario = telefono;
+                    std.correo_usuario = email;
+                    std.nivel_privilegio = privilegio;
+
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
 
         public usuario buscarUsuarioCorreo(string correo)
         {
@@ -67,6 +102,25 @@ namespace prototipo01.controladores
             return user;
         }
 
+
+
+        //buscar usuario ID
+
+        public usuario buscarUsuario(int id_usuario)
+        {
+            usuario user = null;
+            using (var ctx = db)
+            {
+                user = new usuario();
+                user = ctx.usuario
+                             .Where(s => s.id_usuario == id_usuario)
+                             .FirstOrDefault<usuario>();
+            }
+
+            return user;
+        }
+
+
         public Boolean login(usuario usuarioLogin, String password)
         {
             if (usuarioLogin == null)
@@ -76,12 +130,31 @@ namespace prototipo01.controladores
 
             if (usuarioLogin.password_usuario == password)
             {
-                /*ControladorBitacora controladorBitacora = new ControladorBitacora();
-                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);*/
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);
                 return true;
             }
 
             return false;
+        }
+
+
+        public int getNivelPrivilegio(string email, string password)
+
+        {
+
+       
+            using (var ctx = db)
+            {
+               
+                 var Query = ctx.usuario
+                             .Where(s => s.correo_usuario == email && s.password_usuario == password)
+                             .FirstOrDefault<usuario>();
+
+
+                return Query.nivel_privilegio;
+            }
+
         }
 
 

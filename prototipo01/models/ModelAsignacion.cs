@@ -328,6 +328,9 @@ namespace prototipo01.models
                 .Property(e => e.apellido_usuario)
                 .IsUnicode(false);
 
+            //TEST
+        
+
             modelBuilder.Entity<usuario>()
                 .Property(e => e.password_usuario)
                 .IsUnicode(false);

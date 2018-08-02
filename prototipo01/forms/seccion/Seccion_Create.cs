@@ -34,6 +34,47 @@ namespace prototipo01
             fh.Show();
         }
 
+
+
+        private void dataCatedratico()
+        {
+            cbo_catedratico.DataSource = controladorSecciones.getCatedraticos();
+            cbo_catedratico.DisplayMember = "Name";
+            cbo_catedratico.ValueMember = "nombre_catedratico";
+        }
+
+        private void dataCurso()
+        {
+            cbo_curso.DataSource = controladorSecciones.getCursos();
+            cbo_curso.DisplayMember = "Name";
+            cbo_curso.ValueMember = "nombre_curso";
+        }
+
+        private void dataLaboratorio()
+        {
+            cbo_laboratorio.DataSource = controladorSecciones.getLaboratorios();
+            cbo_laboratorio.DisplayMember = "Name";
+            cbo_laboratorio.ValueMember = "descripcion_laboratorio";
+        }
+
+
+
+        private void dataSalon()
+        {
+            cbo_salon.DataSource = controladorSecciones.getSalones();
+            cbo_salon.DisplayMember = "Name";
+            cbo_salon.ValueMember = "nombre_salon";
+        }
+
+
+
+        private void dataHorario()
+        {
+            cbo_horario.DataSource = controladorSecciones.getHorarios();
+            cbo_horario.DisplayMember = "Name";
+            cbo_horario.ValueMember = "horario_horario";
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             openForm(new listaSecciones());
@@ -62,12 +103,27 @@ namespace prototipo01
 
                 string nombre = Txt_Nombre.Text.ToString();
                 string estado = Txt_Estado.Text.ToString();
+                int catedratico = controladorSecciones.getIdCatedratico(cbo_catedratico.Text.ToString());
+                int curso = controladorSecciones.getIdCurso(cbo_curso.Text.ToString());
+                int laboratorio = controladorSecciones.getIdLaboratorio(cbo_laboratorio.Text.ToString());
+                int salon = controladorSecciones.getIdSaon(cbo_salon.Text.ToString());
+                int horario = controladorSecciones.getIdHorario(cbo_horario.Text.ToString());
+                string ciclo = ciclo_.Text.ToString();
+
+
+
                 try
                 {
-                    controladorSecciones.guardarSeccion(nombre, estado);
+                    controladorSecciones.guardarSeccion(nombre, estado, catedratico, curso, laboratorio, salon, horario,ciclo);
                     MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Txt_Nombre.Text = "";
                     Txt_Estado.Text = "";
+                    ciclo_.Text = "";
+                    cbo_catedratico.Text = "";
+                    cbo_curso.Text = "";
+                    cbo_horario.Text = "";
+                    cbo_salon.Text = "";
+                    cbo_laboratorio.Text = "";
                 }catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -80,6 +136,15 @@ namespace prototipo01
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             openForm(new listaSecciones());
+        }
+
+        private void Seccion_Create_Load(object sender, EventArgs e)
+        {
+            dataCatedratico();
+            dataSalon();
+            dataHorario();
+            dataCurso();
+            dataLaboratorio();
         }
     }
 }
