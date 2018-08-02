@@ -1,5 +1,6 @@
 ﻿
 using prototipo01.controladores;
+using prototipo01.Clases;
 using prototipo01.models;
 using prototipo01.DTO;
 using System;
@@ -121,6 +122,9 @@ namespace prototipo01
 
         private void listaEdificios_Load_1(object sender, EventArgs e)
         {
+            button1.Enabled = privilegios.bandera;
+            button2.Enabled = privilegios.bandera;
+            button3.Enabled = privilegios.bandera;
             refreshDataSource();
 
          

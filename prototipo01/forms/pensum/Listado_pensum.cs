@@ -1,4 +1,5 @@
-﻿using prototipo01.controladores;
+﻿using prototipo01.Clases;
+using prototipo01.controladores;
 using prototipo01.Dto;
 using prototipo01.models;
 using System;
@@ -111,6 +112,10 @@ namespace prototipo01.forms.pensum
         private void Listado_pensum_Load(object sender, EventArgs e)
         {
             setData();
+
+            button1.Enabled = privilegios.bandera;
+            button2.Enabled = privilegios.bandera;
+            button3.Enabled = privilegios.bandera;
         }
         
 

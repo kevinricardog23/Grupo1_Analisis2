@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.models;
 using prototipo01.Dto;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -122,6 +123,9 @@ namespace prototipo01
 
         private void listaSecciones_Load(object sender, EventArgs e)
         {
+            Btn_Actualizar.Enabled = privilegios.bandera;
+            Btn_Eliminar.Enabled = privilegios.bandera;
+            Btn_Buscar.Enabled = privilegios.bandera;
             refreshDataSource();
         }
 

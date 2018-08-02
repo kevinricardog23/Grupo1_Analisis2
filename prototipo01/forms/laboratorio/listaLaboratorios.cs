@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.Dto;
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -102,6 +103,9 @@ namespace prototipo01
 
         private void listaLaboratorios_Load(object sender, EventArgs e)
         {
+            button1.Enabled = privilegios.bandera;
+            button2.Enabled = privilegios.bandera;
+            button3.Enabled = privilegios.bandera;
             refreshDataSource();
         }
 

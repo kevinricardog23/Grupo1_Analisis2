@@ -40,13 +40,18 @@ namespace prototipo01.forms
 
         }
 
-
-
-        
-
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(privilegios.privilegio.ToString());
+
+            if (privilegio == 1)
+            {
+                privilegios.bandera = true; 
+            }
+
+            button1.Enabled = privilegios.bandera;
+            button11.Enabled = privilegios.bandera;
+
+
             openForm(new Home());
 
 
