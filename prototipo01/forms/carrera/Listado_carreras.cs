@@ -73,5 +73,16 @@ namespace prototipo01.forms.carrera
         {
             openForm(new Update_Carrera(ID_reference));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el edificio?", "Eliminar", MessageBoxButtons.YesNo);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                controladorCarrera.eliminarCarrera(ID_reference);
+                refreshDataSource();
+            }
+        }
     }
 }
