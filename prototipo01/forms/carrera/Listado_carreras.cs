@@ -66,7 +66,12 @@ namespace prototipo01.forms.carrera
 
         private void button1_Click(object sender, EventArgs e)
         {
+            openForm(new Create_Carrea());
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openForm(new Update_Carrera(ID_reference));
         }
     }
 }
