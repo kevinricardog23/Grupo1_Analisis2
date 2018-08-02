@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.Dto;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.salones
 {
@@ -76,7 +77,11 @@ namespace prototipo01.forms.salones
         }
 
         private void listaSalones_Load(object sender, EventArgs e)
+
         {
+            Btn_crear.Enabled = privilegios.bandera;
+            Btn_editar.Enabled = privilegios.bandera;
+            Btn_eliminar.Enabled = privilegios.bandera;
             setData();
         }
 

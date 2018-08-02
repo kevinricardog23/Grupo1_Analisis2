@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.Dto;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.catedraticos
 {
@@ -95,6 +96,10 @@ namespace prototipo01.forms.catedraticos
         private void listaCatedraticos_Load(object sender, EventArgs e)
         {
             setData();
+        
+            button1.Enabled = privilegios.bandera;
+            button2.Enabled = privilegios.bandera;
+            button3.Enabled = privilegios.bandera;
 
         }
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.Dto;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.estudiante
 {
@@ -108,6 +109,9 @@ namespace prototipo01.forms.estudiante
         private void Listado_estudiante_Load(object sender, EventArgs e)
         {
             setData();
+            Btn_crear.Enabled = privilegios.bandera;
+            Btn_actualizar.Enabled = privilegios.bandera;
+            Btn_eliminar.Enabled = privilegios.bandera;
 
         }
 
