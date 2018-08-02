@@ -75,14 +75,16 @@ namespace prototipo01
                 if (n_privilegio == 1)
                 {
                     this.Hide();
-                    Dashboard dashboard = new Dashboard();
+                    Dashboard dashboard = new Dashboard(n_privilegio);
+                    
+
                     dashboard.Show();
                     MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }else
                 {
                     this.Hide();
-                    Dashboard_secundario dashboardSec = new Dashboard_secundario();
-                    dashboardSec.Show();
+                    Dashboard dashboard = new Dashboard(n_privilegio);
+                    dashboard.Show();
                     MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
