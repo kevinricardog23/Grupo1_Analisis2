@@ -43,7 +43,7 @@ namespace prototipo01.forms.carrera
             prototipo01.models.carrera Model = controladorCarrera.buscarCarrera(reference);
 
             Txt_nombre.Text = Model.nombre_carrera.ToString();
-            //    Cbo_edificio.Text = Model.EDIFICIO_id_edificio.ToString();
+            Cbo_facultad.Text = Model.FACULTAD_id_facultad.ToString();
             Txt_jornada.Text = Model.jornada_carrera.ToString();
 
         }
@@ -87,6 +87,70 @@ namespace prototipo01.forms.carrera
                 Cbo_facultad.Text = "";
                 Txt_nombre.Text = "";
             }
+
+           /* if (Txt_nombre.Text.Trim() == "")
+            {
+                epErrorNombre.SetError(Txt_nombre, "Introduce Nombre para el carrera");
+                Txt_nombre.Focus();
+
+            }
+            else
+            {
+                epErrorNombre.Clear();
+
+            }
+
+            if (Txt_jornada.Text.Trim() == "")
+            {
+                epErrorDescripcion.SetError(Txt_jornada, "Introduce una Jornada");
+                Txt_jornada.Focus();
+
+            }
+            else
+            {
+                epErrorDescripcion.Clear();
+
+            }
+
+
+
+
+            TextBox objTextBox = (TextBox)Txt_nombre;
+            string nombre = objTextBox.Text;
+
+            TextBox objTextBox2 = (TextBox)Txt_jornada;
+            string ubicacion = objTextBox2.Text;
+
+            try
+            {
+
+                controladorCarrera.actualizarCarrera(reference, nombre, ,reference, jornada);
+                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Txt_nombre.Text = "";
+                Txt_jornada.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } */
+
+
+        } 
+
+        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Txt_jornada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Carrera_Update_Load(object sender, EventArgs e)
+        {
+            setData();
+
         }
     }
 }
