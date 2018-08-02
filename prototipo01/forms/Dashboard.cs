@@ -18,6 +18,7 @@ using prototipo01.forms.catedraticos;
 using prototipo01.forms.permisos;
 using prototipo01.forms.bitacoraLogin;
 using prototipo01.forms.salones;
+using prototipo01.Clases;
 
 
 namespace prototipo01.forms
@@ -27,14 +28,28 @@ namespace prototipo01.forms
     {
         public static String seleccionDeDashboard;
 
-        public Dashboard()
+        
+
+        private int privilegio;
+
+        public Dashboard(int nprivilegio)
         {
             InitializeComponent();
+            privilegio = nprivilegio;
+            privilegios.privilegio = privilegio;
+
         }
+
+
+
+        
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(privilegios.privilegio.ToString());
             openForm(new Home());
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -173,6 +188,11 @@ namespace prototipo01.forms
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void workspace_Paint(object sender, PaintEventArgs e)
         {
 
         }

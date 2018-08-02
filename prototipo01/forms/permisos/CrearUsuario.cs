@@ -62,7 +62,7 @@ namespace prototipo01.forms.permisos
                     nivel = 1;
                 }else if (checkedListBox1.SelectedIndex == 1)
                 {
-                    nivel =0;
+                    nivel =2;
                 }
 
 
