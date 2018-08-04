@@ -43,7 +43,7 @@ namespace prototipo01.forms.carrera
             prototipo01.models.carrera Model = controladorCarrera.buscarCarrera(reference);
 
             Txt_nombre.Text = Model.nombre_carrera.ToString();
-            Cbo_facultad.Text = Model.FACULTAD_id_facultad.ToString();
+            // Cbo_facultad.Text = Model.FACULTAD_id_facultad.ToString();
             Txt_jornada.Text = Model.jornada_carrera.ToString();
 
         }
@@ -66,10 +66,10 @@ namespace prototipo01.forms.carrera
 
             nombre = Txt_nombre.Text.ToString();
             ID_facultad = controladorCarrera.getIdFacultad(Cbo_facultad.Text.ToString());
-            jornada = Txt_nombre.Text.ToString();
+            jornada = Txt_jornada.Text.ToString();
 
 
-            controladorCarrera.actualizarCarrera(reference, nombre, ID_facultad, jornada); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            controladorCarrera.actualizarCarrera(reference, nombre, ID_facultad, jornada); MessageBox.Show("Se ha actualizado exitosamente la carrera", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -96,7 +96,7 @@ namespace prototipo01.forms.carrera
         {
             Cbo_facultad.DataSource = controladorCarrera.getfacultades();
             Cbo_facultad.DisplayMember = "Name";
-            Cbo_facultad.ValueMember = "nombre_edificio";
+            Cbo_facultad.ValueMember = "nombre_facultad";
 
 
         }
@@ -111,9 +111,10 @@ namespace prototipo01.forms.carrera
             Clases.Validacion.SoloLetras(e);
         }
 
-        private void Carrera_Update_Load(object sender, EventArgs e)
+        private void Update_Carrera_Load(object sender, EventArgs e)
         {
             setData();
+            dataFacultades();
 
         }
     }

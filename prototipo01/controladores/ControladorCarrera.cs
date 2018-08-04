@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using prototipo01.controladores;
 
 namespace prototipo01.controladores
 {
@@ -48,13 +49,13 @@ namespace prototipo01.controladores
 
 
         //Metodo para guardar una nueva carrera
-        public void guardarCarrera(int id_carrera, String nombre_carrera, int FACULTAD_id_facultad, String jornada_carrera)
+        public void guardarCarrera(String nombre_carrera, int FACULTAD_id_facultad, String jornada_carrera)
         {
             ModelAsignacion db = new ModelAsignacion();
 
             carrera carreraNueva = new carrera();
 
-            carreraNueva.id_carrera = id_carrera;
+            
             carreraNueva.nombre_carrera = nombre_carrera;
             carreraNueva.FACULTAD_id_facultad = FACULTAD_id_facultad;
             carreraNueva.jornada_carrera = jornada_carrera;
@@ -203,6 +204,37 @@ namespace prototipo01.controladores
                     db.carrera.Remove(std);
                     db.SaveChanges();
 
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+        public BindingList<carreraDto> listaCarrerasLike(string search)
+        {
+            try
+            {
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var Query = (from n in db.carrera
+                                 where n.nombre_carrera.Contains(search)
+                                 select new carreraDto
+                                 {
+                                     id_carrera = n.id_carrera,
+                                     FACULTAD_id_facultad = n.FACULTAD_id_facultad,
+                                     jornada_carrera = n.jornada_carrera,
+                                     nombre_carrera = n.nombre_carrera
+
+
+                                 }).ToList();
+
+                    BindingList<carreraDto> result = new BindingList<carreraDto>(Query);
+
+                    return result;
                 }
 
             }

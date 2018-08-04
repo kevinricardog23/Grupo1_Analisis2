@@ -40,8 +40,6 @@
             this.Cbo_facultad = new System.Windows.Forms.ComboBox();
             this.Btn_crear = new System.Windows.Forms.Button();
             this.Lbl_facultad = new System.Windows.Forms.Label();
-            this.Txt_id = new System.Windows.Forms.TextBox();
-            this.Lbl_id = new System.Windows.Forms.Label();
             this.Pnl_titulo.SuspendLayout();
             this.CRUD.SuspendLayout();
             this.Tp_crear.SuspendLayout();
@@ -103,8 +101,6 @@
             this.Tp_crear.Controls.Add(this.Cbo_facultad);
             this.Tp_crear.Controls.Add(this.Btn_crear);
             this.Tp_crear.Controls.Add(this.Lbl_facultad);
-            this.Tp_crear.Controls.Add(this.Txt_id);
-            this.Tp_crear.Controls.Add(this.Lbl_id);
             this.Tp_crear.Location = new System.Drawing.Point(4, 28);
             this.Tp_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Tp_crear.Name = "Tp_crear";
@@ -189,30 +185,6 @@
             this.Lbl_facultad.TabIndex = 4;
             this.Lbl_facultad.Text = "Facultad";
             // 
-            // Txt_id
-            // 
-            this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_id.Location = new System.Drawing.Point(323, 98);
-            this.Txt_id.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_id.MaxLength = 30;
-            this.Txt_id.Multiline = true;
-            this.Txt_id.Name = "Txt_id";
-            this.Txt_id.Size = new System.Drawing.Size(317, 28);
-            this.Txt_id.TabIndex = 2;
-            this.Txt_id.TextChanged += new System.EventHandler(this.Txt_id_TextChanged);
-            // 
-            // Lbl_id
-            // 
-            this.Lbl_id.AutoSize = true;
-            this.Lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_id.Location = new System.Drawing.Point(295, 100);
-            this.Lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_id.Name = "Lbl_id";
-            this.Lbl_id.Size = new System.Drawing.Size(24, 19);
-            this.Lbl_id.TabIndex = 0;
-            this.Lbl_id.Text = "ID";
-            // 
             // Create_Carrea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,8 +217,6 @@
         private System.Windows.Forms.ComboBox Cbo_facultad;
         private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.Label Lbl_facultad;
-        private System.Windows.Forms.TextBox Txt_id;
-        private System.Windows.Forms.Label Lbl_id;
         private System.Windows.Forms.Label Lbl_jornada;
         private System.Windows.Forms.TextBox Txt_jornada;
     }
