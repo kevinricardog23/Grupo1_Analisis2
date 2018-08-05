@@ -45,59 +45,61 @@ namespace prototipo01
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
 
-        
-            //verficiacion de usuarios (LOGIN)
-            if (string.IsNullOrEmpty(Txt_Correo.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_password.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            TextBox objTextBox = (TextBox)Txt_Correo;
-            string email = objTextBox.Text;
-
-            TextBox objTextBox2 = (TextBox)Txt_password;
-            string pass = objTextBox2.Text;
-
-
-            if (login(email,pass))
-            {
-
-                ControladorUsuario controladorUsuario = new ControladorUsuario();
-
-                int n_privilegio = controladorUsuario.getNivelPrivilegio(email,pass);
-
-                if (n_privilegio == 1)
+         
+                //verficiacion de usuarios (LOGIN)
+                if (string.IsNullOrEmpty(Txt_Correo.Text))
                 {
-                    this.Hide();
-                    Dashboard dashboard = new Dashboard(n_privilegio);
-                    
-
-                    dashboard.Show();
-                    MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }else
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_password.Text))
                 {
-                    this.Hide();
-                    Dashboard dashboard = new Dashboard(n_privilegio);
-                    dashboard.Show();
-                    MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
-             
-            }
-            else
-            {
-                MessageBox.Show("El usuario o contraseña es incorrecto", "Error de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                TextBox objTextBox = (TextBox)Txt_Correo;
+                string email = objTextBox.Text;
 
-           
+                TextBox objTextBox2 = (TextBox)Txt_password;
+                string pass = objTextBox2.Text;
+
+
+                if (login(email,pass))
+                {
+
+                    ControladorUsuario controladorUsuario = new ControladorUsuario();
+
+                    int n_privilegio = controladorUsuario.getNivelPrivilegio(email,pass);
+
+                    if (n_privilegio == 1)
+                    {
+                        this.Hide();
+                        Dashboard dash = new Dashboard(n_privilegio);
+
+
+                        dash.Show();
+                        MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }else
+                    {
+                        this.Hide();
+                        Dashboard dash = new Dashboard(n_privilegio);
+                        dash.Show();
+                        MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("El usuario o contraseña es incorrecto", "Error de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                  
         }
+
+
 
 
 
