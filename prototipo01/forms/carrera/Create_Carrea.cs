@@ -41,7 +41,7 @@ namespace prototipo01.forms.carrera
             int id_facultad;
 
             nombre = Txt_nombre.Text.ToString();
-            id_facultad = controladorCarrera.getIdFacultad(Cbo_facultad.Text.ToString());
+            id_facultad = controladorCarrera.getIdFacultad(comboBox1.Text.ToString());
             jornada = Txt_jornada.Text.ToString();
            
 
@@ -66,7 +66,7 @@ namespace prototipo01.forms.carrera
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Cbo_facultad.Text) || string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_jornada.Text))
+            if (string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_jornada.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -78,7 +78,7 @@ namespace prototipo01.forms.carrera
                     crearCarrera();
                     MessageBox.Show("Se ha agregado exitosamente una nueva carrera", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Cbo_facultad.Text = "";
+                    comboBox1.Text = "";
                     Txt_nombre.Text = "";
                     Txt_jornada.Text= "";
                 }
@@ -91,17 +91,14 @@ namespace prototipo01.forms.carrera
 
         private void dataFacultades()
         {
-            Cbo_facultad.DataSource = controladorCarrera.getfacultades();
-            Cbo_facultad.DisplayMember = "Name";
-            Cbo_facultad.ValueMember = "nombre_facultad";
+           comboBox1.DataSource = controladorCarrera.getfacultades();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "nombre_facultad";
 
 
         }
 
-        private void Create_Carrera_Load(object sender, EventArgs e)
-        {
-            dataFacultades();
-        }
+       
 
         private void Txt_id_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -120,6 +117,11 @@ namespace prototipo01.forms.carrera
         private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Create_Carrea_Load(object sender, EventArgs e)
+        {
+            dataFacultades();
         }
     }
 }
