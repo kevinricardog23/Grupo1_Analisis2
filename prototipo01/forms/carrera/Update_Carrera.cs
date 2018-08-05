@@ -43,7 +43,7 @@ namespace prototipo01.forms.carrera
             prototipo01.models.carrera Model = controladorCarrera.buscarCarrera(reference);
 
             Txt_nombre.Text = Model.nombre_carrera.ToString();
-            Cbo_facultad.Text = Model.FACULTAD_id_facultad.ToString();
+            // Cbo_facultad.Text = Model.FACULTAD_id_facultad.ToString();
             Txt_jornada.Text = Model.jornada_carrera.ToString();
 
         }
@@ -58,7 +58,7 @@ namespace prototipo01.forms.carrera
             openForm(new Listado_carreras());
         }
 
-        void updateSalon()
+        void updateCarrera()
         {
 
             string jornada, nombre;
@@ -66,10 +66,10 @@ namespace prototipo01.forms.carrera
 
             nombre = Txt_nombre.Text.ToString();
             ID_facultad = controladorCarrera.getIdFacultad(Cbo_facultad.Text.ToString());
-            jornada = Txt_nombre.Text.ToString();
+            jornada = Txt_jornada.Text.ToString();
 
 
-            controladorCarrera.actualizarCarrera(reference, nombre, ID_facultad, jornada); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            controladorCarrera.actualizarCarrera(reference, nombre, ID_facultad, jornada); MessageBox.Show("Se ha actualizado exitosamente la carrera", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -82,60 +82,24 @@ namespace prototipo01.forms.carrera
             }
             else
             {
-                updateSalon();
+                updateCarrera();
                 Txt_jornada.Text = "";
                 Cbo_facultad.Text = "";
                 Txt_nombre.Text = "";
             }
 
-           /* if (Txt_nombre.Text.Trim() == "")
-            {
-                epErrorNombre.SetError(Txt_nombre, "Introduce Nombre para el carrera");
-                Txt_nombre.Focus();
-
-            }
-            else
-            {
-                epErrorNombre.Clear();
-
-            }
-
-            if (Txt_jornada.Text.Trim() == "")
-            {
-                epErrorDescripcion.SetError(Txt_jornada, "Introduce una Jornada");
-                Txt_jornada.Focus();
-
-            }
-            else
-            {
-                epErrorDescripcion.Clear();
-
-            }
 
 
+        }
+
+        private void dataFacultades()
+        {
+            Cbo_facultad.DataSource = controladorCarrera.getfacultades();
+            Cbo_facultad.DisplayMember = "Name";
+            Cbo_facultad.ValueMember = "nombre_facultad";
 
 
-            TextBox objTextBox = (TextBox)Txt_nombre;
-            string nombre = objTextBox.Text;
-
-            TextBox objTextBox2 = (TextBox)Txt_jornada;
-            string ubicacion = objTextBox2.Text;
-
-            try
-            {
-
-                controladorCarrera.actualizarCarrera(reference, nombre, ,reference, jornada);
-                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Txt_nombre.Text = "";
-                Txt_jornada.Text = "";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } */
-
-
-        } 
+        }
 
         private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -147,9 +111,10 @@ namespace prototipo01.forms.carrera
             Clases.Validacion.SoloLetras(e);
         }
 
-        private void Carrera_Update_Load(object sender, EventArgs e)
+        private void Update_Carrera_Load(object sender, EventArgs e)
         {
             setData();
+            dataFacultades();
 
         }
     }
