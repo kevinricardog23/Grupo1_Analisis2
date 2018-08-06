@@ -37,11 +37,9 @@
             this.Lbl_jornada = new System.Windows.Forms.Label();
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.Lbl_nombre = new System.Windows.Forms.Label();
-            this.Cbo_facultad = new System.Windows.Forms.ComboBox();
             this.Btn_crear = new System.Windows.Forms.Button();
             this.Lbl_facultad = new System.Windows.Forms.Label();
-            this.Txt_id = new System.Windows.Forms.TextBox();
-            this.Lbl_id = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Pnl_titulo.SuspendLayout();
             this.CRUD.SuspendLayout();
             this.Tp_crear.SuspendLayout();
@@ -96,15 +94,13 @@
             // 
             // Tp_crear
             // 
+            this.Tp_crear.Controls.Add(this.comboBox1);
             this.Tp_crear.Controls.Add(this.Txt_jornada);
             this.Tp_crear.Controls.Add(this.Lbl_jornada);
             this.Tp_crear.Controls.Add(this.Txt_nombre);
             this.Tp_crear.Controls.Add(this.Lbl_nombre);
-            this.Tp_crear.Controls.Add(this.Cbo_facultad);
             this.Tp_crear.Controls.Add(this.Btn_crear);
             this.Tp_crear.Controls.Add(this.Lbl_facultad);
-            this.Tp_crear.Controls.Add(this.Txt_id);
-            this.Tp_crear.Controls.Add(this.Lbl_id);
             this.Tp_crear.Location = new System.Drawing.Point(4, 28);
             this.Tp_crear.Margin = new System.Windows.Forms.Padding(2);
             this.Tp_crear.Name = "Tp_crear";
@@ -151,14 +147,6 @@
             this.Lbl_nombre.Text = "Nombre de Carrera";
             this.Lbl_nombre.Click += new System.EventHandler(this.Lbl_nombre_Click);
             // 
-            // Cbo_facultad
-            // 
-            this.Cbo_facultad.FormattingEnabled = true;
-            this.Cbo_facultad.Location = new System.Drawing.Point(325, 231);
-            this.Cbo_facultad.Name = "Cbo_facultad";
-            this.Cbo_facultad.Size = new System.Drawing.Size(315, 27);
-            this.Cbo_facultad.TabIndex = 33;
-            // 
             // Btn_crear
             // 
             this.Btn_crear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(166)))), ((int)(((byte)(153)))));
@@ -189,29 +177,13 @@
             this.Lbl_facultad.TabIndex = 4;
             this.Lbl_facultad.Text = "Facultad";
             // 
-            // Txt_id
+            // comboBox1
             // 
-            this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_id.Location = new System.Drawing.Point(323, 98);
-            this.Txt_id.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_id.MaxLength = 30;
-            this.Txt_id.Multiline = true;
-            this.Txt_id.Name = "Txt_id";
-            this.Txt_id.Size = new System.Drawing.Size(317, 28);
-            this.Txt_id.TabIndex = 2;
-            this.Txt_id.TextChanged += new System.EventHandler(this.Txt_id_TextChanged);
-            // 
-            // Lbl_id
-            // 
-            this.Lbl_id.AutoSize = true;
-            this.Lbl_id.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_id.Location = new System.Drawing.Point(295, 100);
-            this.Lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_id.Name = "Lbl_id";
-            this.Lbl_id.Size = new System.Drawing.Size(24, 19);
-            this.Lbl_id.TabIndex = 0;
-            this.Lbl_id.Text = "ID";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(325, 231);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(315, 27);
+            this.comboBox1.TabIndex = 38;
             // 
             // Create_Carrea
             // 
@@ -224,6 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Create_Carrea";
             this.Text = "Create_Carrea";
+            this.Load += new System.EventHandler(this.Create_Carrea_Load);
             this.Pnl_titulo.ResumeLayout(false);
             this.Pnl_titulo.PerformLayout();
             this.CRUD.ResumeLayout(false);
@@ -242,12 +215,10 @@
         private System.Windows.Forms.TabPage Tp_crear;
         private System.Windows.Forms.TextBox Txt_nombre;
         private System.Windows.Forms.Label Lbl_nombre;
-        private System.Windows.Forms.ComboBox Cbo_facultad;
         private System.Windows.Forms.Button Btn_crear;
         private System.Windows.Forms.Label Lbl_facultad;
-        private System.Windows.Forms.TextBox Txt_id;
-        private System.Windows.Forms.Label Lbl_id;
         private System.Windows.Forms.Label Lbl_jornada;
         private System.Windows.Forms.TextBox Txt_jornada;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

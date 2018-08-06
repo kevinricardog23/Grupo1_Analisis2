@@ -36,18 +36,18 @@ namespace prototipo01.forms.carrera
         {
 
             string nombre;
-            int id_carrera;
-            string jornada;
+         
+           string jornada;
             int id_facultad;
 
             nombre = Txt_nombre.Text.ToString();
-            id_facultad = controladorCarrera.getIdFacultad(Cbo_facultad.Text.ToString());
+            id_facultad = controladorCarrera.getIdFacultad(comboBox1.Text.ToString());
             jornada = Txt_jornada.Text.ToString();
-            id_carrera = Convert.ToInt32(Txt_id.Text.ToString());
+           
 
 
 
-            controladorCarrera.guardarCarrera(id_carrera, nombre, id_facultad, jornada);
+            controladorCarrera.guardarCarrera(nombre, id_facultad, jornada);
         }
 
 
@@ -66,7 +66,7 @@ namespace prototipo01.forms.carrera
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_id.Text) || string.IsNullOrEmpty(Cbo_facultad.Text) || string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_jornada.Text))
+            if (string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(Txt_jornada.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -78,7 +78,7 @@ namespace prototipo01.forms.carrera
                     crearCarrera();
                     MessageBox.Show("Se ha agregado exitosamente una nueva carrera", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Txt_id.Text = "";
+                    comboBox1.Text = "";
                     Txt_nombre.Text = "";
                     Txt_jornada.Text= "";
                 }
@@ -91,21 +91,18 @@ namespace prototipo01.forms.carrera
 
         private void dataFacultades()
         {
-            Cbo_facultad.DataSource = controladorCarrera.getfacultades();
-            Cbo_facultad.DisplayMember = "Name";
-            Cbo_facultad.ValueMember = "nombre_facultad";
+           comboBox1.DataSource = controladorCarrera.getfacultades();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "nombre_facultad";
 
 
         }
 
-        private void carrera_Create_Load(object sender, EventArgs e)
-        {
-            dataFacultades();
-        }
+       
 
         private void Txt_id_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloNumeros(e);
+            
         }
 
         private void Txt_id_TextChanged(object sender, EventArgs e)
@@ -116,6 +113,15 @@ namespace prototipo01.forms.carrera
         private void Txt_jornada_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+        private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Create_Carrea_Load(object sender, EventArgs e)
+        {
+            dataFacultades();
         }
     }
 }

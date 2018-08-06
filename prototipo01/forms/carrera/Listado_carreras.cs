@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.Dto;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.carrera
 {
@@ -45,9 +46,17 @@ namespace prototipo01.forms.carrera
             InitializeComponent();
         }
 
+        void setData()
+        {
+            refreshDataSource();
+        }
+
         private void Listado_carreras_Load(object sender, EventArgs e)
         {
-
+            button1.Enabled = privilegios.bandera;
+            button2.Enabled = privilegios.bandera;
+            button3.Enabled = privilegios.bandera;
+            setData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,7 +80,14 @@ namespace prototipo01.forms.carrera
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openForm(new Update_Carrera(ID_reference));
+            if (ID_reference != 0)
+            {
+                openForm(new Update_Carrera(ID_reference));
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione una carrera");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -84,5 +100,22 @@ namespace prototipo01.forms.carrera
                 refreshDataSource();
             }
         }
+
+        private void Dgv_carreras_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (Dgv_carreras.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = Dgv_carreras.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = Dgv_carreras.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
+
+        }
+
+
     }
 }
