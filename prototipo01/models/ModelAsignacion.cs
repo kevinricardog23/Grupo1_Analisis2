@@ -59,6 +59,10 @@ namespace prototipo01.models
                 .IsUnicode(false);
 
             modelBuilder.Entity<alumno>()
+           .Property(e => e.carnet)
+           .IsUnicode(false);
+
+            modelBuilder.Entity<alumno>()
                 .HasMany(e => e.curso_estudiante)
                 .WithRequired(e => e.alumno)
                 .HasForeignKey(e => e.ALUMNO_dpi_alumno)

@@ -85,6 +85,30 @@ namespace prototipo01.controladores
                 return null;
             }
         }
+
+
+        public alumno buscarEstudianteCarnet(String carnet)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.alumno
+                        .Where(s => s.carnet == carnet)
+                        .FirstOrDefault<alumno>();
+
+                    return std;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno,int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno)
         {
 

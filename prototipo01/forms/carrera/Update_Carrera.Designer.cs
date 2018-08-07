@@ -192,6 +192,7 @@
             this.Controls.Add(this.Pnl_titulo);
             this.Name = "Update_Carrera";
             this.Text = "Update_Carrera";
+            this.Load += new System.EventHandler(this.Update_Carrera_Load_1);
             this.Pnl_titulo.ResumeLayout(false);
             this.Pnl_titulo.PerformLayout();
             this.CRUD.ResumeLayout(false);

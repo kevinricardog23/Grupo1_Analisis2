@@ -117,5 +117,12 @@ namespace prototipo01.forms.carrera
             dataFacultades();
 
         }
+
+        private void Update_Carrera_Load_1(object sender, EventArgs e)
+        {
+            setData();
+            dataFacultades();
+
+        }
     }
 }

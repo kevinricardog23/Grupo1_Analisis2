@@ -24,7 +24,7 @@ namespace prototipo01.forms.asignacion
         public Asignacion_Cursos()
         {
             InitializeComponent();
-            refreshDataSource();
+        
         }
 
         //REFRESCAR EL DATAGRIDVIEW
@@ -63,18 +63,34 @@ namespace prototipo01.forms.asignacion
             String dpiStr = textBox1.Text + textBox2.Text + textBox3.Text;       
             long numVal = Int64.Parse(dpiStr);
 
-            alumno alm = controladorEstudiante.buscarEstudiante(numVal);
+            alumno alm = controladorEstudiante.buscarEstudianteCarnet(dpiStr);
 
             if (alm == null)
             {
-                MessageBox.Show("Error", "Alumno no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alumno no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                MessageBox.Show(alm.nombre_alumno + " " + alm.apellido_alumno , "Alumno encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataSource();
+            }
+
+
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Asignacion_Cursos_Load(object sender, EventArgs e)
+        {
         }
     }
 }
