@@ -93,7 +93,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::prototipo01.Properties.Resources.iconmonstr_edit_11_24;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(282, 240);
+            this.button1.Location = new System.Drawing.Point(291, 238);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 41);

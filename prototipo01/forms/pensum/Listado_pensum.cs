@@ -93,6 +93,9 @@ namespace prototipo01.forms.pensum
                 controladorPensum.eliminarPensum(ID_reference);
                 refreshGrid();
             }
+
+            ControladorBitacora controladorBitacora = new ControladorBitacora();
+            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Pensum.");
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)

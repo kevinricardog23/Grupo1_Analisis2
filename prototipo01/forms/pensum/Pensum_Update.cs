@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
+using prototipo01.Clases;
 using prototipo01.models;
 using prototipo01.Dto;
 
@@ -84,6 +85,9 @@ namespace prototipo01.forms.pensum
                 update();
                
                 MessageBox.Show("Se agrego correctamente el pensum", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Pensum.");
                 textBox1.Text = "";
                 textBox2.Text="";
                 setData();
