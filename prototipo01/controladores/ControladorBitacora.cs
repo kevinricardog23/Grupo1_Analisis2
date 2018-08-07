@@ -13,11 +13,11 @@ namespace prototipo01.controladores
     {
         ModelAsignacion db = new ModelAsignacion();
 
-        public bitacora guardarBitacora(int usuarioId)
+        public bitacora guardarBitacora(int usuarioId, string accion)
         {
             bitacora bitacoraObj = new bitacora();
             bitacoraObj.fecha_hora_bitacora = DateTime.Now;
-            bitacoraObj.accionusario_bitacora = "Inicio de sesión en el sistema.";
+            bitacoraObj.accionusario_bitacora = accion;
             bitacoraObj.usuario_id_usuario = usuarioId;
 
             db.bitacora.Add(bitacoraObj);

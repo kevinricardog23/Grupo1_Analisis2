@@ -131,7 +131,7 @@ namespace prototipo01.controladores
             if (usuarioLogin.password_usuario == password)
             {
                 ControladorBitacora controladorBitacora = new ControladorBitacora();
-                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario);
+                controladorBitacora.guardarBitacora(usuarioLogin.id_usuario, "Inicio de sesión en el sistema.");
                 return true;
             }
 

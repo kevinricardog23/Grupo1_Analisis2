@@ -10,12 +10,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.Clases;
 
 
 namespace prototipo01
 {
     public partial class Form1 : Form
     {
+        
+
         
         public Form1()
         {
@@ -75,10 +78,13 @@ namespace prototipo01
                     if (n_privilegio == 1)
                     {
                         this.Hide();
-                        Dashboard dash = new Dashboard(n_privilegio);
+                    
+                    Dashboard dash = new Dashboard(n_privilegio);
 
-
+                            
                         dash.Show();
+
+                  
                         MessageBox.Show("Se ha ingresado exitosamente", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }else
                     {
@@ -107,6 +113,10 @@ namespace prototipo01
         {
             ControladorUsuario controladorUsuario = new ControladorUsuario();
             usuario user = controladorUsuario.buscarUsuarioCorreo(correo);
+
+
+            usuarioLogi.id_usuario = user.id_usuario;
+
             return controladorUsuario.login(user, password);
         }
 

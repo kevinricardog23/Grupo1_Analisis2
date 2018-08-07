@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\privilegios.cs" />
+    <Compile Include="Clases\usuarioLogi.cs" />
     <Compile Include="Clases\Validacion.cs" />
     <Compile Include="controladores\ControladorBitacora.cs" />
     <Compile Include="controladores\ControladorCarrera.cs" />
