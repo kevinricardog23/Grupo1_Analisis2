@@ -117,8 +117,8 @@ namespace prototipo01.forms.pensum
             button2.Enabled = privilegios.bandera;
             button3.Enabled = privilegios.bandera;
 
-            this.Location = new Point(0, 0); //sobra si tienes la posición en el diseño
-            this.Size = new Size(this.Width, Screen.PrimaryScreen.WorkingArea.Size.Height);
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
         
 
