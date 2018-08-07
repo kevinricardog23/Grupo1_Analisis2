@@ -74,7 +74,7 @@ namespace prototipo01.forms.curso
             creditos = Convert.ToInt32(txtBox_Creditos.Text.ToString());
             semestre = txtBox_semestre.Text.ToString();
 
-            controladorCursos.actualizarCursos(id_curso, nombre, id_pensum, semestre, creditos);
+            controladorCursos.actualizarCursos(reference,nombre, id_pensum, semestre, creditos);
         }
 
         private void Btn_update_Click(object sender, EventArgs e)

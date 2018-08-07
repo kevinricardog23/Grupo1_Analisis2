@@ -117,7 +117,7 @@ namespace prototipo01.forms.curso
             }
             else
             {
-                MessageBox.Show("Por favor seleccione un edificio");
+                MessageBox.Show("Por favor seleccione un curso");
             }
         }
 
@@ -133,7 +133,7 @@ namespace prototipo01.forms.curso
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el edificio?", "Eliminar", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Esta seguro de elimiar el curso?", "Eliminar", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 controladorCursos.eliminarCursos(ID_reference);

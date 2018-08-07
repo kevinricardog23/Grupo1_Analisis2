@@ -127,9 +127,9 @@ namespace prototipo01.forms.catedraticos
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 
-                //controladorCatedraticos.eliminarCatedratico(ID_reference);
+                controladorCatedraticos.eliminarCatedratico(ID_reference);
 
-
+                refreshDataSource();
             }
         }
 

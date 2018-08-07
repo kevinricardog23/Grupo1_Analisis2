@@ -168,6 +168,30 @@ namespace prototipo01.controladores
 
         }
 
+        public void eliminarCatedratico(int idCatedratico)
+        {
+
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.catedratico
+                        .Where(s => s.dpi_catedratico == idCatedratico)
+                        .FirstOrDefault<catedratico>();
+
+                    db.catedratico.Remove(std);
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
 
 
