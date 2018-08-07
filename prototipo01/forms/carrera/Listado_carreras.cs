@@ -116,6 +116,20 @@ namespace prototipo01.forms.carrera
 
         }
 
+        private void Dgv_carreras_SelectionChanged_1(object sender, EventArgs e)
+        {
 
+
+            if (Dgv_carreras.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = Dgv_carreras.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = Dgv_carreras.Rows[selectedrowindex];
+
+                ID_reference = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+            }
+
+        }
     }
 }
