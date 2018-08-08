@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.Dto;
 using prototipo01.models;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 
 namespace prototipo01.forms.catedraticos
@@ -110,6 +111,9 @@ namespace prototipo01.forms.catedraticos
                     textBox4.Text = "";
                     textBox5.Text = "";
                     textBox6.Text = "";
+                    //CONTROL BICORA
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Catedratico.");
                 }
                 catch (Exception ex)
                 {

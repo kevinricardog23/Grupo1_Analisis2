@@ -80,6 +80,9 @@ namespace prototipo01
             {
                 controladorSecciones.eliminarSeccion(ID_reference);
                 refreshDataSource();
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Seccion.");
             }
         }
 
