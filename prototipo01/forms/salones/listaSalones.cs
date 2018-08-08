@@ -121,6 +121,9 @@ namespace prototipo01.forms.salones
 
 
             }
+
+            ControladorBitacora controladorBitacora = new ControladorBitacora();
+            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar aula.");
         }
 
         private void Txt_buscar_TextChanged(object sender, EventArgs e)

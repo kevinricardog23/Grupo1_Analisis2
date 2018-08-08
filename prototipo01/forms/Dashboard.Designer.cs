@@ -76,7 +76,7 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(250, 690);
+            this.sidebar.Size = new System.Drawing.Size(333, 849);
             this.sidebar.TabIndex = 0;
             // 
             // button11
@@ -317,7 +317,7 @@
             this.workspace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.workspace.Location = new System.Drawing.Point(250, 0);
             this.workspace.Name = "workspace";
-            this.workspace.Size = new System.Drawing.Size(965, 690);
+            this.workspace.Size = new System.Drawing.Size(1287, 849);
             this.workspace.TabIndex = 2;
             this.workspace.Paint += new System.Windows.Forms.PaintEventHandler(this.workspace_Paint);
             // 

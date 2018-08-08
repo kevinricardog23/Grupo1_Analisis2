@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.facultad
 {
@@ -108,6 +109,9 @@ namespace prototipo01.forms.facultad
                 {
                     createCatedratico();
                     MessageBox.Show("Se ha agregado exitosamente una nueva Facultad", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Control bitacora
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear facultad");
                     //Txt_id.Text = "";
                     Txt_nombre.Text = "";
                     textBox1.Text = "";
@@ -123,3 +127,4 @@ namespace prototipo01.forms.facultad
         }
     }
 }
+//Valery

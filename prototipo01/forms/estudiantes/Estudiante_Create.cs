@@ -44,7 +44,7 @@ namespace prototipo01.forms.estudiante
         void createAlumno()
         {
 
-            string nombre, apellido,correo, direccion, telefono, estado;
+            string nombre, apellido,correo, direccion, telefono, estado, carnet;
             int edad, dpi, carrera, facultad;
 
             
@@ -58,16 +58,16 @@ namespace prototipo01.forms.estudiante
             direccion = Txt_direccion.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
             estado = Txt_estado.Text.ToString();
-           
-            
+            carnet = Txt_carnet.Text.ToString();
+
 
 
             //
-           
 
 
 
-            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera);
+
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera, carnet);
         }
 
 
@@ -135,6 +135,11 @@ namespace prototipo01.forms.estudiante
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (string.IsNullOrEmpty(Txt_carnet.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             /*codigo kevin*/
             else
             {
@@ -152,6 +157,7 @@ namespace prototipo01.forms.estudiante
                     Txt_estado.Text = "";
                     cbo_estudiante.Text = "";
                     cbo_facultad.Text = "";
+                    Txt_carnet.Text = "";
                 }
                 catch (Exception ex)
                 {

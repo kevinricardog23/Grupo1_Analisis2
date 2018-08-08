@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 namespace prototipo01.forms.salones
+
 {
     public partial class Salones_Create : Form
     {
@@ -66,7 +68,10 @@ namespace prototipo01.forms.salones
                 {
                     crearSalon();
                     MessageBox.Show("Se ha agregado exitosamente un nuevo salon", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
+
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "crear salon.");
                     Txt_nombre.Text = "";
                     Cbo_edificio.Text = "";
                     Txt_capacidad.Text = "";

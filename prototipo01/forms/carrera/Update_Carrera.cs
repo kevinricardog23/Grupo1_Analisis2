@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.Dto;
 using prototipo01.models;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 
 namespace prototipo01.forms.carrera
@@ -83,9 +84,14 @@ namespace prototipo01.forms.carrera
             else
             {
                 updateCarrera();
-                Txt_jornada.Text = "";
-                Cbo_facultad.Text = "";
+                MessageBox.Show("Se edito correctamente la carrera", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Carrera.");
                 Txt_nombre.Text = "";
+                Txt_jornada.Text = "";
+                dataFacultades();
+               
             }
 
 
@@ -94,6 +100,7 @@ namespace prototipo01.forms.carrera
 
         private void dataFacultades()
         {
+            prototipo01.models.carrera Model = controladorCarrera.buscarCarrera(reference);
             Cbo_facultad.DataSource = controladorCarrera.getfacultades();
             Cbo_facultad.DisplayMember = "Name";
             Cbo_facultad.ValueMember = "nombre_facultad";
@@ -126,3 +133,4 @@ namespace prototipo01.forms.carrera
         }
     }
 }
+//FREDY FLORES

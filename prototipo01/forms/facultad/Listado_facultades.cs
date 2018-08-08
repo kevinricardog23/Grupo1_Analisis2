@@ -120,6 +120,10 @@ namespace prototipo01.forms.facultad
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 controladorFacultades.eliminarFacultad(ID_reference);
+                // Control bitacora
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar facultad");
+
                 refreshDataSource();
             }
         }
