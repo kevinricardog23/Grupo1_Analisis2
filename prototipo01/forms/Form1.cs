@@ -115,7 +115,7 @@ namespace prototipo01
             usuario user = controladorUsuario.buscarUsuarioCorreo(correo);
 
 
-             //usuarioLogi.id_usuario = user.id_usuario;
+            usuarioLogi.id_usuario = user.id_usuario;
 
             return controladorUsuario.login(user, password);
         }
