@@ -52,7 +52,7 @@ namespace prototipo01.forms.asignacion
             MessageBox.Show("Se han asignado los cursos exitosamente", "Asignacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+     /*   private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox4.Text))
             {
@@ -74,10 +74,10 @@ namespace prototipo01.forms.asignacion
                 MessageBox.Show(alm.nombre_alumno + " " + alm.apellido_alumno , "Alumno encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshDataSource();
             }
+            
 
 
-
-        }
+        }*/
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
