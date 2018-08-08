@@ -47,6 +47,44 @@ namespace prototipo01.controladores
 
         }
 
+        public BindingList<cursosDto> listaCursosPorAlumno()
+        {
+
+            //try
+            //{
+            //    using (ModelAsignacion db = new ModelAsignacion())
+            //    {
+            //        var Query = (from n in db.curso
+            //                     select new cursosDto
+            //                     {
+            //                         id_curso = n.id_curso,
+            //                         nombre_curso = n.nombre_curso,
+            //                         PENSUM_id_pensum = n.PENSUM_id_pensum,
+            //                         semestre_curso = n.semestre_curso,
+            //                         creditos = n.creditos
+            //                     }).ToList();
+
+            //        BindingList<cursosDto> result = new BindingList<cursosDto>(Query);
+
+            //        return result;
+            //    }
+
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
+
+
+
+            //using (ModelAsignacion db = new ModelAsignacion())
+            //{
+            //    var studentList = db.curso.Where(s => s. == "Bill").ToList();
+            //}
+
+            return null;
+        }
+
 
         //Metodo para guardar un nuevo curso
         public void guardarCurso(int id_curso,String nombre_nombrecurso, int PENSUM_id_pensum, String semestre_curso, int creditos)

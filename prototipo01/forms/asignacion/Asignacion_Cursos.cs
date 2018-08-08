@@ -19,6 +19,8 @@ namespace prototipo01.forms.asignacion
         ControladorCursos controladorCursos = new ControladorCursos(); //LOGICA CRUD CURSOIS
         BindingList<cursosDto> cursosDataSource = new BindingList<cursosDto>(); //LISTA CURSOS
 
+        alumno alumno = new alumno();
+
 
 
         public Asignacion_Cursos()
@@ -52,32 +54,13 @@ namespace prototipo01.forms.asignacion
             MessageBox.Show("Se han asignado los cursos exitosamente", "Asignacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-     /*   private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox4.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            String dpiStr = textBox1.Text + textBox2.Text + textBox3.Text;       
-            long numVal = Int64.Parse(dpiStr);
-
-            alumno alm = controladorEstudiante.buscarEstudianteCarnet(dpiStr);
-
-            if (alm == null)
-            {
-                MessageBox.Show("Alumno no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show(alm.nombre_alumno + " " + alm.apellido_alumno , "Alumno encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refreshDataSource();
-            }
+   
             
 
 
-        }*/
+        }
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -91,6 +74,31 @@ namespace prototipo01.forms.asignacion
 
         private void Asignacion_Cursos_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox4.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            String dpiStr = textBox1.Text + textBox2.Text + textBox3.Text;
+            long numVal = Int64.Parse(dpiStr);
+
+            alumno = controladorEstudiante.buscarEstudianteCarnet(dpiStr);
+
+            if (alumno == null)
+            {
+                MessageBox.Show("Alumno no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //MessageBox.Show(alm.nombre_alumno + " " + alm.apellido_alumno, "Alumno encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                labelNombre.Text = alumno.nombre_alumno + " " + alumno.apellido_alumno;
+                refreshDataSource();
+            }
         }
     }
 }
