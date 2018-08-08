@@ -44,6 +44,45 @@ namespace prototipo01.controladores
                 throw;
             }
         }
+
+
+        //ALUMNOS POR CATEDRATICO
+
+        public BindingList<AlumnosCurso> AlumnosPorCurso()
+        {
+
+            try
+            {
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+
+                    var Query = (from c in db.curso_estudiante
+                                join o in db.curso
+                    on c.CURSO_id_curso equals o.id_curso
+                                select new AlumnosCurso
+                                {
+                                    nombre_curso = o.nombre_curso
+                                }).ToList();
+
+
+
+                    BindingList<AlumnosCurso> result = new BindingList<AlumnosCurso>(Query);
+
+
+                    return result;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+
+
+
+
         public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno)
         {
 

@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.controladores;
+using prototipo01.DTO;
+using prototipo01.Dto;
 
 namespace prototipo01.forms.seccion.reportes
 {
     public partial class AlumnosxCatedratico : Form
     {
+
+        ControladorEstudiante controladorEstudiante = new ControladorEstudiante();
+        BindingList<AlumnosCurso> alumnosCursoDataSource = new BindingList<AlumnosCurso>(); 
+
+
         public AlumnosxCatedratico()
         {
             InitializeComponent();
@@ -54,16 +62,21 @@ namespace prototipo01.forms.seccion.reportes
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrEmpty(Txt_CodCurso.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_Seccion.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+          
+        }
+
+        private void refreshDataSource()
+        {
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.Rows.Clear();
+            alumnosCursoDataSource = controladorEstudiante.AlumnosPorCurso();
+            dataGridView1.DataSource = alumnosCursoDataSource;
+
+        }
+
+        private void AlumnosxCatedratico_Load(object sender, EventArgs e)
+        {
+            refreshDataSource();
         }
     }
 }

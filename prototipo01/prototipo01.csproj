@@ -93,6 +93,7 @@
     <Compile Include="controladores\ControladorSalones.cs" />
     <Compile Include="controladores\ControladorSecciones.cs" />
     <Compile Include="controladores\ControladorUsuario.cs" />
+    <Compile Include="Dto\AlumnosCurso.cs" />
     <Compile Include="Dto\bitacoraDto.cs" />
     <Compile Include="Dto\carreraDto.cs" />
     <Compile Include="Dto\catedraticoDto.cs" />
@@ -316,12 +317,6 @@
     <Compile Include="forms\permisos\Permisos.Designer.cs">
       <DependentUpon>Permisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\reportes\Alumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\reportes\Alumnos.Designer.cs">
-      <DependentUpon>Alumnos.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\salones\Salones_Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -508,9 +503,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\permisos\Permisos.resx">
       <DependentUpon>Permisos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\reportes\Alumnos.resx">
-      <DependentUpon>Alumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\salones\listaSalones.resx">
       <DependentUpon>listaSalones.cs</DependentUpon>
