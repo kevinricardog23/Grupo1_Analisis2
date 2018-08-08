@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.Dto;
 using prototipo01.models;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.salones
 {
@@ -66,6 +67,12 @@ namespace prototipo01.forms.salones
 
 
             controladorSalones.actualizarSalon(reference,capacidad, ID_edificio,nombre); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ControladorBitacora controladorBitacora = new ControladorBitacora();
+            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "editar salon.");
+
+            Txt_capacidad.Text = "";
+            Cbo_edificio.Text = "";
+            Txt_nombre.Text = "";
 
         }
         private void Btn_editar_Click(object sender, EventArgs e)
