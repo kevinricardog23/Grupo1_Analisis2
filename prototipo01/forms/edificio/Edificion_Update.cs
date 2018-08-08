@@ -12,7 +12,6 @@ using prototipo01.controladores;
 using prototipo01.models;
 using prototipo01.Clases;
 
-
 namespace prototipo01
 {
     public partial class Edificion_Update : Form
