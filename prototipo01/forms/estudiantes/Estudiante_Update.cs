@@ -36,7 +36,7 @@ namespace prototipo01.forms.estudiante
         }
         void updateCatedratico()
         {
-            string nombre, apellido, telefono, correo, direccion, estado;
+            string nombre, apellido, telefono, correo, direccion, estado, carnet;
             int edad, carrera, facultad;
 
             nombre = Txt_Nombres.Text.ToString();
@@ -48,10 +48,10 @@ namespace prototipo01.forms.estudiante
             direccion = Txt_Direccion.Text.ToString();
             estado = Txt_estado.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
+            carnet = Txt_carnet.Text.ToString();
 
 
-
-            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado);
+            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado, carnet);
             MessageBox.Show("Se ha Actualizado exitosamente el estudiante", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -66,7 +66,7 @@ namespace prototipo01.forms.estudiante
             Txt_edad.Text = Model.edad_alumno.ToString();
             Txt_Direccion.Text = Model.direccion_alumno.ToString();
             Txt_estado.Text = Model.estado_alumno.ToString();
-
+            Txt_carnet.Text = Model.carnet_alumno.ToString();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace prototipo01.forms.estudiante
         {
            
             
-                if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_edad.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text)|| string.IsNullOrEmpty(Txt_estado.Text))
+                if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_edad.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text)|| string.IsNullOrEmpty(Txt_estado.Text) || string.IsNullOrEmpty(Txt_carnet.Text))
                 {
                     MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -107,7 +107,7 @@ namespace prototipo01.forms.estudiante
                     Txt_edad.Text = "";
                     Txt_Direccion.Text = "";
                     Txt_estado.Text = "";
-                    
+                    Txt_carnet.Text = "";
               
                 }
                 catch (Exception ex)
@@ -140,6 +140,11 @@ namespace prototipo01.forms.estudiante
             cbo_facultad.DataSource = controladorEstudiantes.getFacultades();
             cbo_facultad.DisplayMember = "name";
             cbo_facultad.ValueMember = "nombre_facultad";
+        }
+
+        private void Lbl_Correo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
