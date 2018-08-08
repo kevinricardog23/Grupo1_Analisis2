@@ -32,6 +32,7 @@ namespace prototipo01.controladores
             using (ModelAsignacion db = new ModelAsignacion())
             {
                 var Query = (from n in db.bitacora
+                             orderby n.id_bitacora descending
                              select new bitacoraDto
                              {
                                  id_bitacora = n.id_bitacora,

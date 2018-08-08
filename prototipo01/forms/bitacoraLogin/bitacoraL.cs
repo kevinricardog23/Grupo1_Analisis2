@@ -62,5 +62,9 @@ namespace prototipo01.forms.bitacoraLogin
         {
             openForm(new permisos.Permisos());
         }
+
+        private void bitacoraL_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
