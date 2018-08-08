@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
-
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -139,6 +139,9 @@ namespace prototipo01
                 Cbo_catedratico.Text = "";
                 Cbo_salon.Text = "";
                 cbo_horario.Text = "";
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Laboratorio.");
             }
             catch (Exception ex)
             {

@@ -68,7 +68,7 @@ namespace prototipo01.forms.salones
 
             controladorSalones.actualizarSalon(reference,capacidad, ID_edificio,nombre); MessageBox.Show("Se ha actualizado exitosamente el salon", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ControladorBitacora controladorBitacora = new ControladorBitacora();
-            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "editar salon.");
+            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar salon.");
 
             Txt_capacidad.Text = "";
             Cbo_edificio.Text = "";
@@ -107,7 +107,7 @@ namespace prototipo01.forms.salones
 
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloNumeros(e);
+        //    Clases.Validacion.SoloNumeros(e);
         }
 
         private void Txt_capacidad_TextChanged(object sender, EventArgs e)
@@ -118,6 +118,11 @@ namespace prototipo01.forms.salones
         private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Tp_editar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

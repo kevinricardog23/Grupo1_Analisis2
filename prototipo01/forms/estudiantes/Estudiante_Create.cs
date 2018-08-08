@@ -158,8 +158,7 @@ namespace prototipo01.forms.estudiante
                     Txt_dpi.Text = "";
                     Txt_estado.Text = "";
                     cbo_estudiante.Text = "";
-                    cbo_facultad.Text = "";
-                    
+                    cbo_facultad.Text = "";                  
                    
 
                    
@@ -167,7 +166,7 @@ namespace prototipo01.forms.estudiante
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Ingreso de datos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

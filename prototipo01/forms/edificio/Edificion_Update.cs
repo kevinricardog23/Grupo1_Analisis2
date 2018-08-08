@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
-
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -125,6 +125,9 @@ namespace prototipo01
 
                 controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Control bitacora
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Edificio");
                 textBox1.Text = "";
                 textBox2.Text = "";
             }

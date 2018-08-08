@@ -130,6 +130,9 @@ namespace prototipo01.forms.catedraticos
                 controladorCatedraticos.eliminarCatedratico(ID_reference);
 
                 refreshDataSource();
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Catedratico");
             }
         }
 

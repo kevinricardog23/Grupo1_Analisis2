@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.forms.horarios;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -125,7 +126,11 @@ namespace prototipo01
                     cbo_horario.Text = "";
                     cbo_salon.Text = "";
                     cbo_laboratorio.Text = "";
-                }catch(Exception ex)
+                    //CONTROL BICORA
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Seccion.");
+                }
+                catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
