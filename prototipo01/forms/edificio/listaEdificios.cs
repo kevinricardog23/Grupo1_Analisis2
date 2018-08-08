@@ -170,6 +170,10 @@ namespace prototipo01
             {
                 controladorEdificios.eliminarEdificio(ID_reference);
                 refreshDataSource();
+
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Edificio.");
             }
 
 
