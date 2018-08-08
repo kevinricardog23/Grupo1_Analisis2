@@ -70,8 +70,9 @@ namespace prototipo01.forms.salones
                     MessageBox.Show("Se ha agregado exitosamente un nuevo salon", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+                    //CONTROL BICORA
                     ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "crear salon.");
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Salon.");
                     Txt_nombre.Text = "";
                     Cbo_edificio.Text = "";
                     Txt_capacidad.Text = "";
@@ -113,7 +114,7 @@ namespace prototipo01.forms.salones
 
         private void Txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloLetras(e);
+         //   Clases.Validacion.SoloLetras(e);
         }
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -127,6 +128,11 @@ namespace prototipo01.forms.salones
         private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

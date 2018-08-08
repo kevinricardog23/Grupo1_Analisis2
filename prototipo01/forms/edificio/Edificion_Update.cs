@@ -125,12 +125,9 @@ namespace prototipo01
 
                 controladorEdificios.actualizarEdificio(reference, nombre, ubicacion);
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //CONTROL BICORA
+                //Control bitacora
                 ControladorBitacora controladorBitacora = new ControladorBitacora();
-                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Edificio.");
-
-
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Edificio");
                 textBox1.Text = "";
                 textBox2.Text = "";
             }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.catedraticos
 {
@@ -90,6 +91,9 @@ namespace prototipo01.forms.catedraticos
                     textBox5.Text = "";
                     textBox6.Text = "";
                     textBox7.Text = "";
+                    //CONTROL BICORA
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Catedratico.");
                 }
                 catch (Exception ex)
                 {

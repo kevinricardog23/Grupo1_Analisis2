@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 
 namespace prototipo01
 {
@@ -135,7 +136,11 @@ namespace prototipo01
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Txt_Nombre.Text = "";
                 Text_Estado.Text = "";
-            }catch (Exception ex)
+                    //CONTROL BICORA
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Seccion.");
+                }
+                catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

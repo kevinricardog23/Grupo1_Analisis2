@@ -28,10 +28,10 @@ namespace prototipo01.controladores
                                      correo_alumno = n.correo_alumno,
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno,
-                                    
                                      CARRERA_id_carrera = n.CARRERA_id_carrera,
                                      FACULTAD_id_facultad = n.FACULTAD_id_facultad,
-                                      estado_alumno = n.estado_alumno
+                                      estado_alumno = n.estado_alumno,
+                                   
 
                                  }).ToList();
 
@@ -162,7 +162,7 @@ namespace prototipo01.controladores
 
 
 
-      /* public alumno buscarEstudianteCarnet(String carnet)
+      public alumno buscarEstudianteCarnet(String carnet)
         {
             try
             {
@@ -184,7 +184,7 @@ namespace prototipo01.controladores
             }
         }
         
-       */
+       
 
 
 

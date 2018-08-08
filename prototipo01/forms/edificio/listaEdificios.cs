@@ -169,11 +169,13 @@ namespace prototipo01
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 controladorEdificios.eliminarEdificio(ID_reference);
-                refreshDataSource();
-
                 //CONTROL BICORA
                 ControladorBitacora controladorBitacora = new ControladorBitacora();
                 controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Edificio.");
+                refreshDataSource();
+
+                //CONTROL BICORA
+                
             }
 
 

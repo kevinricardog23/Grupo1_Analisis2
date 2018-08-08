@@ -83,6 +83,9 @@ namespace prototipo01
             {
                 controladorLaboratorio.eliminarLaboratorio(ID_reference);
                 refreshDataSource();
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Laboratorio.");
             }
         }
 
@@ -96,7 +99,7 @@ namespace prototipo01
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                MessageBox.Show("Debe ingrear informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar informacion a buscar", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
