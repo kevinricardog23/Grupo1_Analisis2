@@ -107,7 +107,7 @@ namespace prototipo01.forms.salones
 
         private void Txt_capacidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Clases.Validacion.SoloNumeros(e);
+        //    Clases.Validacion.SoloNumeros(e);
         }
 
         private void Txt_capacidad_TextChanged(object sender, EventArgs e)
@@ -118,6 +118,11 @@ namespace prototipo01.forms.salones
         private void Cbo_edificio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
+        }
+
+        private void Tp_editar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
