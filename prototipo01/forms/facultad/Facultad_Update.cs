@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.Dto;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 
 
 namespace prototipo01.forms.facultad
@@ -96,6 +97,9 @@ namespace prototipo01.forms.facultad
                 {
                     updateFacultad();
                     MessageBox.Show("Se ha modificado exitosamente la facultad", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Control bitacora
+                     ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar facultad");
                     Txt_nombre.Text = "";
                     textBox1.Text = "";
                     textBox2.Text = "";
