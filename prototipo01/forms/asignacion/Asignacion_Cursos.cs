@@ -34,7 +34,7 @@ namespace prototipo01.forms.asignacion
         {
             this.dataGridView1.DataSource = null;
             this.dataGridView1.Rows.Clear();
-            cursosDataSource = controladorCursos.listaCursos();
+            cursosDataSource = controladorCursos.listaCursosPorAlumno(alumno.dpi_alumno);
             dataGridView1.DataSource = cursosDataSource;
 
         }

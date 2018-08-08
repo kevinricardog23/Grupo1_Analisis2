@@ -47,43 +47,40 @@ namespace prototipo01.controladores
 
         }
 
-        public BindingList<cursosDto> listaCursosPorAlumno()
+
+
+        public BindingList<cursosDto> listaCursosPorAlumno(int dpi)
         {
 
-            //try
-            //{
-            //    using (ModelAsignacion db = new ModelAsignacion())
-            //    {
-            //        var Query = (from n in db.curso
-            //                     select new cursosDto
-            //                     {
-            //                         id_curso = n.id_curso,
-            //                         nombre_curso = n.nombre_curso,
-            //                         PENSUM_id_pensum = n.PENSUM_id_pensum,
-            //                         semestre_curso = n.semestre_curso,
-            //                         creditos = n.creditos
-            //                     }).ToList();
+            using (ModelAsignacion db = new ModelAsignacion())
+            {
+                var queryCursos = (from curso_est in db.curso_estudiante
+                                   from seccion_cu in db.seccion_curso
+                                   from cursoObj in db.curso
+                                   where (curso_est.ALUMNO_dpi_alumno.Equals(dpi) && seccion_cu.curso_id.Equals(curso_est.CURSO_id_curso) && cursoObj.id_curso.Equals(seccion_cu.curso_id))
 
-            //        BindingList<cursosDto> result = new BindingList<cursosDto>(Query);
-
-            //        return result;
-            //    }
-
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
+                                   select new cursosDto
+                                   {
+                                       id_curso = cursoObj.id_curso,
+                                       nombre_curso = cursoObj.nombre_curso,
+                                       PENSUM_id_pensum = cursoObj.PENSUM_id_pensum,
+                                       semestre_curso = cursoObj.semestre_curso,
+                                       creditos = cursoObj.creditos
+                                   }).ToList();
 
 
 
-            //using (ModelAsignacion db = new ModelAsignacion())
-            //{
-            //    var studentList = db.curso.Where(s => s. == "Bill").ToList();
-            //}
 
-            return null;
+                return new BindingList<cursosDto>(queryCursos);
+
+            }
+
+
         }
+
+
+
+
 
 
         //Metodo para guardar un nuevo curso
