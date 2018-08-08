@@ -49,11 +49,11 @@
             // 
             this.CRUD.Controls.Add(this.Tp_editar);
             this.CRUD.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CRUD.Location = new System.Drawing.Point(64, 180);
-            this.CRUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CRUD.Location = new System.Drawing.Point(48, 146);
+            this.CRUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CRUD.Name = "CRUD";
             this.CRUD.SelectedIndex = 0;
-            this.CRUD.Size = new System.Drawing.Size(1160, 509);
+            this.CRUD.Size = new System.Drawing.Size(870, 414);
             this.CRUD.TabIndex = 7;
             // 
             // Tp_editar
@@ -65,23 +65,24 @@
             this.Tp_editar.Controls.Add(this.Btn_editar);
             this.Tp_editar.Controls.Add(this.label4);
             this.Tp_editar.Controls.Add(this.label2);
-            this.Tp_editar.Location = new System.Drawing.Point(4, 30);
-            this.Tp_editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tp_editar.Location = new System.Drawing.Point(4, 28);
+            this.Tp_editar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tp_editar.Name = "Tp_editar";
-            this.Tp_editar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tp_editar.Size = new System.Drawing.Size(1152, 475);
+            this.Tp_editar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tp_editar.Size = new System.Drawing.Size(862, 382);
             this.Tp_editar.TabIndex = 0;
             this.Tp_editar.UseVisualStyleBackColor = true;
+            this.Tp_editar.Click += new System.EventHandler(this.Tp_editar_Click);
             // 
             // Txt_nombre
             // 
             this.Txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_nombre.Location = new System.Drawing.Point(425, 109);
-            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_nombre.Location = new System.Drawing.Point(319, 89);
+            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_nombre.MaxLength = 30;
             this.Txt_nombre.Multiline = true;
             this.Txt_nombre.Name = "Txt_nombre";
-            this.Txt_nombre.Size = new System.Drawing.Size(421, 34);
+            this.Txt_nombre.Size = new System.Drawing.Size(317, 28);
             this.Txt_nombre.TabIndex = 37;
             // 
             // Lbl_nombre
@@ -89,31 +90,31 @@
             this.Lbl_nombre.AutoSize = true;
             this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_nombre.Location = new System.Drawing.Point(214, 109);
+            this.Lbl_nombre.Location = new System.Drawing.Point(160, 89);
+            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nombre.Name = "Lbl_nombre";
-            this.Lbl_nombre.Size = new System.Drawing.Size(89, 23);
+            this.Lbl_nombre.Size = new System.Drawing.Size(73, 19);
             this.Lbl_nombre.TabIndex = 36;
             this.Lbl_nombre.Text = "Nombre";
             // 
             // Cbo_edificio
             // 
             this.Cbo_edificio.FormattingEnabled = true;
-            this.Cbo_edificio.Location = new System.Drawing.Point(426, 264);
-            this.Cbo_edificio.Margin = new System.Windows.Forms.Padding(4);
+            this.Cbo_edificio.Location = new System.Drawing.Point(320, 214);
             this.Cbo_edificio.Name = "Cbo_edificio";
-            this.Cbo_edificio.Size = new System.Drawing.Size(420, 29);
+            this.Cbo_edificio.Size = new System.Drawing.Size(316, 27);
             this.Cbo_edificio.TabIndex = 35;
             this.Cbo_edificio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbo_edificio_KeyPress);
             // 
             // Txt_capacidad
             // 
             this.Txt_capacidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_capacidad.Location = new System.Drawing.Point(425, 185);
-            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_capacidad.Location = new System.Drawing.Point(319, 150);
+            this.Txt_capacidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_capacidad.MaxLength = 30;
             this.Txt_capacidad.Multiline = true;
             this.Txt_capacidad.Name = "Txt_capacidad";
-            this.Txt_capacidad.Size = new System.Drawing.Size(421, 34);
+            this.Txt_capacidad.Size = new System.Drawing.Size(317, 28);
             this.Txt_capacidad.TabIndex = 34;
             this.Txt_capacidad.TextChanged += new System.EventHandler(this.Txt_capacidad_TextChanged);
             this.Txt_capacidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_capacidad_KeyPress);
@@ -127,10 +128,10 @@
             this.Btn_editar.ForeColor = System.Drawing.Color.White;
             this.Btn_editar.Image = global::prototipo01.Properties.Resources.iconmonstr_synchronization_19_24;
             this.Btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_editar.Location = new System.Drawing.Point(545, 380);
-            this.Btn_editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_editar.Location = new System.Drawing.Point(409, 309);
+            this.Btn_editar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_editar.Name = "Btn_editar";
-            this.Btn_editar.Size = new System.Drawing.Size(193, 50);
+            this.Btn_editar.Size = new System.Drawing.Size(145, 41);
             this.Btn_editar.TabIndex = 17;
             this.Btn_editar.Text = "Editar";
             this.Btn_editar.UseVisualStyleBackColor = false;
@@ -141,9 +142,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(222, 273);
+            this.label4.Location = new System.Drawing.Point(166, 222);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 23);
+            this.label4.Size = new System.Drawing.Size(64, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Edificio";
             // 
@@ -152,9 +154,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(214, 196);
+            this.label2.Location = new System.Drawing.Point(160, 159);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 23);
+            this.label2.Size = new System.Drawing.Size(112, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Capaciadad";
             // 
@@ -163,10 +166,10 @@
             this.Pnl_titulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pnl_titulo.Controls.Add(this.btn_cerrar);
             this.Pnl_titulo.Controls.Add(this.Lbl_titulo);
-            this.Pnl_titulo.Location = new System.Drawing.Point(64, 97);
-            this.Pnl_titulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pnl_titulo.Location = new System.Drawing.Point(48, 79);
+            this.Pnl_titulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_titulo.Name = "Pnl_titulo";
-            this.Pnl_titulo.Size = new System.Drawing.Size(1160, 62);
+            this.Pnl_titulo.Size = new System.Drawing.Size(870, 50);
             this.Pnl_titulo.TabIndex = 6;
             // 
             // btn_cerrar
@@ -177,10 +180,9 @@
             this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(1093, 0);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cerrar.Location = new System.Drawing.Point(820, 0);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(67, 62);
+            this.btn_cerrar.Size = new System.Drawing.Size(50, 50);
             this.btn_cerrar.TabIndex = 9;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -190,22 +192,22 @@
             this.Lbl_titulo.AutoSize = true;
             this.Lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_titulo.Location = new System.Drawing.Point(20, 18);
+            this.Lbl_titulo.Location = new System.Drawing.Point(15, 15);
+            this.Lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_titulo.Name = "Lbl_titulo";
-            this.Lbl_titulo.Size = new System.Drawing.Size(160, 23);
+            this.Lbl_titulo.Size = new System.Drawing.Size(127, 18);
             this.Lbl_titulo.TabIndex = 0;
             this.Lbl_titulo.Text = "Actualizar Salon\r\n";
             // 
             // Salones_Update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1393, 700);
+            this.ClientSize = new System.Drawing.Size(975, 569);
             this.Controls.Add(this.CRUD);
             this.Controls.Add(this.Pnl_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Salones_Update";
             this.Load += new System.EventHandler(this.Salones_Update_Load);
             this.CRUD.ResumeLayout(false);
