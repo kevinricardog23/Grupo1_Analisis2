@@ -87,6 +87,7 @@
     <Compile Include="controladores\ControladorEdificios.cs" />
     <Compile Include="controladores\ControladorEstudiante.cs" />
     <Compile Include="controladores\ControladorFacultades.cs" />
+    <Compile Include="controladores\ControladorHorarios.cs" />
     <Compile Include="controladores\ControladorPensum.cs" />
     <Compile Include="controladores\ControladorLaboratorio.cs" />
     <Compile Include="controladores\ControladorSalones.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Dto\edificioDto.cs" />
     <Compile Include="Dto\estudianteDto.cs" />
     <Compile Include="Dto\facultadesDto.cs" />
+    <Compile Include="Dto\horariosDto.cs" />
     <Compile Include="Dto\laboratorioDto.cs" />
     <Compile Include="Dto\PensumDto.cs" />
     <Compile Include="Dto\salonDto.cs" />
@@ -247,6 +249,18 @@
     </Compile>
     <Compile Include="forms\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\horarios\Horarios_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\horarios\Horarios_create.Designer.cs">
+      <DependentUpon>Horarios_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\horarios\Lista_Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\horarios\Lista_Horarios.Designer.cs">
+      <DependentUpon>Lista_Horarios.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\laboratorio\Laboratorio_Create.cs">
       <SubType>Form</SubType>
@@ -461,6 +475,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\horarios\Horarios_create.resx">
+      <DependentUpon>Horarios_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\horarios\Lista_Horarios.resx">
+      <DependentUpon>Lista_Horarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\laboratorio\Laboratorio_Create.resx">
       <DependentUpon>Laboratorio_Create.cs</DependentUpon>

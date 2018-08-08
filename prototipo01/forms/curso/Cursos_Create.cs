@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.curso
 {
@@ -80,6 +81,9 @@ namespace prototipo01.forms.curso
             {
                 createCursos();
                 MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Creacion de Cursos");
                 txtBox_nombre.Text = "";
                 txtBox_Creditos.Text = "";
                 txtBox_semestre.Text = "";
