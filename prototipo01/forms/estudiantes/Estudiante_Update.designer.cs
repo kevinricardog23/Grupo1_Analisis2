@@ -54,8 +54,6 @@ namespace prototipo01.forms.estudiante
             this.Pnl_panel = new System.Windows.Forms.Panel();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Txt_carnet = new System.Windows.Forms.TextBox();
-            this.Lbl_carnet = new System.Windows.Forms.Label();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pnl_panel.SuspendLayout();
@@ -74,8 +72,6 @@ namespace prototipo01.forms.estudiante
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Lbl_carnet);
-            this.tabPage1.Controls.Add(this.Txt_carnet);
             this.tabPage1.Controls.Add(this.cbo_carrera);
             this.tabPage1.Controls.Add(this.cbo_facultad);
             this.tabPage1.Controls.Add(this.label3);
@@ -114,7 +110,7 @@ namespace prototipo01.forms.estudiante
             // cbo_facultad
             // 
             this.cbo_facultad.FormattingEnabled = true;
-            this.cbo_facultad.Location = new System.Drawing.Point(113, 260);
+            this.cbo_facultad.Location = new System.Drawing.Point(538, 313);
             this.cbo_facultad.Name = "cbo_facultad";
             this.cbo_facultad.Size = new System.Drawing.Size(317, 27);
             this.cbo_facultad.TabIndex = 41;
@@ -136,7 +132,7 @@ namespace prototipo01.forms.estudiante
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(26, 262);
+            this.label2.Location = new System.Drawing.Point(451, 315);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
@@ -146,7 +142,7 @@ namespace prototipo01.forms.estudiante
             // Txt_estado
             // 
             this.Txt_estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_estado.Location = new System.Drawing.Point(538, 310);
+            this.Txt_estado.Location = new System.Drawing.Point(113, 260);
             this.Txt_estado.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_estado.MaxLength = 15;
             this.Txt_estado.Multiline = true;
@@ -159,7 +155,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_Estado.Location = new System.Drawing.Point(453, 312);
+            this.Lbl_Estado.Location = new System.Drawing.Point(28, 262);
             this.Lbl_Estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Estado.Name = "Lbl_Estado";
             this.Lbl_Estado.Size = new System.Drawing.Size(59, 19);
@@ -258,7 +254,7 @@ namespace prototipo01.forms.estudiante
             // Txt_edad
             // 
             this.Txt_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_edad.Location = new System.Drawing.Point(113, 310);
+            this.Txt_edad.Location = new System.Drawing.Point(113, 150);
             this.Txt_edad.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_edad.MaxLength = 45;
             this.Txt_edad.Multiline = true;
@@ -271,7 +267,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_edad.AutoSize = true;
             this.Lbl_edad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_edad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_edad.Location = new System.Drawing.Point(30, 312);
+            this.Lbl_edad.Location = new System.Drawing.Point(35, 152);
             this.Lbl_edad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_edad.Name = "Lbl_edad";
             this.Lbl_edad.Size = new System.Drawing.Size(50, 19);
@@ -281,7 +277,7 @@ namespace prototipo01.forms.estudiante
             // Txt_Apellidos
             // 
             this.Txt_Apellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Apellidos.Location = new System.Drawing.Point(113, 150);
+            this.Txt_Apellidos.Location = new System.Drawing.Point(538, 90);
             this.Txt_Apellidos.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Apellidos.MaxLength = 30;
             this.Txt_Apellidos.Multiline = true;
@@ -295,7 +291,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_apellido.AutoSize = true;
             this.Lbl_apellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_apellido.Location = new System.Drawing.Point(23, 152);
+            this.Lbl_apellido.Location = new System.Drawing.Point(453, 92);
             this.Lbl_apellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_apellido.Name = "Lbl_apellido";
             this.Lbl_apellido.Size = new System.Drawing.Size(81, 19);
@@ -305,7 +301,7 @@ namespace prototipo01.forms.estudiante
             // Txt_Nombres
             // 
             this.Txt_Nombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Nombres.Location = new System.Drawing.Point(538, 88);
+            this.Txt_Nombres.Location = new System.Drawing.Point(113, 90);
             this.Txt_Nombres.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Nombres.MaxLength = 30;
             this.Txt_Nombres.Multiline = true;
@@ -319,7 +315,7 @@ namespace prototipo01.forms.estudiante
             this.Lbl_nombre.AutoSize = true;
             this.Lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_nombre.Location = new System.Drawing.Point(442, 90);
+            this.Lbl_nombre.Location = new System.Drawing.Point(23, 92);
             this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nombre.Name = "Lbl_nombre";
             this.Lbl_nombre.Size = new System.Drawing.Size(79, 19);
@@ -363,29 +359,6 @@ namespace prototipo01.forms.estudiante
             this.label1.Size = new System.Drawing.Size(160, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Actualizar Estudiante";
-            // 
-            // Txt_carnet
-            // 
-            this.Txt_carnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_carnet.Location = new System.Drawing.Point(113, 90);
-            this.Txt_carnet.Margin = new System.Windows.Forms.Padding(2);
-            this.Txt_carnet.MaxLength = 30;
-            this.Txt_carnet.Multiline = true;
-            this.Txt_carnet.Name = "Txt_carnet";
-            this.Txt_carnet.Size = new System.Drawing.Size(317, 28);
-            this.Txt_carnet.TabIndex = 43;
-            // 
-            // Lbl_carnet
-            // 
-            this.Lbl_carnet.AutoSize = true;
-            this.Lbl_carnet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_carnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Lbl_carnet.Location = new System.Drawing.Point(23, 92);
-            this.Lbl_carnet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_carnet.Name = "Lbl_carnet";
-            this.Lbl_carnet.Size = new System.Drawing.Size(61, 19);
-            this.Lbl_carnet.TabIndex = 44;
-            this.Lbl_carnet.Text = "Carnet";
             // 
             // Estudiante_Update
             // 
@@ -438,7 +411,5 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbo_carrera;
         private System.Windows.Forms.ComboBox cbo_facultad;
-        private System.Windows.Forms.Label Lbl_carnet;
-        private System.Windows.Forms.TextBox Txt_carnet;
     }
 }

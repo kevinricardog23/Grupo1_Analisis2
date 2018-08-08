@@ -28,8 +28,10 @@ namespace prototipo01.controladores
                                      correo_alumno = n.correo_alumno,
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno,
-                                     estado_alumno = n.estado_alumno,
-                                     carnet_alumno = n.carnet
+                                    
+                                     CARRERA_id_carrera = n.CARRERA_id_carrera,
+                                     FACULTAD_id_facultad = n.FACULTAD_id_facultad,
+                                      estado_alumno = n.estado_alumno
 
                                  }).ToList();
 
@@ -42,27 +44,37 @@ namespace prototipo01.controladores
                 throw;
             }
         }
-
-        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera, String carnet_alumno)
+        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno)
         {
-            ModelAsignacion db = new ModelAsignacion();
 
+            try
+            {
 
-            alumno alumnoNuevo = new alumno();
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.alumno
+                        .Where(s => s.dpi_alumno == dpi_alumno)
+                        .FirstOrDefault<alumno>();
 
-            alumnoNuevo.dpi_alumno = dpi_alumno;
-            alumnoNuevo.nombre_alumno = nombre_alumno;
-            alumnoNuevo.apellido_alumno = apellido_alumno;
-            alumnoNuevo.telefono_alumno = telefono_alumno;
-            alumnoNuevo.correo_alumno = correo_alumno;
-            alumnoNuevo.edad_alumno = edad_alumno;
-            alumnoNuevo.direccion_alumno = direccion_alumno;
-            alumnoNuevo.estado_alumno = estado_alumno;
-            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
-            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
-            alumnoNuevo.carnet_alumno = carnet_alumno;
-            db.alumno.Add(alumnoNuevo);
-            db.SaveChanges();
+                    std.nombre_alumno = nombre_alumno;
+                    std.apellido_alumno = apellido_alumno;
+                    std.telefono_alumno = telefono_alumno;
+                    std.correo_alumno = correo_alumno;
+                    std.edad_alumno = edad_alumno;
+                    std.direccion_alumno = direccion_alumno;
+                    
+                    std.CARRERA_id_carrera = CARRERA_id_carrera;
+                    std.FACULTAD_id_facultad = FCULTAD_id_facultad;
+                    std.estado_alumno = estado_alumno;
+                    db.SaveChanges();
+
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
         }
         public alumno buscarEstudiante(long dpi_alumno)
@@ -83,12 +95,35 @@ namespace prototipo01.controladores
             }
             catch (Exception)
             {
-                return null;
+                throw;
             }
+        }
+        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int CARRERA_id_carrera, int FACULTAD_id_facultad)
+        {
+            ModelAsignacion db = new ModelAsignacion();
+
+
+            alumno alumnoNuevo = new alumno();
+
+            alumnoNuevo.dpi_alumno = dpi_alumno;
+            alumnoNuevo.nombre_alumno = nombre_alumno;
+            alumnoNuevo.apellido_alumno = apellido_alumno;
+            alumnoNuevo.telefono_alumno = telefono_alumno;
+            alumnoNuevo.correo_alumno = correo_alumno;
+            alumnoNuevo.edad_alumno = edad_alumno;
+            alumnoNuevo.direccion_alumno = direccion_alumno;
+            alumnoNuevo.estado_alumno = estado_alumno;
+            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
+            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
+
+            db.alumno.Add(alumnoNuevo);
+            db.SaveChanges();
+
         }
 
 
-        public alumno buscarEstudianteCarnet(String carnet)
+
+      /* public alumno buscarEstudianteCarnet(String carnet)
         {
             try
             {
@@ -106,43 +141,11 @@ namespace prototipo01.controladores
             }
             catch (Exception)
             {
-                return null;
+               throw;
             }
         }
         
-        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno,int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno, string carnet_alumno)
-        {
-
-            try
-            {
-
-                using (ModelAsignacion db = new ModelAsignacion())
-                {
-                    var std = db.alumno
-                        .Where(s => s.dpi_alumno == dpi_alumno)
-                        .FirstOrDefault<alumno>();
-
-                    std.nombre_alumno = nombre_alumno;
-                    std.apellido_alumno = apellido_alumno;
-                    std.telefono_alumno = telefono_alumno;
-                    std.correo_alumno = correo_alumno;
-                    std.edad_alumno = edad_alumno;
-                    std.direccion_alumno = direccion_alumno;
-                    std.estado_alumno = estado_alumno;
-                    std.CARRERA_id_carrera = CARRERA_id_carrera;
-                    std.FACULTAD_id_facultad = FCULTAD_id_facultad;
-                    std.carnet_alumno = carnet_alumno;
-                    db.SaveChanges();
-
-                }
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-        }
+       */
 
 
 
@@ -281,7 +284,9 @@ namespace prototipo01.controladores
                                      correo_alumno = n.correo_alumno,
                                      edad_alumno = n.edad_alumno,
                                      direccion_alumno = n.direccion_alumno,
-                                     carnet_alumno = n.carnet_alumno
+                                     estado_alumno = n.estado_alumno,
+                                     CARRERA_id_carrera = n.CARRERA_id_carrera,
+                                     FACULTAD_id_facultad = n.FACULTAD_id_facultad
 
 
                                  }).ToList();

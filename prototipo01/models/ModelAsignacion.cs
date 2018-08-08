@@ -58,9 +58,9 @@ namespace prototipo01.models
                 .Property(e => e.estado_alumno)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<alumno>()
+            /*modelBuilder.Entity<alumno>()
            .Property(e => e.carnet)
-           .IsUnicode(false);
+           .IsUnicode(false);*/
 
             modelBuilder.Entity<alumno>()
                 .HasMany(e => e.curso_estudiante)

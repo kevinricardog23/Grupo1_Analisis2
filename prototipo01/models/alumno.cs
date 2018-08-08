@@ -9,7 +9,7 @@ namespace prototipo01.models
     [Table("mydb.alumno")]
     public partial class alumno
     {
-        internal string carnet_alumno;
+        
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public alumno()
@@ -40,8 +40,8 @@ namespace prototipo01.models
 
         public int edad_alumno { get; set; }
 
-        [StringLength(45)]
-        public string carnet { get; set; }
+        /*[StringLength(45)]
+        public string carnet { get; set; }*/
 
         [StringLength(45)]
         public string direccion_alumno { get; set; }

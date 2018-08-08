@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
+
 namespace prototipo01.forms.estudiante
 {
     public partial class Estudiante_Create : Form
@@ -44,7 +46,7 @@ namespace prototipo01.forms.estudiante
         void createAlumno()
         {
 
-            string nombre, apellido,correo, direccion, telefono, estado, carnet;
+            string nombre, apellido,correo, direccion, telefono, estado;
             int edad, dpi, carrera, facultad;
 
             
@@ -58,7 +60,7 @@ namespace prototipo01.forms.estudiante
             direccion = Txt_direccion.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
             estado = Txt_estado.Text.ToString();
-            carnet = Txt_carnet.Text.ToString();
+            
 
 
 
@@ -67,7 +69,7 @@ namespace prototipo01.forms.estudiante
 
 
 
-            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera, carnet);
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera);
         }
 
 
@@ -135,11 +137,7 @@ namespace prototipo01.forms.estudiante
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrEmpty(Txt_carnet.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
             /*codigo kevin*/
             else
             {
@@ -147,6 +145,8 @@ namespace prototipo01.forms.estudiante
                 {
                     createAlumno();
                     MessageBox.Show("Se ha agregado exitosamente un nuevo Estudiante", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Estudiante.");
                     Txt_Nombre.Text = "";
                     Txt_apellido.Text = "";
                     Txt_edad.Text = "";
@@ -157,7 +157,11 @@ namespace prototipo01.forms.estudiante
                     Txt_estado.Text = "";
                     cbo_estudiante.Text = "";
                     cbo_facultad.Text = "";
-                    Txt_carnet.Text = "";
+                    
+                   
+
+                   
+
                 }
                 catch (Exception ex)
                 {
