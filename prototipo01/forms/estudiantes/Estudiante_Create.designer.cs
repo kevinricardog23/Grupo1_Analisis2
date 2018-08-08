@@ -162,7 +162,7 @@ namespace prototipo01.forms.estudiante
             // Txt_dpi
             // 
             this.Txt_dpi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_dpi.Location = new System.Drawing.Point(113, 25);
+            this.Txt_dpi.Location = new System.Drawing.Point(113, 26);
             this.Txt_dpi.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_dpi.MaxLength = 30;
             this.Txt_dpi.Multiline = true;
