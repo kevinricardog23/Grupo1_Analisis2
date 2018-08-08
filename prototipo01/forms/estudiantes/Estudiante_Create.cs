@@ -145,8 +145,10 @@ namespace prototipo01.forms.estudiante
                 {
                     createAlumno();
                     MessageBox.Show("Se ha agregado exitosamente un nuevo Estudiante", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Estudiante.");
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Creacion Estudiante.");
+
                     Txt_Nombre.Text = "";
                     Txt_apellido.Text = "";
                     Txt_edad.Text = "";

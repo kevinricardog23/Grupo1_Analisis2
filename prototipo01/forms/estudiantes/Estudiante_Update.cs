@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using prototipo01.Dto;
 using prototipo01.models;
 using prototipo01.controladores;
+using prototipo01.Clases;
 namespace prototipo01.forms.estudiante
 {
     public partial class Estudiante_Update : Form
@@ -102,6 +103,8 @@ namespace prototipo01.forms.estudiante
                 {
                     updateEstudiante();
                     MessageBox.Show("Se ha modificado exitosamente un nuevo Estudiante", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar Estudiante.");
                     Txt_Nombres.Text = "";
                     Txt_Apellidos.Text = "";
                     Txt_Telefono.Text = "";
