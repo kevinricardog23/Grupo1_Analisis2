@@ -9,6 +9,8 @@ namespace prototipo01.models
     [Table("mydb.alumno")]
     public partial class alumno
     {
+        internal string carnet_alumno;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public alumno()
         {
