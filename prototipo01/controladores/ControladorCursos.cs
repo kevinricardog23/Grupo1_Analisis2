@@ -57,7 +57,7 @@ namespace prototipo01.controladores
                 var queryCursos = (from curso_est in db.curso_estudiante
                                    from seccion_cu in db.seccion_curso
                                    from cursoObj in db.curso
-                                   where (curso_est.ALUMNO_dpi_alumno.Equals(dpi) && seccion_cu.curso_id.Equals(curso_est.CURSO_id_curso) && cursoObj.id_curso.Equals(seccion_cu.curso_id))
+                                   where (curso_est.ALUMNO_dpi_alumno == dpi) && seccion_cu.curso_id == (curso_est.CURSO_id_curso) && cursoObj.id_curso==(seccion_cu.curso_id)
 
                                    select new cursosDto
                                    {
@@ -69,6 +69,9 @@ namespace prototipo01.controladores
                                    }).ToList();
 
 
+                //
+
+    
 
 
                 return new BindingList<cursosDto>(queryCursos);
