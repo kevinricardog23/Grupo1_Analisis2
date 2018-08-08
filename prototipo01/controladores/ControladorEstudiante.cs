@@ -123,7 +123,7 @@ namespace prototipo01.controladores
 
 
 
-      /* public alumno buscarEstudianteCarnet(String carnet)
+      public alumno buscarEstudianteCarnet(String carnet)
         {
             try
             {
@@ -145,7 +145,7 @@ namespace prototipo01.controladores
             }
         }
         
-       */
+       
 
 
 
