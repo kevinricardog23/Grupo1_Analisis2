@@ -57,6 +57,9 @@ namespace prototipo01.forms.carrera
             button2.Enabled = privilegios.bandera;
             button3.Enabled = privilegios.bandera;
             setData();
+
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -99,6 +102,8 @@ namespace prototipo01.forms.carrera
                 controladorCarrera.eliminarCarrera(ID_reference);
                 refreshDataSource();
             }
+            ControladorBitacora controladorBitacora = new ControladorBitacora();
+            controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminar Carrera.");
         }
 
         private void Dgv_carreras_SelectionChanged(object sender, EventArgs e)
@@ -133,3 +138,5 @@ namespace prototipo01.forms.carrera
         }
     }
 }
+
+//FREDY FLORES

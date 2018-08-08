@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
+using prototipo01.Clases;
 using prototipo01.models;
 
 namespace prototipo01.forms.carrera
@@ -78,9 +79,11 @@ namespace prototipo01.forms.carrera
                     crearCarrera();
                     MessageBox.Show("Se ha agregado exitosamente una nueva carrera", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    comboBox1.Text = "";
+                    ControladorBitacora controladorBitacora = new ControladorBitacora();
+                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Carrera.");
                     Txt_nombre.Text = "";
-                    Txt_jornada.Text= "";
+                    Txt_jornada.Text = "";
+                    dataFacultades();
                 }
                 catch (Exception ex)
                 {
@@ -125,3 +128,4 @@ namespace prototipo01.forms.carrera
         }
     }
 }
+//FREDY FLORES
