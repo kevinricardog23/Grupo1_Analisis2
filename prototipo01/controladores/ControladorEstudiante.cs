@@ -31,6 +31,7 @@ namespace prototipo01.controladores
                                      CARRERA_id_carrera = n.CARRERA_id_carrera,
                                      FACULTAD_id_facultad = n.FACULTAD_id_facultad,
                                       estado_alumno = n.estado_alumno,
+                                      carnet_alumno = n.carnet
                                    
 
                                  }).ToList();
