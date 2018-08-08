@@ -137,6 +137,9 @@ namespace prototipo01.forms.curso
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 controladorCursos.eliminarCursos(ID_reference);
+                //CONTROL BICORA
+                ControladorBitacora controladorBitacora = new ControladorBitacora();
+                controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Eliminacion de Cursos");
                 refreshDataSource();
             }
         }

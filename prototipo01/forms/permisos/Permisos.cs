@@ -80,7 +80,6 @@ namespace prototipo01.forms.permisos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openForm(new bitacoraL());
         }
 
         private void Permisos_Load(object sender, EventArgs e)

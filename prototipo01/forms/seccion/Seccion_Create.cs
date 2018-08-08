@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.forms.horarios;
 using prototipo01.controladores;
 
 namespace prototipo01
@@ -145,6 +146,11 @@ namespace prototipo01
             dataHorario();
             dataCurso();
             dataLaboratorio();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openForm(new Lista_Horarios());
         }
     }
 }

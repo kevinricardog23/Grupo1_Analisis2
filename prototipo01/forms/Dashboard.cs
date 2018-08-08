@@ -201,5 +201,10 @@ namespace prototipo01.forms
         {
 
         }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            openForm(new bitacoraL());
+        }
     }
 }
