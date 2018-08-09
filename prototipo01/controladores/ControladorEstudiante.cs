@@ -84,7 +84,7 @@ namespace prototipo01.controladores
 
 
 
-        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno, String carnet)
+        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno, String carnet)
         {
 
             try
@@ -104,7 +104,7 @@ namespace prototipo01.controladores
                     std.direccion_alumno = direccion_alumno;
                     
                     std.CARRERA_id_carrera = CARRERA_id_carrera;
-                    std.FACULTAD_id_facultad = FCULTAD_id_facultad;
+                    std.FACULTAD_id_facultad = FACULTAD_id_facultad;
                     std.estado_alumno = estado_alumno;
                     std.carnet = carnet;
                     db.SaveChanges();

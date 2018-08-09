@@ -44,18 +44,21 @@ namespace prototipo01.forms.estudiante
             apellido = Txt_Apellidos.Text.ToString();
             telefono = Txt_Telefono.Text.ToString();
             correo = Txt_Correo.Text.ToString();
-            edad = Convert.ToInt32(Txt_edad.Text.ToString());
-            direccion = Txt_Direccion.Text.ToString();
-            estado = Txt_estado.Text.ToString();
-            carnet = Txt_carnet.Text.ToString();
             facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
             carrera = controladorEstudiantes.getIdCarrera(cbo_carrera.Text.ToString());
+            direccion = Txt_Direccion.Text.ToString();
+            carnet = Txt_carnet.Text.ToString();
+            edad = Convert.ToInt32(Txt_edad.Text.ToString());
+            estado = Txt_estado.Text.ToString();
+          
+           
+           
            
            
            
 
 
-            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado, carnet);
+            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo,edad, direccion, facultad, carrera, estado, carnet);
             MessageBox.Show("Se ha Actualizado exitosamente el estudiante", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
