@@ -46,7 +46,7 @@ namespace prototipo01.forms.estudiante
         void createAlumno()
         {
 
-            string nombre, apellido,correo, direccion, telefono, estado;
+            string nombre, apellido,correo, direccion, telefono, estado, carnet;
             int edad, dpi, carrera, facultad;
 
             
@@ -58,6 +58,7 @@ namespace prototipo01.forms.estudiante
             facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
             carrera = controladorEstudiantes.getIdCarrera(cbo_estudiante.Text.ToString());
             direccion = Txt_direccion.Text.ToString();
+            carnet = Txt_carnet.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
             estado = Txt_estado.Text.ToString();
             
@@ -69,7 +70,7 @@ namespace prototipo01.forms.estudiante
 
 
 
-            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera);
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera, carnet);
         }
 
 
@@ -157,6 +158,7 @@ namespace prototipo01.forms.estudiante
                     Txt_telefono.Text = "";
                     Txt_dpi.Text = "";
                     Txt_estado.Text = "";
+                    Txt_carnet.Text = "";
                     cbo_estudiante.Text = "";
                     cbo_facultad.Text = "";                  
                    

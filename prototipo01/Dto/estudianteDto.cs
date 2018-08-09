@@ -23,7 +23,7 @@ namespace prototipo01.Dto
         public string correo_alumno { get; set; }
 
         public int FACULTAD_id_facultad { get; set; }
-        public string carnet_alumno { get; set; }
+       
 
         public int CARRERA_id_carrera { get; set; }
 
@@ -32,5 +32,6 @@ namespace prototipo01.Dto
         public string direccion_alumno { get; set; }
 
         public string estado_alumno { get; set; }
+        public string carnet { get; set; }
     }
 }

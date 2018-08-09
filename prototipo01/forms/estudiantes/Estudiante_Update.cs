@@ -37,7 +37,7 @@ namespace prototipo01.forms.estudiante
         }
         void updateEstudiante()
         {
-            string nombre, apellido, telefono, correo, direccion, estado;
+            string nombre, apellido, telefono, correo, direccion, estado, carnet;
             int edad, carrera, facultad;
 
             nombre = Txt_Nombres.Text.ToString();
@@ -47,6 +47,7 @@ namespace prototipo01.forms.estudiante
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
             direccion = Txt_Direccion.Text.ToString();
             estado = Txt_estado.Text.ToString();
+            carnet = Txt_carnet.Text.ToString();
             facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
             carrera = controladorEstudiantes.getIdCarrera(cbo_carrera.Text.ToString());
            
@@ -54,7 +55,7 @@ namespace prototipo01.forms.estudiante
            
 
 
-            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado);
+            controladorEstudiantes.actualizarEstudiante(reference, nombre, apellido, telefono, correo, edad, direccion,carrera, facultad, estado, carnet);
             MessageBox.Show("Se ha Actualizado exitosamente el estudiante", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -69,13 +70,14 @@ namespace prototipo01.forms.estudiante
             Txt_edad.Text = Model.edad_alumno.ToString();
             Txt_Direccion.Text = Model.direccion_alumno.ToString();
             Txt_estado.Text = Model.estado_alumno.ToString();
+            Txt_carnet.Text = Model.carnet.ToString();
            
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             openForm(new Listado_estudiante());
         }
-
+        
         private void Txt_Nombres_KeyPress(object sender, KeyPressEventArgs e)
         {
             Clases.Validacion.SoloLetras(e);
@@ -112,7 +114,7 @@ namespace prototipo01.forms.estudiante
                     Txt_edad.Text = "";
                     Txt_Direccion.Text = "";
                     Txt_estado.Text = "";
-                   
+                    Txt_carnet.Text = "";
               
                 }
                 catch (Exception ex)
@@ -148,6 +150,11 @@ namespace prototipo01.forms.estudiante
         }
 
         private void Lbl_Correo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

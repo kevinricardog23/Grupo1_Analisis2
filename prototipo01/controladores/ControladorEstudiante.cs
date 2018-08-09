@@ -31,7 +31,7 @@ namespace prototipo01.controladores
                                      CARRERA_id_carrera = n.CARRERA_id_carrera,
                                      FACULTAD_id_facultad = n.FACULTAD_id_facultad,
                                       estado_alumno = n.estado_alumno,
-                                      carnet_alumno = n.carnet
+                                      carnet = n.carnet
                                    
 
                                  }).ToList();
@@ -84,7 +84,7 @@ namespace prototipo01.controladores
 
 
 
-        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno)
+        public void actualizarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, int FCULTAD_id_facultad, int CARRERA_id_carrera, String estado_alumno, String carnet)
         {
 
             try
@@ -106,6 +106,7 @@ namespace prototipo01.controladores
                     std.CARRERA_id_carrera = CARRERA_id_carrera;
                     std.FACULTAD_id_facultad = FCULTAD_id_facultad;
                     std.estado_alumno = estado_alumno;
+                    std.carnet = carnet;
                     db.SaveChanges();
 
                 }
@@ -138,7 +139,7 @@ namespace prototipo01.controladores
                 throw;
             }
         }
-        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int CARRERA_id_carrera, int FACULTAD_id_facultad)
+        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int CARRERA_id_carrera, int FACULTAD_id_facultad, String carnet)
         {
             ModelAsignacion db = new ModelAsignacion();
 
@@ -155,7 +156,7 @@ namespace prototipo01.controladores
             alumnoNuevo.estado_alumno = estado_alumno;
             alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
             alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
-
+            alumnoNuevo.carnet = carnet;
             db.alumno.Add(alumnoNuevo);
             db.SaveChanges();
 
@@ -326,8 +327,8 @@ namespace prototipo01.controladores
                                      direccion_alumno = n.direccion_alumno,
                                      estado_alumno = n.estado_alumno,
                                      CARRERA_id_carrera = n.CARRERA_id_carrera,
-                                     FACULTAD_id_facultad = n.FACULTAD_id_facultad
-
+                                     FACULTAD_id_facultad = n.FACULTAD_id_facultad,
+                                     carnet = n.carnet
 
                                  }).ToList();
 

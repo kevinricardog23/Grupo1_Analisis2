@@ -33,6 +33,8 @@ namespace prototipo01.forms.estudiante
             this.components = new System.ComponentModel.Container();
             this.CRUD = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Txt_carnet = new System.Windows.Forms.TextBox();
+            this.Lbl_carnet = new System.Windows.Forms.Label();
             this.Txt_estado = new System.Windows.Forms.TextBox();
             this.cbo_facultad = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@ namespace prototipo01.forms.estudiante
             this.epError_Apellidos = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Correo = new System.Windows.Forms.ErrorProvider(this.components);
             this.epError_Direccion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Txt_carnet = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.CRUD.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,8 +89,8 @@ namespace prototipo01.forms.estudiante
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.Txt_carnet);
+            this.tabPage1.Controls.Add(this.Lbl_carnet);
             this.tabPage1.Controls.Add(this.Txt_estado);
             this.tabPage1.Controls.Add(this.cbo_facultad);
             this.tabPage1.Controls.Add(this.label4);
@@ -119,6 +119,29 @@ namespace prototipo01.forms.estudiante
             this.tabPage1.Size = new System.Drawing.Size(868, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Txt_carnet
+            // 
+            this.Txt_carnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_carnet.Location = new System.Drawing.Point(113, 98);
+            this.Txt_carnet.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_carnet.MaxLength = 30;
+            this.Txt_carnet.Multiline = true;
+            this.Txt_carnet.Name = "Txt_carnet";
+            this.Txt_carnet.Size = new System.Drawing.Size(317, 28);
+            this.Txt_carnet.TabIndex = 42;
+            // 
+            // Lbl_carnet
+            // 
+            this.Lbl_carnet.AutoSize = true;
+            this.Lbl_carnet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_carnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Lbl_carnet.Location = new System.Drawing.Point(15, 100);
+            this.Lbl_carnet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_carnet.Name = "Lbl_carnet";
+            this.Lbl_carnet.Size = new System.Drawing.Size(61, 19);
+            this.Lbl_carnet.TabIndex = 41;
+            this.Lbl_carnet.Text = "Carnet";
             // 
             // Txt_estado
             // 
@@ -439,29 +462,6 @@ namespace prototipo01.forms.estudiante
             // 
             this.epError_Direccion.ContainerControl = this;
             // 
-            // Txt_carnet
-            // 
-            this.Txt_carnet.AutoSize = true;
-            this.Txt_carnet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_carnet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_carnet.Location = new System.Drawing.Point(15, 100);
-            this.Txt_carnet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Txt_carnet.Name = "Txt_carnet";
-            this.Txt_carnet.Size = new System.Drawing.Size(61, 19);
-            this.Txt_carnet.TabIndex = 41;
-            this.Txt_carnet.Text = "Carnet";
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox1.Location = new System.Drawing.Point(113, 98);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 28);
-            this.textBox1.TabIndex = 42;
-            // 
             // Estudiante_Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,7 +531,7 @@ namespace prototipo01.forms.estudiante
         private System.Windows.Forms.ComboBox cbo_facultad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Txt_estado;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Txt_carnet;
+        private System.Windows.Forms.TextBox Txt_carnet;
+        private System.Windows.Forms.Label Lbl_carnet;
     }
 }
