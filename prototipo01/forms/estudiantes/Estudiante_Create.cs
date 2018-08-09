@@ -34,9 +34,9 @@ namespace prototipo01.forms.estudiante
         }
         private void Estudiante_Create_Load(object sender, EventArgs e)
         {
-            cbo_estudiante.DataSource = controladorEstudiantes.getCarreras();
-            cbo_estudiante.DisplayMember = "name";
-            cbo_estudiante.ValueMember = "nombre_carrera";
+            cbo_carrera.DataSource = controladorEstudiantes.getCarreras();
+            cbo_carrera.DisplayMember = "name";
+            cbo_carrera.ValueMember = "nombre_carrera";
            
 
             cbo_facultad.DataSource = controladorEstudiantes.getFacultades();
@@ -53,11 +53,11 @@ namespace prototipo01.forms.estudiante
             dpi = Convert.ToInt32(Txt_dpi.Text.ToString());
             nombre = Txt_Nombre.Text.ToString();
             apellido = Txt_apellido.Text.ToString();
-            telefono = Txt_telefono.Text.ToString();
+            telefono = Txt_telef.Text.ToString();
             correo = Txt_correo.Text.ToString();
             facultad = controladorEstudiantes.getIdFacultad(cbo_facultad.Text.ToString());
-            carrera = controladorEstudiantes.getIdCarrera(cbo_estudiante.Text.ToString());
-            direccion = Txt_direccion.Text.ToString();
+            carrera = controladorEstudiantes.getIdCarrera(cbo_carrera.Text.ToString());
+            direccion = Txt_dire.Text.ToString();
             carnet = Txt_carnet.Text.ToString();
             edad = Convert.ToInt32(Txt_edad.Text.ToString());
             estado = Txt_estado.Text.ToString();
@@ -70,7 +70,7 @@ namespace prototipo01.forms.estudiante
 
 
 
-            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, correo, direccion, edad, estado,telefono, facultad, carrera, carnet);
+            controladorEstudiantes.guardarEstudiante(dpi, nombre, apellido, telefono,correo,facultad,carrera,edad,direccion,estado,carnet);
         }
 
 
@@ -118,17 +118,17 @@ namespace prototipo01.forms.estudiante
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (string.IsNullOrEmpty(Txt_telef.Text))
+            {
+                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (string.IsNullOrEmpty(Txt_correo.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrEmpty(Txt_direccion.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_telefono.Text))
+            if (string.IsNullOrEmpty(Txt_estado.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -153,13 +153,13 @@ namespace prototipo01.forms.estudiante
                     Txt_Nombre.Text = "";
                     Txt_apellido.Text = "";
                     Txt_edad.Text = "";
+                    Txt_telef.Text = "";
                     Txt_correo.Text = "";
-                    Txt_direccion.Text = "";
-                    Txt_telefono.Text = "";
-                    Txt_dpi.Text = "";
                     Txt_estado.Text = "";
+                    Txt_dpi.Text = "";
+                    Txt_dire.Text = "";
                     Txt_carnet.Text = "";
-                    cbo_estudiante.Text = "";
+                    cbo_carrera.Text = "";
                     cbo_facultad.Text = "";                  
                    
 
@@ -215,10 +215,10 @@ namespace prototipo01.forms.estudiante
 
         private void textBox4_Validated(object sender, EventArgs e)
         {
-            if (Txt_correo.Text.Trim() == "")
+            if (Txt_telef.Text.Trim() == "")
             {
-                epError_Correo.SetError(Txt_correo, "Introduce un correo del estudiante");
-                Txt_correo.Focus();
+                epError_Correo.SetError(Txt_telef, "Introduce un correo del estudiante");
+                Txt_telef.Focus();
             }
             else
             {
@@ -228,10 +228,10 @@ namespace prototipo01.forms.estudiante
 
         private void textBox5_Validated(object sender, EventArgs e)
         {
-            if (Txt_direccion.Text.Trim() == "")
+            if (Txt_correo.Text.Trim() == "")
             {
-                epError_Tel.SetError(Txt_direccion, "Introduce direccion del estudiante");
-                Txt_direccion.Focus();
+                epError_Tel.SetError(Txt_correo, "Introduce direccion del estudiante");
+                Txt_correo.Focus();
             }
             else
             {
@@ -241,10 +241,10 @@ namespace prototipo01.forms.estudiante
 
         private void textBox6_Validated(object sender, EventArgs e)
         {
-            if (Txt_telefono.Text.Trim() == "")
+            if (Txt_estado.Text.Trim() == "")
             {
-                epError_Direccion.SetError(Txt_telefono, "Introduce telefono del estudiante");
-                Txt_telefono.Focus();
+                epError_Direccion.SetError(Txt_estado, "Introduce telefono del estudiante");
+                Txt_estado.Focus();
             }
             else
             {

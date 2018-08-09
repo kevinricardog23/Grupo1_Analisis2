@@ -139,7 +139,7 @@ namespace prototipo01.controladores
                 throw;
             }
         }
-        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int edad_alumno, String direccion_alumno, String estado_alumno, int CARRERA_id_carrera, int FACULTAD_id_facultad, String carnet)
+        public void guardarEstudiante(int dpi_alumno, String nombre_alumno, String apellido_alumno, String telefono_alumno, String correo_alumno, int FACULTAD_id_facultad, int CARRERA_id_carrera, int edad_alumno, String direccion_alumno, String estado_alumno, String carnet)
         {
             ModelAsignacion db = new ModelAsignacion();
 
@@ -151,11 +151,11 @@ namespace prototipo01.controladores
             alumnoNuevo.apellido_alumno = apellido_alumno;
             alumnoNuevo.telefono_alumno = telefono_alumno;
             alumnoNuevo.correo_alumno = correo_alumno;
+            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
+            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
             alumnoNuevo.edad_alumno = edad_alumno;
             alumnoNuevo.direccion_alumno = direccion_alumno;
             alumnoNuevo.estado_alumno = estado_alumno;
-            alumnoNuevo.CARRERA_id_carrera = CARRERA_id_carrera;
-            alumnoNuevo.FACULTAD_id_facultad = FACULTAD_id_facultad;
             alumnoNuevo.carnet = carnet;
             db.alumno.Add(alumnoNuevo);
             db.SaveChanges();
