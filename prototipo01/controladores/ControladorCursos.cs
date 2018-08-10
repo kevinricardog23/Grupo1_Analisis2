@@ -176,6 +176,45 @@ namespace prototipo01.controladores
 
 
 
+        public seccion_curso buscarSeccionCurso(int id_cursos)
+        {
+            try
+            {
+
+                using (ModelAsignacion db = new ModelAsignacion())
+                {
+                    var std = db.seccion_curso
+                        .Where(s => s.curso_id == id_cursos)
+                        .FirstOrDefault<seccion_curso>();
+                    return std;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
+        public void guardarSeccionEstudiante(int seccionC, int estudianteDPI)
+        {
+            ModelAsignacion db = new ModelAsignacion();
+
+
+            curso_estudiante cursoEst = new curso_estudiante();
+
+            cursoEst.ALUMNO_dpi_alumno = estudianteDPI;
+            cursoEst.CURSO_id_curso = seccionC;
+
+            db.curso_estudiante.Add(cursoEst);
+            db.SaveChanges();
+
+        }
+
+
+
         //Busqueda Por Barra
         public BindingList<cursosDto> listadoCursosPorCaracter(string search)
         {

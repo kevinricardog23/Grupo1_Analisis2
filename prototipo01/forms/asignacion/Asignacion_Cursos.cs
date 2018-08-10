@@ -34,8 +34,15 @@ namespace prototipo01.forms.asignacion
         {
             this.dataGridView1.DataSource = null;
             this.dataGridView1.Rows.Clear();
-            cursosDataSource = controladorCursos.listaCursosPorAlumno(alumno.dpi_alumno);
+            cursosDataSource = controladorCursos.listaCursos();
             dataGridView1.DataSource = cursosDataSource;
+
+            DataGridViewCheckBoxColumn dgvCmb = new DataGridViewCheckBoxColumn();
+            dgvCmb.ValueType = typeof(bool);
+            dgvCmb.Name = "Chk";
+            dgvCmb.HeaderText = "Asignar";
+            dataGridView1.Columns.Add(dgvCmb);
+
 
         }
 
@@ -53,8 +60,37 @@ namespace prototipo01.forms.asignacion
             }
 
 
+            List<int> cursos = new List<int>();
 
-            MessageBox.Show("Se han asignado los cursos exitosamente", "Asignacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[5].Value))
+                {
+                    // what you want to do
+                    cursos.Add(Convert.ToInt32(row.Cells[0].Value));
+
+                }
+            }
+
+
+            foreach (int x in cursos)
+            {
+                seccion_curso sec = controladorCursos.buscarSeccionCurso(x);
+
+                if (sec != null)
+                {
+                    controladorCursos.guardarSeccionEstudiante(sec.id_seccion, alumno.dpi_alumno);
+                }
+
+               
+            }
+
+
+            MessageBox.Show("Asignado correctamente", "Asignacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
