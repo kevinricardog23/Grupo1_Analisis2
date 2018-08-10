@@ -74,11 +74,11 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(204)))));
             this.button1.Location = new System.Drawing.Point(23, 75);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(248, 79);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Alumnos por Sección";
+            this.button1.Text = "Asignación de Cursos por Alumno";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -93,11 +93,11 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(204)))));
             this.button2.Location = new System.Drawing.Point(23, 263);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(248, 79);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Alumnos por Carrera";
+            this.button2.Text = "Alumnos por Curso";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -112,11 +112,11 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(204)))));
             this.button3.Location = new System.Drawing.Point(23, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(248, 80);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Alumnos por Catedratico";
+            this.button3.Text = "Alumnos por Carrera";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -131,11 +131,11 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(121)))), ((int)(((byte)(204)))));
             this.button4.Location = new System.Drawing.Point(309, 75);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(248, 80);
             this.button4.TabIndex = 6;
-            this.button4.Text = "Alumnos por Curso";
+            this.button4.Text = "Catedraticos";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -147,7 +147,7 @@
             this.Reportes.Location = new System.Drawing.Point(4, 0);
             this.Reportes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Reportes.Name = "Reportes";
-            this.Reportes.Size = new System.Drawing.Size(220, 51);
+            this.Reportes.Size = new System.Drawing.Size(215, 50);
             this.Reportes.TabIndex = 7;
             this.Reportes.Text = "Reportes";
             // 
@@ -159,7 +159,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(219, 294);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(865, 363);
             this.panel1.TabIndex = 8;
@@ -174,7 +174,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bienvenido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.Text = "Home";
             this.panel1.ResumeLayout(false);

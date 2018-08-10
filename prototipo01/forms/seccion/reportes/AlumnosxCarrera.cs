@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prototipo01.controladores;
 
 namespace prototipo01.forms.seccion.reportes
 {
     public partial class AlumnosxCarrera : Form
     {
+
+        ControladorReports cr = new ControladorReports();
+
+
         public AlumnosxCarrera()
         {
             InitializeComponent();
@@ -39,21 +44,27 @@ namespace prototipo01.forms.seccion.reportes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_CodFacu.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_CodCarrera.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Cbo_Jornada.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+
+
+            viewAlumnosCarrera vc = new viewAlumnosCarrera(cr.getIdCarrera(comboBox1.Text.ToString()));
+            vc.Show();
+        }
+
+        void getCarreras()
+        {
+            comboBox1.DataSource = cr.getCarreras();
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "nombre_carrera";
+        }
+
+        private void AlumnosxCarrera_Load(object sender, EventArgs e)
+        {
+            getCarreras();
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsAsignacionCursos" targetNamespace="http://tempuri.org/DsAsignacionCursos.xsd" xmlns:mstns="http://tempuri.org/DsAsignacionCursos.xsd" xmlns="http://tempuri.org/DsAsignacionCursos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsAsignacionCursos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsAsignacionCursos" msprop:Generator_UserDSName="DsAsignacionCursos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AsignacionCursos" msprop:Generator_TableClassName="AsignacionCursosDataTable" msprop:Generator_TableVarName="tableAsignacionCursos" msprop:Generator_TablePropName="AsignacionCursos" msprop:Generator_RowDeletingName="AsignacionCursosRowDeleting" msprop:Generator_RowChangingName="AsignacionCursosRowChanging" msprop:Generator_RowEvHandlerName="AsignacionCursosRowChangeEventHandler" msprop:Generator_RowDeletedName="AsignacionCursosRowDeleted" msprop:Generator_UserTableName="AsignacionCursos" msprop:Generator_RowChangedName="AsignacionCursosRowChanged" msprop:Generator_RowEvArgName="AsignacionCursosRowChangeEvent" msprop:Generator_RowClassName="AsignacionCursosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Carne" msprop:Generator_ColumnVarNameInTable="columnCarne" msprop:Generator_ColumnPropNameInRow="Carne" msprop:Generator_ColumnPropNameInTable="CarneColumn" msprop:Generator_UserColumnName="Carne" type="xs:string" minOccurs="0" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres" type="xs:string" minOccurs="0" />
+              <xs:element name="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_UserColumnName="apellidos" type="xs:string" minOccurs="0" />
+              <xs:element name="curso" msprop:Generator_ColumnVarNameInTable="columncurso" msprop:Generator_ColumnPropNameInRow="curso" msprop:Generator_ColumnPropNameInTable="cursoColumn" msprop:Generator_UserColumnName="curso" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

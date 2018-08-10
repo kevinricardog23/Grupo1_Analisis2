@@ -57,26 +57,20 @@ namespace prototipo01.forms.seccion.reportes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_CodCat.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+           
           
         }
 
-        private void refreshDataSource()
-        {
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.Rows.Clear();
-            alumnosCursoDataSource = controladorEstudiante.AlumnosPorCurso();
-            dataGridView1.DataSource = alumnosCursoDataSource;
-
-        }
-
+  
         private void AlumnosxCatedratico_Load(object sender, EventArgs e)
         {
-            refreshDataSource();
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            forms.seccion.reportes.viewCatedraticos vcat = new forms.seccion.reportes.viewCatedraticos();
+            vcat.Show();
         }
     }
 }

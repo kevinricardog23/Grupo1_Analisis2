@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCatedraticos" targetNamespace="http://tempuri.org/DsCatedraticos.xsd" xmlns:mstns="http://tempuri.org/DsCatedraticos.xsd" xmlns="http://tempuri.org/DsCatedraticos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCatedraticos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsCatedraticos" msprop:Generator_UserDSName="DsCatedraticos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Catedraticos" msprop:Generator_TableClassName="CatedraticosDataTable" msprop:Generator_TableVarName="tableCatedraticos" msprop:Generator_RowChangedName="CatedraticosRowChanged" msprop:Generator_TablePropName="Catedraticos" msprop:Generator_RowDeletingName="CatedraticosRowDeleting" msprop:Generator_RowChangingName="CatedraticosRowChanging" msprop:Generator_RowEvHandlerName="CatedraticosRowChangeEventHandler" msprop:Generator_RowDeletedName="CatedraticosRowDeleted" msprop:Generator_RowClassName="CatedraticosRow" msprop:Generator_UserTableName="Catedraticos" msprop:Generator_RowEvArgName="CatedraticosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dpi" msprop:Generator_ColumnVarNameInTable="columndpi" msprop:Generator_ColumnPropNameInRow="dpi" msprop:Generator_ColumnPropNameInTable="dpiColumn" msprop:Generator_UserColumnName="dpi" type="xs:long" minOccurs="0" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres" type="xs:string" minOccurs="0" />
+              <xs:element name="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_UserColumnName="apellidos" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="correo" msprop:Generator_ColumnVarNameInTable="columncorreo" msprop:Generator_ColumnPropNameInRow="correo" msprop:Generator_ColumnPropNameInTable="correoColumn" msprop:Generator_UserColumnName="correo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
