@@ -74,31 +74,38 @@ namespace prototipo01.forms.catedraticos
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
+            if (Validacion.ValidarCorreo(textBox4.Text) == true)
             {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text) || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        createCatedratico();
+                        MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        textBox7.Text = "";
+                        //CONTROL BICORA
+                        ControladorBitacora controladorBitacora = new ControladorBitacora();
+                        controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Catedratico.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }else
             {
-                try
-                {
-                    createCatedratico();
-                    MessageBox.Show("Se ha agregado exitosamente un nuevo Catedratico", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    textBox6.Text = "";
-                    textBox7.Text = "";
-                    //CONTROL BICORA
-                    ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear Catedratico.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }

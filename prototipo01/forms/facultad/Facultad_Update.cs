@@ -87,28 +87,36 @@ namespace prototipo01.forms.facultad
 
         private void Btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+            if (Validacion.ValidarCorreo(textBox3.Text) == true)
             {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }else
+                if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        updateFacultad();
+                        MessageBox.Show("Se ha modificado exitosamente la facultad", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Control bitacora
+                        ControladorBitacora controladorBitacora = new ControladorBitacora();
+                        controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar facultad");
+                        Txt_nombre.Text = "";
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Edicion de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
             {
-                try
-                {
-                    updateFacultad();
-                    MessageBox.Show("Se ha modificado exitosamente la facultad", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Control bitacora
-                     ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Editar facultad");
-                    Txt_nombre.Text = "";
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Edicion de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

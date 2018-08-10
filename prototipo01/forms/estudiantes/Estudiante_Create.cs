@@ -103,73 +103,80 @@ namespace prototipo01.forms.estudiante
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_Nombre.Text))
+            if (Validacion.ValidarCorreo(Txt_correo.Text) == true)
             {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (string.IsNullOrEmpty(Txt_Nombre.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_apellido.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_edad.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_telef.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_correo.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_estado.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(Txt_dpi.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                /*codigo kevin*/
+                else
+                {
+                    try
+                    {
+                        createAlumno();
+                        MessageBox.Show("Se ha agregado exitosamente un nuevo Estudiante", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        ControladorBitacora controladorBitacora = new ControladorBitacora();
+                        controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Creacion Estudiante.");
+
+                        Txt_Nombre.Text = "";
+                        Txt_apellido.Text = "";
+                        Txt_edad.Text = "";
+                        Txt_telef.Text = "";
+                        Txt_correo.Text = "";
+                        Txt_estado.Text = "";
+                        Txt_dpi.Text = "";
+                        Txt_dire.Text = "";
+                        Txt_carnet.Text = "";
+                        cbo_carrera.Text = "";
+                        cbo_facultad.Text = "";
+
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ingreso de datos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-            if (string.IsNullOrEmpty(Txt_apellido.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_edad.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_telef.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_correo.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_estado.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(Txt_dpi.Text))
-            {
-                MessageBox.Show("Debe completar la informacion", "Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            
-            /*codigo kevin*/
             else
             {
-                try
-                {
-                    createAlumno();
-                    MessageBox.Show("Se ha agregado exitosamente un nuevo Estudiante", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Creacion Estudiante.");
-
-                    Txt_Nombre.Text = "";
-                    Txt_apellido.Text = "";
-                    Txt_edad.Text = "";
-                    Txt_telef.Text = "";
-                    Txt_correo.Text = "";
-                    Txt_estado.Text = "";
-                    Txt_dpi.Text = "";
-                    Txt_dire.Text = "";
-                    Txt_carnet.Text = "";
-                    cbo_carrera.Text = "";
-                    cbo_facultad.Text = "";                  
-                   
-
-                   
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ingreso de datos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

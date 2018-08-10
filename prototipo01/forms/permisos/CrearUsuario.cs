@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.permisos
 {
@@ -41,43 +42,52 @@ namespace prototipo01.forms.permisos
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxNombre.Text) || string.IsNullOrEmpty(textBoxApellidos.Text) || string.IsNullOrEmpty(textBoxPassword.Text) || string.IsNullOrEmpty(textBoxEmail.Text) || string.IsNullOrEmpty(textBoxAlias.Text) || string.IsNullOrEmpty(textBoxTelefono.Text) || string.IsNullOrEmpty(checkedListBox1.Text))
+            if (Validacion.ValidarCorreo(textBoxEmail.Text) == true)
             {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            try
-            {
-                TextBox objTextBoxNombre = (TextBox)textBoxNombre;
-                TextBox objTextBoxApellidos = (TextBox)textBoxApellidos;
-                TextBox objTextBoxPass = (TextBox)textBoxPassword;
-                TextBox objTextBoxEmail = (TextBox)textBoxEmail;
-                TextBox objTextBoxUser = (TextBox)textBoxAlias;
-                TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
-
-                int nivel = 0;
-
-                if (checkedListBox1.SelectedIndex == 0)
+                if (string.IsNullOrEmpty(textBoxNombre.Text) || string.IsNullOrEmpty(textBoxApellidos.Text) || string.IsNullOrEmpty(textBoxPassword.Text) || string.IsNullOrEmpty(textBoxEmail.Text) || string.IsNullOrEmpty(textBoxAlias.Text) || string.IsNullOrEmpty(textBoxTelefono.Text) || string.IsNullOrEmpty(checkedListBox1.Text))
                 {
-                    nivel = 1;
-                }else if (checkedListBox1.SelectedIndex == 1)
-                {
-                    nivel =2;
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                try
+                {
+                    TextBox objTextBoxNombre = (TextBox)textBoxNombre;
+                    TextBox objTextBoxApellidos = (TextBox)textBoxApellidos;
+                    TextBox objTextBoxPass = (TextBox)textBoxPassword;
+                    TextBox objTextBoxEmail = (TextBox)textBoxEmail;
+                    TextBox objTextBoxUser = (TextBox)textBoxAlias;
+                    TextBox objTextBoxTelefono = (TextBox)textBoxTelefono;
+
+                    int nivel = 0;
+
+                    if (checkedListBox1.SelectedIndex == 0)
+                    {
+                        nivel = 1;
+                    }
+                    else if (checkedListBox1.SelectedIndex == 1)
+                    {
+                        nivel = 2;
+                    }
 
 
-                controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text,nivel);
-                MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBoxNombre.Text = "";
-                textBoxApellidos.Text = "";
-                textBoxPassword.Text = "";
-                textBoxEmail.Text = "";
-                textBoxAlias.Text = "";
-                textBoxTelefono.Text = "";
-                
-            }catch(Exception ex)
+                    controladorUsuario.guardarUsuario(objTextBoxUser.Text, objTextBoxNombre.Text, objTextBoxApellidos.Text, objTextBoxPass.Text, objTextBoxEmail.Text, objTextBoxTelefono.Text, nivel);
+                    MessageBox.Show("Informacion agregada correctamente", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxNombre.Text = "";
+                    textBoxApellidos.Text = "";
+                    textBoxPassword.Text = "";
+                    textBoxEmail.Text = "";
+                    textBoxAlias.Text = "";
+                    textBoxTelefono.Text = "";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
             {
-                MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

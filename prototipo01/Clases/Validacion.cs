@@ -50,5 +50,17 @@ namespace prototipo01.Clases
                 MessageBox.Show("Solo se permite ingresar numeros", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static bool ValidarCorreo(String cadena)
+        {
+            for (int i = 0; i < cadena.Length; i++)
+            {
+                if (cadena[i] == '@')
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
