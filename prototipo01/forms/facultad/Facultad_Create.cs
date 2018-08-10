@@ -98,33 +98,40 @@ namespace prototipo01.forms.facultad
 
         private void Btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+            if (Validacion.ValidarCorreo(textBox3.Text) == true)
             {
-                MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (string.IsNullOrEmpty(Txt_nombre.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+                {
+                    MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        createCatedratico();
+                        MessageBox.Show("Se ha agregado exitosamente una nueva Facultad", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Control bitacora
+                        ControladorBitacora controladorBitacora = new ControladorBitacora();
+                        controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear facultad");
+                        //Txt_id.Text = "";
+                        Txt_nombre.Text = "";
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    createCatedratico();
-                    MessageBox.Show("Se ha agregado exitosamente una nueva Facultad", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Control bitacora
-                    ControladorBitacora controladorBitacora = new ControladorBitacora();
-                    controladorBitacora.guardarBitacora(usuarioLogi.id_usuario, "Crear facultad");
-                    //Txt_id.Text = "";
-                    Txt_nombre.Text = "";
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+}
 }
 //Valery

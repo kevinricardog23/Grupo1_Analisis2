@@ -94,7 +94,7 @@ namespace prototipo01.forms.estudiante
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (Validacion.ValidarCorreo(Txt_Correo.Text)) { 
             
                 if (string.IsNullOrEmpty(Txt_Nombres.Text) || string.IsNullOrEmpty(Txt_Apellidos.Text) || string.IsNullOrEmpty(Txt_edad.Text) || string.IsNullOrEmpty(Txt_Correo.Text) || string.IsNullOrEmpty(Txt_Direccion.Text) || string.IsNullOrEmpty(Txt_Telefono.Text)|| string.IsNullOrEmpty(Txt_estado.Text))
                 {
@@ -125,6 +125,11 @@ namespace prototipo01.forms.estudiante
                     MessageBox.Show(ex.Message, "Edicion de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
