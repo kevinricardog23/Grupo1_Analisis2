@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prototipo01.controladores;
 using prototipo01.models;
+using prototipo01.Clases;
 
 namespace prototipo01.forms.permisos
 {
@@ -49,6 +50,7 @@ namespace prototipo01.forms.permisos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Validacion.ValidarCorreo(textBoxEmail.Text) == true) { 
             if (string.IsNullOrEmpty(textBoxNombre.Text) || string.IsNullOrEmpty(textBoxApellidos.Text) || string.IsNullOrEmpty(textBoxPassword.Text) || string.IsNullOrEmpty(textBoxEmail.Text) || string.IsNullOrEmpty(textBoxAlias.Text) || string.IsNullOrEmpty(textBoxTelefono.Text))
             {
                 MessageBox.Show("Debe completar la informacion", "Error de ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,6 +94,11 @@ namespace prototipo01.forms.permisos
                 MessageBox.Show(ex.Message, "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+            else
+            {
+                MessageBox.Show("Porfavor ingresa correctamente el correo", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+}
 
 
 
